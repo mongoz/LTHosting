@@ -12,7 +12,7 @@
 
 @interface event : NSObject
 
-+(id)sharedInstance;
++(event*)sharedInstance;
 
 @property (strong, nonatomic) NSString *name;
 

@@ -231,10 +231,13 @@
         UIImage *theImage=NULL;
         if(image!=NULL)
         {
-            theImage=[UIImage imageWithCGImage:image];
             if(_captureDevicePosition==AVCaptureDevicePositionFront)
             {
-                theImage=[UIImage imageWithCGImage:image scale:1.0f orientation:UIImageOrientationDownMirrored];
+                theImage=[UIImage imageWithCGImage:image scale:1.0f orientation:UIImageOrientationLeftMirrored];
+            }
+            else
+            {
+                theImage=[UIImage imageWithCGImage:image scale:1.0f orientation:UIImageOrientationRight];
             }
         }
         inCompletionBlock(theImage,error);

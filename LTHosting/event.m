@@ -36,7 +36,7 @@
     return self;
 }
 
-+(id)sharedInstance
++(event*)sharedInstance
 {
     static event *sharedEvent=nil;
     static dispatch_once_t onceToken;

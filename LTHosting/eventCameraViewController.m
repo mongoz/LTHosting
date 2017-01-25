@@ -14,6 +14,8 @@
     CGFloat pinchStartScale;
     
     UIImageView *imagePreviewView;
+    
+    BOOL visible;
 }
 @end
 
@@ -42,11 +44,22 @@
     
     
     //Disable good and bad photo buttons until photo is taken
-    [_goodPictureButton setHidden:YES];
-    [_badPictureButton setHidden:YES];
+    [self hideGoodBadButtons];
     
     //Set most recent image in libary bar
     [self findMostRecentImage];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    visible=YES;
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    visible=NO;
 }
 
 -(void)findMostRecentImage
@@ -74,6 +87,10 @@
 
 -(IBAction)libraryBarTapped:(id)sender
 {
+    if(![_goodPictureButton isHidden])
+    {
+        return;
+    }
     UIImagePickerController *pickerController=[[UIImagePickerController alloc] init];
     [pickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     [pickerController setDelegate:self];
@@ -105,12 +122,6 @@
         [[eventCamera sharedInstance] scaleZoomBy:pinch.scale/pinchStartScale];
         pinchStartScale=pinch.scale;
     }
-}
-
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
 }
 
 -(void)configureView
@@ -176,7 +187,7 @@
         imagePreviewView=[[UIImageView alloc] initWithImage:image];
         [imagePreviewView setAutoresizesSubviews:YES];
         [imagePreviewView setContentMode:UIViewContentModeScaleAspectFit];
-        [imagePreviewView setTransform:CGAffineTransformMakeRotation(M_PI_2)];
+        //[imagePreviewView setTransform:CGAffineTransformMakeRotation(M_PI_2)];
         imagePreviewView.frame=_imageView.bounds;
         [self removeCameraView];
         [_imageView addSubview:imagePreviewView];
@@ -358,7 +369,10 @@
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    NSLog(@"ended");
+    if(visible)
+    {
+        NSLog(@"ended");
+    }
     pinchStartScale=0;
 }
 
@@ -372,6 +386,7 @@
 - (IBAction)goodButtonPressed:(id)sender {
     event *change=[event sharedInstance];
     change.image=imagePreviewView.image;
+    [self performSegueWithIdentifier:@"editPhoto" sender:nil];
 }
 
 - (IBAction)badButtonPressed:(id)sender {
@@ -423,6 +438,21 @@
     [_imageView addSubview:imagePreviewView];
     [_imageView sendSubviewToBack:imagePreviewView];
     [self showGoodBadButtons];
+    
+}
+
+//If editing photo is cancelled
+-(void)prepareForUnwind:(UIStoryboardSegue*)segue
+{
+    if([[segue identifier] isEqualToString:@"cancelEditing"])
+    {
+        [self resumeCameraLayer];
+    }
+}
+
+//Prepare for segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
     
 }
 @end
