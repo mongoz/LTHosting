@@ -82,6 +82,8 @@
             NSLog(@"error retrieving photo");
         }
         [_libraryBarImageView setImage:retrieved];
+        [_libraryBarImageView setContentMode:UIViewContentModeScaleAspectFit];
+        [_libraryBarImageView setBackgroundColor:[UIColor blackColor]];
     }];
 }
 
@@ -155,8 +157,8 @@
 //Handle segue
 -(void)performSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
-    [super performSegueWithIdentifier:identifier sender:sender];
     [self removeCameraView];
+    [super performSegueWithIdentifier:identifier sender:sender];
 }
 
 - (IBAction)backPressed:(id)sender {
@@ -297,11 +299,12 @@
 
 -(void)resumeCameraLayer
 {
-    if(imagePreviewView)
+    if(imagePreviewView!=nil)
     {
         NSLog(@"IN");
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             [imagePreviewView removeFromSuperview];
+            imagePreviewView=nil;
         }];
     }
     if(![[eventCamera sharedInstance] isRunning])
@@ -384,8 +387,7 @@
 
 
 - (IBAction)goodButtonPressed:(id)sender {
-    event *change=[event sharedInstance];
-    change.image=imagePreviewView.image;
+    [[event sharedInstance] setImage:imagePreviewView.image];
     [self performSegueWithIdentifier:@"editPhoto" sender:nil];
 }
 

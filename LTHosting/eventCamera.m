@@ -83,6 +83,7 @@
         _previewLayer=[AVCaptureVideoPreviewLayer layerWithSession:_captureSession];
         _previewLayer.videoGravity=AVLayerVideoGravityResizeAspect;
         _previewLayer.connection.videoOrientation=AVCaptureVideoOrientationPortrait;
+        [_previewLayer setMasksToBounds:YES];
         
     }
     return _previewLayer;
@@ -219,6 +220,8 @@
             CIContext *context=[CIContext contextWithOptions:options];
             theCGImage=[context createCGImage:image fromRect:image.extent];
         }
+        CGSize size=CGSizeMake(CGImageGetWidth(theCGImage), CGImageGetHeight(theCGImage));
+        theCGImage=CGImageCreateWithImageInRect(theCGImage, CGRectMake(0, size.height/2-(size.width*836/750)/2, size.width, size.width*(836/750)));
         inCompletionBlock(theCGImage, error);
         CGImageRelease(theCGImage);
     }];

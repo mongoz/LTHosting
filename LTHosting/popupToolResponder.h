@@ -35,6 +35,10 @@
 
 -(void)textAlignmentDidChangeTo:(NSTextAlignment)alignment;
 
+-(void)shadeDidChangeTo:(CGFloat)shade;
+
+-(void)removeColor;
+
 @end
 
 

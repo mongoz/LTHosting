@@ -42,6 +42,8 @@
 
 -(void)setColorValue:(float)val;
 
+@property BOOL isStatic;
+
 @end
 
 

@@ -10,8 +10,10 @@
 #import "imageEditorView.h"
 #import "borderToolViewController.h"
 #import "textToolViewController.h"
+#import "horizontalViewPicker.h"
+#import "illuminatedButton.h"
 
-@interface flyerViewController : UIViewController <CAAnimationDelegate, toolKitSuperController, UIGestureRecognizerDelegate>
+@interface flyerViewController : UIViewController <CAAnimationDelegate, toolKitSuperController, UIGestureRecognizerDelegate, horizontalViewPickerDelegate, horizontalViewPickerDataSource, illuminatedButtonResponder, illuminatedSource, UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *topBarView;
 
@@ -26,14 +28,6 @@
 @property (strong, nonatomic) IBOutlet UIView *imageContainerView;
 
 @property (strong, nonatomic) IBOutlet UIView *bottomBarView;
-
-@property (strong, nonatomic) IBOutlet UIButton *editTextButton;
-
-- (IBAction)editTextButtonPressed:(id)sender;
-
-@property (strong, nonatomic) IBOutlet UIButton *editBordersButton;
-
-- (IBAction)editBordersButtonPressed:(id)sender;
 
 @property (strong, nonatomic) IBOutlet UIView *toolView;
 

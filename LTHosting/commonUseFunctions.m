@@ -22,9 +22,7 @@
     UIGraphicsBeginImageContextWithOptions(layer.frame.size, NO, 0.0f);
     [layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *outputImage = UIGraphicsGetImageFromCurrentImageContext();
-    
     UIGraphicsEndImageContext();
-    
     return outputImage;
 }
 
@@ -80,7 +78,6 @@
 {
     CGRect textRect=[self textRectForBounds:CGRectMake(0, 0, self.bounds.size.width, CGFLOAT_MAX) limitedToNumberOfLines:0];
     NSInteger temp=round(textRect.size.height/self.font.lineHeight);
-    NSLog(@"number of lines: %ld",(long)temp);
     return temp;
 }
 

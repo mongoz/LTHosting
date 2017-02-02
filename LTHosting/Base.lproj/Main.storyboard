@@ -235,49 +235,18 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="apU-mb-BVP">
-                                <rect key="frame" x="0.0" y="64" width="375" height="411"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="431"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RV8-b0-fDw">
-                                <rect key="frame" x="0.0" y="603" width="375" height="64"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6a4-dD-ckq">
-                                        <rect key="frame" x="8" y="26" width="46" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="JVI-vF-RQS"/>
-                                            <constraint firstAttribute="width" constant="46" id="kE8-Og-hBK"/>
-                                        </constraints>
-                                        <state key="normal" title="Text">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="editTextButtonPressed:" destination="KYl-p6-0lP" eventType="touchUpInside" id="41o-Qy-zzw"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cri-15-Wsk">
-                                        <rect key="frame" x="302" y="26" width="65" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="65" id="FIc-B4-RcV"/>
-                                        </constraints>
-                                        <state key="normal" title="Borders">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="editBordersButtonPressed:" destination="KYl-p6-0lP" eventType="touchUpInside" id="JcO-uh-e5v"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Cri-15-Wsk" firstAttribute="baseline" secondItem="6a4-dD-ckq" secondAttribute="baseline" id="5c0-uk-vc6"/>
-                                    <constraint firstAttribute="height" constant="64" id="6Kt-sI-amm"/>
-                                    <constraint firstItem="6a4-dD-ckq" firstAttribute="leading" secondItem="RV8-b0-fDw" secondAttribute="leading" constant="8" id="NkS-eu-3KI"/>
-                                    <constraint firstAttribute="bottom" secondItem="6a4-dD-ckq" secondAttribute="bottom" constant="8" id="Qke-RR-F5M"/>
-                                    <constraint firstItem="Cri-15-Wsk" firstAttribute="trailing" secondItem="RV8-b0-fDw" secondAttribute="trailingMargin" id="iAd-Ih-rN8"/>
+                                    <constraint firstAttribute="height" constant="44" id="6Kt-sI-amm"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nfQ-4L-qAg">
-                                <rect key="frame" x="0.0" y="475" width="375" height="128"/>
+                                <rect key="frame" x="0.0" y="495" width="375" height="128"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Clp-tT-4KL"/>
@@ -306,8 +275,6 @@
                         <outlet property="backButton" destination="bJj-R6-dcf" id="Wmd-zS-QlZ"/>
                         <outlet property="bottomBarView" destination="RV8-b0-fDw" id="o6C-hB-itD"/>
                         <outlet property="doneButton" destination="qFx-n5-LNB" id="ihi-Dm-24k"/>
-                        <outlet property="editBordersButton" destination="Cri-15-Wsk" id="Sj0-rc-zQb"/>
-                        <outlet property="editTextButton" destination="6a4-dD-ckq" id="8eB-DZ-2Dh"/>
                         <outlet property="imageContainerView" destination="apU-mb-BVP" id="atp-s1-ptC"/>
                         <outlet property="toolView" destination="nfQ-4L-qAg" id="zW9-9e-cwx"/>
                         <outlet property="toolViewHeight" destination="Clp-tT-4KL" id="xqL-m3-wOC"/>

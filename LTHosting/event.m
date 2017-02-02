@@ -112,4 +112,47 @@
     return [NSNumber numberWithInt:-1];
 }
 
+
+-(NSAttributedString*)flyerBodyForCurrentState
+{
+    NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setDateFormat:@"h:mm a, M/d/YYYY"];
+    NSString *dateString=[formatter stringFromDate:self.date];
+    NSMutableAttributedString *full=[[NSMutableAttributedString alloc] init];
+    NSMutableArray<NSAttributedString*>* lines=[[NSMutableArray alloc] init];
+    [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Start: %@",dateString]]];
+    [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"About: %@",_about]]];
+    NSMutableString *lastLine=[[NSMutableString alloc] init];
+    BOOL both=NO;
+    if(_isPrivate)
+    {
+        [lastLine appendString:@"Private"];
+        both=YES;
+    }
+    if(!_isFree)
+    {
+        if(both)
+        {
+            [lastLine appendString:@", "];
+        }
+        [lastLine appendString:@"Paid"];
+        both=YES;
+    }
+    NSAttributedString  *final=[[NSAttributedString alloc] initWithString:lastLine attributes:[NSDictionary dictionaryWithObject:[UIFont boldSystemFontOfSize:[UIFont systemFontSize]] forKey:NSFontAttributeName]];
+    if(both)
+    {
+        [lines addObject:final];
+    }
+    for(NSInteger i=0; i<lines.count; i++)
+    {
+        [full appendAttributedString:lines[i]];
+        if(i<lines.count-1)
+        {
+            [full appendAttributedString:[[NSAttributedString alloc] initWithString:@"\n"]];
+        }
+    }
+    return full;
+}
+
 @end

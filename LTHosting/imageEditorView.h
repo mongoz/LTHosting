@@ -16,7 +16,7 @@
 
 @end
 
-@interface imageEditorView : UIView <UIGestureRecognizerDelegate, UITextViewDelegate>
+@interface imageEditorView : UIView <UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) id<imageEditorViewDelegate> delegate;
 
@@ -30,17 +30,33 @@
 
 -(void)updateImageContainer;
 
+-(void)updateImageContainerWithImage:(UIImage*)image;
+
 -(void)createNewLayerWithController:(UIViewController*)controller thumbnail:(smartLayerThumbnail*)nail;
 
 -(void)setSelectedLayer:(smartLayer*)layer;
 
 -(smartLayer*)selectedLayer;
 
--(void)reset;
++(void)reset;
 
 -(void)removeSelectedLayer;
 
 -(UIImage*)currentImage;
+
+-(smartBorderLayer*)borderLayer;
+
+-(smartTextLayer*)titleLayer;
+
+-(smartTextLayer*)bodyLayer;
+
+-(void)setBorderLayer:(smartBorderLayer*)layer;
+
+-(void)setTitleAndBodyText;
+
+-(void)setBodyString:(NSString*)string;
+
+-(void)setTitleString:(NSString*)string;
 
 @end
 

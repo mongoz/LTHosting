@@ -9,10 +9,12 @@
 #import "imageEditorView.h"
 #import "textToolViewController.h"
 #import "borderToolViewController.h"
+#import "usefulArray.h"
 
 @interface  imageEditorView(){
     NSArray<smartLayer*>* layerStack;
     CALayer *baseLayer;
+    CGSize baseLayerImageSize;
     
     smartLayer *selected;
     
@@ -27,10 +29,21 @@
     
     UIView *textInputView;
     BOOL hasTranferredText;
+    
+    smartBorderLayer *borderLayer;
+    
+    smartTextLayer *bodyText;
+    smartTextLayer *titleText;
 }
 @end
 
 @implementation imageEditorView
+
+static imageEditorView *sharedInstance=nil;
+
+-(smartBorderLayer*)borderLayer{
+    return borderLayer;
+}
 
 /*
 // Only override drawRect: if you perform custom drawing.
@@ -62,7 +75,93 @@
 
 -(void)updateImageContainer
 {
-    [baseLayer setContents:(id)[event sharedInstance].image.CGImage];
+    
+    [self updateImageContainerWithImage:[[event sharedInstance] image]];
+}
+
+-(void)updateImageContainerWithImage:(UIImage *)image
+{
+    [baseLayer removeFromSuperlayer];
+    baseLayer=[CALayer layer];
+    [baseLayer setAffineTransform:CGAffineTransformMakeRotation(M_PI_2)];
+    [baseLayer setContentsGravity:kCAGravityResizeAspect];
+    [baseLayer setContents:(id)image.CGImage];
+    baseLayerImageSize=image.size;
+    [self.layer addSublayer:baseLayer];
+    [borderLayer removeFromSuperlayer];
+    borderLayer=[smartBorderLayer newSmartBorderInParentRect:CGRectZero];
+    [borderLayer setContentsGravity:kCAGravityResize];
+    [borderLayer setContents:nil];
+    [self.layer addSublayer:borderLayer];
+    [self setFrame:self.frame];
+    
+}
+
+-(void)setTitleAndBodyText
+{
+    NSAttributedString *currentBody=nil;
+    NSAttributedString *currentTitle=nil;
+    if(titleText!=nil)
+    {
+        currentTitle=[titleText textLayer].attributedText;
+        [titleText removeFromSuperlayer];
+    }
+    if(bodyText!=nil)
+    {
+        currentBody=[bodyText textLayer].attributedText;
+        [bodyText removeFromSuperlayer];
+    }
+    __block UIFont *bodyFont;
+    __block UIFont *titleFont;
+    if(currentBody!=nil)
+    {
+        [currentBody enumerateAttribute:NSFontAttributeName inRange:NSMakeRange(0, currentBody.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(id value, NSRange range, BOOL *stop){
+            bodyFont=(UIFont*)value;
+            *stop=YES;
+        }];
+    }
+    else
+    {
+        bodyFont=[self defaultBodyFont];
+    }
+    if(currentTitle!=nil)
+    {
+        [currentTitle enumerateAttribute:NSFontAttributeName inRange:NSMakeRange(0, currentTitle.length) options:NSAttributedStringEnumerationLongestEffectiveRangeNotRequired usingBlock:^(id value, NSRange range, BOOL *stop){
+            titleFont=(UIFont*)value;
+            *stop=YES;
+        }];
+    }
+    else
+    {
+        titleFont=[self defaultTitleFont];
+    }
+    NSAttributedString *body=[[NSAttributedString alloc] initWithAttributedString:[[event sharedInstance] flyerBodyForCurrentState]];
+    NSAttributedString *title=[[NSAttributedString alloc] initWithString:[[event sharedInstance] name]];
+    CGFloat margin=44;
+    CGRect titleFrame=CGRectMake(margin, margin, self.frame.size.width-margin*2, self.frame.size.height-margin*2);
+    titleText=[[smartTextLayer alloc] initWithParentRect:titleFrame attributedString:title font:titleFont];
+    
+    CGFloat seperation=8;
+    CGRect bodyFrame=CGRectMake(titleText.frame.origin.x, titleText.frame.origin.y+titleText.frame.size.height+seperation, self.frame.size.width-margin*2, self.frame.size.height-(titleText.frame.origin.y+titleText.frame.size.height+margin+seperation));
+    bodyText=[[smartTextLayer alloc] initWithParentRect:bodyFrame attributedString:body font:bodyFont];
+    
+    [titleText.textLayer setTextColor:[UIColor whiteColor]];
+    [bodyText.textLayer setTextColor:[UIColor whiteColor]];
+    [titleText.textLayer setTextAlignment:NSTextAlignmentCenter];
+    [bodyText.textLayer setTextAlignment:NSTextAlignmentCenter];
+    
+    [self.layer addSublayer:titleText];
+    [self.layer addSublayer:bodyText];
+}
+
+-(UIFont*)defaultBodyFont
+{
+    return  [UIFont preferredFontForTextStyle:UIFontTextStyleTitle3];
+}
+
+-(UIFont*)defaultTitleFont
+{
+    return [UIFont preferredFontForTextStyle:UIFontTextStyleTitle1];
 }
 
 -(id)init
@@ -70,14 +169,18 @@
     if(self=[super init])
     {
         
-        UIImage *chosenImage=[event sharedInstance].image;
+        UIImage *chosenImage=[[event sharedInstance] image];
         baseLayer=[CALayer layer];
         [baseLayer setAffineTransform:CGAffineTransformMakeRotation(M_PI_2)];
         [baseLayer setContentsGravity:kCAGravityResizeAspect];
         [baseLayer setContents:(id)chosenImage.CGImage];
+        baseLayerImageSize=chosenImage.size;
+        [self.layer addSublayer:baseLayer];
+        
+
         //[baseLayer setMasksToBounds:YES];
         //[self setBounds:CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.width*(baseLayer.bounds.size.height/baseLayer.bounds.size.width))];
-        [self.layer addSublayer:baseLayer];
+        
         layerStack=[[NSArray alloc] init];
         
         UIPanGestureRecognizer *pan=[[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panFired:)];
@@ -102,6 +205,9 @@
         [test setFrame:self.layer.bounds];
         [self.layer addSublayer:test];*/
         [self.layer setMasksToBounds:YES];
+        
+        titleText=nil;
+        bodyText=nil;
     }
     return self;
 }
@@ -160,8 +266,19 @@
 
 -(void)setFrame:(CGRect)frame
 {
+    CGSize prop=CGSizeMake(frame.size.width/self.frame.size.width, frame.size.height/self.frame.size.height);
+    CGRect change=CGRectMake(frame.origin.x-self.frame.origin.x, frame.origin.y-self.frame.origin.y, prop.width, prop.height);
     [super setFrame:frame];
-    [baseLayer setFrame:self.bounds];
+    [baseLayer setFrame:CGRectMake(0, frame.size.height/2-(frame.size.width*baseLayerImageSize.height/baseLayerImageSize.width)/2, frame.size.width, frame.size.width*baseLayerImageSize.height/baseLayerImageSize.width)];
+    [borderLayer setFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+    [self proportionalizeFrameForLayer:titleText withRect:change];
+    [self proportionalizeFrameForLayer:bodyText withRect:change];
+}
+
+-(void)proportionalizeFrameForLayer:(CALayer*)layer withRect:(CGRect)rect
+{
+    CGRect currentFrame=layer.frame;
+    [layer setFrame:CGRectMake(currentFrame.origin.x+rect.origin.x, currentFrame.origin.y+rect.origin.y, currentFrame.size.width*rect.size.width, currentFrame.size.height*rect.size.height)];
 }
 
 -(void)setBounds:(CGRect)bounds
@@ -172,12 +289,11 @@
 
 +(imageEditorView*)sharedInstance
 {
-    static imageEditorView *one=nil;
-    static dispatch_once_t oncetoken;
-    dispatch_once(&oncetoken, ^{
-        one=[[self alloc] init];
-    });
-    return one;
+    if(sharedInstance==nil)
+    {
+        sharedInstance=[[self alloc] init];
+    }
+    return sharedInstance;
 }
 
 -(CGSize)size
@@ -196,7 +312,6 @@
 
 -(void)addTextLayerWithThumbnail:(smartLayerThumbnail*)nail
 {
-    [self beginTextEditing];
     NSBlockOperation *blockop=[NSBlockOperation blockOperationWithBlock:^{
         while(!hasTranferredText)
         {
@@ -210,83 +325,20 @@
             [self pushSmartLayer:newlayer];
         }];
         [block setCompletionBlock:^{
-            [self endTextEditing];
         }];
         [[NSOperationQueue mainQueue] addOperation:block];
     }];
     [[NSOperationQueue new] addOperation:blockop];
 }
 
--(void)beginTextEditing
+-(void)setTitleString:(NSString *)string
 {
-    hasTranferredText=NO;
-    UIView *shade=[[UIView alloc] initWithFrame:self.bounds];
-    [shade.layer setBackgroundColor:[UIColor blackColor].CGColor];
-    [shade setTintColor:[UIColor blackColor]];
-    [shade.layer setOpacity:.5];
-    UITextView *editor=[[UITextView alloc] initWithFrame:shade.bounds];
-    [shade addSubview:editor];
-    [shade bringSubviewToFront:editor];
-    [editor setTextColor:[UIColor blackColor]];
-    [editor setFont:[UIFont fontWithName:@"Keep Calm" size:32]];
-    [editor setReturnKeyType:UIReturnKeyDone];
-    [self addSubview:shade];
-    [self bringSubviewToFront:shade];
-    editor.delegate=self;
-    [editor becomeFirstResponder];
-    
-    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textEditingLayerTapped:)];
-    [editor addGestureRecognizer:tap];
-    
-    textInputView=shade;
-    //[shade setFrame:CGRectMake(shade.frame.origin.x, shade.frame.origin.y, shade.frame.size.width, self.superview.frame.size.height-self.frame.origin.y-keyboardFrame.size.height)];
+    [titleText setText:string];
 }
 
--(IBAction)textEditingLayerTapped:(UITapGestureRecognizer*)tap
+-(void)setBodyString:(NSString *)string
 {
-    UITextView *tView=(UITextView*)tap.view;
-    if(![tView.text isEqualToString:@""])
-    {
-        [self shouldEndTextEditing];
-    }
-}
-
--(void)shouldEndTextEditing
-{
-    hasTranferredText=YES;
-}
-
--(void)endTextEditing
-{
-    if(textInputView!=nil)
-    {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[textInputView.subviews firstObject] endEditing:YES];
-            [textInputView removeFromSuperview];
-            textInputView=nil;
-            [(smartTextLayer*)[self selectedLayer] centerView];
-        }];
-    }
-}
-
-//TextView delegate methods
--(void)textViewDidChange:(UITextView *)textView
-{
-    if([[textView.text substringFromIndex:textView.text.length-1] isEqualToString:@"\n"])
-    {
-        [textView setText:[textView.text substringToIndex:textView.text.length-1]];
-        [self textViewDidEndEditing:textView];
-    }
-}
-
--(void)textViewDidEndEditing:(UITextView *)textView
-{
-    [self shouldEndTextEditing];
-}
-
--(void)textViewDidBeginEditing:(UITextView *)textView
-{
-    
+    [bodyText setText:string];
 }
 
 //Managing view stack
@@ -294,7 +346,7 @@
 {
     smartLayer *adjusted=layer;
     adjusted.stackIndex=layerStack.count;
-    [self.layer addSublayer:adjusted];
+    [self.layer insertSublayer:adjusted atIndex:0];
     NSMutableArray *temp=[NSMutableArray arrayWithArray:layerStack];
     [temp addObject:adjusted];
     layerStack=temp;
@@ -387,12 +439,11 @@
 }
 
 //Reset layers, in case editing is cancelled
--(void)reset
++(void)reset
 {
-    while (layerStack.count>0) {
-        [self popSmartLayer];
-    }
-    baseLayer=nil;
+    [sharedInstance removeFromSuperview];
+    CGImageRelease((CGImageRef)sharedInstance->baseLayer.contents);
+    sharedInstance=nil;
 }
 
 -(UIImage*)currentImage
@@ -422,6 +473,21 @@
     UIGraphicsEndImageContext();
     
     return  flyer;
+}
+
+-(void)setBorderLayer:(smartBorderLayer*)layer
+{
+    borderLayer=layer;
+}
+
+-(smartTextLayer*)titleLayer
+{
+    return titleText;
+}
+
+-(smartTextLayer*)bodyLayer
+{
+    return bodyText;
 }
 
 @end

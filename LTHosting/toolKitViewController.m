@@ -56,11 +56,9 @@
 
 -(void)configureView
 {
-    [self.view setBackgroundColor:[UIColor darkGrayColor]];
+    [self.view setBackgroundColor:[UIColor clearColor]];
     activeThumbnails=[[NSArray alloc] init];
-    [self setPlaceHolders];
     [self setToolBar];
-    [_toolBar setUserInteractionEnabled:NO];
 }
 
 -(void)setPlaceHolders
@@ -188,13 +186,13 @@
     //NSLog(@"%@ selected",tool);
     popupToolView *new;
     NSString *option=_tools[[view selectedSegmentIndex]];
-    CGRect newRect=CGRectMake(thumbnailBorderWidth, view.frame.origin.y+view.frame.size.height+thumbnailBorderWidth, view.frame.size.width, thumbnailwidth);
+    CGRect newRect=CGRectMake(thumbnailBorderWidth, thumbnailBorderWidth*2+_toolBar.frame.size.height, self.view.frame.size.width-2*thumbnailBorderWidth, self.view.frame.size.height-thumbnailBorderWidth*3-_toolBar.frame.size.height);
     if([self class]==[textToolViewController class])
     {
         if([option isEqualToString:@"Color"])
         {
             new=[[colorPopupToolView alloc] initWithFrame:newRect];
-            [new configureWithToolType:LTpopupColorTool];
+            [new configureWithToolType:LTpopupBorderColorTool];
         }
         else if([option isEqualToString:@"Font"])
         {
@@ -210,20 +208,15 @@
     }
     else
     {
-        if([option isEqualToString:@"Width"])
+        if([option isEqualToString:@"Shade"])
         {
-            new=[[popupToolView alloc] initWithFrame:newRect];
-            [new configureWithToolType:LTpopupBorderWidthTool];
-        }
-        else if([option isEqualToString:@"Roundness"])
-        {
-            new=[[popupToolView alloc] initWithFrame:newRect];
-            [new configureWithToolType:LTpopupCornerRadiusTool];
+            new=[[colorPopupToolView alloc] initWithFrame:newRect];
+            [new configureWithToolType:LTpopupBorderShadeTool];
         }
         else if([option isEqualToString:@"Color"])
         {
             new=[[colorPopupToolView alloc] initWithFrame:newRect];
-            [new configureWithToolType:LTpopupColorTool];
+            [new configureWithToolType:LTpopupBorderColorTool];
         }
 
     }
@@ -231,8 +224,10 @@
     [self.view addSubview:new];
     [self.view bringSubviewToFront:new];
     _current=new;
+    _current.alpha=1.0f;
     [_current popIntoView];
     [self setIsUsingTool:YES];
+    [self.view layoutIfNeeded];
     
 }
 

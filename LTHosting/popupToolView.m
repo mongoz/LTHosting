@@ -33,15 +33,11 @@
 
 -(id)initWithFrame:(CGRect)frame
 {
+    NSLog(@"init");
     fullFrame=frame;
     inset=8;
     
     self=[super initWithFrame:frame];
-    _responder=[[imageEditorView sharedInstance] selectedLayer];
-    if(_responder==nil)
-    {
-        return self;
-    }
     
     [self.layer setMasksToBounds:YES];
     [self.layer setBackgroundColor:[UIColor whiteColor].CGColor];
@@ -56,8 +52,6 @@
     [self setUserInteractionEnabled:YES];
     hasPopped=NO;
     
-    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(testing:)];
-    [self addGestureRecognizer:tap];
     return self;
 }
 
@@ -103,6 +97,7 @@
 
 -(void)popIntoView
 {
+    NSLog(@"pop in");
     if(hasPopped)
     {
         return;
@@ -118,6 +113,7 @@
 
 -(void)popOutOfView
 {
+    NSLog(@"pop out");
     if(!hasPopped)
     {
         return;
@@ -136,6 +132,7 @@
 
 -(void)configureWithToolType:(popupType)type
 {
+    _type=type;
     _responder=[[imageEditorView sharedInstance] selectedLayer];
     switch (type) {
         case LTpopupBorderWidthTool:{
@@ -156,6 +153,12 @@
             
             break;}
     }
+}
+
+-(void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    NSLog(@"set frame: %f, %f, %f, %f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
 }
 
 @end

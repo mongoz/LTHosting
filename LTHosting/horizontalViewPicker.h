@@ -22,7 +22,23 @@
 
 @property (strong, nonatomic) id<horizontalViewPickerDelegate> hDelegate;
 
+-(UIColor*)labelTextColor;
+
+-(void)setLabelTextColor:(UIColor*)color;
+
+-(UIFont*)labelFont;
+
+-(CGFloat)heightWidthRatio;
+
+-(void)setHeightWidthRatio:(CGFloat)ratio;
+
+-(void)setLabelFont:(UIFont*)font;
+
 -(void)reloadData;
+
+-(NSInteger)selectedIndex;
+
+-(void)selectRowAtIndex:(NSInteger)index;
 
 @end
 
@@ -34,6 +50,11 @@
 
 -(NSInteger)numberOfViews;
 
+-(BOOL)shouldUseLabels;
+
+@optional
+-(NSString*)labelForIndex:(NSInteger)index;
+
 @end
 
 @protocol horizontalViewPickerDelegate <UIScrollViewDelegate>
@@ -41,5 +62,11 @@
 @required
 
 -(void)horizontalPickerDidSelectViewAtIndex:(NSInteger)index;
+
+-(BOOL)shouldHandleViewResizing;
+
+@optional
+//Only implement this method if you return 'YES' for shouldHandleViewResizing.  Otherwise, it will never be called.
+-(UIView*)view:(UIView*)view inFrame:(CGRect)frame;
 
 @end

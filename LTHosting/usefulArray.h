@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface usefulArray : NSArray
 
 +(NSArray<NSString*>*)bodyFontPostScriptNames;
+
++(NSArray<UIImage*>*)borderImages;
+
++(NSArray<NSString*>*)borderNames;
+
++(NSDictionary<NSString*,UIImage*>*)borderImageNameDict;
 
 @end

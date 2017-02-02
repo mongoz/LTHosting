@@ -34,6 +34,7 @@
 
 -(void)configureWithToolType:(popupType)type
 {
+    self.type=type;
     self.responder=[[imageEditorView sharedInstance] selectedLayer];
     if(type==LTpopupFontTool)
     {
@@ -80,6 +81,16 @@
     
     [self popOutOfView];
     [self.controller.toolBar setSelectedSegmentIndex:-1];
+}
+
+-(BOOL)shouldHandleViewResizing
+{
+    return NO;
+}
+
+-(BOOL)shouldUseLabels
+{
+    return NO;
 }
 
 @end

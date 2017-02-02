@@ -8,6 +8,11 @@
 
 #import "colorPopupToolView.h"
 
+@interface colorPopupToolView(){
+    UIButton *noColorButton;
+}
+@end
+
 @implementation colorPopupToolView
 
 /*
@@ -20,23 +25,44 @@
 
 -(id)initWithFrame:(CGRect)frame
 {
+    noColorButton=nil;
     self=[super initWithFrame:frame];
     [self.slider setContinuous:YES];
     [self.slider setMinimumValue:0];
     [self.slider setMaximumValue:1];
-    [self addGradientToSlider];
+    [self setNoColorButton];
     return self;
 }
 
--(void)addGradientToSlider
+-(void)setNoColorButton
 {
-    //UIView *view=[self.slider.subviews objectAtIndex:0];
-    //NSLog(@"view class: %@",view.class);
-    //UIImageView *before=[view.subviews objectAtIndex:0];
-    CAGradientLayer *gradientLayer=[CAGradientLayer layer];
-    // Create colors using hues in +5 increments
+    CGFloat inset=8;
+    noColorButton=[[UIButton alloc] initWithFrame:CGRectMake(self.slider.frame.origin.x, self.slider.frame.origin.y+inset, self.slider.frame.size.height-inset*2, self.slider.frame.size.height-inset*2)];
+    [noColorButton.layer setBorderColor:[UIColor blackColor].CGColor];
+    [noColorButton.layer setBorderWidth:2];
+    [noColorButton.layer setMasksToBounds:YES];
+    [noColorButton.layer setCornerRadius:noColorButton.frame.size.height/2];
+    [noColorButton addTarget:self action:@selector(noColor:) forControlEvents:UIControlEventTouchUpInside];
+    [self.slider setFrame:CGRectMake(noColorButton.frame.origin.x*2+noColorButton.frame.size.width, noColorButton.frame.origin.y-inset, self.slider.frame.size.width-(noColorButton.frame.origin.x+noColorButton.frame.size.width),self.slider.frame.size.height)];
+    [self addSubview:noColorButton];
+}
+
+-(IBAction)noColor:(UIButton*)noColorButtona
+{
+    [self.responder removeColor];
+    [noColorButtona.layer setBackgroundColor:[UIColor clearColor].CGColor];
+    [self.slider setValue:0.0f animated:YES];
+}
+
+-(void)addColorGradientToSlider
+{
+    [self addGradientToSliderWithColors:[self colorArray]];
+}
+
+-(NSArray<id>*)colorArray
+{
     NSMutableArray *colors = [NSMutableArray array];
-    for (NSInteger hue = 0; hue<=360; hue += 5) {
+    for (NSInteger hue = 0; hue<=300; hue += 5) {
         
         UIColor *color;
         color = [UIColor colorWithHue:1.0 * hue / 360.0
@@ -45,6 +71,24 @@
                                 alpha:1.0];
         [colors addObject:(id)[color CGColor]];
     }
+    return  colors;
+}
+
+-(NSArray<id>*)shadeArray
+{
+    NSMutableArray *colors = [NSMutableArray array];
+    for (NSInteger hue = 360; hue>=0; hue -= 5) {
+        
+        UIColor *color;
+        color = [UIColor colorWithWhite:hue/360.0f alpha:1.0f];
+        [colors addObject:(id)[color CGColor]];
+    }
+    return colors;
+}
+
+-(void)addGradientToSliderWithColors:(NSArray<id>*)colors
+{
+    CAGradientLayer *gradientLayer=[CAGradientLayer layer];
     [gradientLayer setColors:[NSArray arrayWithArray:colors]];
     [gradientLayer setStartPoint:CGPointMake(0.0f, 0.5f)];
     [gradientLayer setEndPoint:CGPointMake(1.0f, 0.5f)];
@@ -54,6 +98,8 @@
     gradientFrame=CGRectMake(0, self.slider.bounds.size.height/2-gradientHeight/2, gradientFrame.size.width, gradientHeight);
     [gradientLayer setFrame:gradientFrame];
     [gradientLayer setCornerRadius:gradientHeight/2];
+    [gradientLayer setBorderColor:[UIColor blackColor].CGColor];
+    [gradientLayer setBorderWidth:2.0f];
     
     UIImage *layerImage=[UIImage imageForLayer:gradientLayer];
     layerImage=[layerImage resizableImageWithCapInsets:UIEdgeInsetsZero resizingMode:UIImageResizingModeTile];
@@ -61,17 +107,50 @@
     [self.slider setMinimumTrackImage:layerImage forState:UIControlStateNormal];
 }
 
+-(void)addShadeGradientToSlider
+{
+    [self addGradientToSliderWithColors:[self shadeArray]];
+    
+}
+
 -(void)configureWithToolType:(popupType)type
 {
+    self.type=type;
     self.responder=[[imageEditorView sharedInstance] selectedLayer];
     switch (type) {
-        case LTpopupColorTool:{
-            [self addGradientToSlider];
+        case LTpopupBorderColorTool:{
+            self.responder=[[imageEditorView sharedInstance] borderLayer];
+            [self addColorGradientToSlider];
             CGFloat hue;
-            [[UIColor colorWithCGColor:[self.responder color]] getHue:&hue saturation:nil brightness:nil alpha:nil];
-            [self.slider setValue:hue];
+            CGFloat alpha;
+            [[UIColor colorWithCGColor:[self.responder color]] getHue:&hue saturation:nil brightness:nil alpha:&alpha];
+            if(alpha!=0)
+            {
+                [noColorButton.layer setBackgroundColor:[self.responder color]];
+                [self.slider setValue:hue];
+            }
+            else
+            {
+                [self.slider setValue:0.0f];
+            }
             break;}
-            
+        case LTpopupBorderShadeTool:{
+            self.responder=[[imageEditorView sharedInstance] borderLayer];
+            [self addShadeGradientToSlider];
+            CGFloat hue;
+            CGFloat alpha;
+            [[UIColor colorWithCGColor:[self.responder color]] getHue:nil saturation:nil brightness:&hue alpha:&alpha];
+            hue=1.0f-hue;
+            if(alpha!=0)
+            {
+                [noColorButton.layer setBackgroundColor:[self.responder color]];
+                [self.slider setValue:hue];
+            }
+            else
+            {
+                [self.slider setValue:0.0f];
+            }
+        }
         default:{
             break;}
     }
@@ -79,7 +158,56 @@
 
 -(IBAction)sliderChanged:(UISlider*)slider
 {
-    [self.responder colorDidChangeTo:[UIColor colorWithHue:1.0f*[slider value] saturation:1.0f brightness:1.0f alpha:1.0f].CGColor];
+    UIColor *current=[UIColor colorWithCGColor:[self.responder color]];
+    CGFloat sat;
+    CGFloat bright;
+    CGFloat alph;
+    CGFloat hue;
+    [current getHue:&hue saturation:&sat brightness:&bright alpha:&alph];
+    
+    switch(self.type)
+    {
+        case LTpopupBorderColorTool:{
+            if([current isEqual:[UIColor clearColor]])
+            {
+                bright=1.0f;
+                sat=1.0f;
+            }
+            else if(sat==0)
+            {
+                sat=1.0f;
+            }
+            CGColorRef col=[UIColor colorWithHue:5.0f/6.0f*[slider value] saturation:sat brightness:bright alpha:1.0f].CGColor;
+            [self.responder colorDidChangeTo:col];
+            [noColorButton.layer setBackgroundColor:col];
+            break;
+        }
+        case LTpopupBorderShadeTool:{
+            CGColorRef col;
+            if([current isEqual:[UIColor clearColor]]||(sat==0&&hue==0))
+            {
+                bright=1.0f;
+                sat=0.0f;
+                col=[UIColor colorWithWhite:1.0f-1.0f*[slider value] alpha:1.0f].CGColor;
+                CGFloat hue, alpha, brightness, sat;
+                [[UIColor colorWithWhite:1.0f-1.0f*[slider value] alpha:1.0f] getHue:&hue saturation:&sat brightness:&brightness alpha:&alpha];
+                //NSLog(@"%f, %f, %f, %f",hue,alpha,brightness,sat);
+                
+            }
+            else
+            {
+                sat=1.0f;
+                col=[UIColor colorWithHue:hue saturation:sat brightness:1.0f-1.0f*[slider value] alpha:1.0f].CGColor;
+            }
+            [self.responder colorDidChangeTo:col];
+            [noColorButton.layer setBackgroundColor:col];
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
 }
 
 @end

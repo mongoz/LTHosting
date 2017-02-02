@@ -29,8 +29,7 @@
 -(void)generateTools
 {
     NSMutableArray *temp=[[NSMutableArray alloc] init];
-    [temp addObject:@"Width"];
-    [temp addObject:@"Roundness"];
+    [temp addObject:@"Shade"];
     [temp addObject:@"Color"];
     self.tools=temp;
 }

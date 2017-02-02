@@ -26,4 +26,6 @@
 
 @property (readwrite, nonatomic) CGFloat currentInset;
 
+-(void)removeColor;
+
 @end

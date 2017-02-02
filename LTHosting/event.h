@@ -38,4 +38,6 @@
 
 -(void)print;
 
+-(NSAttributedString*)flyerBodyForCurrentState;
+
 @end

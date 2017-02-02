@@ -11,7 +11,9 @@
 
 @interface smartBorderLayer(){
     CGFloat currentCornerRadius;
+    CALayer *mask;
     
+    BOOL isMasking;
 }
 @end
 
@@ -26,6 +28,9 @@
     currentCornerRadius=_defaultCornerRadius;
     [self setShouldRasterize:YES];
     [self setRasterizationScale:10.0f];
+    mask=[[CALayer alloc] init];
+    self.mask=mask;
+    isMasking=NO;
     return self;
 }
 
@@ -36,12 +41,9 @@
     new.parentRect=parentrect;
     
     new.backgroundColor=nil;
-    new.borderColor=[UIColor yellowColor].CGColor;
-    new.borderWidth=new.defaultBorderWidth;
     new.cornerRadius=new.defaultCornerRadius;
     [new setFrame:parentrect];
-    [new setContentsGravity:kCAGravityCenter];
-    [new incrementInsetBy:new.defaultInset];
+    [new setContentsGravity:kCAGravityResizeAspect];
     return new;
 }
 
@@ -92,14 +94,45 @@
 
 -(CGColorRef)color
 {
-    return self.borderColor;
+    return self.backgroundColor;
 }
 
 -(void)setColor:(CGColorRef)color
 {
+    if(!isMasking)
+    {
+        isMasking=YES;
+        [self setContents:nil];
+    }
     [super setColor:color];
-    [self setBorderColor:color];
+    self.backgroundColor=color;
+    
 }
 
+-(void)setContents:(id)contents
+{
+    [super setContents:contents];
+    if(!isMasking)
+    {
+        [mask setContents:contents];
+    }
+    else
+    {
+        isMasking=NO;
+    }
+    [self setBackgroundColor:[UIColor clearColor].CGColor];
+}
+
+-(void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    [mask setFrame:self.bounds];
+}
+
+-(void)removeColor
+{
+    [self setContents:mask.contents];
+    [self setBackgroundColor:[UIColor clearColor].CGColor];
+}
 
 @end

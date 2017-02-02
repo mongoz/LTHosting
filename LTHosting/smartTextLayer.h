@@ -12,6 +12,10 @@
 
 +(smartTextLayer*)newSmartTextLayerInParentRect:(CGRect)parentRect withTextView:(UITextView*)textView;
 
+-(id)initWithParentRect:(CGRect)parentRect attributedString:(NSAttributedString*)string;
+
+-(id)initWithParentRect:(CGRect)parentRect attributedString:(NSAttributedString*)string font:(UIFont*)font;
+
 @property (strong, nonatomic) UILabel *textLayer;
 
 @property (strong, nonatomic) UITextView *sourceTextView;
@@ -19,5 +23,7 @@
 -(void)centerView;
 
 -(NSTextAlignment)textAlignment;
+
+-(void)setText:(NSString*)text;
 
 @end

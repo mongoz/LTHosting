@@ -31,6 +31,7 @@
     self=[super init];
     numberMovements=0;
     movementSum=CGSizeZero;
+    _isStatic=NO;
     return self;
 }
 
@@ -43,11 +44,19 @@
 
 -(void)moveBy:(CGSize)distance
 {
+    if(_isStatic)
+    {
+        return;
+    }
     [self moveBy:distance interval:.25];
 }
 
 -(void)moveBy:(CGSize)distance interval:(NSTimeInterval)interval
 {
+    if(_isStatic)
+    {
+        return;
+    }
     numberMovements++;
     movementSum.width+=distance.width;
     movementSum.height+=distance.height;
@@ -75,7 +84,10 @@
 
 -(void)setColor:(CGColorRef)color
 {
-    [_mirror layerDidChange:self];
+    if(_mirror!=nil)
+    {
+        [_mirror layerDidChange:self];
+    }
 }
 
 -(void)setFrame:(CGRect)frame
@@ -84,7 +96,6 @@
     [super setFrame:frame];
     [self setCornerRadius:self.cornerRadius/scale];
     self.centerPoint=CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
-    [_mirror layerDidChange:self];
 }
 
 -(void)setMirror:(id<smartLayerMirror>)mirror
@@ -95,6 +106,10 @@
 
 -(void)scaleBy:(CGFloat)scale
 {
+    if(_isStatic)
+    {
+        return;
+    }
     CGSize newSize=CGSizeMake(self.frame.size.width*scale, self.frame.size.height*scale);
     [self setFrame:CGRectMake(_centerPoint.x-newSize.width/2, _centerPoint.y-newSize.height/2, newSize.width, newSize.height) animated:YES];
 }
@@ -102,8 +117,11 @@
 -(void)removeFromSuperlayer
 {
     [super removeFromSuperlayer];
-    [_mirror layerWasDeleted:self];
-    _mirror=nil;
+    if(_mirror!=nil)
+    {
+        [_mirror layerWasDeleted:self];
+        _mirror=nil;
+    }
 }
 
 //popupToolResponder methods
@@ -120,19 +138,33 @@
 -(void)setColorValue:(float)val
 {
     colorValue=val;
-    [_mirror layerDidChange:self];
+    if(_mirror!=nil)
+    {
+        [_mirror layerDidChange:self];
+    }
 }
 
 -(void)setBorderWidth:(CGFloat)borderWidth
 {
     [super setBorderWidth:borderWidth];
-    [_mirror layerDidChange:self];
+    if(_mirror!=nil)
+    {
+        [_mirror layerDidChange:self];
+    }
 }
 
 -(void)setCornerRadius:(CGFloat)cornerRadius
 {
     [super setCornerRadius:cornerRadius];
-    [_mirror layerDidChange:self];
+    if(_mirror!=nil)
+    {
+        [_mirror layerDidChange:self];
+    }
+}
+
+-(void)setContents:(id)contents
+{
+    [super setContents:contents];
 }
 
 @end

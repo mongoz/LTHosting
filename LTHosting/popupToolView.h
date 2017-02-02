@@ -14,9 +14,10 @@
 typedef enum sliderPopUpType{
     LTpopupBorderWidthTool,
     LTpopupCornerRadiusTool,
-    LTpopupColorTool,
+    LTpopupBorderColorTool,
     LTpopupFontTool,
-    LTpopupTextAlignmentTool
+    LTpopupTextAlignmentTool,
+    LTpopupBorderShadeTool,
 } popupType;
 
 @interface popupToolView : UIView
@@ -27,13 +28,13 @@ typedef enum sliderPopUpType{
 
 @property (strong, nonatomic) toolKitViewController *controller;
 
+@property (readwrite) popupType type;
+
 -(void)popIntoView;
 
 -(void)popOutOfView;
 
 -(void)configureWithToolType:(popupType)type;
-
-@property popupType toolType;
 
 @property UISlider *slider;
 

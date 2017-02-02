@@ -8,11 +8,8 @@
 
 #import "smartTextLayer.h"
 #import "commonUseFunctions.h"
-#import "collapsingFrameQueue.h"
 @interface smartTextLayer(){
     CGFloat currentScale;
-    
-    collapsingFrameQueue *frameChangeManager;
     
     BOOL hasTightened;
     
@@ -33,13 +30,41 @@
     _textLayer=nil;
     _sourceTextView=nil;
     currentScale=1.0f;
-    frameChangeManager=nil;
     hasTightened=NO;
     numScalers=0;
     scalerProduct=1.0f;
     cumScale=1.0f;
     numMovers=0;
     movementSum=CGSizeZero;
+    return self;
+}
+
+-(id)initWithParentRect:(CGRect)parentRect attributedString:(NSAttributedString *)string
+{
+    self=[self initWithParentRect:parentRect attributedString:string font:nil];
+    return self;
+}
+
+-(id)initWithParentRect:(CGRect)parentRect attributedString:(NSAttributedString *)string font:(UIFont *)font
+{
+    self=[self init];
+    self.parentRect=parentRect;
+    [self setFrame:parentRect];
+    
+    self.textLayer=[[UILabel alloc] initWithFrame:self.bounds];
+    [self.textLayer setLineBreakMode:NSLineBreakByWordWrapping];
+    [self.textLayer setNumberOfLines:0];
+    [self.textLayer setLineBreakMode:NSLineBreakByClipping];
+    [self.textLayer setTextAlignment:NSTextAlignmentLeft];
+    [self.textLayer setAttributedText:string];
+    if(font!=nil)
+    {
+        [self.textLayer setFont:font];
+    }
+    [self addSublayer:self.textLayer.layer];
+    [self setFrame:CGRectZero];
+    [self tightenBoundingRect];
+    [self setMasksToBounds:NO];
     return self;
 }
 
@@ -60,10 +85,9 @@
     //[new addSublayer:new.textLayer];
     //[new setSourceTextView:[textView copy]];
     //[new addSublayer:new.sourceTextView.layer];
-    [new setContents:[UIImage imageForLayer:textView.layer]];
     [new setFrame:CGRectZero];
     [new tightenBoundingRect];
-    [new display];
+    [new displayIfNeeded];
     [new setMasksToBounds:NO];
     return new;
 }
@@ -84,7 +108,7 @@
     [self setFrame:adjustedRect];
     CGRect newRect=[_textLayer textRectForBounds:self.bounds limitedToNumberOfLines:0];
     
-    [self setFrame:CGRectMake(startRect.origin.x, startRect.origin.y, newRect.size.width, newRect.size.height)];
+    [self setFrame:CGRectMake(startRect.origin.x, startRect.origin.y, startRect.size.width, newRect.size.height)];
     hasTightened=YES;
     //[_textLayer setAdjustsFontSizeToFitWidth:YES];
     [_textLayer setMinimumScaleFactor:1/10];
@@ -169,6 +193,15 @@
 -(NSTextAlignment)textAlignment
 {
     return _textLayer.textAlignment;
+}
+
+-(void)setText:(NSString *)text
+{
+    [_textLayer setText:text];
+    while([_textLayer attributedText].size.width*_textLayer.attributedText.size.height>self.frame.size.width*self.frame.size.height)
+    {
+        [_textLayer setFont:[_textLayer.font fontWithSize:_textLayer.font.pointSize-1.0f]];
+    }
 }
 
 @end
