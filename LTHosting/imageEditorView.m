@@ -34,6 +34,12 @@
     
     smartTextLayer *bodyText;
     smartTextLayer *titleText;
+    
+    CGRect titleFrame;
+    
+    BOOL isTitleEditing;
+    
+    NSDate *lastFrameUpdate;
 }
 @end
 
@@ -138,20 +144,54 @@ static imageEditorView *sharedInstance=nil;
     NSAttributedString *body=[[NSAttributedString alloc] initWithAttributedString:[[event sharedInstance] flyerBodyForCurrentState]];
     NSAttributedString *title=[[NSAttributedString alloc] initWithString:[[event sharedInstance] name]];
     CGFloat margin=44;
-    CGRect titleFrame=CGRectMake(margin, margin, self.frame.size.width-margin*2, self.frame.size.height-margin*2);
+    titleFrame=CGRectMake(margin, margin, self.frame.size.width-margin*2, self.frame.size.height-margin*2);
     titleText=[[smartTextLayer alloc] initWithParentRect:titleFrame attributedString:title font:titleFont];
-    
+    [titleText.textLayer setFont:[usefulArray bodyFontsWithSize:titleText.textLayer.font.pointSize][1]];
+    titleText.mirror=self;
+    titleText.flexibleHeight=YES;
+    [titleText sizeToFit];
+    titleFrame=titleText.frame;
     CGFloat seperation=8;
     CGRect bodyFrame=CGRectMake(titleText.frame.origin.x, titleText.frame.origin.y+titleText.frame.size.height+seperation, self.frame.size.width-margin*2, self.frame.size.height-(titleText.frame.origin.y+titleText.frame.size.height+margin+seperation));
     bodyText=[[smartTextLayer alloc] initWithParentRect:bodyFrame attributedString:body font:bodyFont];
-    
+    [bodyText.textLayer setFont:[usefulArray bodyFontsWithSize:bodyText.textLayer.font.pointSize][1]];
     [titleText.textLayer setTextColor:[UIColor whiteColor]];
     [bodyText.textLayer setTextColor:[UIColor whiteColor]];
     [titleText.textLayer setTextAlignment:NSTextAlignmentCenter];
     [bodyText.textLayer setTextAlignment:NSTextAlignmentCenter];
-    
+    bodyText.frame=bodyText.frame;
     [self.layer addSublayer:titleText];
     [self.layer addSublayer:bodyText];
+    lastFrameUpdate=[NSDate date];
+}
+
+-(void)layerDidChange:(smartLayer*)layer
+{
+    NSTimeInterval refInterval=.1;
+    if(layer==titleText)
+    {
+        if([[NSDate date] timeIntervalSinceDate:lastFrameUpdate]>refInterval)
+        {
+            lastFrameUpdate=[NSDate date];
+            titleFrame=layer.frame;
+            CGFloat seperation=8;
+            CGFloat margin=44;
+            CGFloat newHeight=self.frame.size.height-(margin*2+titleFrame.size.height+seperation);
+            CGRect bodyFrame=CGRectMake(titleFrame.origin.x, margin+titleFrame.size.height+seperation, self.frame.size.width-margin*2, newHeight);
+            [bodyText setFrame:bodyFrame];
+            [bodyText sizeToFit];
+        }
+    }
+}
+
+-(void)layerWasCreated:(smartLayer*)layer
+{
+    
+}
+
+-(void)layerWasDeleted:(smartLayer*)layer
+{
+    
 }
 
 -(UIFont*)defaultBodyFont
@@ -168,7 +208,7 @@ static imageEditorView *sharedInstance=nil;
 {
     if(self=[super init])
     {
-        
+        isTitleEditing=NO;
         UIImage *chosenImage=[[event sharedInstance] image];
         baseLayer=[CALayer layer];
         [baseLayer setAffineTransform:CGAffineTransformMakeRotation(M_PI_2)];
@@ -465,8 +505,8 @@ static imageEditorView *sharedInstance=nil;
     }
     newFrame=CGRectMake(myFrame.origin.x+myFrame.size.width/2*(1-xScale/scale), myFrame.size.height/2*(1-yScale/scale) , self.frame.size.width*(xScale/scale), self.frame.size.height*(yScale/scale));
     
-    UIGraphicsBeginImageContextWithOptions(newFrame.size, NO, scale);
-    [self drawViewHierarchyInRect:newFrame afterScreenUpdates:NO];
+    UIGraphicsBeginImageContextWithOptions(self.frame.size, NO, scale);
+    [self drawViewHierarchyInRect:self.frame afterScreenUpdates:YES];
     //[layer.presentationLayer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *flyer = UIGraphicsGetImageFromCurrentImageContext();
     

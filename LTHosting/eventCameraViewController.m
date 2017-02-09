@@ -162,8 +162,7 @@
 }
 
 - (IBAction)backPressed:(id)sender {
-    NSLog(@"pressed");
-    [self performSegueWithIdentifier:@"unwindFromImageOption" sender:self];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (IBAction)switchCameraView:(id)sender {

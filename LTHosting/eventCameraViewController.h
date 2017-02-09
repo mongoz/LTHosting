@@ -41,5 +41,7 @@
 
 @property (strong, nonatomic) IBOutlet UIImageView *libraryBarImageView;
 
+-(void)prepareForUnwind:(UIStoryboardSegue*)seg;
+
 @end
 

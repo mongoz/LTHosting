@@ -10,7 +10,9 @@
 		088B6CD9DE1AF1D472AF893F /* libPods-LTHostingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E4FD975F0668A2ACE13B12 /* libPods-LTHostingUITests.a */; };
 		1E4C027B53E604A651CB310C /* libPods-LTHosting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EFCC24B4C17C83D5A762A5 /* libPods-LTHosting.a */; };
 		3229AF921E1B500400405137 /* dateSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3229AF911E1B500400405137 /* dateSliderViewController.m */; };
-		3234982C1E42D6DD000148DF /* SMVerticalSegmentedControl in Resources */ = {isa = PBXBuildFile; fileRef = 3234982B1E42D6DD000148DF /* SMVerticalSegmentedControl */; };
+		323498641E481EB9000148DF /* eventsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323498631E481EB8000148DF /* eventsNavigationController.m */; };
+		3234986A1E482985000148DF /* flexibleIlluminatedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 323498691E482985000148DF /* flexibleIlluminatedButton.m */; };
+		3234986D1E48443D000148DF /* textSizePopupToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3234986C1E48443D000148DF /* textSizePopupToolView.m */; };
 		323876091E243C26000ECEEB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876081E243C26000ECEEB /* AVFoundation.framework */; };
 		3238760F1E248E14000ECEEB /* eventCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3238760E1E248E14000ECEEB /* eventCamera.m */; };
 		323876111E249A98000ECEEB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876101E249A98000ECEEB /* CoreImage.framework */; };
@@ -40,6 +42,21 @@
 		327708181E2F3C6C000FE30A /* popupToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 327708171E2F3C6C000FE30A /* popupToolView.m */; };
 		3277081C1E3032BA000FE30A /* colorPopupToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277081B1E3032BA000FE30A /* colorPopupToolView.m */; };
 		3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277081E1E3037D5000FE30A /* commonUseFunctions.m */; };
+		3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6CD1E48766100042C26 /* navigationScrollView.m */; };
+		3290A6DA1E49381F00042C26 /* topGravityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6D91E49381F00042C26 /* topGravityView.m */; };
+		3290A6E31E496E0A00042C26 /* eventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6E21E496E0A00042C26 /* eventViewController.m */; };
+		3290A6F21E49BF9F00042C26 /* eventOptionVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6F11E49BF9F00042C26 /* eventOptionVIew.m */; };
+		3290A6F51E49C1A400042C26 /* stackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6F41E49C1A400042C26 /* stackView.m */; };
+		3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6F71E49CB2C00042C26 /* nameOptionView.m */; };
+		3290A6FB1E49D48800042C26 /* addressOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6FA1E49D48800042C26 /* addressOptionView.m */; };
+		3290A6FE1E49E0FD00042C26 /* aboutOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6FD1E49E0FD00042C26 /* aboutOptionView.m */; };
+		3290A7011E49F09400042C26 /* stackTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A7001E49F09400042C26 /* stackTableView.m */; };
+		3290A7061E49F70600042C26 /* datePickerOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A7051E49F70600042C26 /* datePickerOptionView.m */; };
+		3290A7091E49F8B800042C26 /* stackDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A7081E49F8B800042C26 /* stackDatePicker.m */; };
+		3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A70B1E4A51EC00042C26 /* pickerOptionView.m */; };
+		3290A7221E4A7E0D00042C26 /* switchOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A7211E4A7E0D00042C26 /* switchOptionView.m */; };
+		3290A7251E4AAEC500042C26 /* goOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A7241E4AAEC500042C26 /* goOptionView.m */; };
+		3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3290A7261E4AB91A00042C26 /* Unused.storyboard */; };
 		329889051E413EFC00397E3A /* border4 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329888FD1E413EFC00397E3A /* border4 copy.png */; };
 		329889061E413EFC00397E3A /* border5 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329888FE1E413EFC00397E3A /* border5 copy.png */; };
 		329889071E413EFC00397E3A /* border12 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329888FF1E413EFC00397E3A /* border12 copy.png */; };
@@ -94,7 +111,12 @@
 		3229AF901E1B500400405137 /* dateSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dateSliderViewController.h; sourceTree = "<group>"; };
 		3229AF911E1B500400405137 /* dateSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dateSliderViewController.m; sourceTree = "<group>"; };
 		3229AF941E1B501F00405137 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		3234982B1E42D6DD000148DF /* SMVerticalSegmentedControl */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SMVerticalSegmentedControl; sourceTree = "<group>"; };
+		323498621E481EB8000148DF /* eventsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventsNavigationController.h; sourceTree = "<group>"; };
+		323498631E481EB8000148DF /* eventsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventsNavigationController.m; sourceTree = "<group>"; };
+		323498681E482985000148DF /* flexibleIlluminatedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = flexibleIlluminatedButton.h; sourceTree = "<group>"; };
+		323498691E482985000148DF /* flexibleIlluminatedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flexibleIlluminatedButton.m; sourceTree = "<group>"; };
+		3234986B1E48443D000148DF /* textSizePopupToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textSizePopupToolView.h; sourceTree = "<group>"; };
+		3234986C1E48443D000148DF /* textSizePopupToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textSizePopupToolView.m; sourceTree = "<group>"; };
 		323876061E243B77000ECEEB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		323876081E243C26000ECEEB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3238760D1E248E14000ECEEB /* eventCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCamera.h; sourceTree = "<group>"; };
@@ -143,6 +165,35 @@
 		3277081B1E3032BA000FE30A /* colorPopupToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = colorPopupToolView.m; sourceTree = "<group>"; };
 		3277081D1E3037D5000FE30A /* commonUseFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonUseFunctions.h; sourceTree = "<group>"; };
 		3277081E1E3037D5000FE30A /* commonUseFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commonUseFunctions.m; sourceTree = "<group>"; };
+		3290A6CC1E48766100042C26 /* navigationScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navigationScrollView.h; sourceTree = "<group>"; };
+		3290A6CD1E48766100042C26 /* navigationScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navigationScrollView.m; sourceTree = "<group>"; };
+		3290A6D81E49381F00042C26 /* topGravityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = topGravityView.h; sourceTree = "<group>"; };
+		3290A6D91E49381F00042C26 /* topGravityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = topGravityView.m; sourceTree = "<group>"; };
+		3290A6E11E496E0A00042C26 /* eventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewController.h; sourceTree = "<group>"; };
+		3290A6E21E496E0A00042C26 /* eventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewController.m; sourceTree = "<group>"; };
+		3290A6F01E49BF9F00042C26 /* eventOptionVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionVIew.h; sourceTree = "<group>"; };
+		3290A6F11E49BF9F00042C26 /* eventOptionVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionVIew.m; sourceTree = "<group>"; };
+		3290A6F31E49C1A400042C26 /* stackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stackView.h; sourceTree = "<group>"; };
+		3290A6F41E49C1A400042C26 /* stackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stackView.m; sourceTree = "<group>"; };
+		3290A6F61E49CB2C00042C26 /* nameOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nameOptionView.h; sourceTree = "<group>"; };
+		3290A6F71E49CB2C00042C26 /* nameOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nameOptionView.m; sourceTree = "<group>"; };
+		3290A6F91E49D48800042C26 /* addressOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressOptionView.h; sourceTree = "<group>"; };
+		3290A6FA1E49D48800042C26 /* addressOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addressOptionView.m; sourceTree = "<group>"; };
+		3290A6FC1E49E0FD00042C26 /* aboutOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aboutOptionView.h; sourceTree = "<group>"; };
+		3290A6FD1E49E0FD00042C26 /* aboutOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = aboutOptionView.m; sourceTree = "<group>"; };
+		3290A6FF1E49F09400042C26 /* stackTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stackTableView.h; sourceTree = "<group>"; };
+		3290A7001E49F09400042C26 /* stackTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stackTableView.m; sourceTree = "<group>"; };
+		3290A7041E49F70600042C26 /* datePickerOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datePickerOptionView.h; sourceTree = "<group>"; };
+		3290A7051E49F70600042C26 /* datePickerOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = datePickerOptionView.m; sourceTree = "<group>"; };
+		3290A7071E49F8B800042C26 /* stackDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stackDatePicker.h; sourceTree = "<group>"; };
+		3290A7081E49F8B800042C26 /* stackDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = stackDatePicker.m; sourceTree = "<group>"; };
+		3290A70A1E4A51EB00042C26 /* pickerOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pickerOptionView.h; sourceTree = "<group>"; };
+		3290A70B1E4A51EC00042C26 /* pickerOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerOptionView.m; sourceTree = "<group>"; };
+		3290A7201E4A7E0D00042C26 /* switchOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = switchOptionView.h; sourceTree = "<group>"; };
+		3290A7211E4A7E0D00042C26 /* switchOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = switchOptionView.m; sourceTree = "<group>"; };
+		3290A7231E4AAEC500042C26 /* goOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goOptionView.h; sourceTree = "<group>"; };
+		3290A7241E4AAEC500042C26 /* goOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goOptionView.m; sourceTree = "<group>"; };
+		3290A7261E4AB91A00042C26 /* Unused.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unused.storyboard; sourceTree = "<group>"; };
 		329888FD1E413EFC00397E3A /* border4 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border4 copy.png"; sourceTree = "<group>"; };
 		329888FE1E413EFC00397E3A /* border5 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border5 copy.png"; sourceTree = "<group>"; };
 		329888FF1E413EFC00397E3A /* border12 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border12 copy.png"; sourceTree = "<group>"; };
@@ -260,6 +311,7 @@
 		323CF9441E280B2700A1A0A9 /* Main Options View */ = {
 			isa = PBXGroup;
 			children = (
+				32ADD0D71E18288800C42207 /* Event Options Table View Cells */,
 				32AF04A71E181DFC006D4E19 /* eventDetailViewController.h */,
 				32AF04A81E181DFC006D4E19 /* eventDetailViewController.m */,
 				32B1E67E1E1CDC8E00BF7DB9 /* addressSearchResultsViewController.h */,
@@ -286,6 +338,8 @@
 				324BC17A1E3808B900C9B629 /* fontPopupToolView.m */,
 				324BC1861E3841EF00C9B629 /* textAlignmentPopupToolView.h */,
 				324BC1871E3841EF00C9B629 /* textAlignmentPopupToolView.m */,
+				3234986B1E48443D000148DF /* textSizePopupToolView.h */,
+				3234986C1E48443D000148DF /* textSizePopupToolView.m */,
 				324BC17C1E380ADB00C9B629 /* horizontalViewPicker.h */,
 				324BC17D1E380ADB00C9B629 /* horizontalViewPicker.m */,
 				327708191E2F4139000FE30A /* popupToolResponder.h */,
@@ -322,6 +376,42 @@
 			name = "smartLayers and thumbnails";
 			sourceTree = "<group>";
 		};
+		3290A7021E49F14700042C26 /* Stack Views */ = {
+			isa = PBXGroup;
+			children = (
+				3290A6F31E49C1A400042C26 /* stackView.h */,
+				3290A6F41E49C1A400042C26 /* stackView.m */,
+				3290A6FF1E49F09400042C26 /* stackTableView.h */,
+				3290A7001E49F09400042C26 /* stackTableView.m */,
+				3290A7071E49F8B800042C26 /* stackDatePicker.h */,
+				3290A7081E49F8B800042C26 /* stackDatePicker.m */,
+			);
+			name = "Stack Views";
+			sourceTree = "<group>";
+		};
+		3290A7031E49F18400042C26 /* Option Views */ = {
+			isa = PBXGroup;
+			children = (
+				3290A6F01E49BF9F00042C26 /* eventOptionVIew.h */,
+				3290A6F11E49BF9F00042C26 /* eventOptionVIew.m */,
+				3290A6F61E49CB2C00042C26 /* nameOptionView.h */,
+				3290A6F71E49CB2C00042C26 /* nameOptionView.m */,
+				3290A6F91E49D48800042C26 /* addressOptionView.h */,
+				3290A6FA1E49D48800042C26 /* addressOptionView.m */,
+				3290A6FC1E49E0FD00042C26 /* aboutOptionView.h */,
+				3290A6FD1E49E0FD00042C26 /* aboutOptionView.m */,
+				3290A7041E49F70600042C26 /* datePickerOptionView.h */,
+				3290A7051E49F70600042C26 /* datePickerOptionView.m */,
+				3290A70A1E4A51EB00042C26 /* pickerOptionView.h */,
+				3290A70B1E4A51EC00042C26 /* pickerOptionView.m */,
+				3290A7201E4A7E0D00042C26 /* switchOptionView.h */,
+				3290A7211E4A7E0D00042C26 /* switchOptionView.m */,
+				3290A7231E4AAEC500042C26 /* goOptionView.h */,
+				3290A7241E4AAEC500042C26 /* goOptionView.m */,
+			);
+			name = "Option Views";
+			sourceTree = "<group>";
+		};
 		3298890D1E41410F00397E3A /* Border Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +434,8 @@
 				323CF9461E280B5000A1A0A9 /* flyerViewController.m */,
 				3298890E1E41B0A000397E3A /* illuminatedButton.h */,
 				3298890F1E41B0A000397E3A /* illuminatedButton.m */,
+				323498681E482985000148DF /* flexibleIlluminatedButton.h */,
+				323498691E482985000148DF /* flexibleIlluminatedButton.m */,
 				323CF9481E2811E100A1A0A9 /* imageEditorView.h */,
 				323CF9491E2811E100A1A0A9 /* imageEditorView.m */,
 				327708131E2DF606000FE30A /* smartLayers and thumbnails */,
@@ -412,11 +504,20 @@
 		32AF04701E180F67006D4E19 /* LTHosting */ = {
 			isa = PBXGroup;
 			children = (
-				3234982B1E42D6DD000148DF /* SMVerticalSegmentedControl */,
 				32AF04741E180F67006D4E19 /* AppDelegate.h */,
 				32AF04751E180F67006D4E19 /* AppDelegate.m */,
 				3277081D1E3037D5000FE30A /* commonUseFunctions.h */,
 				3277081E1E3037D5000FE30A /* commonUseFunctions.m */,
+				323498621E481EB8000148DF /* eventsNavigationController.h */,
+				323498631E481EB8000148DF /* eventsNavigationController.m */,
+				3290A6CC1E48766100042C26 /* navigationScrollView.h */,
+				3290A6CD1E48766100042C26 /* navigationScrollView.m */,
+				3290A6E11E496E0A00042C26 /* eventViewController.h */,
+				3290A6E21E496E0A00042C26 /* eventViewController.m */,
+				3290A7031E49F18400042C26 /* Option Views */,
+				3290A7021E49F14700042C26 /* Stack Views */,
+				3290A6D81E49381F00042C26 /* topGravityView.h */,
+				3290A6D91E49381F00042C26 /* topGravityView.m */,
 				329910A41E4119DD0034154C /* Flyer Creator */,
 				323CF9541E28128500A1A0A9 /* Toolkit View Controllers */,
 				323CF9431E280B0D00A1A0A9 /* Camera */,
@@ -425,8 +526,8 @@
 				32ADD0D91E182CF400C42207 /* event.m */,
 				324BC1761E38018D00C9B629 /* usefulArray.h */,
 				324BC1771E38018D00C9B629 /* usefulArray.m */,
-				32ADD0D71E18288800C42207 /* Event Options Table View Cells */,
 				32AF047A1E180F67006D4E19 /* Main.storyboard */,
+				3290A7261E4AB91A00042C26 /* Unused.storyboard */,
 				32AF04801E180F67006D4E19 /* Assets.xcassets */,
 				32AF04821E180F67006D4E19 /* LaunchScreen.storyboard */,
 				32AF04851E180F67006D4E19 /* Info.plist */,
@@ -609,7 +710,7 @@
 				3298890C1E413EFC00397E3A /* pizzaborder.png in Resources */,
 				32AF04841E180F67006D4E19 /* LaunchScreen.storyboard in Resources */,
 				327708151E2DF74F000FE30A /* maptrash.png in Resources */,
-				3234982C1E42D6DD000148DF /* SMVerticalSegmentedControl in Resources */,
+				3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */,
 				32AF04811E180F67006D4E19 /* Assets.xcassets in Resources */,
 				32AF047C1E180F67006D4E19 /* Main.storyboard in Resources */,
 				329889051E413EFC00397E3A /* border4 copy.png in Resources */,
@@ -776,35 +877,52 @@
 			buildActionMask = 2147483647;
 			files = (
 				323CF9531E28127E00A1A0A9 /* borderToolViewController.m in Sources */,
+				3290A7061E49F70600042C26 /* datePickerOptionView.m in Sources */,
 				32B1E6801E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m in Sources */,
+				323498641E481EB9000148DF /* eventsNavigationController.m in Sources */,
 				324BC1881E3841EF00C9B629 /* textAlignmentPopupToolView.m in Sources */,
 				323CF9501E28127000A1A0A9 /* textToolViewController.m in Sources */,
 				32AF04791E180F67006D4E19 /* eventCameraViewController.m in Sources */,
+				3290A7091E49F8B800042C26 /* stackDatePicker.m in Sources */,
 				323CF9601E28192C00A1A0A9 /* smartTextLayer.m in Sources */,
+				3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */,
 				32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */,
 				323CF94D1E28125600A1A0A9 /* toolKitViewController.m in Sources */,
 				323CF9631E2DB36600A1A0A9 /* smartLayerThumbnail.m in Sources */,
 				323CF9471E280B5000A1A0A9 /* flyerViewController.m in Sources */,
 				327708181E2F3C6C000FE30A /* popupToolView.m in Sources */,
 				3238760F1E248E14000ECEEB /* eventCamera.m in Sources */,
+				3290A7221E4A7E0D00042C26 /* switchOptionView.m in Sources */,
 				32ADD0D61E18280500C42207 /* eventOptionsFieldTableViewCell.m in Sources */,
 				323CF95D1E28191E00A1A0A9 /* smartBorderLayer.m in Sources */,
+				3234986D1E48443D000148DF /* textSizePopupToolView.m in Sources */,
+				3290A7011E49F09400042C26 /* stackTableView.m in Sources */,
 				32D4E1851E1EDF9800616488 /* eventOptionsImageTableViewCell.m in Sources */,
+				3290A6E31E496E0A00042C26 /* eventViewController.m in Sources */,
 				32ADD0DD1E19E58300C42207 /* eventOptionTableViewCell.m in Sources */,
 				32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */,
 				3229AF921E1B500400405137 /* dateSliderViewController.m in Sources */,
 				32ADD0E01E1A001500C42207 /* pickerSliderViewController.m in Sources */,
+				3290A6FE1E49E0FD00042C26 /* aboutOptionView.m in Sources */,
+				3290A6F51E49C1A400042C26 /* stackView.m in Sources */,
+				3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */,
 				3277081C1E3032BA000FE30A /* colorPopupToolView.m in Sources */,
 				324BC17E1E380ADB00C9B629 /* horizontalViewPicker.m in Sources */,
+				3234986A1E482985000148DF /* flexibleIlluminatedButton.m in Sources */,
 				32ADD0DA1E182CF400C42207 /* event.m in Sources */,
 				32B1E67D1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m in Sources */,
 				324BC17B1E3808B900C9B629 /* fontPopupToolView.m in Sources */,
+				3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */,
 				323CF94A1E2811E100A1A0A9 /* imageEditorView.m in Sources */,
+				3290A6DA1E49381F00042C26 /* topGravityView.m in Sources */,
+				3290A7251E4AAEC500042C26 /* goOptionView.m in Sources */,
 				323CF95A1E2818FC00A1A0A9 /* smartLayer.m in Sources */,
 				32AF04A91E181DFC006D4E19 /* eventDetailViewController.m in Sources */,
 				329889101E41B0A000397E3A /* illuminatedButton.m in Sources */,
 				32AF04AC1E18213C006D4E19 /* eventOptionsTextTableViewCell.m in Sources */,
+				3290A6F21E49BF9F00042C26 /* eventOptionVIew.m in Sources */,
 				32AF04731E180F67006D4E19 /* main.m in Sources */,
+				3290A6FB1E49D48800042C26 /* addressOptionView.m in Sources */,
 				3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */,
 				32ADD0E61E1A088800C42207 /* sliderViewController.m in Sources */,
 				324BC1781E38018D00C9B629 /* usefulArray.m in Sources */,

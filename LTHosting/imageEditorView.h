@@ -16,7 +16,7 @@
 
 @end
 
-@interface imageEditorView : UIView <UIGestureRecognizerDelegate>
+@interface imageEditorView : UIView <UIGestureRecognizerDelegate, smartLayerMirror>
 
 @property (strong, nonatomic) id<imageEditorViewDelegate> delegate;
 

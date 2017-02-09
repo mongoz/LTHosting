@@ -13,6 +13,8 @@
 
 +(NSArray<NSString*>*)bodyFontPostScriptNames;
 
++(NSArray<UIFont*>*)bodyFontsWithSize:(CGFloat)size;
+
 +(NSArray<UIImage*>*)borderImages;
 
 +(NSArray<NSString*>*)borderNames;

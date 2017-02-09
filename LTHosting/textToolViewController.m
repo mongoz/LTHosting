@@ -9,11 +9,25 @@
 #import "textToolViewController.h"
 #import "colorPopupToolView.h"
 
-@interface textToolViewController ()
+@interface textToolViewController (){
+    textToolViewControllerType myType;
+}
 
 @end
 
 @implementation textToolViewController
+
+-(textToolViewControllerType)type
+{
+    return myType;
+}
+
+-(id)initWithType:(textToolViewControllerType)type
+{
+    self=[super init];
+    myType=type;
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,6 +45,8 @@
     [temp addObject:@"Font"];
     [temp addObject:@"Alignment"];
     [temp addObject:@"Color"];
+    [temp addObject:@"Shade"];
+    [temp addObject:@"Size"];
     self.tools=temp;
 }
 

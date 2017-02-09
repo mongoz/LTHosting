@@ -26,9 +26,11 @@
 
 @property (strong, nonatomic) id<illuminatedButtonResponder> responder;
 
-@property (strong, nonnull, nonatomic) id<illuminatedSource> source;
+@property (strong, nonatomic) id<illuminatedSource> source;
 
 -(void)changeState;
+
+-(void)changeState:(void(^)())completion;
 
 -(void)reloadData;
 
@@ -51,6 +53,5 @@
 -(NSString* _Nullable)offTitle;
 
 -(NSString* _Nullable)onTitle;
-
 
 @end

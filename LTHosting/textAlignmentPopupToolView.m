@@ -45,17 +45,21 @@
 
 -(void)configureWithToolType:(popupType)type
 {
-    self.responder=[[imageEditorView sharedInstance] selectedLayer];
-    if(type==LTpopupTextAlignmentTool)
+    if(type==LTpopupBodyTextAlignmentTool)
     {
-        NSTextAlignment current=[self.responder textAlignment];
-        for(NSInteger i=0; i<3; i++)
+        self.responder=[[imageEditorView sharedInstance] bodyLayer];
+    }
+    else if(type==LTpopupTitleTextAlignmentTool)
+    {
+        self.responder=[[imageEditorView sharedInstance] titleLayer];
+    }
+    NSTextAlignment current=[self.responder textAlignment];
+    for(NSInteger i=0; i<3; i++)
+    {
+        if(ops[i]==current)
         {
-            if(ops[i]==current)
-            {
-                [segControl setSelectedSegmentIndex:i];
-                selectedIndex=i;
-            }
+            [segControl setSelectedSegmentIndex:i];
+            selectedIndex=i;
         }
     }
 }
@@ -67,12 +71,7 @@
 
 -(IBAction)segmentEventOccured:(UISegmentedControl*)sender
 {
-    if([sender selectedSegmentIndex]!=selectedIndex)
-    {
-        [self.responder textAlignmentDidChangeTo:ops[[sender selectedSegmentIndex]]];
-    }
-    [self popOutOfView];
-    [self.controller.toolBar setSelectedSegmentIndex:-1];
+    [self.responder textAlignmentDidChangeTo:ops[[sender selectedSegmentIndex]]];
 }
 
 -(NSArray<NSString*>*)options

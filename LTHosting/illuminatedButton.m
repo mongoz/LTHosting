@@ -109,6 +109,11 @@
 
 -(void)changeState
 {
+    [self changeState:nil];
+}
+
+-(void)changeState:(void (^)())completion
+{
     [self sendMessageToResponder:^(id<illuminatedButtonResponder> resp){
         [resp illuminatedButton:self stateWillChangeTo:!_illuminated];
     }];
@@ -131,7 +136,12 @@
         [self sendMessageToResponder:^(id<illuminatedButtonResponder> resp){
             [resp illuminatedButton:self stateDidChangeTo:_illuminated];
         }];
+        if(completion!=nil)
+        {
+            completion();
+        }
     }];
+    
 }
 
 -(void)reloadData

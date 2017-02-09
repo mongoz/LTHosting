@@ -80,4 +80,15 @@
     return ret;
 }
 
++(NSArray<UIFont*>*)bodyFontsWithSize:(CGFloat)size
+{
+    NSMutableArray *temp=[[NSMutableArray alloc] init];
+    NSArray<NSString*>* names=[self bodyFontPostScriptNames];
+    for(NSInteger i=0; i<names.count; i++)
+    {
+        [temp addObject:[UIFont fontWithName:names[i] size:size]];
+    }
+    return [NSArray arrayWithArray:temp];
+}
+
 @end

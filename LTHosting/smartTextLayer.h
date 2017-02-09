@@ -20,10 +20,16 @@
 
 @property (strong, nonatomic) UITextView *sourceTextView;
 
+@property BOOL flexibleHeight;
+
 -(void)centerView;
 
 -(NSTextAlignment)textAlignment;
 
 -(void)setText:(NSString*)text;
+
+-(CGFloat)maxTextSize;
+
+-(void)sizeToFit;
 
 @end

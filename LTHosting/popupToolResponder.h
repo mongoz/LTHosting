@@ -27,6 +27,10 @@
 
 -(NSTextAlignment)textAlignment;
 
+-(CGFloat)fontSize;
+
+-(CGFloat)maxTextSize;
+
 -(void)borderWidthDidChangeTo:(CGFloat)bwidth;
 
 -(void)cornerRadiusDidChangeTo:(CGFloat)radius;
@@ -34,6 +38,8 @@
 -(void)fontDidChangeTo:(UIFont*)font;
 
 -(void)textAlignmentDidChangeTo:(NSTextAlignment)alignment;
+
+-(void)fontSizeDidChangeTo:(CGFloat)fontSize;
 
 -(void)shadeDidChangeTo:(CGFloat)shade;
 

@@ -117,39 +117,67 @@
 {
     self.type=type;
     self.responder=[[imageEditorView sharedInstance] selectedLayer];
+    void (^shadeBlock)(colorPopupToolView*)=^(colorPopupToolView *view){
+        [view addShadeGradientToSlider];
+        CGFloat hue;
+        CGFloat alpha;
+        [[UIColor colorWithCGColor:[view.responder color]] getHue:nil saturation:nil brightness:&hue alpha:&alpha];
+        hue=1.0f-hue;
+        if(alpha!=0)
+        {
+            [noColorButton.layer setBackgroundColor:[view.responder color]];
+            [view.slider setValue:hue];
+        }
+        else
+        {
+            [view.slider setValue:0.0f];
+        }
+    };
+    void (^colorBlock)(colorPopupToolView*)=^(colorPopupToolView *view){
+        [view addColorGradientToSlider];
+        CGFloat hue;
+        CGFloat alpha;
+        [[UIColor colorWithCGColor:[view.responder color]] getHue:&hue saturation:nil brightness:nil alpha:&alpha];
+        if(alpha!=0)
+        {
+            [noColorButton.layer setBackgroundColor:[view.responder color]];
+            [view.slider setValue:hue];
+        }
+        else
+        {
+            [view.slider setValue:0.0f];
+        }
+        
+    };
     switch (type) {
         case LTpopupBorderColorTool:{
             self.responder=[[imageEditorView sharedInstance] borderLayer];
-            [self addColorGradientToSlider];
-            CGFloat hue;
-            CGFloat alpha;
-            [[UIColor colorWithCGColor:[self.responder color]] getHue:&hue saturation:nil brightness:nil alpha:&alpha];
-            if(alpha!=0)
-            {
-                [noColorButton.layer setBackgroundColor:[self.responder color]];
-                [self.slider setValue:hue];
-            }
-            else
-            {
-                [self.slider setValue:0.0f];
-            }
+            colorBlock(self);
             break;}
         case LTpopupBorderShadeTool:{
             self.responder=[[imageEditorView sharedInstance] borderLayer];
-            [self addShadeGradientToSlider];
-            CGFloat hue;
-            CGFloat alpha;
-            [[UIColor colorWithCGColor:[self.responder color]] getHue:nil saturation:nil brightness:&hue alpha:&alpha];
-            hue=1.0f-hue;
-            if(alpha!=0)
-            {
-                [noColorButton.layer setBackgroundColor:[self.responder color]];
-                [self.slider setValue:hue];
-            }
-            else
-            {
-                [self.slider setValue:0.0f];
-            }
+            shadeBlock(self);
+            break;
+        }
+        case LTpopupBodyTextColorTool:{
+            self.responder=[[imageEditorView sharedInstance] bodyLayer];
+            colorBlock(self);
+            break;
+        }
+        case LTpopupTitleTextColorTool:{
+            self.responder=[[imageEditorView sharedInstance] titleLayer];
+            colorBlock(self);
+            break;
+        }
+        case LTpopupTitleShadeTool:{
+            self.responder=[[imageEditorView sharedInstance] titleLayer];
+            shadeBlock(self);
+            break;
+        }
+        case LTpopupBodyShadeTool:{
+            self.responder=[[imageEditorView sharedInstance] bodyLayer];
+            shadeBlock(self);
+            break;
         }
         default:{
             break;}
@@ -167,7 +195,10 @@
     
     switch(self.type)
     {
-        case LTpopupBorderColorTool:{
+        case LTpopupBorderColorTool:
+        case LTpopupBodyTextColorTool:
+        case LTpopupTitleTextColorTool:
+        {
             if([current isEqual:[UIColor clearColor]])
             {
                 bright=1.0f;
@@ -182,7 +213,10 @@
             [noColorButton.layer setBackgroundColor:col];
             break;
         }
-        case LTpopupBorderShadeTool:{
+        case LTpopupBorderShadeTool:
+        case LTpopupBodyShadeTool:
+        case LTpopupTitleShadeTool:
+        {
             CGColorRef col;
             if([current isEqual:[UIColor clearColor]]||(sat==0&&hue==0))
             {

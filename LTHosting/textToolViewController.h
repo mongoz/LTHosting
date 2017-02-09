@@ -8,6 +8,15 @@
 
 #import "toolKitViewController.h"
 
+typedef enum textToolType{
+    bodyTextToolViewController,
+    titleTextToolViewController
+}textToolViewControllerType;
+
 @interface textToolViewController : toolKitViewController
+
+-(id)initWithType:(textToolViewControllerType)type;
+
+@property (readonly) textToolViewControllerType type;
 
 @end

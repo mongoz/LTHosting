@@ -18,6 +18,8 @@
 
 @property (strong, nonatomic) NSString *address;
 
+@property (strong, nonatomic) GMSAutocompletePrediction *fullAddressInfo;
+
 @property (strong, nonatomic) NSString *about;
 
 @property (strong, nonatomic) NSDate *date;
@@ -39,5 +41,7 @@
 -(void)print;
 
 -(NSAttributedString*)flyerBodyForCurrentState;
+
+-(NSString*)dateString;
 
 @end

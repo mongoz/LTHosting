@@ -11,9 +11,9 @@
 #import "borderToolViewController.h"
 #import "textToolViewController.h"
 #import "horizontalViewPicker.h"
-#import "illuminatedButton.h"
+#import "flexibleIlluminatedButton.h"
 
-@interface flyerViewController : UIViewController <CAAnimationDelegate, toolKitSuperController, UIGestureRecognizerDelegate, horizontalViewPickerDelegate, horizontalViewPickerDataSource, illuminatedButtonResponder, illuminatedSource, UITextViewDelegate>
+@interface flyerViewController : UIViewController <CAAnimationDelegate, toolKitSuperController, UIGestureRecognizerDelegate, horizontalViewPickerDelegate, horizontalViewPickerDataSource, illuminatedButtonResponder, flexibleIlluminatedSource, UITextViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *topBarView;
 

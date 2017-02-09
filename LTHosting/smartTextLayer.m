@@ -19,6 +19,7 @@
     
     NSInteger numMovers;
     CGSize movementSum;
+    BOOL flexHeight;
 }
 @end
 
@@ -36,6 +37,7 @@
     cumScale=1.0f;
     numMovers=0;
     movementSum=CGSizeZero;
+    flexHeight=NO;
     return self;
 }
 
@@ -52,9 +54,9 @@
     [self setFrame:parentRect];
     
     self.textLayer=[[UILabel alloc] initWithFrame:self.bounds];
-    [self.textLayer setLineBreakMode:NSLineBreakByWordWrapping];
     [self.textLayer setNumberOfLines:0];
-    [self.textLayer setLineBreakMode:NSLineBreakByClipping];
+    //[self.textLayer setLineBreakMode:NSLineBreakByClipping];
+    [self.textLayer setLineBreakMode:NSLineBreakByWordWrapping];
     [self.textLayer setTextAlignment:NSTextAlignmentLeft];
     [self.textLayer setAttributedText:string];
     if(font!=nil)
@@ -62,10 +64,24 @@
         [self.textLayer setFont:font];
     }
     [self addSublayer:self.textLayer.layer];
-    [self setFrame:CGRectZero];
-    [self tightenBoundingRect];
+    //[self setFrame:CGRectZero];
+    //[self tightenBoundingRect];
     [self setMasksToBounds:NO];
     return self;
+}
+
+-(void)setFlexibleHeight:(BOOL)flexibleHeight
+{
+    flexHeight=flexibleHeight;
+    if(flexHeight)
+    {
+        [self tightenBoundingRect];
+    }
+}
+
+-(BOOL)flexibleHeight
+{
+    return flexHeight;
 }
 
 +(smartTextLayer*)newSmartTextLayerInParentRect:(CGRect)parentRect withTextView:(UITextView *)textView
@@ -78,7 +94,7 @@
     [new.textLayer setAttributedText:textView.attributedText];
     [new.textLayer setTextColor:textView.textColor];
     [new.textLayer setLineBreakMode:NSLineBreakByWordWrapping];
-    [new.textLayer setNumberOfLines:[textView numberOfLines]];
+    [new.textLayer setNumberOfLines:0];
     [new.textLayer setLineBreakMode:NSLineBreakByClipping];
     [new.textLayer setTextAlignment:NSTextAlignmentLeft];
     [new addSublayer:new.textLayer.layer];
@@ -105,21 +121,21 @@
         startRect=self.parentRect;
     }
     CGRect adjustedRect=CGRectMake(startRect.origin.x, startRect.origin.y, self.parentRect.size.width*cumScale, self.parentRect.size.height*cumScale);
-    [self setFrame:adjustedRect];
-    CGRect newRect=[_textLayer textRectForBounds:self.bounds limitedToNumberOfLines:0];
+    CGRect newRect=[_textLayer textRectForBounds:adjustedRect limitedToNumberOfLines:0];
     
     [self setFrame:CGRectMake(startRect.origin.x, startRect.origin.y, startRect.size.width, newRect.size.height)];
     hasTightened=YES;
     //[_textLayer setAdjustsFontSizeToFitWidth:YES];
     [_textLayer setMinimumScaleFactor:1/10];
-    [_textLayer setNumberOfLines:[_textLayer currentNumberOfLines]];
+    [_textLayer setNumberOfLines:0];
     [_textLayer setAutoresizingMask:(UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight)];
 }
 
 -(void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-    [_textLayer setFrame:self.bounds];
+    CGRect textRect=[_textLayer textRectForBounds:self.bounds limitedToNumberOfLines:NSIntegerMax];
+    [_textLayer setFrame:CGRectMake(self.bounds.origin.x, self.bounds.origin.y, self.bounds.size.width, textRect.size.height)];
     
 }
 
@@ -171,9 +187,7 @@
 
 -(void)fontDidChangeTo:(UIFont *)font
 {
-    NSLog(@"called");
     [_textLayer setFont:[font fontWithSize:_textLayer.font.pointSize]];
-    [self tightenBoundingRect];
 }
 
 -(void)textAlignmentDidChangeTo:(NSTextAlignment)alignment
@@ -201,6 +215,87 @@
     while([_textLayer attributedText].size.width*_textLayer.attributedText.size.height>self.frame.size.width*self.frame.size.height)
     {
         [_textLayer setFont:[_textLayer.font fontWithSize:_textLayer.font.pointSize-1.0f]];
+    }
+    [self fontSizeDidChangeTo:self.textLayer.font.pointSize];
+}
+
+-(void)removeColor
+{
+    [self setColor:[UIColor whiteColor].CGColor];
+}
+
+-(CGFloat)maxTextSize
+{
+    if(!self.flexibleHeight)
+    {
+        CGFloat currentSize=1.0f;
+        BOOL isTooBig=NO;
+        while(!isTooBig)
+        {
+            currentSize+=1.0f;
+            UIFont *newFont=[self.textLayer.font fontWithSize:currentSize];
+            NSAttributedString *newString=[[NSAttributedString alloc] initWithString:self.textLayer.text attributes:[NSDictionary dictionaryWithObject:newFont forKey:NSFontAttributeName]];
+            NSInteger numLines=ceil((newString.size.width*newString.size.height)/(self.textLayer.frame.size.width)/newFont.lineHeight);
+            if(numLines*newFont.lineHeight>self.frame.size.height)
+            {
+                isTooBig=YES;
+                currentSize-=1.0f;
+            }
+        }
+        return currentSize;
+    }
+    else
+    {
+        CGFloat currentSize=1.0f;
+        BOOL isTooBig=NO;
+        while(!isTooBig)
+        {
+            currentSize+=1.0f;
+            UIFont *newFont=[self.textLayer.font fontWithSize:currentSize];
+            NSAttributedString *newString=[[NSAttributedString alloc] initWithString:self.textLayer.text attributes:[NSDictionary dictionaryWithObject:newFont forKey:NSFontAttributeName]];
+            NSInteger numLines=ceil((newString.size.width*newString.size.height)/(self.textLayer.frame.size.width)/newFont.lineHeight);
+            if(numLines*newFont.lineHeight>self.parentRect.size.height/2)
+            {
+                isTooBig=YES;
+                currentSize-=1.0f;
+            }
+        }
+        return currentSize;
+    }
+}
+
+-(CGFloat)fontSize
+{
+    return _textLayer.font.pointSize;
+}
+
+-(void)fontSizeDidChangeTo:(CGFloat)fontSize
+{
+    [self.textLayer setFont:[self.textLayer.font fontWithSize:fontSize]];
+    if(self.flexibleHeight)
+    {
+        [self resizeBoundingRect];
+    }
+    else
+    {
+        self.frame=self.frame;
+    }
+}
+
+-(void)resizeBoundingRect
+{
+    NSInteger currentNumLines=ceil(_textLayer.attributedText.size.width*_textLayer.attributedText.size.height/self.frame.size.width/_textLayer.font.lineHeight);
+    if(self.frame.size.height!=currentNumLines*_textLayer.font.lineHeight)
+    {
+        [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, currentNumLines*_textLayer.font.lineHeight)];
+    }
+}
+
+-(void)sizeToFit
+{
+    while(self.fontSize>self.maxTextSize)
+    {
+        [self fontSizeDidChangeTo:self.fontSize-1];
     }
 }
 

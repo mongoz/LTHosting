@@ -38,6 +38,8 @@
 @implementation eventDetailViewController
 
 - (void)viewDidLoad {
+    _navBar=self.navigationController.navigationBar;
+    self.view.translatesAutoresizingMaskIntoConstraints=YES;
     [self configureView];
     [super viewDidLoad];
     [self registerForKeyboardNotifications];
@@ -82,10 +84,9 @@
 
 -(void)setInitialFrames
 {
-    sliderProportion=2;
+    sliderProportion=2.5;
     CGRect viewRect=self.view.frame;
-    [_navBar setFrame:CGRectMake(0, 20, viewRect.size.width, 44)];
-    [_optionsTableView setFrame:CGRectMake(0, 64, viewRect.size.width, viewRect.size.height-64)];
+    [_optionsTableView setFrame:self.view.bounds];
     [_slidingView setFrame:CGRectMake(0, viewRect.size.height, viewRect.size.width, viewRect.size.height/sliderProportion)];
 }
 

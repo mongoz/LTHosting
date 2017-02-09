@@ -69,6 +69,10 @@
     [new setContinuous:YES];
     [new setMinimumValue:1];
     [new setMaximumValue:20];
+    for(UIGestureRecognizer *gest in new.gestureRecognizers)
+    {
+        NSLog(@"%@",gest.class);
+    }
     
     [new addTarget:self action:@selector(sliderChanged:) forControlEvents:UIControlEventValueChanged];
     
@@ -158,7 +162,11 @@
 -(void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-    NSLog(@"set frame: %f, %f, %f, %f",frame.origin.x,frame.origin.y,frame.size.width,frame.size.height);
+}
+
+-(BOOL)shouldSwipeInView
+{
+    return NO;
 }
 
 @end

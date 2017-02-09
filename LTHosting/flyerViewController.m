@@ -9,7 +9,7 @@
 #import "flyerViewController.h"
 #import "commonUseFunctions.h"
 #import "usefulArray.h"
-#import "SMVerticalSegmentedControl/SMVerticalSegmentedControl.h"
+#import "eventCameraViewController.h"
 
 @interface flyerViewController (){
     UIView *current;
@@ -21,7 +21,8 @@
     
     UISegmentedControl *toolChooser;
     
-    illuminatedButton *editingButton;
+    flexibleIlluminatedButton *editingButton;
+    
     
     UIVisualEffectView *editingView;
     toolKitViewController *editingController;
@@ -57,9 +58,8 @@
     
     UIImage *im=[[event sharedInstance] image];
     thumbnailImage=im;
-    [[imageEditorView sharedInstance] updateImageContainerWithImage:thumbnailImage];
-    [[imageEditorView sharedInstance] setTitleAndBodyText];
     borderPicker=[[horizontalViewPicker alloc] initWithFrame:_toolView.bounds];
+    borderPicker.bounces=NO;
     [borderPicker setHeightWidthRatio:830.0f/750.0f];
     [borderPicker setHDelegate:self];
     [borderPicker setDataSource:self];
@@ -80,13 +80,23 @@
     
     CGFloat margin=6.0f;
     CGFloat width=_bottomBarView.frame.size.width/3.0f;
-    editingButton=[[illuminatedButton alloc] initWithFrame:CGRectMake(_bottomBarView.frame.size.width/2-width/2, margin, width, _bottomBarView.frame.size.height-margin*2)];
+    editingButton=[[flexibleIlluminatedButton alloc] initWithFrame:CGRectMake(_bottomBarView.frame.size.width/2-width/2, margin, width, _bottomBarView.frame.size.height-margin*2)];
     [editingButton setTitle:@"Editing: NO" forState:UIControlStateNormal];
     editingButton.responder=self;
-    editingButton.source=self;
+    editingButton.flexibleSource=self;
     editingButton.userInteractionEnabled=NO;
     [_bottomBarView addSubview:editingButton];
 }
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [[imageEditorView sharedInstance] updateImageContainerWithImage:thumbnailImage];
+    [[imageEditorView sharedInstance] setTitleAndBodyText];
+    [[[imageEditorView sharedInstance] bodyLayer] fontSizeDidChangeTo:[[imageEditorView sharedInstance] bodyLayer].maxTextSize];
+    [[[imageEditorView sharedInstance] titleLayer] fontSizeDidChangeTo:[[imageEditorView sharedInstance] titleLayer].maxTextSize];
+}
+
 
 -(UIView*)textEditorWithFrame:(CGRect)frame
 {
@@ -128,16 +138,20 @@
     [self beginTextEditingWithTextLayer:[[imageEditorView sharedInstance] titleLayer]];
 }
 
+__weak smartTextLayer *editingLayer=nil;
 
 -(void)beginTextEditingWithTextLayer:(smartTextLayer*)layer
 {
-    UIBlurEffect *blur=[UIBlurEffect effectWithStyle:UIBlurEffectStyleProminent];
+    if(editingLayer!=nil)
+    {
+        return;
+    }
+    editingLayer=layer;
+    UIBlurEffect *blur=[UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
     UIVisualEffectView *shade=[[UIVisualEffectView alloc] initWithEffect:blur];
     [shade setFrame:self.view.bounds];
-    [shade.layer setBackgroundColor:[UIColor blackColor].CGColor];
-    [shade setTintColor:[UIColor blackColor]];
-    [shade.layer setOpacity:.5];
     UITextView *editor=[[UITextView alloc] initWithFrame:shade.bounds];
+    [editor setBackgroundColor:[UIColor clearColor]];
     [editor setInputAccessoryView:[self inputAccessoryView]];
     if(layer!=nil)
     {
@@ -150,7 +164,6 @@
     [shade bringSubviewToFront:editor];
     [editor setTextColor:[UIColor whiteColor]];
     [editor setFont:[UIFont fontWithName:@"Keep Calm" size:32]];
-    [editor setReturnKeyType:UIReturnKeyDone];
     [self.view addSubview:shade];
     [self.view bringSubviewToFront:shade];
     editor.delegate=self;
@@ -206,7 +219,26 @@
     if(textInputView!=nil)
     {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            [[textInputView.subviews firstObject] endEditing:YES];
+            for(UIView *v in textInputView.subviews)
+            {
+                if(v.class==[UITextView class])
+                {
+                    [v endEditing:YES];
+                    [editingLayer setText:[(UITextView*)v text]];
+                    BOOL hadFlex=NO;
+                    if(editingLayer.flexibleHeight)
+                    {
+                        hadFlex=YES;
+                    }
+                    editingLayer.flexibleHeight=NO;
+                    editingLayer.frame=editingLayer.frame;
+                    if(hadFlex)
+                    {
+                        editingLayer.flexibleHeight=YES;
+                    }
+                }
+            }
+            editingLayer=nil;
             [textInputView removeFromSuperview];
             textInputView=nil;
         }];
@@ -228,23 +260,51 @@
 
 -(void)illuminatedButton:(illuminatedButton *)button stateWillChangeTo:(BOOL)illuminated
 {
-    if(illuminated)
+    __block BOOL wait=NO;
+    if(isEditing)
     {
-        [self beginEditing];
+        wait=YES;
+        [self endEditing:^{
+            wait=NO;
+        }];
     }
-    else
+    while(wait)
     {
-        [self endEditing];
+        [[NSRunLoop mainRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:.01]];
+    }
+    flexibleIlluminatedButton *myButton=(flexibleIlluminatedButton*)button;
+    if([self isIlluminatedAtTitleWithIndex:[myButton currentIndex]])
+    {
+        [self beginEditing:nil];
     }
 }
 
--(void)beginEditing
+-(void)beginEditing:(void(^)())completion
 {
+    if(editingView!=nil)
+    {
+        return;
+    }
     UIBlurEffect *blur=[UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
     editingView=[[UIVisualEffectView alloc] initWithEffect:blur];
     [editingView setFrame:_toolView.bounds];
     editingView.alpha=.75;
-    editingController=[[borderToolViewController alloc] init];
+    if(current==borderPicker)
+    {
+        editingController=[[borderToolViewController alloc] init];
+        
+    }
+    else if(current==textEditorView)
+    {
+        if([editingButton currentIndex]==1)
+        {
+            editingController=[[textToolViewController alloc] initWithType:bodyTextToolViewController];
+        }
+        else if([editingButton currentIndex]==2)
+        {
+            editingController=[[textToolViewController alloc] initWithType:titleTextToolViewController];
+        }
+    }
     [editingController.view setFrame:_toolView.bounds];
     [self addChildViewController:editingController];
     CGFloat y=editingController.toolBar.frame.origin.y*2+editingController.toolBar.frame.size.height;
@@ -263,10 +323,14 @@
         [editingView setAlpha:1.0f];
     } completion:^(BOOL finished){
         isEditing=YES;
+        if(completion!=nil)
+        {
+            completion();
+        }
     }];
 }
 
--(void)endEditing
+-(void)endEditing:(void(^)())completion
 {
     [UIView animateWithDuration:.5 animations:^{
         [editingView setAlpha:0.0f];
@@ -276,28 +340,89 @@
         [editingController removeFromParentViewController];
         editingController=nil;
         isEditing=NO;
+        if(completion!=nil)
+        {
+            completion();
+        }
     }];
 }
 
--(NSString*)offTitle
+-(NSInteger)numberOfStatesForFlexibleButton
 {
-    return @"Editing: OFF";
+    if(toolChooser.selectedSegmentIndex==0)
+    {
+        return 2;
+    }
+    else
+    {
+        return 3;
+    }
 }
 
--(NSString*)onTitle
+-(NSString*)flexibleIlluminatedButton:(flexibleIlluminatedButton *)button titleForIndex:(NSInteger)index
 {
-    return @"Editing: ON";
+    if(toolChooser.selectedSegmentIndex==0)
+    {
+        switch(index)
+        {
+            case 0:
+                return @"Editing: NO";
+            case 1:
+                return @"Editing: YES";
+        }
+    }
+    else
+    {
+        switch(index)
+        {
+            case 0:
+                return @"Editing: NO";
+            case 1:
+                return @"Editing: Body";
+            case 2:
+                return @"Editing: Title";
+        }
+    }
+    return @"Editing: NO";
+}
+
+-(BOOL)isIlluminatedAtTitleWithIndex:(NSInteger)index
+{
+    if(toolChooser.selectedSegmentIndex==0)
+    {
+        switch(index)
+        {
+            case 0:
+                return NO;
+            case 1:
+                return YES;
+        }
+    }
+    else
+    {
+        switch(index) {
+            case 0:
+                return NO;
+            case 1:
+                return YES;
+            case 2:
+                return YES;
+        }
+        
+    }
+    return NO;
 }
 
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
     CGFloat margin=4;
+    _topBarView=self.navigationController.navigationBar;
     CGFloat width=_topBarView.frame.size.width/3.0f;
     [toolChooser setFrame:CGRectMake(_topBarView.frame.size.width/2-width/2, margin+self.topLayoutGuide.length, width, _topBarView.frame.size.height-self.topLayoutGuide.length-margin*2)];
     [toolChooser setTintColor:[UIColor whiteColor]];
     [toolChooser addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
-    [_topBarView addSubview:toolChooser];
+    [self.navigationItem setTitleView:toolChooser];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -324,12 +449,8 @@
     {
         [self moveToolsOverBy:-self.view.frame.size.width left:NO];
         current=textEditorView;
+        [editingButton setUserInteractionEnabled:YES];
     }
-}
-
--(void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -363,7 +484,11 @@
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
 }
 - (IBAction)backButtonPressed:(id)sender {
-    [self performSegueWithIdentifier:@"cancelEditing" sender:nil];
+    eventCameraViewController *cam=(eventCameraViewController*)self.navigationController.viewControllers[self.navigationController.viewControllers.count-2];
+    [self.navigationController popViewControllerAnimated:YES];
+    [cam prepareForUnwind:[UIStoryboardSegue segueWithIdentifier:@"cancelEditing" source:self destination:cam performHandler:^{
+        
+    }]];
 }
 
 -(void)moveToolsOverBy:(CGFloat)distance left:(BOOL)left

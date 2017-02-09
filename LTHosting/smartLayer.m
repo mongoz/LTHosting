@@ -96,6 +96,7 @@
     [super setFrame:frame];
     [self setCornerRadius:self.cornerRadius/scale];
     self.centerPoint=CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
+    [_mirror layerDidChange:self];
 }
 
 -(void)setMirror:(id<smartLayerMirror>)mirror

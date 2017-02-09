@@ -11,6 +11,7 @@
 #import "textToolViewController.h"
 #import "fontPopupToolView.h"
 #import "textAlignmentPopupToolView.h"
+#import "textSizePopupToolView.h"
 
 @interface toolKitViewController (){
     CGFloat thumbnailwidth;
@@ -189,20 +190,63 @@
     CGRect newRect=CGRectMake(thumbnailBorderWidth, thumbnailBorderWidth*2+_toolBar.frame.size.height, self.view.frame.size.width-2*thumbnailBorderWidth, self.view.frame.size.height-thumbnailBorderWidth*3-_toolBar.frame.size.height);
     if([self class]==[textToolViewController class])
     {
-        if([option isEqualToString:@"Color"])
+        textToolViewControllerType myT=[(textToolViewController*)self type];
+        switch(myT)
         {
-            new=[[colorPopupToolView alloc] initWithFrame:newRect];
-            [new configureWithToolType:LTpopupBorderColorTool];
-        }
-        else if([option isEqualToString:@"Font"])
-        {
-            new=[[fontPopupToolView alloc] initWithFrame:newRect];
-            [new configureWithToolType:LTpopupFontTool];
-        }
-        else if([option isEqualToString:@"Alignment"])
-        {
-            new=[[textAlignmentPopupToolView alloc] initWithFrame:newRect];
-            [new configureWithToolType:LTpopupTextAlignmentTool];
+            case bodyTextToolViewController:
+                if([option isEqualToString:@"Color"])
+                {
+                    new=[[colorPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupBodyTextColorTool];
+                }
+                else if([option isEqualToString:@"Font"])
+                {
+                    new=[[fontPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupBodyFontTool];
+                }
+                else if([option isEqualToString:@"Alignment"])
+                {
+                    new=[[textAlignmentPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupBodyTextAlignmentTool];
+                }
+                else if([option isEqualToString:@"Shade"])
+                {
+                    new=[[colorPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupBodyShadeTool];
+                }
+                else if([option isEqualToString:@"Size"])
+                {
+                    new=[[textSizePopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupBodyTextSizeTool];
+                }
+                break;
+            case titleTextToolViewController:
+                if([option isEqualToString:@"Color"])
+                {
+                    new=[[colorPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupTitleTextColorTool];
+                }
+                else if([option isEqualToString:@"Font"])
+                {
+                    new=[[fontPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupTitleFontTool];
+                }
+                else if([option isEqualToString:@"Alignment"])
+                {
+                    new=[[textAlignmentPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupTitleTextAlignmentTool];
+                }
+                else if([option isEqualToString:@"Shade"])
+                {
+                    new=[[colorPopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupTitleShadeTool];
+                }
+                else if([option isEqualToString:@"Size"])
+                {
+                    new=[[textSizePopupToolView alloc] initWithFrame:newRect];
+                    [new configureWithToolType:LTpopupTitleTextSizeTool];
+                }
+                break;
         }
 
     }

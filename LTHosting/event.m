@@ -155,4 +155,83 @@
     return full;
 }
 
+-(NSString*)dateString
+{
+    return [self stringForDate:self.date];
+}
+
+-(NSString*)stringForDate:(NSDate*)date
+{
+    NSDateComponents *comp=[[NSCalendar currentCalendar] components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitYear | NSCalendarUnitSecond) fromDate:date];
+    NSDateComponents *now=[[NSCalendar currentCalendar] components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitYear | NSCalendarUnitSecond) fromDate:[NSDate date]];
+    
+    NSTimeInterval interval=[date timeIntervalSinceNow];
+    
+    NSTimeInterval effectiveTime=ceil(interval-(comp.hour*60*60)-comp.minute*60-comp.second+(now.hour*60*60)+now.minute*60+now.second);
+    effectiveTime=effectiveTime/(24*60*60);
+    if(effectiveTime<1)
+    {
+        CGFloat hours=interval/(60*60);
+        CGFloat extra=0;
+        if(hours-floor(hours)<=.25)
+        {
+            extra=0;
+        }
+        else if(hours-floor(hours)>.25&&hours-floor(hours)<.75)
+        {
+            extra=.5;
+        }
+        else if(hours-floor(hours)>=.75)
+        {
+            extra=1;
+        }
+        hours=floor(hours)+extra;
+        NSString *hourText;
+        if(hours==0)
+        {
+            return @"Now";
+        }
+        if(hours==1)
+        {
+            hourText=@"1 Hour";
+        }
+        else
+        {
+            if(hours!=floor(hours))
+            {
+                hourText=[NSString stringWithFormat:@"%.01f Hours",(double)hours];
+            }
+            else
+            {
+                hourText=[NSString stringWithFormat:@"%.f Hours",(double)hours];
+            }
+        }
+        return [NSString stringWithFormat:@"In %@",hourText];
+    }
+    else if(effectiveTime>=1&&effectiveTime<2)
+    {
+        NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterShortStyle];
+        [formatter setDateFormat:@"h:mm a"];
+        return [NSString stringWithFormat:@"Tomorrow, %@",[formatter stringFromDate:date]];
+    }
+    else if(effectiveTime>=2&&effectiveTime<7)
+    {
+        NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterShortStyle];
+        formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        [formatter setDateFormat:@"EEEE, h:mm a"];
+        return [formatter stringFromDate:date];
+    }
+    else
+    {
+        NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterShortStyle];
+        formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        [formatter setDateFormat:@"M/dd, h:mm a"];
+        return [formatter stringFromDate:date];
+    }
+}
+
+
 @end
