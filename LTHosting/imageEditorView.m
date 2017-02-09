@@ -149,7 +149,6 @@ static imageEditorView *sharedInstance=nil;
     [titleText.textLayer setFont:[usefulArray bodyFontsWithSize:titleText.textLayer.font.pointSize][1]];
     titleText.mirror=self;
     titleText.flexibleHeight=YES;
-    [titleText sizeToFit];
     titleFrame=titleText.frame;
     CGFloat seperation=8;
     CGRect bodyFrame=CGRectMake(titleText.frame.origin.x, titleText.frame.origin.y+titleText.frame.size.height+seperation, self.frame.size.width-margin*2, self.frame.size.height-(titleText.frame.origin.y+titleText.frame.size.height+margin+seperation));
