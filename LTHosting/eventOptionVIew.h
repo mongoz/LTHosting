@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "event.h"
+#import <ChameleonFramework/Chameleon.h>
+#import "commonUseFunctions.h"
 
 @protocol eventOptionViewDelegate;
 

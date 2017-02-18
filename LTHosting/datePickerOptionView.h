@@ -7,7 +7,8 @@
 //
 
 #import "eventOptionVIew.h"
+#import "LTDatePicker.h"
 
-@interface datePickerOptionView : eventOptionView
+@interface datePickerOptionView : eventOptionView<LTDatePickerDelegate>
 
 @end

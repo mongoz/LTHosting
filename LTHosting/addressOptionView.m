@@ -75,6 +75,8 @@
     self.accessoryView.hidden=YES;
     
     field.placeholder=@"Add Address...";
+    field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[[UIColor flatTealColorDark] colorWithAlphaComponent:.75] forKey:NSForegroundColorAttributeName]];
+    [self.barView addSubview:field];
     
     [self.accessoryView setAutoresizesSubviews:YES];
     [self.accessoryView.layer setMasksToBounds:YES];

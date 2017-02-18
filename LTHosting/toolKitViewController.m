@@ -121,10 +121,11 @@
 {
     UISegmentedControl *new=[[UISegmentedControl alloc] initWithItems:_tools];
     [new setTintColor:[UIColor whiteColor]];
-    [new.layer setBackgroundColor:[UIColor darkTextColor].CGColor];
+    [new setBackgroundColor:[UIColor darkTextColor]];
     [new.layer setMasksToBounds:YES];
+    [new.layer setCornerRadius:3.0f];
     
-    CGFloat height=128-thumbnailwidth-3*thumbnailBorderWidth;
+    CGFloat height=128- thumbnailwidth-3*thumbnailBorderWidth;
     [new setFrame:CGRectMake(thumbnailBorderWidth, thumbnailBorderWidth, self.view.frame.size.width-2*thumbnailBorderWidth, height)];
     return new;
 }

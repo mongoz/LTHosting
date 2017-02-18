@@ -1,15 +1,20 @@
 PODS:
+  - ChameleonFramework (2.1.0):
+    - ChameleonFramework/Default (= 2.1.0)
+  - ChameleonFramework/Default (2.1.0)
   - GoogleMaps/Base (2.1.1)
   - GooglePlaces (2.1.1):
     - GoogleMaps/Base (= 2.1.1)
 
 DEPENDENCIES:
+  - ChameleonFramework
   - GooglePlaces
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
   GooglePlaces: 35636d86e5020cba3856eb988c09a5491de0a65a
 
-PODFILE CHECKSUM: 830d86d738f0438f487c6d969369c34333869d9e
+PODFILE CHECKSUM: dc6af0fe677aece992cfa52654d647d0e73c7627
 
 COCOAPODS: 1.1.1

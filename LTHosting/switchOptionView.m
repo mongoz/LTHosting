@@ -68,8 +68,12 @@
     }
     [left setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
     [right setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
+    [left setTextColor:[UIColor flatTealColorDark]];
+    [right setTextColor:[UIColor flatTealColorDark]];
     
     swap=[[UISwitch alloc] initWithFrame:self.barView.bounds];
+    [swap setTintColor:[UIColor flatGreenColorDark]];
+    [swap setOnTintColor:[UIColor flatGreenColorDark]];
     [swap setFrame:CGRectMake(self.barView.frame.size.width/2-swap.frame.size.width/2, self.barView.frame.size.height/2-swap.frame.size.height/2, swap.frame.size.width, swap.frame.size.height)];
     
     [self.barView addSubview:swap];

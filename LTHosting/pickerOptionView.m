@@ -70,6 +70,7 @@
         [barLabel setText:@"Venue"];
     }
     [barLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
+    barLabel.textColor=[UIColor flatTealColorDark];
     [self.barView addSubview:barLabel];
     
     [self addArrangedSubview:self.accessoryView];
@@ -114,13 +115,14 @@
 -(void)generateMusicList
 {
     NSMutableArray *temp=[[NSMutableArray alloc] init];
-    [temp addObject:@"Classical"];
-    [temp addObject:@"Latin"];
-    [temp addObject:@"Jazz"];
     [temp addObject:@"EDM"];
     [temp addObject:@"Rap"];
     [temp addObject:@"Hip Hop"];
+    [temp addObject:@"Pop"];
     [temp addObject:@"Rock"];
+    [temp addObject:@"Alternative"];
+    [temp addObject:@"Latin"];
+    [temp addObject:@"Other"];
     pickerData=[temp copy];
 }
 

@@ -13,6 +13,8 @@
 @interface datePickerOptionView(){
     UILabel *dateLabel;
     
+    LTDatePicker *pick;
+    
     NSDate *currentDate;
 }
 @end
@@ -30,6 +32,7 @@
 -(id)initWithFrame:(CGRect)frame barHeight:(CGFloat)barHeight
 {
     self=[super initWithFrame:frame barHeight:barHeight];
+    currentDate=[NSDate date];
     [self configureAccessoryView];
     return self;
 }
@@ -45,10 +48,11 @@
     [self.accessoryView.layer setShadowColor:self.barView.layer.shadowColor];
     [self.accessoryView.layer setShadowRadius:self.barView.layer.shadowRadius];
     [self.accessoryView.layer setShadowOpacity:self.barView.layer.shadowOpacity];
-    stackDatePicker *pick=[[stackDatePicker alloc] initWithFrame:self.accessoryView.bounds];
+    pick=[[LTDatePicker alloc] initWithFrame:self.accessoryView.bounds];
+    pick.delegate=self;
     [pick setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
-    [pick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventPrimaryActionTriggered];
-    [pick setMinimumDate:[NSDate date]];
+    //[pick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventPrimaryActionTriggered];
+    //[pick setMinimumDate:[NSDate date]];
     [self.accessoryView addSubview:pick];
     [self addArrangedSubview:self.accessoryView];
     self.accessoryView.hidden=YES;
@@ -57,25 +61,18 @@
     dateLabel=[[UILabel alloc] initWithFrame:CGRectMake(margin,margin,self.barView.frame.size.width-margin*2, self.barView.frame.size.height-margin*2)];
     [dateLabel setText:[self stringForDate:[NSDate date]]];
     [dateLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
+    [dateLabel setTextColor:[UIColor flatTealColorDark]];
     [self.barView addSubview:dateLabel];
-}
-
--(IBAction)dateChanged:(UIDatePicker*)picker
-{
-    NSString *newText=[self stringForDate:[picker date]];
-    if(newText!=dateLabel.text)
-    {
-        dateLabel.alpha=0.0f;
-        [dateLabel setText:[self stringForDate:[picker date]]];
-        currentDate=[picker date];
-        dateLabel.alpha=1.0f;
-    }
 }
 
 -(NSString*)stringForDate:(NSDate*)date
 {
     NSDateComponents *comp=[[NSCalendar currentCalendar] components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitYear | NSCalendarUnitSecond) fromDate:date];
     NSDateComponents *now=[[NSCalendar currentCalendar] components:(NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitYear | NSCalendarUnitSecond) fromDate:[NSDate date]];
+    if(comp.hour%12==0)
+    {
+        date=[date dateByAddingTimeInterval:-12*60*60];
+    }
     
     NSTimeInterval interval=[date timeIntervalSinceNow];
     
@@ -125,6 +122,8 @@
         NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterShortStyle];
         [formatter setDateFormat:@"h:mm a"];
+        [formatter setLocale:[NSLocale localeWithLocaleIdentifier:@"en_US"]];
+        [formatter setTimeZone:[NSTimeZone systemTimeZone]];
         return [NSString stringWithFormat:@"Tomorrow, %@",[formatter stringFromDate:date]];
     }
     else if(effectiveTime>=2&&effectiveTime<7)
@@ -132,6 +131,7 @@
         NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterShortStyle];
         formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        [formatter setTimeZone:[NSTimeZone systemTimeZone]];
         [formatter setDateFormat:@"EEEE, h:mm a"];
         return [formatter stringFromDate:date];
     }
@@ -140,6 +140,7 @@
         NSDateFormatter *formatter=[[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterShortStyle];
         formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US"];
+        [formatter setTimeZone:[NSTimeZone systemTimeZone]];
         [formatter setDateFormat:@"M/dd, h:mm a"];
         return [formatter stringFromDate:date];
     }
@@ -161,6 +162,24 @@
 -(void)detailEditingWillEnd
 {
     [[event sharedInstance] setDate:currentDate];
+}
+
+//LTDatePickerDelegate method
+-(void)datePicker:(LTDatePicker *)picker dateDidChangeTo:(NSDate *)date
+{
+    NSString *newText=[self stringForDate:date];
+    if(newText!=dateLabel.text)
+    {
+        dateLabel.alpha=0.0f;
+        [dateLabel setText:[self stringForDate:[picker date]]];
+        currentDate=[picker date];
+        dateLabel.alpha=1.0f;
+    }
+    if([date timeIntervalSinceNow]<0&&fabs([date timeIntervalSinceNow])>60)
+    {
+        [picker setDate:[NSDate date] animated:YES];
+    }
+    
 }
 
 @end

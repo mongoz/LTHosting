@@ -8,6 +8,7 @@
 
 #import "popupToolView.h"
 #import "imageEditorView.h"
+#import "responsiveSlider.h"
 
 @interface popupToolView(){
     
@@ -63,7 +64,7 @@
 
 -(UISlider*)aslider
 {
-    UISlider *new=[[UISlider alloc] init];
+    responsiveSlider *new=[[responsiveSlider alloc] init];
     [new setFrame:CGRectMake(inset, inset, self.frame.size.width-2*inset, [self okButton].frame.size.height)];
     [new setUserInteractionEnabled:YES];
     [new setContinuous:YES];

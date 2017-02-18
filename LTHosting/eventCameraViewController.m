@@ -7,6 +7,7 @@
 //
 
 #import "eventCameraViewController.h"
+#import <ChameleonFramework/Chameleon.h>
 
 @interface eventCameraViewController () {
     AVCaptureVideoPreviewLayer *videoPreviewLayer;
@@ -22,8 +23,18 @@
 @implementation eventCameraViewController
 
 - (void)viewDidLoad {
-    [self configureView];
     [super viewDidLoad];
+    
+    
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];self.view.translatesAutoresizingMaskIntoConstraints=YES;
+    
+    [_imageView setFrame:CGRectMake(_imageView.frame.origin.x, _imageView.frame.origin.y, _imageView.frame.size.width, _imageView.frame.size.width*640/480)];
+    [_libraryBar setFrame:CGRectMake(_imageView.frame.origin.x, _imageView.frame.origin.y+_imageView.frame.size.height, _imageView.frame.size.width, self.view.bounds.size.height-_imageView.frame.origin.y-_imageView.frame.size.height)];
+    [self configureView];
     // Do any additional setup after loading the view, typically from a nib.
     
     //Add tap recognizer to view
@@ -38,16 +49,72 @@
     pinchStartScale=0;
     
     //Add tap gesture to libary bar
-    UITapGestureRecognizer *libraryTap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(libraryBarTapped:)];
+    UILongPressGestureRecognizer *libraryTap=[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(libraryBarTapped:)];
+    [libraryTap setMinimumPressDuration:0];
     [libraryTap setDelegate:self];
-    [_libraryBar addGestureRecognizer:libraryTap];
-    
+    [_libraryBarImageView addGestureRecognizer:libraryTap];
+    [_libraryBarImageView setUserInteractionEnabled:YES];
+    [_libraryBar setBackgroundColor:[UIColor flatTealColor]];
     
     //Disable good and bad photo buttons until photo is taken
     [self hideGoodBadButtons];
     
     //Set most recent image in libary bar
     [self findMostRecentImage];
+    
+    
+    [_captureButton setContentMode:UIViewContentModeScaleAspectFit];
+    [_captureButton.layer setShadowOpacity:0.0f];
+    [_captureButton setTintColor:[UIColor flatWhiteColor]];
+    CGFloat height=_libraryBar.frame.size.height-8*2;
+    [_captureButton setFrame:CGRectMake(_libraryBar.frame.size.width/2-height/2, _libraryBar.frame.size.height/2-height/2, height, height)];
+    [_captureButton removeFromSuperview];
+    [_libraryBar addSubview:_captureButton];
+    
+    CALayer *mask=[CALayer layer];
+    [mask setFrame:_captureButton.bounds];
+    [mask setContents:(id)[UIImage imageNamed:@"CameraButton.png"].CGImage];
+    [mask setContentsGravity:kCAGravityResizeAspect];
+    [_captureButton.layer setMask:mask];
+    [_captureButton.layer setBackgroundColor:[UIColor flatWhiteColor].CGColor];
+    [_captureButton setTitle:@"" forState:UIControlStateNormal];
+    
+    CGFloat num=16;
+    height=_libraryBar.frame.size.height-num*2;
+    [_libraryBarImageView setFrame:CGRectMake(num, num, height, height)];
+    
+    num*=1.5;
+    height=_libraryBar.frame.size.height-num*2;
+    [_switchCameraButton setTitle:@"" forState:UIControlStateNormal];
+    [_switchCameraButton setFrame:CGRectMake(_libraryBar.frame.size.width-num-height, num, height, height)];
+    [_switchCameraButton setImage:nil forState:UIControlStateNormal];
+    CALayer *mask2=[CALayer layer];
+    [mask2 setFrame:_switchCameraButton.bounds];
+    [mask2 setContents:(id)[UIImage imageNamed:@"SwitchCamera.png"].CGImage];
+    [mask2 setContentsGravity:kCAGravityResizeAspect];
+    [_switchCameraButton.layer setMask:mask2];
+    [_switchCameraButton.layer setBackgroundColor:[UIColor flatWhiteColor].CGColor];
+    [_switchCameraButton removeFromSuperview];
+    [_libraryBar addSubview:_switchCameraButton];
+    
+    [_badPictureButton removeFromSuperview];
+    [_badPictureButton setFrame:CGRectMake(0, 0, _libraryBar.frame.size.width/2, _libraryBar.frame.size.height)];
+    [_badPictureButton setBackgroundColor:[UIColor flatWhiteColor]];
+    [_badPictureButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
+    [_badPictureButton.layer setBorderWidth:2.0f];
+    [_badPictureButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
+    [_libraryBar addSubview:_badPictureButton];
+    [_badPictureButton.layer setShadowOpacity:0];
+    
+    [_goodPictureButton removeFromSuperview];
+    [_goodPictureButton setFrame:CGRectMake(_libraryBar.frame.size.width/2, 0, _libraryBar.frame.size.width/2, _libraryBar.frame.size.height)];
+    [_goodPictureButton setBackgroundColor:[UIColor flatWhiteColor]];
+    [_goodPictureButton.layer setBorderColor:[UIColor flatMintColor].CGColor];
+    [_goodPictureButton.layer setBorderWidth:2.0f];
+    [_goodPictureButton setTitleColor:[UIColor flatMintColor] forState:UIControlStateNormal];
+    [_libraryBar addSubview:_goodPictureButton];
+    [_goodPictureButton.layer setShadowOpacity:0];
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -89,15 +156,10 @@
 
 -(IBAction)libraryBarTapped:(id)sender
 {
-    if(![_goodPictureButton isHidden])
-    {
-        return;
-    }
     UIImagePickerController *pickerController=[[UIImagePickerController alloc] init];
     [pickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     [pickerController setDelegate:self];
     [self presentViewController:pickerController animated:YES completion:^{
-        NSLog(@"Completed");
     }];
 }
 
@@ -166,24 +228,39 @@
 }
 
 - (IBAction)switchCameraView:(id)sender {
-    //[captureInput setDevice:(id<MTLDevice>)[AVCaptureDevice defaultDeviceWithDeviceType:AVCaptureDeviceTypeBuiltInWideAngleCamera mediaType:AVMediaTypeVideo position:AVCaptureDevicePositionFront]];
-    [self removeCameraView];
-    [[eventCamera sharedInstance] switchCamera];
-    [self addCameraView];
+    [_switchCameraButton setUserInteractionEnabled:NO];
+    [UIView animateWithDuration:.1 animations:^{
+        [_switchCameraButton setAlpha:.5f];
+    } completion:^(BOOL finished){
+        [eventCamera sharedInstance].captureFlashMode=AVCaptureFlashModeOff;
+        [self updateFlashButtonText];
+        if([eventCamera sharedInstance].captureDevicePosition==AVCaptureDevicePositionFront)
+        {
+            _flashButton.userInteractionEnabled=NO;
+        }
+        else
+        {
+            _flashButton.userInteractionEnabled=YES;
+        }
+        [self removeCameraView];
+        [[eventCamera sharedInstance] switchCamera];
+        [self addCameraView];
+        [UIView animateWithDuration:.25 animations:^{
+            [_switchCameraButton setAlpha:1.0f];
+        } completion:^(BOOL finished){
+            [_switchCameraButton setUserInteractionEnabled:YES];
+        }];
+        
+    }];
 }
 
 - (IBAction)capturePhoto:(id)sender {
-    
     [self hideCameraButtons];
     [[eventCamera sharedInstance] captureStillUIImage:^(UIImage *image, NSError *error){
         
         if(error)
         {
             NSLog(@"error capturing photo");
-        }
-        else
-        {
-            NSLog(@"%@",image.debugDescription);
         }
         imagePreviewView=[[UIImageView alloc] initWithImage:image];
         [imagePreviewView setAutoresizesSubviews:YES];
@@ -194,7 +271,6 @@
         [_imageView addSubview:imagePreviewView];
         [_imageView sendSubviewToBack:imagePreviewView];
         [self showGoodBadButtons];
-        NSLog(@"1: %@",image.description);
     }];
 }
 
@@ -251,6 +327,7 @@
     {
         [[eventCamera sharedInstance] startRunning];
     }
+    [[[eventCamera sharedInstance] previewLayer] setVideoGravity:AVLayerVideoGravityResizeAspect];
     [[[eventCamera sharedInstance] previewLayer] setFrame:_imageView.bounds];
     videoPreviewLayer=[[eventCamera sharedInstance] previewLayer];
     [_imageView.layer insertSublayer:videoPreviewLayer atIndex:0];
@@ -266,7 +343,6 @@
     NSString *text=@"Off";
     if(flashMode==AVCaptureFlashModeOn)
     {
-        NSLog(@"it's on now");
         text=@"On";
     }
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -315,42 +391,55 @@
         [[[[eventCamera sharedInstance] previewLayer] connection] setEnabled:YES];
         [self hideGoodBadButtons];
         [self showCameraButtons];
-        [_captureButton setHidden:NO];
-        [_switchCameraButton setHidden:NO];
     }
 }
 
 -(void)showGoodBadButtons
 {
-    for(UIButton *button in [self goodBadButtons])
-    {
-        [button setHidden:NO];
-    }
+    [UIView animateWithDuration:.25 animations:^{
+        for(UIButton *button in [self goodBadButtons])
+        {
+            [button setHidden:NO];
+        }
+    }];
 }
 
 -(void)hideGoodBadButtons
 {
-    for(UIButton *button in [self goodBadButtons])
-    {
-        [button setHidden:YES];
-    }
+    [UIView animateWithDuration:.25 animations:^{
+        for(UIButton *button in [self goodBadButtons])
+        {
+            [button setHidden:YES];
+        }
+    }];
 }
 
 -(void)hideCameraButtons
 {
-    for(UIButton *button in [self cameraButtons])
-    {
-        [button setHidden:YES];
-    }
-    
+    CGFloat dimmedAlpha=.5;
+    [_flashButton setHidden:YES];
+    [_captureButton setUserInteractionEnabled:NO];
+    [_captureButton setAlpha:dimmedAlpha];
+    [_libraryBarImageView setUserInteractionEnabled:NO];
+    [_libraryBarImageView setAlpha:dimmedAlpha];
+    [_switchCameraButton setUserInteractionEnabled:NO];
+    [_switchCameraButton setAlpha:dimmedAlpha];
 }
 
 -(void)showCameraButtons
 {
-    for(UIButton *button in [self cameraButtons])
-    {
-        [button setHidden:NO];
-    }
+    CGFloat dimmedAlpha=1;
+    [UIView animateWithDuration:.25 animations:^{
+        [_captureButton setAlpha:dimmedAlpha];
+        [_libraryBarImageView setAlpha:dimmedAlpha];
+        [_switchCameraButton setAlpha:dimmedAlpha];
+        
+    } completion:^(BOOL finished){
+        [_libraryBarImageView setUserInteractionEnabled:YES];
+        [_captureButton setUserInteractionEnabled:YES];
+        [_switchCameraButton setUserInteractionEnabled:YES];
+        [_flashButton setHidden:NO];
+    }];
 }
 
 -(NSArray<UIButton*>*)goodBadButtons
@@ -371,10 +460,6 @@
 
 -(void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
 {
-    if(visible)
-    {
-        NSLog(@"ended");
-    }
     pinchStartScale=0;
 }
 
@@ -382,8 +467,6 @@
 {
     return YES;
 }
-
-
 
 - (IBAction)goodButtonPressed:(id)sender {
     [[event sharedInstance] setImage:imagePreviewView.image];
@@ -398,12 +481,10 @@
 - (IBAction)flashButtonPressed:(id)sender {
     if([eventCamera sharedInstance].captureFlashMode==AVCaptureFlashModeOff)
     {
-        NSLog(@"turn on");
         [eventCamera sharedInstance].captureFlashMode=AVCaptureFlashModeOn;
     }
     else
     {
-        NSLog(@"turn off");
         [eventCamera sharedInstance].captureFlashMode=AVCaptureFlashModeOff;
     }
     [self updateFlashButtonText];
@@ -417,7 +498,6 @@
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
-    NSLog(@"called");
     [picker dismissViewControllerAnimated:YES completion:^{
     }];
     UIImage *image=nil;

@@ -21,7 +21,7 @@
     {
         self=[super init];
         NSString *string=@"Add";
-        _date=[NSDate distantPast];
+        _date=[NSDate date];
         _music=[string copy];
         _venue=[string copy];
         _isPrivate=YES;
@@ -122,7 +122,18 @@
     NSMutableAttributedString *full=[[NSMutableAttributedString alloc] init];
     NSMutableArray<NSAttributedString*>* lines=[[NSMutableArray alloc] init];
     [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Start: %@",dateString]]];
-    [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"About: %@",_about]]];
+    if(![_about isEqualToString:@""])
+    {
+        [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"About: %@",_about]]];
+    }
+    if(![_music isEqualToString:@"Music"])
+    {
+        [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Music: %@",_music]]];
+    }
+    if(![_venue isEqualToString:@"Venue"])
+    {
+        [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Venue: %@",_venue]]];
+    }
     NSMutableString *lastLine=[[NSMutableString alloc] init];
     BOOL both=NO;
     if(_isPrivate)

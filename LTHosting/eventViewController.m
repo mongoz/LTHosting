@@ -30,6 +30,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _scrollView.delegate=self;
+    _scrollView.bounces=NO;
     [self registerForKeyboardNotifications];
     self.view.translatesAutoresizingMaskIntoConstraints=YES;
     [_stackView setDistribution:UIStackViewDistributionFill];
@@ -38,8 +39,7 @@
     animator=[[UIDynamicAnimator alloc] init];
     animator.delegate=self;
     // Do any additional setup after loading the view.
-    [self.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Test" style:UIBarButtonItemStyleDone target:self action:@selector(testPressed:)]];
-    
+    _scrollView.delaysContentTouches=NO;
     [self configureView];
 }
 

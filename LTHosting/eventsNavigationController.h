@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface eventsNavigationController : UINavigationController <UIScrollViewDelegate>
+@interface eventsNavigationController : UINavigationController <UIScrollViewDelegate, UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UINavigationBar *navBar;
 

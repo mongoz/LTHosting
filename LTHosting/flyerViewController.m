@@ -10,6 +10,7 @@
 #import "commonUseFunctions.h"
 #import "usefulArray.h"
 #import "eventCameraViewController.h"
+#import <ChameleonFramework/Chameleon.h>
 
 @interface flyerViewController (){
     UIView *current;
@@ -37,6 +38,7 @@
     NSInteger typeIndex;
     
     UIView *textInputView;
+    
 }
 @end
 
@@ -50,8 +52,17 @@
     textInputView=nil;
     // Do any additional setup after loading the view.
     [self.view setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
+    
     [_imageContainerView setAutoresizesSubviews:YES];
-    CGFloat proportion=750.0f/836.0f;
+    CGFloat proportion=480.0f/640.0f;
+    
+    
+    [_imageContainerView setFrame:CGRectMake(0, _imageContainerView.frame.origin.y, _imageContainerView.frame.size.width, _imageContainerView.frame.size.width/proportion)];
+    
+    [_toolView setFrame:CGRectMake(0, _imageContainerView.frame.origin.y+_imageContainerView.frame.size.height, self.view.frame.size.width, _bottomBarView.frame.origin.y+_bottomBarView.frame.size.height-_imageContainerView.frame.size.height-_imageContainerView.frame.origin.y)];
+    [_toolView setBackgroundColor:[UIColor flatTealColor]];
+    
     [[imageEditorView sharedInstance] setFrame:CGRectMake(_imageContainerView.frame.size.width/2-(_imageContainerView.frame.size.height*proportion)/2, 0, _imageContainerView.frame.size.height*proportion, _imageContainerView.frame.size.height)];
     NSLog(@"versus: %f, %f",_imageContainerView.frame.size.width,(_imageContainerView.frame.size.height*proportion));
     [_imageContainerView addSubview:[imageEditorView sharedInstance]];
@@ -60,7 +71,7 @@
     thumbnailImage=im;
     borderPicker=[[horizontalViewPicker alloc] initWithFrame:_toolView.bounds];
     borderPicker.bounces=NO;
-    [borderPicker setHeightWidthRatio:830.0f/750.0f];
+    [borderPicker setHeightWidthRatio:640.0f/480.0f];
     [borderPicker setHDelegate:self];
     [borderPicker setDataSource:self];
     [borderPicker selectRowAtIndex:0];
@@ -80,22 +91,32 @@
     
     CGFloat margin=6.0f;
     CGFloat width=_bottomBarView.frame.size.width/3.0f;
-    editingButton=[[flexibleIlluminatedButton alloc] initWithFrame:CGRectMake(_bottomBarView.frame.size.width/2-width/2, margin, width, _bottomBarView.frame.size.height-margin*2)];
+    editingButton=[[flexibleIlluminatedButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-margin-width, _toolView.frame.origin.y-margin-32, width, 32)];
     [editingButton setTitle:@"Editing: NO" forState:UIControlStateNormal];
     editingButton.responder=self;
     editingButton.flexibleSource=self;
     editingButton.userInteractionEnabled=NO;
-    [_bottomBarView addSubview:editingButton];
+    [self.view addSubview:editingButton];
+    
+    
 }
+
+static BOOL isSet=NO;
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
     [[imageEditorView sharedInstance] updateImageContainerWithImage:thumbnailImage];
     [[imageEditorView sharedInstance] setTitleAndBodyText];
     [[[imageEditorView sharedInstance] bodyLayer] fontSizeDidChangeTo:[[imageEditorView sharedInstance] bodyLayer].maxTextSize];
     [[[imageEditorView sharedInstance] titleLayer] fontSizeDidChangeTo:[[imageEditorView sharedInstance] titleLayer].maxTextSize];
+    [super viewWillAppear:animated];
+    if(!isSet)
+    {
+        isSet=YES;
+        [self viewWillAppear:NO];
+    }
 }
+
 
 
 -(UIView*)textEditorWithFrame:(CGRect)frame

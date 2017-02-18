@@ -36,7 +36,7 @@
     if(self=[super init])
     {
         _captureDevicePosition=AVCaptureDevicePositionUnspecified;
-        _preset=AVCaptureSessionPresetPhoto;
+        _preset=AVCaptureSessionPreset640x480;
         _captureFlashMode=AVCaptureFlashModeOff;
         isCaptured=NO;
     }
@@ -220,8 +220,8 @@
             CIContext *context=[CIContext contextWithOptions:options];
             theCGImage=[context createCGImage:image fromRect:image.extent];
         }
-        CGSize size=CGSizeMake(CGImageGetWidth(theCGImage), CGImageGetHeight(theCGImage));
-        theCGImage=CGImageCreateWithImageInRect(theCGImage, CGRectMake(0, size.height/2-(size.width*836/750)/2, size.width, size.width*(836/750)));
+        //CGSize size=CGSizeMake(CGImageGetWidth(theCGImage), CGImageGetHeight(theCGImage));
+        //theCGImage=CGImageCreateWithImageInRect(theCGImage, CGRectMake(0, 0, 100, 100));
         inCompletionBlock(theCGImage, error);
         CGImageRelease(theCGImage);
     }];
@@ -298,8 +298,6 @@
         if([_captureDevice isFocusPointOfInterestSupported])
         {
             [_captureDevice setFocusPointOfInterest:updated];
-            [_captureDevice setExposurePointOfInterest:updated];
-            
         }
         if([_captureDevice isFocusModeSupported:AVCaptureFocusModeAutoFocus])
         {

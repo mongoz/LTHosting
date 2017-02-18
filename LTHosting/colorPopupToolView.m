@@ -36,14 +36,14 @@
 
 -(void)setNoColorButton
 {
-    CGFloat inset=8;
-    noColorButton=[[UIButton alloc] initWithFrame:CGRectMake(self.slider.frame.origin.x, self.slider.frame.origin.y+inset, self.slider.frame.size.height-inset*2, self.slider.frame.size.height-inset*2)];
+    CGFloat inset=6;
+    noColorButton=[[UIButton alloc] initWithFrame:CGRectMake(inset, inset, self.frame.size.height-inset*2, self.frame.size.height-inset*2)];
     [noColorButton.layer setBorderColor:[UIColor blackColor].CGColor];
     [noColorButton.layer setBorderWidth:2];
     [noColorButton.layer setMasksToBounds:YES];
     [noColorButton.layer setCornerRadius:noColorButton.frame.size.height/2];
     [noColorButton addTarget:self action:@selector(noColor:) forControlEvents:UIControlEventTouchUpInside];
-    [self.slider setFrame:CGRectMake(noColorButton.frame.origin.x*2+noColorButton.frame.size.width, noColorButton.frame.origin.y-inset, self.slider.frame.size.width-(noColorButton.frame.origin.x+noColorButton.frame.size.width),self.slider.frame.size.height)];
+    [self.slider setFrame:CGRectMake(noColorButton.frame.origin.x*2+noColorButton.frame.size.width, self.slider.frame.origin.y, self.slider.frame.size.width-(noColorButton.frame.origin.x+noColorButton.frame.size.width),self.slider.frame.size.height)];
     [self addSubview:noColorButton];
 }
 

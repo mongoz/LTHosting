@@ -9,6 +9,7 @@
 #import "eventsNavigationController.h"
 #import "commonUseFunctions.h"
 #import "navigationScrollView.h"
+#import <ChameleonFramework/Chameleon.h>
 
 @interface eventsNavigationController (){
     navigationScrollView *scroller;
@@ -43,7 +44,6 @@
     if(scroller==nil)
     {
         _navBar=self.navigationBar;
-        UIColor *col=self.navigationBar.backgroundColor;
         [self updateBar];
         scroller=[[navigationScrollView alloc] init];
         [scroller setScrollEnabled:YES];
@@ -70,8 +70,8 @@
             }];
             
         }
-        [_navBar setBackgroundColor:col];
         [super viewDidAppear:animated];
+        scroller.delaysContentTouches=NO;
     }
 }
 
@@ -79,7 +79,8 @@
 {
     if(_navBar==nil)
     {
-        return [super navigationBar];
+        _navBar=[super navigationBar];
+        [_navBar setBarTintColor:[UIColor flatTealColor]];
     }
     return _navBar;
 }
@@ -109,7 +110,6 @@
 {
     UIViewController *newVController=[segue destinationViewController];
     [self presentViewController:newVController animated:YES completion:^{
-        NSLog(@"completed");
     }];
 }
 
@@ -237,6 +237,11 @@
     {
         [self popViewController:self.topViewController animated:NO];
     }
+}
+
+-(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
 }
 
 @end

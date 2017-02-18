@@ -59,6 +59,9 @@
     [self.textLayer setLineBreakMode:NSLineBreakByWordWrapping];
     [self.textLayer setTextAlignment:NSTextAlignmentLeft];
     [self.textLayer setAttributedText:string];
+    [self.textLayer.layer setShadowRadius:8.0f];
+    [self.textLayer.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.textLayer.layer setShadowOpacity:1.0f];
     if(font!=nil)
     {
         [self.textLayer setFont:font];
@@ -226,6 +229,10 @@
 
 -(CGFloat)maxTextSize
 {
+    if([self.textLayer.text isEqualToString:@""])
+    {
+        return 32;
+    }
     if(!self.flexibleHeight)
     {
         CGFloat currentSize=1.0f;

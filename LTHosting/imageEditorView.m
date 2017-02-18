@@ -87,9 +87,17 @@ static imageEditorView *sharedInstance=nil;
 
 -(void)updateImageContainerWithImage:(UIImage *)image
 {
+    NSLog(@"%ld",(long)image.imageOrientation);
     [baseLayer removeFromSuperlayer];
     baseLayer=[CALayer layer];
-    [baseLayer setAffineTransform:CGAffineTransformMakeRotation(M_PI_2)];
+    if(image.imageOrientation!=UIImageOrientationUp)
+    {
+        if(image.imageOrientation==UIImageOrientationLeftMirrored)
+        {
+            baseLayer.affineTransform=CGAffineTransformScale(baseLayer.affineTransform, -1, 1);
+        }
+        [baseLayer setAffineTransform:CGAffineTransformRotate(baseLayer.affineTransform,M_PI_2)];
+    }
     [baseLayer setContentsGravity:kCAGravityResizeAspect];
     [baseLayer setContents:(id)image.CGImage];
     baseLayerImageSize=image.size;

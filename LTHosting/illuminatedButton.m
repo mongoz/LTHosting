@@ -41,7 +41,7 @@
 -(void)configure
 {
     _illuminationColor=[UIColor blackColor];
-    _offColor=[UIColor clearColor];
+    _offColor=[UIColor whiteColor];
     _illuminated=NO;
     _onTextColor=[UIColor whiteColor];
     _offTextColor=[UIColor blackColor];

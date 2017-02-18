@@ -42,6 +42,7 @@
     tView=[[UITextView alloc] initWithFrame:self.accessoryView.bounds];
     [self.accessoryView addSubview:tView];
     [tView setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
+    [tView setTextColor:[UIColor flatTealColorDark]];
     [tView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     tView.inputAccessoryView=self.inputAccessoryView;
     [self.accessoryView.layer setShadowColor:self.barView.layer.shadowColor];
@@ -54,8 +55,11 @@
     {
         if(v.class==[UITextField class])
         {
+            UITextField *field=(UITextField*)v;
             [v setUserInteractionEnabled:NO];
             [(UITextField*)v setPlaceholder:@"Add About..."];
+            field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[[UIColor flatTealColorDark] colorWithAlphaComponent:.75] forKey:NSForegroundColorAttributeName]];
+            [self.barView addSubview:field];
         }
     }
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(textTapped:)];

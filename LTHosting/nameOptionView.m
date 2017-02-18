@@ -37,8 +37,11 @@
     CGRect textFieldRect=CGRectMake(margin, margin, self.barView.frame.size.width-margin*2, self.barView.frame.size.height-margin*2);
     field=[[UITextField alloc] initWithFrame:textFieldRect];
     field.inputAccessoryView=[self inputAccessoryView];
-    [self.barView addSubview:field];
+    field.textColor=[UIColor flatTealColorDark];
+    [field setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
     [field setPlaceholder:@"Add Name..."];
+    field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[[UIColor flatTealColorDark] colorWithAlphaComponent:.75] forKey:NSForegroundColorAttributeName]];
+    [self.barView addSubview:field];
     [field setReturnKeyType:UIReturnKeyDone];
     [field addTarget:self action:@selector(donePressed:) forControlEvents:UIControlEventPrimaryActionTriggered];
 }

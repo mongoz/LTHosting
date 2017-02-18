@@ -7,6 +7,7 @@ target 'LTHosting' do
 
   # Pods for LTHosting
 	pod ‘GooglePlaces’
+	pod ‘ChameleonFramework’
 
   target 'LTHostingTests' do
     inherit! :search_paths

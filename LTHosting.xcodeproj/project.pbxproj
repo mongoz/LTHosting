@@ -13,6 +13,12 @@
 		323498641E481EB9000148DF /* eventsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323498631E481EB8000148DF /* eventsNavigationController.m */; };
 		3234986A1E482985000148DF /* flexibleIlluminatedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 323498691E482985000148DF /* flexibleIlluminatedButton.m */; };
 		3234986D1E48443D000148DF /* textSizePopupToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3234986C1E48443D000148DF /* textSizePopupToolView.m */; };
+		3234D0841E511EB3008245B7 /* responsiveSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 3234D0831E511EB3008245B7 /* responsiveSlider.m */; };
+		3234D0CC1E53F5DA008245B7 /* LTDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3234D0CB1E53F5DA008245B7 /* LTDatePicker.m */; };
+		3234D0CF1E540EAE008245B7 /* pizzaborder.png in Resources */ = {isa = PBXBuildFile; fileRef = 3234D0CD1E540EAE008245B7 /* pizzaborder.png */; };
+		3234D0D01E540EAE008245B7 /* fireborder.png in Resources */ = {isa = PBXBuildFile; fileRef = 3234D0CE1E540EAE008245B7 /* fireborder.png */; };
+		3234D0D21E541866008245B7 /* CameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3234D0D11E541866008245B7 /* CameraButton.png */; };
+		3234D0D41E542985008245B7 /* SwitchCamera.png in Resources */ = {isa = PBXBuildFile; fileRef = 3234D0D31E542985008245B7 /* SwitchCamera.png */; };
 		323876091E243C26000ECEEB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876081E243C26000ECEEB /* AVFoundation.framework */; };
 		3238760F1E248E14000ECEEB /* eventCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3238760E1E248E14000ECEEB /* eventCamera.m */; };
 		323876111E249A98000ECEEB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876101E249A98000ECEEB /* CoreImage.framework */; };
@@ -63,8 +69,6 @@
 		329889081E413EFC00397E3A /* border14 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329889001E413EFC00397E3A /* border14 copy.png */; };
 		329889091E413EFC00397E3A /* border15 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329889011E413EFC00397E3A /* border15 copy.png */; };
 		3298890A1E413EFC00397E3A /* border17 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329889021E413EFC00397E3A /* border17 copy.png */; };
-		3298890B1E413EFC00397E3A /* fireborder.png in Resources */ = {isa = PBXBuildFile; fileRef = 329889031E413EFC00397E3A /* fireborder.png */; };
-		3298890C1E413EFC00397E3A /* pizzaborder.png in Resources */ = {isa = PBXBuildFile; fileRef = 329889041E413EFC00397E3A /* pizzaborder.png */; };
 		329889101E41B0A000397E3A /* illuminatedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298890F1E41B0A000397E3A /* illuminatedButton.m */; };
 		32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0D21E18267400C42207 /* eventOptionsSwitchTableViewCell.m */; };
 		32ADD0D61E18280500C42207 /* eventOptionsFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0D51E18280500C42207 /* eventOptionsFieldTableViewCell.m */; };
@@ -117,6 +121,14 @@
 		323498691E482985000148DF /* flexibleIlluminatedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = flexibleIlluminatedButton.m; sourceTree = "<group>"; };
 		3234986B1E48443D000148DF /* textSizePopupToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textSizePopupToolView.h; sourceTree = "<group>"; };
 		3234986C1E48443D000148DF /* textSizePopupToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textSizePopupToolView.m; sourceTree = "<group>"; };
+		3234D0821E511EB3008245B7 /* responsiveSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = responsiveSlider.h; sourceTree = "<group>"; };
+		3234D0831E511EB3008245B7 /* responsiveSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = responsiveSlider.m; sourceTree = "<group>"; };
+		3234D0CA1E53F5DA008245B7 /* LTDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTDatePicker.h; sourceTree = "<group>"; };
+		3234D0CB1E53F5DA008245B7 /* LTDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTDatePicker.m; sourceTree = "<group>"; };
+		3234D0CD1E540EAE008245B7 /* pizzaborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizzaborder.png; sourceTree = "<group>"; };
+		3234D0CE1E540EAE008245B7 /* fireborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireborder.png; sourceTree = "<group>"; };
+		3234D0D11E541866008245B7 /* CameraButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraButton.png; sourceTree = "<group>"; };
+		3234D0D31E542985008245B7 /* SwitchCamera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SwitchCamera.png; sourceTree = "<group>"; };
 		323876061E243B77000ECEEB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		323876081E243C26000ECEEB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3238760D1E248E14000ECEEB /* eventCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCamera.h; sourceTree = "<group>"; };
@@ -200,8 +212,6 @@
 		329889001E413EFC00397E3A /* border14 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border14 copy.png"; sourceTree = "<group>"; };
 		329889011E413EFC00397E3A /* border15 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border15 copy.png"; sourceTree = "<group>"; };
 		329889021E413EFC00397E3A /* border17 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border17 copy.png"; sourceTree = "<group>"; };
-		329889031E413EFC00397E3A /* fireborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireborder.png; sourceTree = "<group>"; };
-		329889041E413EFC00397E3A /* pizzaborder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizzaborder.png; sourceTree = "<group>"; };
 		3298890E1E41B0A000397E3A /* illuminatedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = illuminatedButton.h; sourceTree = "<group>"; };
 		3298890F1E41B0A000397E3A /* illuminatedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = illuminatedButton.m; sourceTree = "<group>"; };
 		32ADD0D11E18267400C42207 /* eventOptionsSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsSwitchTableViewCell.h; sourceTree = "<group>"; };
@@ -342,6 +352,8 @@
 				3234986C1E48443D000148DF /* textSizePopupToolView.m */,
 				324BC17C1E380ADB00C9B629 /* horizontalViewPicker.h */,
 				324BC17D1E380ADB00C9B629 /* horizontalViewPicker.m */,
+				3234D0821E511EB3008245B7 /* responsiveSlider.h */,
+				3234D0831E511EB3008245B7 /* responsiveSlider.m */,
 				327708191E2F4139000FE30A /* popupToolResponder.h */,
 			);
 			name = "Toolkit View Controllers";
@@ -350,6 +362,7 @@
 		324BC1751E38002500C9B629 /* Body Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				3234D0D31E542985008245B7 /* SwitchCamera.png */,
 				324BC16E1E38001100C9B629 /* aliens and cows_trial.ttf */,
 				324BC16F1E38001100C9B629 /* CODE Bold.otf */,
 				324BC1701E38001100C9B629 /* KeepCalm-Medium.ttf */,
@@ -421,8 +434,8 @@
 				329889001E413EFC00397E3A /* border14 copy.png */,
 				329889011E413EFC00397E3A /* border15 copy.png */,
 				329889021E413EFC00397E3A /* border17 copy.png */,
-				329889031E413EFC00397E3A /* fireborder.png */,
-				329889041E413EFC00397E3A /* pizzaborder.png */,
+				3234D0CD1E540EAE008245B7 /* pizzaborder.png */,
+				3234D0CE1E540EAE008245B7 /* fireborder.png */,
 			);
 			name = "Border Images";
 			sourceTree = "<group>";
@@ -487,6 +500,7 @@
 				324BC1751E38002500C9B629 /* Body Fonts */,
 				323876121E24BFA0000ECEEB /* refresh2 copy.png */,
 				327708141E2DF74F000FE30A /* maptrash.png */,
+				3234D0D11E541866008245B7 /* CameraButton.png */,
 				3298890D1E41410F00397E3A /* Border Images */,
 			);
 			sourceTree = "<group>";
@@ -514,6 +528,8 @@
 				3290A6CD1E48766100042C26 /* navigationScrollView.m */,
 				3290A6E11E496E0A00042C26 /* eventViewController.h */,
 				3290A6E21E496E0A00042C26 /* eventViewController.m */,
+				3234D0CA1E53F5DA008245B7 /* LTDatePicker.h */,
+				3234D0CB1E53F5DA008245B7 /* LTDatePicker.m */,
 				3290A7031E49F18400042C26 /* Option Views */,
 				3290A7021E49F14700042C26 /* Stack Views */,
 				3290A6D81E49381F00042C26 /* topGravityView.h */,
@@ -693,12 +709,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3234D0D01E540EAE008245B7 /* fireborder.png in Resources */,
 				329889071E413EFC00397E3A /* border12 copy.png in Resources */,
-				3298890B1E413EFC00397E3A /* fireborder.png in Resources */,
 				324BC17F1E3827E200C9B629 /* aliens and cows_trial.ttf in Resources */,
 				329889081E413EFC00397E3A /* border14 copy.png in Resources */,
 				324BC1801E3827E200C9B629 /* CODE Bold.otf in Resources */,
 				324BC1811E3827E200C9B629 /* KeepCalm-Medium.ttf in Resources */,
+				3234D0D41E542985008245B7 /* SwitchCamera.png in Resources */,
+				3234D0D21E541866008245B7 /* CameraButton.png in Resources */,
 				3298890A1E413EFC00397E3A /* border17 copy.png in Resources */,
 				324BC1821E3827E200C9B629 /* Nike Total 90.ttf in Resources */,
 				324BC1831E3827E200C9B629 /* NOVABOLD.otf in Resources */,
@@ -707,8 +725,8 @@
 				329889061E413EFC00397E3A /* border5 copy.png in Resources */,
 				329889091E413EFC00397E3A /* border15 copy.png in Resources */,
 				323876131E24BFA1000ECEEB /* refresh2 copy.png in Resources */,
-				3298890C1E413EFC00397E3A /* pizzaborder.png in Resources */,
 				32AF04841E180F67006D4E19 /* LaunchScreen.storyboard in Resources */,
+				3234D0CF1E540EAE008245B7 /* pizzaborder.png in Resources */,
 				327708151E2DF74F000FE30A /* maptrash.png in Resources */,
 				3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */,
 				32AF04811E180F67006D4E19 /* Assets.xcassets in Resources */,
@@ -883,11 +901,13 @@
 				324BC1881E3841EF00C9B629 /* textAlignmentPopupToolView.m in Sources */,
 				323CF9501E28127000A1A0A9 /* textToolViewController.m in Sources */,
 				32AF04791E180F67006D4E19 /* eventCameraViewController.m in Sources */,
+				3234D0841E511EB3008245B7 /* responsiveSlider.m in Sources */,
 				3290A7091E49F8B800042C26 /* stackDatePicker.m in Sources */,
 				323CF9601E28192C00A1A0A9 /* smartTextLayer.m in Sources */,
 				3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */,
 				32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */,
 				323CF94D1E28125600A1A0A9 /* toolKitViewController.m in Sources */,
+				3234D0CC1E53F5DA008245B7 /* LTDatePicker.m in Sources */,
 				323CF9631E2DB36600A1A0A9 /* smartLayerThumbnail.m in Sources */,
 				323CF9471E280B5000A1A0A9 /* flyerViewController.m in Sources */,
 				327708181E2F3C6C000FE30A /* popupToolView.m in Sources */,

@@ -51,7 +51,7 @@
     previousContentOffset=CGPointZero;
     [self setContentSize:CGSizeMake(CGFLOAT_MAX,frame.size.height)];
     labelTextColor=[UIColor whiteColor];
-    labelFont=[UIFont preferredFontForTextStyle:UIFontTextStyleCaption1];
+    labelFont=[UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
     return self;
 }
 
