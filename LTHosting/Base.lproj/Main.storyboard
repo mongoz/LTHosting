@@ -122,78 +122,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <exit id="4tt-IF-pqM" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="20.5" y="42.5"/>
-        </scene>
-        <!--Flyer-->
-        <scene sceneID="ss6-w4-DSd">
-            <objects>
-                <viewController id="KYl-p6-0lP" customClass="flyerViewController1" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xoE-1j-Get"/>
-                        <viewControllerLayoutGuide type="bottom" id="92D-XV-Qij"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZXg-FO-2VH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV8-b0-fDw">
-                                <rect key="frame" x="0.0" y="559" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nfQ-4L-qAg">
-                                <rect key="frame" x="0.0" y="431" width="375" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="apU-mb-BVP">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="431"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Flyer" id="z5x-J5-j33">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="aIr-sf-raX">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bJj-R6-dcf">
-                                <rect key="frame" x="16" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="KYl-p6-0lP" eventType="touchUpInside" id="0aZ-AO-JUg"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="Ygo-20-385">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qFx-n5-LNB">
-                                <rect key="frame" x="313" y="7" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="doneButtonPressed:" destination="KYl-p6-0lP" eventType="touchUpInside" id="FYB-2F-7bm"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="backButton" destination="bJj-R6-dcf" id="Wmd-zS-QlZ"/>
-                        <outlet property="bottomBarView" destination="RV8-b0-fDw" id="o6C-hB-itD"/>
-                        <outlet property="doneButton" destination="qFx-n5-LNB" id="ihi-Dm-24k"/>
-                        <outlet property="imageContainerView" destination="apU-mb-BVP" id="atp-s1-ptC"/>
-                        <outlet property="toolView" destination="nfQ-4L-qAg" id="zW9-9e-cwx"/>
-                        <segue destination="4tt-IF-pqM" kind="unwind" identifier="cancelEditing" unwindAction="prepareForUnwind:" id="JVb-su-G5S"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="faz-9a-nWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="560" y="43"/>
         </scene>
         <!--Flyer View Controller-->
         <scene sceneID="yu8-00-tnS">
