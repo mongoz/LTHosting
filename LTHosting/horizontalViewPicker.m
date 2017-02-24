@@ -52,10 +52,27 @@
     [self setContentSize:CGSizeMake(CGFLOAT_MAX,frame.size.height)];
     labelTextColor=[UIColor whiteColor];
     labelFont=[UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
+    _showsSelection=YES;
     return self;
 }
 
+-(id)init
+{
+    self=[self initWithFrame:CGRectZero];
+    return self;
+}
 
+-(void)setFrame:(CGRect)frame
+{
+    BOOL reload=frame.size.height!=self.frame.size.height;
+    [super setFrame:frame];
+    if(reload)
+    {
+        CGFloat height=frame.size.height-_margin*2-bottomCushion;
+        thumbnailSize=CGSizeMake(height/heightWidthRatio, height);
+        [self reloadData];
+    }
+}
 
 -(NSInteger)selectedIndex
 {
@@ -250,7 +267,10 @@
 {
     UIView *view=tap.view;
     NSInteger index=[self indexForFrameOfView:view.frame];
-    [self selectRowAtIndex:index];
+    if(_showsSelection)
+    {
+        [self selectRowAtIndex:index];
+    }
     if(_hDelegate!=nil)
     {
         [_hDelegate horizontalPickerDidSelectViewAtIndex:index];
@@ -320,5 +340,6 @@
         [view removeFromSuperview];
     }
 }
+
 
 @end

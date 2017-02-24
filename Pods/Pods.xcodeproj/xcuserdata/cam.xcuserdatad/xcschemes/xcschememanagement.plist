@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HMSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-LTHosting.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,17 +32,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>172ADAA87AB014F18238DF2043DB4AA8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4339401AA38C748D86F3C2E3C3C633E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9455971C31FD6B46D95862CED71A0D8A</key>
+		<key>6E66B362AE57238557E51E1B585B5C93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A064767B37278DD6225322E7AF616D5A</key>
+		<key>9455971C31FD6B46D95862CED71A0D8A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

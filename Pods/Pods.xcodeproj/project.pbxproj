@@ -7,136 +7,155 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		189D95130E0E34C7EFBD3F5680425DC4 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = A271D938A8E560D6B8B56EB7A6A0D5C3 /* UIButton+Chameleon.m */; };
-		19B414A7BCEC677124DDE9CEEAA746F3 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = E70CCC8F64CAAABF7EFB9C0DD5F13A07 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C8E49542CBC7F970D66954AC4961A5C /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = B5025FDE35D6F101B55BDFDDFA2555C1 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3748655A81D2AEB5701D1A1BCAFB35D2 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = A91A8720C7523F535766B538D5769F35 /* UIView+ChameleonPrivate.m */; };
-		458C8B2C0346386AA021AE2CB51C2C29 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 49C9622B10AFDAAED117175DB9B2277C /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47B181B78F57FAD82F110F5197D96DA8 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = E02521E1406414D691E805F3E16FA437 /* Chameleon_.m */; };
-		487857079B7BF67244CE9010019CF1E5 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 127CA89EC3A408ED5A1B9F0EF7FFB805 /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48BB63C4BBB631037E93B4E025C0572D /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FA716DCF73710EC9238F65707DC6FA /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06E7D2E442D29969F491F4E267EB28BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		0CEA1E3942EFBD610278839916EAF8DB /* Pods-LTHosting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E52115C14FC7DF906AD8E723998389 /* Pods-LTHosting-dummy.m */; };
+		189D95130E0E34C7EFBD3F5680425DC4 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB38AF5CA241FFAE066A7AFF065613F /* UIButton+Chameleon.m */; };
+		19B414A7BCEC677124DDE9CEEAA746F3 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = BB7B63FF6C6663426D0D842416E72DF4 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C8E49542CBC7F970D66954AC4961A5C /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 762BF5FBB4285F4801F3DDA37B88E926 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3748655A81D2AEB5701D1A1BCAFB35D2 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C597CD1F685FDB19DBE8D6FF63842 /* UIView+ChameleonPrivate.m */; };
+		458C8B2C0346386AA021AE2CB51C2C29 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EE55B4E4396CCBF004966851D71B63F /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47B181B78F57FAD82F110F5197D96DA8 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C981F01BF91AF0AD9429D01AFE44E1 /* Chameleon_.m */; };
+		487857079B7BF67244CE9010019CF1E5 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 361C1DA3D3461239877C1B200824342F /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48BB63C4BBB631037E93B4E025C0572D /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A34E3C9BBD4B137277FF245BD932F140 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51108773117EA1EB38120CBE77614ACC /* Pods-LTHostingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A01725D0247429FD1FCC0F1471E027 /* Pods-LTHostingTests-dummy.m */; };
-		73F5A380DCDA2D3961E941B1E9B4320C /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C2C8479A8DCB97BE9090490FED55E11 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6140FA9151F304FDD10E084CB7A10442 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5132B2B59C41B9AE78E3238DE58EAE /* HMSegmentedControl.m */; };
+		73F5A380DCDA2D3961E941B1E9B4320C /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 6755177395DEA8755A8D5FA87625A1C1 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7646651962E88F9CB06617724E57F159 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
-		76A14BDF94501D1F6E7F04EAF00C910E /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E8B80AAEB3CB68FD30405E95F48F69 /* UIColor+Chameleon.m */; };
-		7B3E3E404773B80255C516BA035E47B3 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 86623D165901122BBF68FC8EF9BD43DE /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7D16B0B0D1ECBF329C30F4CA74698032 /* Pods-LTHosting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E52115C14FC7DF906AD8E723998389 /* Pods-LTHosting-dummy.m */; };
-		8854F330A9EF4E0632BEAB1D18DA6F5B /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 78DA27DD65EE8C5BBF95DFA939E9EC51 /* ChameleonConstants.m */; };
+		76A14BDF94501D1F6E7F04EAF00C910E /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE2995E76D7D0852E1F837ABB53A88C /* UIColor+Chameleon.m */; };
+		7B3E3E404773B80255C516BA035E47B3 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C8ACFEB5D0CCA89BEFC9D58502A467 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8854F330A9EF4E0632BEAB1D18DA6F5B /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D975ED68935119481DAE909221D8E89C /* ChameleonConstants.m */; };
 		889D843442116DE6D3786858CC9775F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		8B7F22A8AF5E56A49D3F3DCD86C47071 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAC795424A70CABC7DBE9F3160A356C1 /* UIColor+ChameleonPrivate.m */; };
-		960DFDBC513E356857B63D42FF0933CB /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B2F6B2D0A5BB0748D859357705B4D89 /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98DE52ED56F29381A72098A75B5A4E08 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B8FBB871BE86ECD709D96801E23D25F /* NSArray+Chameleon.m */; };
-		9A292300ABA66ADFBC69F7AB4CF440C9 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B995073663DE5DA41D62E649CD4C190 /* UINavigationController+Chameleon.m */; };
-		9DD7780E908382B8A64268E50207E157 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3529A4DEB566279445AE3DF35CD6289D /* UIViewController+Chameleon.m */; };
-		B0D1D186C9B10E7C4BD4CA2DE67062D5 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = F57983A825993D5CB34DE8FCE1C14D68 /* UILabel+Chameleon.m */; };
+		8B7F22A8AF5E56A49D3F3DCD86C47071 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEF96F6B5C62C2D202D08658BBB331 /* UIColor+ChameleonPrivate.m */; };
+		908E15E10551EEA9F0F4BE64BF0EAFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		960DFDBC513E356857B63D42FF0933CB /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = C972EA57D82F18F39C36055232520C02 /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98DE52ED56F29381A72098A75B5A4E08 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD1F345357E0B4D0D07BE26C87DF05B /* NSArray+Chameleon.m */; };
+		9A292300ABA66ADFBC69F7AB4CF440C9 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C60483D5331FF1763971FBD9B7410457 /* UINavigationController+Chameleon.m */; };
+		9DD7780E908382B8A64268E50207E157 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D554D103DC5AC55FB40CF2CCD4384D37 /* UIViewController+Chameleon.m */; };
+		A5C58E98A560F8E832748A2B309736A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
+		B0D1D186C9B10E7C4BD4CA2DE67062D5 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = E57621960D7476636A3D1BADD0E9259B /* UILabel+Chameleon.m */; };
 		B35DB3E2FE26A8FCD22FA7D7F04489EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
 		B9CA5FACCF8F81D1FFEE83BCBCF05BD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		BBD42AF76472A79C3881088E62C8CA60 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BF25C77DF7F64A00A85A6E730DB9DCA /* UIImage+ChameleonPrivate.m */; };
-		BBDFE569C91BEF78191ED77D8B5C35D5 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = C084351C6BDD7CB67AE9A4B6F207844C /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBD42AF76472A79C3881088E62C8CA60 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF9D3BA237FD1BF77B65DB48279DB9 /* UIImage+ChameleonPrivate.m */; };
+		BBDFE569C91BEF78191ED77D8B5C35D5 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7043888CD5955B20583DDB5FC1B7E8 /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BDFD18B3FAB1DE3FD2FC2307E4A4F6A3 /* HMSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A21A1803F0BAD3068C02ABA61F75DD44 /* HMSegmentedControl-dummy.m */; };
+		BFC487AF0EF719A47A77BDEB3A8B8FB6 /* HMSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F11C2C86C4D021553F4BC62786CB96 /* HMSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C1CE01DA2C4B1997A9EECFEF53701E75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
-		C95178CC895456CE0C2472EB3FE8330B /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 2A61E28CA19CD6B36C6E77AD8DC32B25 /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C95178CC895456CE0C2472EB3FE8330B /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 107CE1D42510B87C370385E3E3A73EC0 /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC9AFD03FACD81CAE8D9F15F0293092D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		D2EEF9446FE5C07C8024F4663876D4C0 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C3DB31AEE983EE0EAC47D923AC74048 /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9F3430DA94CB631B7545F3F289B9AF7 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 48504E0CEA4E7112C78D7BA6638E58F9 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DAC640157E80AD4BDABC537B8C5D556F /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F6C6A8C1D60B84F310B44395F151C8D5 /* ChameleonFramework-dummy.m */; };
-		E5BF16209EAB243FDF571F307D219376 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 10376BEA367640DD89D66642C7E229E4 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E85B04CFD68ACC582EF3C13E5EBF95FA /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = B7B94637DB12AAC0B42BDABBB1DAC422 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F46E1A50A8F08769ADAAA5CF429457A1 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E8325EDDCECEBEB9C077825CF5B516 /* UIAppearance+Swift.m */; };
+		D2EEF9446FE5C07C8024F4663876D4C0 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EC8C3580EFB132B1E233C7A57348E2 /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9F3430DA94CB631B7545F3F289B9AF7 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4155844BF2EDC81177FA71479EC4BE5C /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAC640157E80AD4BDABC537B8C5D556F /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E373BB81DD864D7252593862C00469B4 /* ChameleonFramework-dummy.m */; };
+		E5BF16209EAB243FDF571F307D219376 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DF092823554FC0CC34702ED608F4F9 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E85B04CFD68ACC582EF3C13E5EBF95FA /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D95B9CEE3B1CE03EF5DA7D061E51E74 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F46E1A50A8F08769ADAAA5CF429457A1 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D7C9A65215E34DD2ABA8228C64B59 /* UIAppearance+Swift.m */; };
 		F89F8E81C406AFD1FDFA91F013C07D0C /* Pods-LTHostingUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0B3612BCDBB0F22196CD9ED36F1408 /* Pods-LTHostingUITests-dummy.m */; };
-		FB2B20EB6FA376F7CC00EC65620CE306 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		FEAAB03EA07B91C563BEAFAC737FE237 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 869DC953BBC8657BDA5B8EB058DCD00D /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEAAB03EA07B91C563BEAFAC737FE237 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D4C395118D907870A23524ADE6A67FD /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F20273A8E986307E5C4C8F7C64EAB8C2 /* PBXContainerItemProxy */ = {
+		14C0D481D307432427612D1151623518 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D57F6DD7CBDE11E457971075B0805982;
 			remoteInfo = ChameleonFramework;
 		};
+		C760765A57AC571791D3C0826232A3BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E66B362AE57238557E51E1B585B5C93;
+			remoteInfo = HMSegmentedControl;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08C8ACFEB5D0CCA89BEFC9D58502A467 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		096D7C9A65215E34DD2ABA8228C64B59 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
 		0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		10376BEA367640DD89D66642C7E229E4 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
+		107CE1D42510B87C370385E3E3A73EC0 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
 		1263E67EA77958DDDF1141A96454ABBF /* Pods-LTHostingTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingTests-frameworks.sh"; sourceTree = "<group>"; };
-		127CA89EC3A408ED5A1B9F0EF7FFB805 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
 		151B47A6AC4E71302543C2BE65633246 /* Pods-LTHostingTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingTests-resources.sh"; sourceTree = "<group>"; };
+		1A09BD0277D6F4F7896481BE4833A4C9 /* ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
 		1E73A7D5D56E892F9CEB3875531EF79D /* Pods-LTHosting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHosting.debug.xcconfig"; sourceTree = "<group>"; };
+		1EE55B4E4396CCBF004966851D71B63F /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
 		2351CBD67DB91B6B12726F3B56A1CA6D /* Pods-LTHosting-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHosting-resources.sh"; sourceTree = "<group>"; };
 		2956EBECEDD9717F509D117727B521E6 /* Pods-LTHosting-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHosting-frameworks.sh"; sourceTree = "<group>"; };
-		2A61E28CA19CD6B36C6E77AD8DC32B25 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
-		2B995073663DE5DA41D62E649CD4C190 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
-		3529A4DEB566279445AE3DF35CD6289D /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		2ABEF96F6B5C62C2D202D08658BBB331 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		361C1DA3D3461239877C1B200824342F /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
 		36B6D56CDC1DA44E6EFFCCA5DAB7841F /* Pods-LTHosting-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTHosting-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3C2C8479A8DCB97BE9090490FED55E11 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
-		3C3DB31AEE983EE0EAC47D923AC74048 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		48504E0CEA4E7112C78D7BA6638E58F9 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		48A04405BDDDA69772733E3947BB67F6 /* libChameleonFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libChameleonFramework.a; path = libChameleonFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		49C9622B10AFDAAED117175DB9B2277C /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
+		3AD1F345357E0B4D0D07BE26C87DF05B /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		3C0C597CD1F685FDB19DBE8D6FF63842 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		3C5132B2B59C41B9AE78E3238DE58EAE /* HMSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HMSegmentedControl.m; path = HMSegmentedControl/HMSegmentedControl.m; sourceTree = "<group>"; };
+		4155844BF2EDC81177FA71479EC4BE5C /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		48DF092823554FC0CC34702ED608F4F9 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
 		4A1D80B20B5643D6F2D6EE9DC82AAE3D /* Pods-LTHostingUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTHostingUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4B8FBB871BE86ECD709D96801E23D25F /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
-		4BF25C77DF7F64A00A85A6E730DB9DCA /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		4B29225369B75A39E934894DF55B13F3 /* libChameleonFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libChameleonFramework.a; path = libChameleonFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		52E52115C14FC7DF906AD8E723998389 /* Pods-LTHosting-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTHosting-dummy.m"; sourceTree = "<group>"; };
 		53A01725D0247429FD1FCC0F1471E027 /* Pods-LTHostingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTHostingTests-dummy.m"; sourceTree = "<group>"; };
 		55CDD57B0ED687495520CCE07324E916 /* Pods-LTHostingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTHostingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		56AF8CE8C549F8A0EFB7A0E66898DDFF /* Pods-LTHostingUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingUITests-frameworks.sh"; sourceTree = "<group>"; };
+		5F03FF6D17F5E8814E9E75BECDE45D2F /* HMSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HMSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		62DF9D3BA237FD1BF77B65DB48279DB9 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		65FF7CAF14DC883830CA835C3342E0B7 /* libPods-LTHostingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingTests.a"; path = "libPods-LTHostingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6E53B804BCF698637F0DD7DF6DF8162C /* libPods-LTHosting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHosting.a"; path = "libPods-LTHosting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6755177395DEA8755A8D5FA87625A1C1 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		6B5CFC9AED7C1101B62EA8587E3BEB1C /* libPods-LTHosting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHosting.a"; path = "libPods-LTHosting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E723F01CE4C8CAD7B807FC2EC54C71E /* Pods-LTHostingUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTHostingUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		78DA27DD65EE8C5BBF95DFA939E9EC51 /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
-		78E8325EDDCECEBEB9C077825CF5B516 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		762BF5FBB4285F4801F3DDA37B88E926 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
 		794D50E645F93921DDBA7FEC832B90F4 /* Pods-LTHostingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7B2F6B2D0A5BB0748D859357705B4D89 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		7C7043888CD5955B20583DDB5FC1B7E8 /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
 		7DEC844753B83224767A1EF3688322FA /* Pods-LTHostingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		86623D165901122BBF68FC8EF9BD43DE /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
-		869DC953BBC8657BDA5B8EB058DCD00D /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
-		875EB06F3235D5D1D60F300762D52196 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
-		8D81272D7DBE2C4E6320C962CCE651FE /* libPods-LTHostingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingUITests.a"; path = "libPods-LTHostingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BCB532134F9620495E35973D5978231 /* libPods-LTHostingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingUITests.a"; path = "libPods-LTHostingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D95B9CEE3B1CE03EF5DA7D061E51E74 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96DC2366806705CA6D86F142B68F9584 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		96EC8C3580EFB132B1E233C7A57348E2 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
 		97409FBB5CA248F54B31121E1E5230D7 /* Pods-LTHosting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHosting.release.xcconfig"; sourceTree = "<group>"; };
-		9D9E82E53755579CCF36F95E75B870BD /* ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
+		9D4C395118D907870A23524ADE6A67FD /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
 		9DE90F0C9A1DD7C6CB0AF1C7A87CA6F6 /* Pods-LTHostingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTHostingTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A271D938A8E560D6B8B56EB7A6A0D5C3 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
-		A4EF1EFB5216086BA8DD3261BA6C91D1 /* ChameleonFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.xcconfig; sourceTree = "<group>"; };
-		A91A8720C7523F535766B538D5769F35 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		B5025FDE35D6F101B55BDFDDFA2555C1 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
-		B7B94637DB12AAC0B42BDABBB1DAC422 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		A11E8E1759F59F2386CE16FB9EC188F4 /* libHMSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHMSegmentedControl.a; path = libHMSegmentedControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HMSegmentedControl.xcconfig; sourceTree = "<group>"; };
+		A21A1803F0BAD3068C02ABA61F75DD44 /* HMSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HMSegmentedControl-dummy.m"; sourceTree = "<group>"; };
+		A2C981F01BF91AF0AD9429D01AFE44E1 /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
+		A34E3C9BBD4B137277FF245BD932F140 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		ABB38AF5CA241FFAE066A7AFF065613F /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
 		B9384DB8586765A12739751E2D2D7378 /* Pods-LTHosting-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTHosting-acknowledgements.plist"; sourceTree = "<group>"; };
-		C084351C6BDD7CB67AE9A4B6F207844C /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
-		C26744855920502544C476DED6074054 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		BB7B63FF6C6663426D0D842416E72DF4 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		C1BEE4BD3077DA1386F023D587715D97 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		C4F11C2C86C4D021553F4BC62786CB96 /* HMSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HMSegmentedControl.h; path = HMSegmentedControl/HMSegmentedControl.h; sourceTree = "<group>"; };
+		C60483D5331FF1763971FBD9B7410457 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.xcconfig; sourceTree = "<group>"; };
+		C972EA57D82F18F39C36055232520C02 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		D554D103DC5AC55FB40CF2CCD4384D37 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		D975ED68935119481DAE909221D8E89C /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
 		DA06A93D6E14C9AD102C59E76B6B0DDB /* Pods-LTHostingUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingUITests-resources.sh"; sourceTree = "<group>"; };
-		DAC795424A70CABC7DBE9F3160A356C1 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		E02521E1406414D691E805F3E16FA437 /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
+		DAE2995E76D7D0852E1F837ABB53A88C /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		E1252ADE5EF37A785249CE7CF79A96CB /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		E373BB81DD864D7252593862C00469B4 /* ChameleonFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-dummy.m"; sourceTree = "<group>"; };
 		E4E936ADC50CF0FB47446D45813CE048 /* Pods-LTHostingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E53DD1C00C851219DCC05E789B42075D /* Pods-LTHostingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingTests.release.xcconfig"; sourceTree = "<group>"; };
-		E5E8B80AAEB3CB68FD30405E95F48F69 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
-		E70CCC8F64CAAABF7EFB9C0DD5F13A07 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
+		E57621960D7476636A3D1BADD0E9259B /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
 		EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		ED0B3612BCDBB0F22196CD9ED36F1408 /* Pods-LTHostingUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTHostingUITests-dummy.m"; sourceTree = "<group>"; };
-		F08AC321A786E821C26628D5EBC2D63F /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		F57983A825993D5CB34DE8FCE1C14D68 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
-		F6C6A8C1D60B84F310B44395F151C8D5 /* ChameleonFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-dummy.m"; sourceTree = "<group>"; };
-		F8FA716DCF73710EC9238F65707DC6FA /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
-		F961FD7801D29FFEF20C8E6083D4CAE5 /* libPods-LTHostingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingTests.a"; path = "libPods-LTHostingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		2AA5F33F4E2D8F63F9068159CD2D61CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06E7D2E442D29969F491F4E267EB28BA /* Foundation.framework in Frameworks */,
+				A5C58E98A560F8E832748A2B309736A1 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35C7CFAC9E78C47DF5D6997CC1378BF2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B9CA5FACCF8F81D1FFEE83BCBCF05BD9 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4C084CD3E1BC63D9B8DFCA8BFE0AF9BB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FB2B20EB6FA376F7CC00EC65620CE306 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,34 +178,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EB33A65C42C77B6BF5F923505B9ACFF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				908E15E10551EEA9F0F4BE64BF0EAFA4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00ADFF3D9CD2A687044DB3EA1FB360E9 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A4EF1EFB5216086BA8DD3261BA6C91D1 /* ChameleonFramework.xcconfig */,
-				F6C6A8C1D60B84F310B44395F151C8D5 /* ChameleonFramework-dummy.m */,
-				9D9E82E53755579CCF36F95E75B870BD /* ChameleonFramework-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ChameleonFramework";
-			sourceTree = "<group>";
-		};
-		074CC22B71103ADF3B4C06CDD3902D40 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				875EB06F3235D5D1D60F300762D52196 /* GooglePlaces.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				2691F93227E549B2A03FB9E6D0C3C623 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C73671220ECC7F1E5CDF9232A04F00E /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				E6D4D3FD28805C92D200B122669C3E44 /* Base */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		2691F93227E549B2A03FB9E6D0C3C623 /* iOS */ = {
@@ -198,6 +215,28 @@
 				EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		2D40AED609A9FCB2D3D4B8AD1540EBBA /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */,
+				E373BB81DD864D7252593862C00469B4 /* ChameleonFramework-dummy.m */,
+				1A09BD0277D6F4F7896481BE4833A4C9 /* ChameleonFramework-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ChameleonFramework";
+			sourceTree = "<group>";
+		};
+		3330B477DECAF7BFEEEA7BE3983CE7BC /* HMSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				C4F11C2C86C4D021553F4BC62786CB96 /* HMSegmentedControl.h */,
+				3C5132B2B59C41B9AE78E3238DE58EAE /* HMSegmentedControl.m */,
+				49E817C7ECB29312A0440239A4C62C0A /* Support Files */,
+			);
+			name = HMSegmentedControl;
+			path = HMSegmentedControl;
 			sourceTree = "<group>";
 		};
 		36D720E2831551C60C15D5DBEFBCBF7C /* Pods-LTHostingTests */ = {
@@ -215,22 +254,57 @@
 			path = "Target Support Files/Pods-LTHostingTests";
 			sourceTree = "<group>";
 		};
-		3C7545A4B19D07496C8D211EA226809A /* Base */ = {
+		3B8ECE7BE088E9C635E970A714419233 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				55BD73143489067CE56E9DD4DC1976DF /* Frameworks */,
+				C1BEE4BD3077DA1386F023D587715D97 /* GooglePlaces.bundle */,
 			);
-			name = Base;
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		528D29E36C39E4D0CEF502F27D8A883C /* Pods */ = {
+		49E817C7ECB29312A0440239A4C62C0A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C2DD1608AF6CC43EE44A157415A1797F /* ChameleonFramework */,
-				BFEBDE7A4BF1C248D8CC4CC3AF108AB0 /* GoogleMaps */,
-				88A5DDD2E9372478B41EA1F4198D0976 /* GooglePlaces */,
+				A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */,
+				A21A1803F0BAD3068C02ABA61F75DD44 /* HMSegmentedControl-dummy.m */,
+				5F03FF6D17F5E8814E9E75BECDE45D2F /* HMSegmentedControl-prefix.pch */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/HMSegmentedControl";
+			sourceTree = "<group>";
+		};
+		4A525DC13F0C18AB1E3C182B4F0593F3 /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				9D4C395118D907870A23524ADE6A67FD /* Chameleon.h */,
+				107CE1D42510B87C370385E3E3A73EC0 /* Chameleon_.h */,
+				A2C981F01BF91AF0AD9429D01AFE44E1 /* Chameleon_.m */,
+				48DF092823554FC0CC34702ED608F4F9 /* ChameleonConstants.h */,
+				D975ED68935119481DAE909221D8E89C /* ChameleonConstants.m */,
+				1EE55B4E4396CCBF004966851D71B63F /* ChameleonEnums.h */,
+				7C7043888CD5955B20583DDB5FC1B7E8 /* ChameleonMacros.h */,
+				BB7B63FF6C6663426D0D842416E72DF4 /* NSArray+Chameleon.h */,
+				3AD1F345357E0B4D0D07BE26C87DF05B /* NSArray+Chameleon.m */,
+				08C8ACFEB5D0CCA89BEFC9D58502A467 /* UIAppearance+Swift.h */,
+				096D7C9A65215E34DD2ABA8228C64B59 /* UIAppearance+Swift.m */,
+				6755177395DEA8755A8D5FA87625A1C1 /* UIButton+Chameleon.h */,
+				ABB38AF5CA241FFAE066A7AFF065613F /* UIButton+Chameleon.m */,
+				8D95B9CEE3B1CE03EF5DA7D061E51E74 /* UIColor+Chameleon.h */,
+				DAE2995E76D7D0852E1F837ABB53A88C /* UIColor+Chameleon.m */,
+				4155844BF2EDC81177FA71479EC4BE5C /* UIColor+ChameleonPrivate.h */,
+				2ABEF96F6B5C62C2D202D08658BBB331 /* UIColor+ChameleonPrivate.m */,
+				361C1DA3D3461239877C1B200824342F /* UIImage+ChameleonPrivate.h */,
+				62DF9D3BA237FD1BF77B65DB48279DB9 /* UIImage+ChameleonPrivate.m */,
+				762BF5FBB4285F4801F3DDA37B88E926 /* UILabel+Chameleon.h */,
+				E57621960D7476636A3D1BADD0E9259B /* UILabel+Chameleon.m */,
+				C972EA57D82F18F39C36055232520C02 /* UINavigationController+Chameleon.h */,
+				C60483D5331FF1763971FBD9B7410457 /* UINavigationController+Chameleon.m */,
+				96EC8C3580EFB132B1E233C7A57348E2 /* UIView+ChameleonPrivate.h */,
+				3C0C597CD1F685FDB19DBE8D6FF63842 /* UIView+ChameleonPrivate.m */,
+				A34E3C9BBD4B137277FF245BD932F140 /* UIViewController+Chameleon.h */,
+				D554D103DC5AC55FB40CF2CCD4384D37 /* UIViewController+Chameleon.m */,
+			);
+			name = Default;
 			sourceTree = "<group>";
 		};
 		541437032DEC0171FCEFC0FD1E35C58C /* Targets Support Files */ = {
@@ -243,20 +317,24 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		55BD73143489067CE56E9DD4DC1976DF /* Frameworks */ = {
+		71294C13C01620507319C243FFD2E4D5 /* GooglePlaces */ = {
 			isa = PBXGroup;
 			children = (
-				C26744855920502544C476DED6074054 /* GoogleMapsBase.framework */,
+				FE02951EF7AC6560E090BDD4A231547C /* Frameworks */,
+				3B8ECE7BE088E9C635E970A714419233 /* Resources */,
 			);
-			name = Frameworks;
+			name = GooglePlaces;
+			path = GooglePlaces;
 			sourceTree = "<group>";
 		};
-		571E076FBC54B88DD78FE8973B067D2E /* Frameworks */ = {
+		74F354D8D2AA4CC76EECD3D2A884905C /* ChameleonFramework */ = {
 			isa = PBXGroup;
 			children = (
-				F08AC321A786E821C26628D5EBC2D63F /* GooglePlaces.framework */,
+				4A525DC13F0C18AB1E3C182B4F0593F3 /* Default */,
+				2D40AED609A9FCB2D3D4B8AD1540EBBA /* Support Files */,
 			);
-			name = Frameworks;
+			name = ChameleonFramework;
+			path = ChameleonFramework;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -264,20 +342,18 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				528D29E36C39E4D0CEF502F27D8A883C /* Pods */,
-				CE23E70DA1ABD21E0D6D43CAE2D8A66E /* Products */,
+				E5C6F74D8736B160D28E93655D93C0D0 /* Pods */,
+				ACBFECABAE3A2ABC7D2A4EE3ECE36CA0 /* Products */,
 				541437032DEC0171FCEFC0FD1E35C58C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		88A5DDD2E9372478B41EA1F4198D0976 /* GooglePlaces */ = {
+		8882D3BD3FA62C5361B517B804F7F1FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				571E076FBC54B88DD78FE8973B067D2E /* Frameworks */,
-				074CC22B71103ADF3B4C06CDD3902D40 /* Resources */,
+				E1252ADE5EF37A785249CE7CF79A96CB /* GoogleMapsBase.framework */,
 			);
-			name = GooglePlaces;
-			path = GooglePlaces;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8988A1C9721FC426EA689074135FDC57 /* Pods-LTHostingUITests */ = {
@@ -295,47 +371,16 @@
 			path = "Target Support Files/Pods-LTHostingUITests";
 			sourceTree = "<group>";
 		};
-		ADCA6FD0AA38FABB2B64B7525A057304 /* Default */ = {
+		ACBFECABAE3A2ABC7D2A4EE3ECE36CA0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				869DC953BBC8657BDA5B8EB058DCD00D /* Chameleon.h */,
-				2A61E28CA19CD6B36C6E77AD8DC32B25 /* Chameleon_.h */,
-				E02521E1406414D691E805F3E16FA437 /* Chameleon_.m */,
-				10376BEA367640DD89D66642C7E229E4 /* ChameleonConstants.h */,
-				78DA27DD65EE8C5BBF95DFA939E9EC51 /* ChameleonConstants.m */,
-				49C9622B10AFDAAED117175DB9B2277C /* ChameleonEnums.h */,
-				C084351C6BDD7CB67AE9A4B6F207844C /* ChameleonMacros.h */,
-				E70CCC8F64CAAABF7EFB9C0DD5F13A07 /* NSArray+Chameleon.h */,
-				4B8FBB871BE86ECD709D96801E23D25F /* NSArray+Chameleon.m */,
-				86623D165901122BBF68FC8EF9BD43DE /* UIAppearance+Swift.h */,
-				78E8325EDDCECEBEB9C077825CF5B516 /* UIAppearance+Swift.m */,
-				3C2C8479A8DCB97BE9090490FED55E11 /* UIButton+Chameleon.h */,
-				A271D938A8E560D6B8B56EB7A6A0D5C3 /* UIButton+Chameleon.m */,
-				B7B94637DB12AAC0B42BDABBB1DAC422 /* UIColor+Chameleon.h */,
-				E5E8B80AAEB3CB68FD30405E95F48F69 /* UIColor+Chameleon.m */,
-				48504E0CEA4E7112C78D7BA6638E58F9 /* UIColor+ChameleonPrivate.h */,
-				DAC795424A70CABC7DBE9F3160A356C1 /* UIColor+ChameleonPrivate.m */,
-				127CA89EC3A408ED5A1B9F0EF7FFB805 /* UIImage+ChameleonPrivate.h */,
-				4BF25C77DF7F64A00A85A6E730DB9DCA /* UIImage+ChameleonPrivate.m */,
-				B5025FDE35D6F101B55BDFDDFA2555C1 /* UILabel+Chameleon.h */,
-				F57983A825993D5CB34DE8FCE1C14D68 /* UILabel+Chameleon.m */,
-				7B2F6B2D0A5BB0748D859357705B4D89 /* UINavigationController+Chameleon.h */,
-				2B995073663DE5DA41D62E649CD4C190 /* UINavigationController+Chameleon.m */,
-				3C3DB31AEE983EE0EAC47D923AC74048 /* UIView+ChameleonPrivate.h */,
-				A91A8720C7523F535766B538D5769F35 /* UIView+ChameleonPrivate.m */,
-				F8FA716DCF73710EC9238F65707DC6FA /* UIViewController+Chameleon.h */,
-				3529A4DEB566279445AE3DF35CD6289D /* UIViewController+Chameleon.m */,
+				4B29225369B75A39E934894DF55B13F3 /* libChameleonFramework.a */,
+				A11E8E1759F59F2386CE16FB9EC188F4 /* libHMSegmentedControl.a */,
+				6B5CFC9AED7C1101B62EA8587E3BEB1C /* libPods-LTHosting.a */,
+				65FF7CAF14DC883830CA835C3342E0B7 /* libPods-LTHostingTests.a */,
+				8BCB532134F9620495E35973D5978231 /* libPods-LTHostingUITests.a */,
 			);
-			name = Default;
-			sourceTree = "<group>";
-		};
-		BFEBDE7A4BF1C248D8CC4CC3AF108AB0 /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				3C7545A4B19D07496C8D211EA226809A /* Base */,
-			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C0601039AA97DD4A93D61B6943AB5AAB /* Pods-LTHosting */ = {
@@ -353,30 +398,44 @@
 			path = "Target Support Files/Pods-LTHosting";
 			sourceTree = "<group>";
 		};
-		C2DD1608AF6CC43EE44A157415A1797F /* ChameleonFramework */ = {
+		E5C6F74D8736B160D28E93655D93C0D0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ADCA6FD0AA38FABB2B64B7525A057304 /* Default */,
-				00ADFF3D9CD2A687044DB3EA1FB360E9 /* Support Files */,
+				74F354D8D2AA4CC76EECD3D2A884905C /* ChameleonFramework */,
+				1C73671220ECC7F1E5CDF9232A04F00E /* GoogleMaps */,
+				71294C13C01620507319C243FFD2E4D5 /* GooglePlaces */,
+				3330B477DECAF7BFEEEA7BE3983CE7BC /* HMSegmentedControl */,
 			);
-			name = ChameleonFramework;
-			path = ChameleonFramework;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		CE23E70DA1ABD21E0D6D43CAE2D8A66E /* Products */ = {
+		E6D4D3FD28805C92D200B122669C3E44 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				48A04405BDDDA69772733E3947BB67F6 /* libChameleonFramework.a */,
-				6E53B804BCF698637F0DD7DF6DF8162C /* libPods-LTHosting.a */,
-				F961FD7801D29FFEF20C8E6083D4CAE5 /* libPods-LTHostingTests.a */,
-				8D81272D7DBE2C4E6320C962CCE651FE /* libPods-LTHostingUITests.a */,
+				8882D3BD3FA62C5361B517B804F7F1FA /* Frameworks */,
 			);
-			name = Products;
+			name = Base;
+			sourceTree = "<group>";
+		};
+		FE02951EF7AC6560E090BDD4A231547C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96DC2366806705CA6D86F142B68F9584 /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		1BBD9F7CEC386A8DE830F56FE4D2BB59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFC487AF0EF719A47A77BDEB3A8B8FB6 /* HMSegmentedControl.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42D77042A3C91E61B45A6E8BBFA82E9E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -402,6 +461,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		172ADAA87AB014F18238DF2043DB4AA8 /* Pods-LTHosting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B26812F56928C74DA428EB12FB18C7F3 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */;
+			buildPhases = (
+				D13D99810308C457AA9E4EF5225DBB38 /* Sources */,
+				EB33A65C42C77B6BF5F923505B9ACFF0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				57B18402F0E89D0196CF1775725DB0AF /* PBXTargetDependency */,
+				6974DDEE950BF6F2E93B72949D1E53E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-LTHosting";
+			productName = "Pods-LTHosting";
+			productReference = 6B5CFC9AED7C1101B62EA8587E3BEB1C /* libPods-LTHosting.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		4339401AA38C748D86F3C2E3C3C633E8 /* Pods-LTHostingUITests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B54435AB6C99DF0F01441399CC574917 /* Build configuration list for PBXNativeTarget "Pods-LTHostingUITests" */;
@@ -415,7 +492,24 @@
 			);
 			name = "Pods-LTHostingUITests";
 			productName = "Pods-LTHostingUITests";
-			productReference = 8D81272D7DBE2C4E6320C962CCE651FE /* libPods-LTHostingUITests.a */;
+			productReference = 8BCB532134F9620495E35973D5978231 /* libPods-LTHostingUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		6E66B362AE57238557E51E1B585B5C93 /* HMSegmentedControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2C2EA64CD5AA31F8FD3779DCAB1EA5B /* Build configuration list for PBXNativeTarget "HMSegmentedControl" */;
+			buildPhases = (
+				12B0937F9BE3BF6804980CD41425D339 /* Sources */,
+				2AA5F33F4E2D8F63F9068159CD2D61CB /* Frameworks */,
+				1BBD9F7CEC386A8DE830F56FE4D2BB59 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMSegmentedControl;
+			productName = HMSegmentedControl;
+			productReference = A11E8E1759F59F2386CE16FB9EC188F4 /* libHMSegmentedControl.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		9455971C31FD6B46D95862CED71A0D8A /* Pods-LTHostingTests */ = {
@@ -431,24 +525,7 @@
 			);
 			name = "Pods-LTHostingTests";
 			productName = "Pods-LTHostingTests";
-			productReference = F961FD7801D29FFEF20C8E6083D4CAE5 /* libPods-LTHostingTests.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		A064767B37278DD6225322E7AF616D5A /* Pods-LTHosting */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6C1E74E3807FE5E9FC425AC3ACA7845 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */;
-			buildPhases = (
-				D0FBDA8E3CA205A3FB0D035EA01D8D49 /* Sources */,
-				4C084CD3E1BC63D9B8DFCA8BFE0AF9BB /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				084A67C23BBFF08B775129A88DC13E42 /* PBXTargetDependency */,
-			);
-			name = "Pods-LTHosting";
-			productName = "Pods-LTHosting";
-			productReference = 6E53B804BCF698637F0DD7DF6DF8162C /* libPods-LTHosting.a */;
+			productReference = 65FF7CAF14DC883830CA835C3342E0B7 /* libPods-LTHostingTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D57F6DD7CBDE11E457971075B0805982 /* ChameleonFramework */ = {
@@ -465,7 +542,7 @@
 			);
 			name = ChameleonFramework;
 			productName = ChameleonFramework;
-			productReference = 48A04405BDDDA69772733E3947BB67F6 /* libChameleonFramework.a */;
+			productReference = 4B29225369B75A39E934894DF55B13F3 /* libChameleonFramework.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -485,12 +562,13 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = CE23E70DA1ABD21E0D6D43CAE2D8A66E /* Products */;
+			productRefGroup = ACBFECABAE3A2ABC7D2A4EE3ECE36CA0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D57F6DD7CBDE11E457971075B0805982 /* ChameleonFramework */,
-				A064767B37278DD6225322E7AF616D5A /* Pods-LTHosting */,
+				6E66B362AE57238557E51E1B585B5C93 /* HMSegmentedControl */,
+				172ADAA87AB014F18238DF2043DB4AA8 /* Pods-LTHosting */,
 				9455971C31FD6B46D95862CED71A0D8A /* Pods-LTHostingTests */,
 				4339401AA38C748D86F3C2E3C3C633E8 /* Pods-LTHostingUITests */,
 			);
@@ -498,6 +576,15 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		12B0937F9BE3BF6804980CD41425D339 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDFD18B3FAB1DE3FD2FC2307E4A4F6A3 /* HMSegmentedControl-dummy.m in Sources */,
+				6140FA9151F304FDD10E084CB7A10442 /* HMSegmentedControl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		16E3DD3BF7928D368434D5126F6E9CA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -534,29 +621,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D0FBDA8E3CA205A3FB0D035EA01D8D49 /* Sources */ = {
+		D13D99810308C457AA9E4EF5225DBB38 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D16B0B0D1ECBF329C30F4CA74698032 /* Pods-LTHosting-dummy.m in Sources */,
+				0CEA1E3942EFBD610278839916EAF8DB /* Pods-LTHosting-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		084A67C23BBFF08B775129A88DC13E42 /* PBXTargetDependency */ = {
+		57B18402F0E89D0196CF1775725DB0AF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ChameleonFramework;
 			target = D57F6DD7CBDE11E457971075B0805982 /* ChameleonFramework */;
-			targetProxy = F20273A8E986307E5C4C8F7C64EAB8C2 /* PBXContainerItemProxy */;
+			targetProxy = 14C0D481D307432427612D1151623518 /* PBXContainerItemProxy */;
+		};
+		6974DDEE950BF6F2E93B72949D1E53E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HMSegmentedControl;
+			target = 6E66B362AE57238557E51E1B585B5C93 /* HMSegmentedControl */;
+			targetProxy = C760765A57AC571791D3C0826232A3BA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		167CD88496D8FB2F6A90D2815E722B43 /* Release */ = {
+		0B029688D6709A4CB39F90CAED5AEB3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4E936ADC50CF0FB47446D45813CE048 /* Pods-LTHostingUITests.release.xcconfig */;
+			baseConfigurationReference = A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -564,22 +657,22 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		33C90574A5751A7B3544E3AF86FB75C6 /* Release */ = {
+		167CD88496D8FB2F6A90D2815E722B43 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97409FBB5CA248F54B31121E1E5230D7 /* Pods-LTHosting.release.xcconfig */;
+			baseConfigurationReference = E4E936ADC50CF0FB47446D45813CE048 /* Pods-LTHostingUITests.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -623,6 +716,29 @@
 			};
 			name = Release;
 		};
+		6644FDC36715F515D1FF249236B742E9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E73A7D5D56E892F9CEB3875531EF79D /* Pods-LTHosting.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -663,19 +779,19 @@
 			};
 			name = Release;
 		};
-		8D430334759B233883FA530C363188F1 /* Debug */ = {
+		6FA311A7FEB2DD8CA51BAFAF13F7B4C3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E73A7D5D56E892F9CEB3875531EF79D /* Pods-LTHosting.debug.xcconfig */;
+			baseConfigurationReference = 97409FBB5CA248F54B31121E1E5230D7 /* Pods-LTHosting.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -684,7 +800,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		9D60F55507332F641B9F9E20E33C1E78 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -711,7 +827,7 @@
 		};
 		9EE9D2D435242AC06C2B8F5B20B04D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4EF1EFB5216086BA8DD3261BA6C91D1 /* ChameleonFramework.xcconfig */;
+			baseConfigurationReference = C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -757,7 +873,7 @@
 		};
 		BD4722E7E8CB33D0C8A84DBFE1794777 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4EF1EFB5216086BA8DD3261BA6C91D1 /* ChameleonFramework.xcconfig */;
+			baseConfigurationReference = C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -777,6 +893,29 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		D9EFFB85B6BAED55C96513504D459EB8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -834,6 +973,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A2C2EA64CD5AA31F8FD3779DCAB1EA5B /* Build configuration list for PBXNativeTarget "HMSegmentedControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D9EFFB85B6BAED55C96513504D459EB8 /* Debug */,
+				0B029688D6709A4CB39F90CAED5AEB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B26812F56928C74DA428EB12FB18C7F3 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6644FDC36715F515D1FF249236B742E9 /* Debug */,
+				6FA311A7FEB2DD8CA51BAFAF13F7B4C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B466472CA384578069CD31A80DF990D5 /* Build configuration list for PBXNativeTarget "ChameleonFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -848,15 +1005,6 @@
 			buildConfigurations = (
 				AA87114898D330C8A82266892C4FBA8E /* Debug */,
 				167CD88496D8FB2F6A90D2815E722B43 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6C1E74E3807FE5E9FC425AC3ACA7845 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8D430334759B233883FA530C363188F1 /* Debug */,
-				33C90574A5751A7B3544E3AF86FB75C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

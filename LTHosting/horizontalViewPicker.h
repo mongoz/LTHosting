@@ -40,6 +40,8 @@
 
 -(void)selectRowAtIndex:(NSInteger)index;
 
+@property BOOL showsSelection;
+
 @end
 
 @protocol horizontalViewPickerDataSource <NSObject>

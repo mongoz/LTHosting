@@ -118,7 +118,7 @@
                         <outlet property="libraryBar" destination="sqi-tv-Fo9" id="HKu-AB-uUx"/>
                         <outlet property="libraryBarImageView" destination="cQT-pq-Lk2" id="mAp-4p-JG6"/>
                         <outlet property="switchCameraButton" destination="Hnh-mU-ke5" id="dRc-9n-DxS"/>
-                        <segue destination="KYl-p6-0lP" kind="push" identifier="editPhoto" id="0bd-kY-yxI"/>
+                        <segue destination="Ajq-ap-5KK" kind="push" identifier="editPhoto" id="RNQ-I6-hkJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -129,13 +129,13 @@
         <!--Flyer-->
         <scene sceneID="ss6-w4-DSd">
             <objects>
-                <viewController id="KYl-p6-0lP" customClass="flyerViewController" sceneMemberID="viewController">
+                <viewController id="KYl-p6-0lP" customClass="flyerViewController1" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xoE-1j-Get"/>
                         <viewControllerLayoutGuide type="bottom" id="92D-XV-Qij"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ZXg-FO-2VH">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RV8-b0-fDw">
@@ -194,6 +194,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faz-9a-nWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="560" y="43"/>
+        </scene>
+        <!--Flyer View Controller-->
+        <scene sceneID="yu8-00-tnS">
+            <objects>
+                <viewController id="Ajq-ap-5KK" customClass="flyerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WV2-rI-e9l"/>
+                        <viewControllerLayoutGuide type="bottom" id="tYY-Oi-SvE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4VR-lM-WyY">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j3J-N9-4AW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XR9-vf-I5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="560" y="866"/>
         </scene>
         <!--New Event-->
         <scene sceneID="FjR-4S-SQe">

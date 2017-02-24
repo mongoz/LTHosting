@@ -12,7 +12,7 @@
 #import "eventCameraViewController.h"
 #import <ChameleonFramework/Chameleon.h>
 
-@interface flyerViewController (){
+@interface flyerViewController1 (){
     UIView *current;
     
     CGRect targetBorderFrame;
@@ -42,7 +42,7 @@
 }
 @end
 
-@implementation flyerViewController
+@implementation flyerViewController1
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -626,7 +626,7 @@ __weak smartTextLayer *editingLayer=nil;
         return base;
     }
     UIImage *im=[usefulArray borderImages][index-1];
-    CGSize newSize=CGSizeMake(_toolView.frame.size.height, _toolView.frame.size.height*836.0f/750.0f);
+    CGSize newSize=CGSizeMake(_toolView.frame.size.height, _toolView.frame.size.height*640.0f/480.0f);
     UIImageView *new=[[UIImageView alloc] initWithImage:[self resizeImage:im newSize:newSize]];
     [new setContentMode:UIViewContentModeScaleToFill];
     [new setFrame:base.frame];
