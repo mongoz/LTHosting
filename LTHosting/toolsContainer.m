@@ -122,6 +122,9 @@ NSInteger tCount=3;
     
 }
 
+UIButton *barView=nil;
+BOOL barShowing=NO;
+
 -(void)toolView:(toolView *)view isEditingWillChangeTo:(BOOL)isEditing
 {
     if(isEditing)
@@ -138,9 +141,6 @@ NSInteger tCount=3;
     }
     bottom.userInteractionEnabled=!isEditing;
 }
-
-UIButton *barView=nil;
-BOOL barShowing=NO;
 
 -(void)toggleBar
 {
@@ -162,16 +162,19 @@ BOOL barShowing=NO;
         heightChange*=-1;
     }
     CGRect newFrame=CGRectMake(barView.frame.origin.x, barView.frame.origin.y+heightChange, barView.frame.size.width, barView.frame.size.height);
-    [UIView animateWithDuration:.25 animations:^{
-        [barView setFrame:newFrame];
-    } completion:^(BOOL finished){
-        if(!up)
-        {
-            [barView removeFromSuperview];
-            barView=nil;
-        }
-        barShowing=!barShowing;
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [UIView animateWithDuration:.25 animations:^{
+            [barView setFrame:newFrame];
+        } completion:^(BOOL finished){
+            if(!up)
+            {
+                [barView removeFromSuperview];
+                barView=nil;
+            }
+            barShowing=!barShowing;
+        }];
     }];
+    
 }
 
 -(IBAction)donePressed:(UIButton*)done

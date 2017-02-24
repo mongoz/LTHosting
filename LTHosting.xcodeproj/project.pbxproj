@@ -69,20 +69,6 @@
 		329889091E413EFC00397E3A /* border15 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329889011E413EFC00397E3A /* border15 copy.png */; };
 		3298890A1E413EFC00397E3A /* border17 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 329889021E413EFC00397E3A /* border17 copy.png */; };
 		329889101E41B0A000397E3A /* illuminatedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298890F1E41B0A000397E3A /* illuminatedButton.m */; };
-		32998E7E1E5FF13E00DFA698 /* borderPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E621E5FF13E00DFA698 /* borderPicker.m */; };
-		32998E7F1E5FF13E00DFA698 /* flyerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E631E5FF13E00DFA698 /* flyerViewController.m */; };
-		32998E801E5FF13E00DFA698 /* toolsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E641E5FF13E00DFA698 /* toolsContainer.m */; };
-		32998E811E5FF13E00DFA698 /* editorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E651E5FF13E00DFA698 /* editorView.m */; };
-		32998E821E5FF13E00DFA698 /* borderEditingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E671E5FF13E00DFA698 /* borderEditingLayer.m */; };
-		32998E831E5FF13E00DFA698 /* shadeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E681E5FF13E00DFA698 /* shadeTool.m */; };
-		32998E841E5FF13E00DFA698 /* editingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E691E5FF13E00DFA698 /* editingLayer.m */; };
-		32998E851E5FF13E00DFA698 /* borderToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E6A1E5FF13E00DFA698 /* borderToolView.m */; };
-		32998E861E5FF13E00DFA698 /* tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E6B1E5FF13E00DFA698 /* tool.m */; };
-		32998E871E5FF13E00DFA698 /* toolViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E6D1E5FF13E00DFA698 /* toolViewItem.m */; };
-		32998E881E5FF13E00DFA698 /* colorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E6E1E5FF13E00DFA698 /* colorTool.m */; };
-		32998E891E5FF13E00DFA698 /* toolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E741E5FF13E00DFA698 /* toolView.m */; };
-		32998E8A1E5FF13E00DFA698 /* smarterString.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E791E5FF13E00DFA698 /* smarterString.m */; };
-		32998E8B1E5FF13E00DFA698 /* textEditingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E7B1E5FF13E00DFA698 /* textEditingLayer.m */; };
 		32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0D21E18267400C42207 /* eventOptionsSwitchTableViewCell.m */; };
 		32ADD0D61E18280500C42207 /* eventOptionsFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0D51E18280500C42207 /* eventOptionsFieldTableViewCell.m */; };
 		32ADD0DA1E182CF400C42207 /* event.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0D91E182CF400C42207 /* event.m */; };
@@ -227,34 +213,6 @@
 		329889021E413EFC00397E3A /* border17 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "border17 copy.png"; sourceTree = "<group>"; };
 		3298890E1E41B0A000397E3A /* illuminatedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = illuminatedButton.h; sourceTree = "<group>"; };
 		3298890F1E41B0A000397E3A /* illuminatedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = illuminatedButton.m; sourceTree = "<group>"; };
-		32998E621E5FF13E00DFA698 /* borderPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = borderPicker.m; path = temp/borderPicker.m; sourceTree = "<group>"; };
-		32998E631E5FF13E00DFA698 /* flyerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flyerViewController.m; path = temp/flyerViewController.m; sourceTree = "<group>"; };
-		32998E641E5FF13E00DFA698 /* toolsContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = toolsContainer.m; path = temp/toolsContainer.m; sourceTree = "<group>"; };
-		32998E651E5FF13E00DFA698 /* editorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = editorView.m; path = temp/editorView.m; sourceTree = "<group>"; };
-		32998E661E5FF13E00DFA698 /* flyerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flyerViewController.h; path = temp/flyerViewController.h; sourceTree = "<group>"; };
-		32998E671E5FF13E00DFA698 /* borderEditingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = borderEditingLayer.m; path = temp/borderEditingLayer.m; sourceTree = "<group>"; };
-		32998E681E5FF13E00DFA698 /* shadeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = shadeTool.m; path = temp/shadeTool.m; sourceTree = "<group>"; };
-		32998E691E5FF13E00DFA698 /* editingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = editingLayer.m; path = temp/editingLayer.m; sourceTree = "<group>"; };
-		32998E6A1E5FF13E00DFA698 /* borderToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = borderToolView.m; path = temp/borderToolView.m; sourceTree = "<group>"; };
-		32998E6B1E5FF13E00DFA698 /* tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = tool.m; path = temp/tool.m; sourceTree = "<group>"; };
-		32998E6C1E5FF13E00DFA698 /* toolViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = toolViewItem.h; path = temp/toolViewItem.h; sourceTree = "<group>"; };
-		32998E6D1E5FF13E00DFA698 /* toolViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = toolViewItem.m; path = temp/toolViewItem.m; sourceTree = "<group>"; };
-		32998E6E1E5FF13E00DFA698 /* colorTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = colorTool.m; path = temp/colorTool.m; sourceTree = "<group>"; };
-		32998E6F1E5FF13E00DFA698 /* shadeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = shadeTool.h; path = temp/shadeTool.h; sourceTree = "<group>"; };
-		32998E701E5FF13E00DFA698 /* editingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = editingLayer.h; path = temp/editingLayer.h; sourceTree = "<group>"; };
-		32998E711E5FF13E00DFA698 /* tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = tool.h; path = temp/tool.h; sourceTree = "<group>"; };
-		32998E721E5FF13E00DFA698 /* colorTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = colorTool.h; path = temp/colorTool.h; sourceTree = "<group>"; };
-		32998E731E5FF13E00DFA698 /* toolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = toolView.h; path = temp/toolView.h; sourceTree = "<group>"; };
-		32998E741E5FF13E00DFA698 /* toolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = toolView.m; path = temp/toolView.m; sourceTree = "<group>"; };
-		32998E751E5FF13E00DFA698 /* toolsContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = toolsContainer.h; path = temp/toolsContainer.h; sourceTree = "<group>"; };
-		32998E761E5FF13E00DFA698 /* borderPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = borderPicker.h; path = temp/borderPicker.h; sourceTree = "<group>"; };
-		32998E771E5FF13E00DFA698 /* borderToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = borderToolView.h; path = temp/borderToolView.h; sourceTree = "<group>"; };
-		32998E781E5FF13E00DFA698 /* smarterString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = smarterString.h; path = temp/smarterString.h; sourceTree = "<group>"; };
-		32998E791E5FF13E00DFA698 /* smarterString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = smarterString.m; path = temp/smarterString.m; sourceTree = "<group>"; };
-		32998E7A1E5FF13E00DFA698 /* textEditingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = textEditingLayer.h; path = temp/textEditingLayer.h; sourceTree = "<group>"; };
-		32998E7B1E5FF13E00DFA698 /* textEditingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = textEditingLayer.m; path = temp/textEditingLayer.m; sourceTree = "<group>"; };
-		32998E7C1E5FF13E00DFA698 /* editorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = editorView.h; path = temp/editorView.h; sourceTree = "<group>"; };
-		32998E7D1E5FF13E00DFA698 /* borderEditingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = borderEditingLayer.h; path = temp/borderEditingLayer.h; sourceTree = "<group>"; };
 		32ADD0D11E18267400C42207 /* eventOptionsSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsSwitchTableViewCell.h; sourceTree = "<group>"; };
 		32ADD0D21E18267400C42207 /* eventOptionsSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionsSwitchTableViewCell.m; sourceTree = "<group>"; };
 		32ADD0D41E18280500C42207 /* eventOptionsFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsFieldTableViewCell.h; sourceTree = "<group>"; };
@@ -627,34 +585,6 @@
 		32C82E371E5FDBE400D557A5 /* flyer */ = {
 			isa = PBXGroup;
 			children = (
-				32998E621E5FF13E00DFA698 /* borderPicker.m */,
-				32998E631E5FF13E00DFA698 /* flyerViewController.m */,
-				32998E641E5FF13E00DFA698 /* toolsContainer.m */,
-				32998E651E5FF13E00DFA698 /* editorView.m */,
-				32998E661E5FF13E00DFA698 /* flyerViewController.h */,
-				32998E671E5FF13E00DFA698 /* borderEditingLayer.m */,
-				32998E681E5FF13E00DFA698 /* shadeTool.m */,
-				32998E691E5FF13E00DFA698 /* editingLayer.m */,
-				32998E6A1E5FF13E00DFA698 /* borderToolView.m */,
-				32998E6B1E5FF13E00DFA698 /* tool.m */,
-				32998E6C1E5FF13E00DFA698 /* toolViewItem.h */,
-				32998E6D1E5FF13E00DFA698 /* toolViewItem.m */,
-				32998E6E1E5FF13E00DFA698 /* colorTool.m */,
-				32998E6F1E5FF13E00DFA698 /* shadeTool.h */,
-				32998E701E5FF13E00DFA698 /* editingLayer.h */,
-				32998E711E5FF13E00DFA698 /* tool.h */,
-				32998E721E5FF13E00DFA698 /* colorTool.h */,
-				32998E731E5FF13E00DFA698 /* toolView.h */,
-				32998E741E5FF13E00DFA698 /* toolView.m */,
-				32998E751E5FF13E00DFA698 /* toolsContainer.h */,
-				32998E761E5FF13E00DFA698 /* borderPicker.h */,
-				32998E771E5FF13E00DFA698 /* borderToolView.h */,
-				32998E781E5FF13E00DFA698 /* smarterString.h */,
-				32998E791E5FF13E00DFA698 /* smarterString.m */,
-				32998E7A1E5FF13E00DFA698 /* textEditingLayer.h */,
-				32998E7B1E5FF13E00DFA698 /* textEditingLayer.m */,
-				32998E7C1E5FF13E00DFA698 /* editorView.h */,
-				32998E7D1E5FF13E00DFA698 /* borderEditingLayer.h */,
 			);
 			name = flyer;
 			path = ../../../aGame/flyerCreator/flyerCreator;
@@ -987,21 +917,13 @@
 				3234D0841E511EB3008245B7 /* responsiveSlider.m in Sources */,
 				3290A7091E49F8B800042C26 /* stackDatePicker.m in Sources */,
 				323CF9601E28192C00A1A0A9 /* smartTextLayer.m in Sources */,
-				32998E7E1E5FF13E00DFA698 /* borderPicker.m in Sources */,
 				3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */,
 				32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */,
-				32998E871E5FF13E00DFA698 /* toolViewItem.m in Sources */,
-				32998E841E5FF13E00DFA698 /* editingLayer.m in Sources */,
-				32998E8A1E5FF13E00DFA698 /* smarterString.m in Sources */,
-				32998E7F1E5FF13E00DFA698 /* flyerViewController.m in Sources */,
 				323CF94D1E28125600A1A0A9 /* toolKitViewController.m in Sources */,
 				3234D0CC1E53F5DA008245B7 /* LTDatePicker.m in Sources */,
 				32C82E481E5FDD4F00D557A5 /* horizontalViewPicker.m in Sources */,
-				32998E811E5FF13E00DFA698 /* editorView.m in Sources */,
 				323CF9631E2DB36600A1A0A9 /* smartLayerThumbnail.m in Sources */,
 				323CF9471E280B5000A1A0A9 /* flyerViewController.m in Sources */,
-				32998E8B1E5FF13E00DFA698 /* textEditingLayer.m in Sources */,
-				32998E821E5FF13E00DFA698 /* borderEditingLayer.m in Sources */,
 				327708181E2F3C6C000FE30A /* popupToolView.m in Sources */,
 				3238760F1E248E14000ECEEB /* eventCamera.m in Sources */,
 				3290A7221E4A7E0D00042C26 /* switchOptionView.m in Sources */,
@@ -1009,7 +931,6 @@
 				323CF95D1E28191E00A1A0A9 /* smartBorderLayer.m in Sources */,
 				3234986D1E48443D000148DF /* textSizePopupToolView.m in Sources */,
 				3290A7011E49F09400042C26 /* stackTableView.m in Sources */,
-				32998E801E5FF13E00DFA698 /* toolsContainer.m in Sources */,
 				32D4E1851E1EDF9800616488 /* eventOptionsImageTableViewCell.m in Sources */,
 				3290A6E31E496E0A00042C26 /* eventViewController.m in Sources */,
 				32ADD0DD1E19E58300C42207 /* eventOptionTableViewCell.m in Sources */,
@@ -1018,17 +939,14 @@
 				32ADD0E01E1A001500C42207 /* pickerSliderViewController.m in Sources */,
 				3290A6FE1E49E0FD00042C26 /* aboutOptionView.m in Sources */,
 				3290A6F51E49C1A400042C26 /* stackView.m in Sources */,
-				32998E851E5FF13E00DFA698 /* borderToolView.m in Sources */,
 				3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */,
 				3277081C1E3032BA000FE30A /* colorPopupToolView.m in Sources */,
-				32998E881E5FF13E00DFA698 /* colorTool.m in Sources */,
 				3234986A1E482985000148DF /* flexibleIlluminatedButton.m in Sources */,
 				32ADD0DA1E182CF400C42207 /* event.m in Sources */,
 				32B1E67D1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m in Sources */,
 				324BC17B1E3808B900C9B629 /* fontPopupToolView.m in Sources */,
 				3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */,
 				323CF94A1E2811E100A1A0A9 /* imageEditorView.m in Sources */,
-				32998E831E5FF13E00DFA698 /* shadeTool.m in Sources */,
 				3290A6DA1E49381F00042C26 /* topGravityView.m in Sources */,
 				3290A7251E4AAEC500042C26 /* goOptionView.m in Sources */,
 				323CF95A1E2818FC00A1A0A9 /* smartLayer.m in Sources */,
@@ -1041,8 +959,6 @@
 				3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */,
 				32ADD0E61E1A088800C42207 /* sliderViewController.m in Sources */,
 				324BC1781E38018D00C9B629 /* usefulArray.m in Sources */,
-				32998E891E5FF13E00DFA698 /* toolView.m in Sources */,
-				32998E861E5FF13E00DFA698 /* tool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

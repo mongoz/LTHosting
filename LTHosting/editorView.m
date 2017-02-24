@@ -101,9 +101,8 @@ static editorView *instance=nil;
 //Managing contents of background & border layers
 -(void)setImage:(UIImage *)image
 {
-    [backgroundLayer setContents:(id)image.CGImage];
     imageSize=image.size;
-    [self setFrame:self.frame];
+    [self updateImageContainerWithImage:image];
 }
 
 -(void)setBorder:(UIImage *)bimage
@@ -128,6 +127,23 @@ static editorView *instance=nil;
 -(borderEditingLayer*)borderLayer
 {
     return border;
+}
+
+-(void)updateImageContainerWithImage:(UIImage *)image
+{
+    if(image.imageOrientation!=UIImageOrientationUp)
+    {
+        if(image.imageOrientation==UIImageOrientationLeftMirrored)
+        {
+            backgroundLayer.affineTransform=CGAffineTransformScale(backgroundLayer.affineTransform, -1, 1);
+        }
+        [backgroundLayer setAffineTransform:CGAffineTransformRotate(backgroundLayer.affineTransform,M_PI_2)];
+    }
+    [backgroundLayer setContentsGravity:kCAGravityResizeAspect];
+    [backgroundLayer setContents:(id)image.CGImage];
+    imageSize=image.size;
+    [border setContents:nil];
+    [self setFrame:self.frame];
 }
 
 @end

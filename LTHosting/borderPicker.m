@@ -11,6 +11,7 @@
 #import "editorView.h"
 #import "borderEditingLayer.h"
 #import "textEditingLayer.h"
+#import "event.h"
 
 @interface borderPicker(){
     horizontalViewPicker *scroller;
@@ -50,6 +51,7 @@ static NSInteger selectedIndex=0;
     if(scroller==nil&frame.size.height>0)
     {
         scroller=[[horizontalViewPicker alloc] initWithFrame:self.bounds];
+        scroller.bounces=NO;
         [scroller setHeightWidthRatio:640.0f/480.0f];
         [scroller setLabelTextColor:[UIColor blackColor]];
         scroller.hDelegate=self;
@@ -79,7 +81,7 @@ static NSInteger selectedIndex=0;
 //Horizontal picker view
 -(UIView*)viewForIndex:(NSInteger)index
 {
-    UIImageView *base=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"test.png"]];
+    UIImageView *base=[[UIImageView alloc] initWithImage:[[event sharedInstance] image]];
     [base setBackgroundColor:[UIColor blackColor]];
     [base.layer setContentsGravity:kCAGravityResizeAspectFill];
     [base setAutoresizesSubviews:YES];
