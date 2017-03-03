@@ -10,9 +10,9 @@
 #import "borderPicker.h"
 #import "colorTool.h"
 #import "shadeTool.h"
-//#import "sizeTool.h"
-//#import "fontTool.h"
-//#import "textAlignmentTool.h"
+#import "sizeTool.h"
+#import "fontTool.h"
+#import "textAlignmentTool.h"
 
 @interface tool(){
     __weak editingLayer *targetLayer;
@@ -53,13 +53,13 @@
             self=[[shadeTool alloc] init];
             break;
         case sizePickerTool:
-            //self=[[sizeTool alloc] init];
+            self=[[sizeTool alloc] init];
             break;
         case fontPickerTool:
-            //self=[[fontTool alloc] init];
+            self=[[fontTool alloc] init];
             break;
         case alignmentTool:
-            //self=[[textAlignmentTool alloc] init];
+            self=[[textAlignmentTool alloc] init];
             break;
         default:
             self=[self init];

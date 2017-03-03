@@ -21,6 +21,10 @@
 		323876111E249A98000ECEEB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876101E249A98000ECEEB /* CoreImage.framework */; };
 		323876131E24BFA1000ECEEB /* refresh2 copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 323876121E24BFA0000ECEEB /* refresh2 copy.png */; };
 		323876151E25D5E6000ECEEB /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876141E25D5E6000ECEEB /* Photos.framework */; };
+		3249C4BA1E69083000F23B60 /* fontTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249C4B81E69083000F23B60 /* fontTool.m */; };
+		3249C4BD1E69083E00F23B60 /* textAlignmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249C4BB1E69083E00F23B60 /* textAlignmentTool.m */; };
+		3249C4C01E69084900F23B60 /* sizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249C4BE1E69084900F23B60 /* sizeTool.m */; };
+		3249C4CF1E6908D000F23B60 /* textEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249C4CD1E6908D000F23B60 /* textEditor.m */; };
 		324BC1781E38018D00C9B629 /* usefulArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 324BC1771E38018D00C9B629 /* usefulArray.m */; };
 		327708151E2DF74F000FE30A /* maptrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 327708141E2DF74F000FE30A /* maptrash.png */; };
 		3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277081E1E3037D5000FE30A /* commonUseFunctions.m */; };
@@ -100,10 +104,6 @@
 		32EB4A191E68E30400E9E714 /* Subway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB4A051E68DFA000E9E714 /* Subway-Black.ttf */; };
 		32EB4A1A1E68E30400E9E714 /* SugarcubesRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB4A061E68DFA000E9E714 /* SugarcubesRegular.ttf */; };
 		32EB4A1B1E68E30400E9E714 /* Typo GeoSlab Regular Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB4A071E68DFA000E9E714 /* Typo GeoSlab Regular Demo.otf */; };
-		32EB4A211E69032E00E9E714 /* fontTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EB4A201E69032E00E9E714 /* fontTool.m */; };
-		32EB4A241E69033D00E9E714 /* textAlignmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EB4A231E69033D00E9E714 /* textAlignmentTool.m */; };
-		32EB4A271E69034800E9E714 /* sizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EB4A261E69034800E9E714 /* sizeTool.m */; };
-		32EB4A2A1E69035400E9E714 /* textEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 32EB4A291E69035400E9E714 /* textEditor.m */; };
 		F906F4CD6FD301F2864F3868 /* libPods-LTHostingTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E976958F10ECE71A9F31D80 /* libPods-LTHostingTests.a */; };
 /* End PBXBuildFile section */
 
@@ -145,6 +145,14 @@
 		323876101E249A98000ECEEB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		323876121E24BFA0000ECEEB /* refresh2 copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "refresh2 copy.png"; path = "/Applications/refresh2 copy.png"; sourceTree = "<absolute>"; };
 		323876141E25D5E6000ECEEB /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		3249C4B81E69083000F23B60 /* fontTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fontTool.m; sourceTree = SOURCE_ROOT; };
+		3249C4B91E69083000F23B60 /* fontTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fontTool.h; sourceTree = SOURCE_ROOT; };
+		3249C4BB1E69083E00F23B60 /* textAlignmentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textAlignmentTool.m; sourceTree = SOURCE_ROOT; };
+		3249C4BC1E69083E00F23B60 /* textAlignmentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textAlignmentTool.h; sourceTree = SOURCE_ROOT; };
+		3249C4BE1E69084900F23B60 /* sizeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sizeTool.m; sourceTree = SOURCE_ROOT; };
+		3249C4BF1E69084900F23B60 /* sizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sizeTool.h; sourceTree = SOURCE_ROOT; };
+		3249C4CD1E6908D000F23B60 /* textEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textEditor.m; sourceTree = SOURCE_ROOT; };
+		3249C4CE1E6908D000F23B60 /* textEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textEditor.h; sourceTree = SOURCE_ROOT; };
 		324BC1761E38018D00C9B629 /* usefulArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usefulArray.h; sourceTree = "<group>"; };
 		324BC1771E38018D00C9B629 /* usefulArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = usefulArray.m; sourceTree = "<group>"; };
 		327708141E2DF74F000FE30A /* maptrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maptrash.png; sourceTree = "<group>"; };
@@ -277,14 +285,6 @@
 		32EB4A051E68DFA000E9E714 /* Subway-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Subway-Black.ttf"; sourceTree = "<group>"; };
 		32EB4A061E68DFA000E9E714 /* SugarcubesRegular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SugarcubesRegular.ttf; sourceTree = "<group>"; };
 		32EB4A071E68DFA000E9E714 /* Typo GeoSlab Regular Demo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Typo GeoSlab Regular Demo.otf"; sourceTree = "<group>"; };
-		32EB4A1F1E69032E00E9E714 /* fontTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fontTool.h; path = LTHosting/fontTool.h; sourceTree = SOURCE_ROOT; };
-		32EB4A201E69032E00E9E714 /* fontTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fontTool.m; path = LTHosting/fontTool.m; sourceTree = SOURCE_ROOT; };
-		32EB4A221E69033D00E9E714 /* textAlignmentTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = textAlignmentTool.h; path = LTHosting/textAlignmentTool.h; sourceTree = SOURCE_ROOT; };
-		32EB4A231E69033D00E9E714 /* textAlignmentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = textAlignmentTool.m; path = LTHosting/textAlignmentTool.m; sourceTree = SOURCE_ROOT; };
-		32EB4A251E69034800E9E714 /* sizeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sizeTool.h; path = LTHosting/sizeTool.h; sourceTree = SOURCE_ROOT; };
-		32EB4A261E69034800E9E714 /* sizeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = sizeTool.m; path = LTHosting/sizeTool.m; sourceTree = SOURCE_ROOT; };
-		32EB4A281E69035400E9E714 /* textEditor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = textEditor.h; path = LTHosting/textEditor.h; sourceTree = SOURCE_ROOT; };
-		32EB4A291E69035400E9E714 /* textEditor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = textEditor.m; path = LTHosting/textEditor.m; sourceTree = SOURCE_ROOT; };
 		39EFCC24B4C17C83D5A762A5 /* libPods-LTHosting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTHosting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B6C24CC542EC0D5843E8976 /* Pods-LTHosting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTHosting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LTHosting/Pods-LTHosting.debug.xcconfig"; sourceTree = "<group>"; };
 		48DAAB51762830A7348A703A /* Pods-LTHostingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTHostingTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTHostingTests/Pods-LTHostingTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -395,18 +395,18 @@
 			children = (
 				32998E991E5FF4C300DFA698 /* tool.h */,
 				32998E9A1E5FF4C300DFA698 /* tool.m */,
-				32EB4A251E69034800E9E714 /* sizeTool.h */,
-				32EB4A261E69034800E9E714 /* sizeTool.m */,
+				3249C4BE1E69084900F23B60 /* sizeTool.m */,
+				3249C4BF1E69084900F23B60 /* sizeTool.h */,
 				32998E901E5FF4C300DFA698 /* colorTool.h */,
 				32998E911E5FF4C300DFA698 /* colorTool.m */,
 				32998E941E5FF4C300DFA698 /* shadeTool.h */,
 				32998EA61E5FF4C300DFA698 /* shadeTool.m */,
 				32998E8D1E5FF4C300DFA698 /* borderPicker.h */,
 				32998EA11E5FF4C300DFA698 /* borderPicker.m */,
-				32EB4A1F1E69032E00E9E714 /* fontTool.h */,
-				32EB4A201E69032E00E9E714 /* fontTool.m */,
-				32EB4A221E69033D00E9E714 /* textAlignmentTool.h */,
-				32EB4A231E69033D00E9E714 /* textAlignmentTool.m */,
+				3249C4B81E69083000F23B60 /* fontTool.m */,
+				3249C4B91E69083000F23B60 /* fontTool.h */,
+				3249C4BB1E69083E00F23B60 /* textAlignmentTool.m */,
+				3249C4BC1E69083E00F23B60 /* textAlignmentTool.h */,
 			);
 			name = tools;
 			sourceTree = "<group>";
@@ -625,10 +625,10 @@
 				3278EA671E64E09D002E68A4 /* toolViews */,
 				32998E931E5FF4C300DFA698 /* editorView.h */,
 				32998EA31E5FF4C300DFA698 /* editorView.m */,
+				3249C4CD1E6908D000F23B60 /* textEditor.m */,
+				3249C4CE1E6908D000F23B60 /* textEditor.h */,
 				32998EA41E5FF4C300DFA698 /* flyerViewController.h */,
 				32998EA51E5FF4C300DFA698 /* flyerViewController.m */,
-				32EB4A281E69035400E9E714 /* textEditor.h */,
-				32EB4A291E69035400E9E714 /* textEditor.m */,
 				32998E951E5FF4C300DFA698 /* smarterString.h */,
 				32998E961E5FF4C300DFA698 /* smarterString.m */,
 				32998EA91E5FF4C300DFA698 /* horizontalViewPicker.h */,
@@ -970,9 +970,9 @@
 				3278EA681E64E392002E68A4 /* datePickerOptionView.m in Sources */,
 				32998EAB1E5FF4C300DFA698 /* borderToolView.m in Sources */,
 				32B1E6801E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m in Sources */,
-				32EB4A271E69034800E9E714 /* sizeTool.m in Sources */,
+				3249C4C01E69084900F23B60 /* sizeTool.m in Sources */,
+				3249C4BA1E69083000F23B60 /* fontTool.m in Sources */,
 				323498641E481EB9000148DF /* eventsNavigationController.m in Sources */,
-				32EB4A211E69032E00E9E714 /* fontTool.m in Sources */,
 				32AF04791E180F67006D4E19 /* eventCameraViewController.m in Sources */,
 				3290A7091E49F8B800042C26 /* stackDatePicker.m in Sources */,
 				32998EB51E5FF4C300DFA698 /* editorView.m in Sources */,
@@ -986,7 +986,6 @@
 				3238760F1E248E14000ECEEB /* eventCamera.m in Sources */,
 				3290A7221E4A7E0D00042C26 /* switchOptionView.m in Sources */,
 				32998EB11E5FF4C300DFA698 /* toolViewItem.m in Sources */,
-				32EB4A2A1E69035400E9E714 /* textEditor.m in Sources */,
 				32ADD0D61E18280500C42207 /* eventOptionsFieldTableViewCell.m in Sources */,
 				32998EB21E5FF4C300DFA698 /* borderEditingLayer.m in Sources */,
 				3290A7011E49F09400042C26 /* stackTableView.m in Sources */,
@@ -999,6 +998,7 @@
 				3229AF921E1B500400405137 /* dateSliderViewController.m in Sources */,
 				32ADD0E01E1A001500C42207 /* pickerSliderViewController.m in Sources */,
 				3290A6FE1E49E0FD00042C26 /* aboutOptionView.m in Sources */,
+				3249C4CF1E6908D000F23B60 /* textEditor.m in Sources */,
 				3290A6F51E49C1A400042C26 /* stackView.m in Sources */,
 				32998EAC1E5FF4C300DFA698 /* colorTool.m in Sources */,
 				3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */,
@@ -1018,7 +1018,7 @@
 				3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */,
 				32ADD0E61E1A088800C42207 /* sliderViewController.m in Sources */,
 				32DEA0371E65715300FCFFFF /* textToolView.m in Sources */,
-				32EB4A241E69033D00E9E714 /* textAlignmentTool.m in Sources */,
+				3249C4BD1E69083E00F23B60 /* textAlignmentTool.m in Sources */,
 				324BC1781E38018D00C9B629 /* usefulArray.m in Sources */,
 				3278EA6E1E64F062002E68A4 /* stackLabel.m in Sources */,
 			);
