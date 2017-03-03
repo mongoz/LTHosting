@@ -7,6 +7,7 @@
 //
 
 #import "horizontalViewPicker.h"
+#import "commonUseFunctions.h"
 
 @interface horizontalViewPicker(){
     CGSize thumbnailSize;
@@ -27,6 +28,8 @@
     NSInteger selectedIndex;
     
     UIView *selectionView;
+    
+    NSArray<UIView*>* managedViews;
     
 }
 @end
@@ -58,7 +61,7 @@
 
 -(id)init
 {
-    self=[self initWithFrame:CGRectZero];
+    self=[self initWithFrame:CGRectMake(0, 0, 100, 100)];
     return self;
 }
 
@@ -69,8 +72,14 @@
     if(reload)
     {
         CGFloat height=frame.size.height-_margin*2-bottomCushion;
-        thumbnailSize=CGSizeMake(height/heightWidthRatio, height);
-        [self reloadData];
+        if(height>0)
+        {
+            thumbnailSize=CGSizeMake((height-labelHeight)/heightWidthRatio, height-labelHeight);
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [self reloadData];
+            } completion:^{
+            }];
+        }
     }
 }
 
@@ -94,21 +103,13 @@
     UIView *selected=[[UIView alloc] initWithFrame:CGRectMake(frame.origin.x-_margin/2, frame.origin.y-_margin/2-labelHeight, frame.size.width+_margin, frame.size.height+_margin+labelHeight)];
     [selected setBackgroundColor:[UIColor blueColor]];
     [selected setAlpha:.25];
-    [selected addObserver:self forKeyPath:@"superview" options:NSKeyValueObservingOptionNew context:nil];
     selectionView=selected;
     [self addSubview:selectionView];
-    
-}
-
--(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
-{
-    NSLog(@"blah");
 }
 
 -(void)deselectSelected
 {
     [selectionView removeFromSuperview];
-    [selectionView removeObserver:self forKeyPath:@"superview"];
     selectionView=nil;
     selectedIndex=-1;
 }
@@ -182,7 +183,7 @@
     if([dataSource shouldUseLabels])
     {
         labelHeight=labelFont.lineHeight*labelSizeProp;
-        thumbnailSize=CGSizeMake((thumbnailSize.height-labelHeight)/heightWidthRatio, thumbnailSize.height-labelHeight);
+        thumbnailSize=CGSizeMake((self.frame.size.height-labelHeight-_margin*2.0f)/heightWidthRatio, self.frame.size.height-labelHeight-_margin*2.0f);
     }
     else
     {
@@ -199,6 +200,24 @@
         return;
     }
     [self setContentSize:CGSizeMake(_margin+(_margin+thumbnailSize.width)*[_dataSource numberOfViews], self.frame.size.height)];
+    if(self.contentSize.width<self.frame.size.width)
+    {
+        [self centerViews];
+    }
+}
+
+-(void)centerViews
+{
+    CGFloat total=self.frame.size.width-[_dataSource numberOfViews]*thumbnailSize.width;
+    total/=[_dataSource numberOfViews]+1;
+    NSArray<UIView*> *sortedSubviews=[[self subviews] sortedArrayUsingComparator:^NSComparisonResult(UIView *one, UIView *two){
+        return one.frame.origin.x>two.frame.origin.x;
+    }];
+    for(NSInteger i=0; i<sortedSubviews.count; i++)
+    {
+        [sortedSubviews[i] setFrame:CGRectMake((total+thumbnailSize.width)*i+total, sortedSubviews[i].frame.origin.y, sortedSubviews[i].frame.size.width, sortedSubviews[i].frame.size.height)];
+    }
+    [self layoutIfNeeded];
 }
 
 -(void)setHDelegate:(id<horizontalViewPickerDelegate>)delegate
@@ -212,8 +231,8 @@
     {
         return;
     }
+    NSMutableArray *temp=[[NSMutableArray alloc] init];
     [self reset];
-    [self setContentSize];
     for(NSInteger i=0; i<[_dataSource numberOfViews]; i++)
     {
         CGRect thisRect=[self frameForViewAtIndex:i];
@@ -235,6 +254,7 @@
                 [thisOne addGestureRecognizer:tap];
                 [thisOne setUserInteractionEnabled:YES];
                 [self addSubview:thisOne];
+                [temp addObject:thisOne];
                 if([_dataSource shouldUseLabels])
                 {
                     UILabel *lab=[[UILabel alloc] initWithFrame:[self frameForLabelAtIndex:i]];
@@ -260,7 +280,13 @@
     {
         [self addSubview:selectionView];
     }
+    managedViews=temp;
+    [self setContentSize];
     [self layoutIfNeeded];
+    if(self.showsSelection&&managedViews.count>0)
+    {
+        [self selectRowAtIndex:[self selectedIndex]];
+    }
 }
 
 -(IBAction)viewTapped:(UITapGestureRecognizer*)tap
@@ -271,6 +297,7 @@
     {
         [self selectRowAtIndex:index];
     }
+    [self scrollIndexToVisible:index animated:YES];
     if(_hDelegate!=nil)
     {
         [_hDelegate horizontalPickerDidSelectViewAtIndex:index];
@@ -295,20 +322,38 @@
 
 -(CGRect)frameForViewAtIndex:(NSInteger)index
 {
-    
     return CGRectMake(_margin+((thumbnailSize.width)+_margin)*index, _margin+labelHeight, thumbnailSize.width, thumbnailSize.height);
 }
 
 -(CGRect)frameForLabelAtIndex:(NSInteger)index
 {
     CGRect viewFrame=[self frameForViewAtIndex:index];
-    return CGRectMake(viewFrame.origin.x, viewFrame.origin.y-labelHeight, viewFrame.size.width, labelFont.pointSize);
+    return CGRectMake(viewFrame.origin.x, viewFrame.origin.y-labelHeight, viewFrame.size.width, labelHeight);
 }
 
 -(NSInteger)indexForFrameOfView:(CGRect)frame
 {
-    CGFloat num=(frame.origin.x-_margin)/(thumbnailSize.width+_margin);
-    return round(num);
+    if(self.contentSize.width>=self.frame.size.width)
+    {
+        CGFloat num=(frame.origin.x-_margin)/(thumbnailSize.width+_margin);
+        return round(num);
+    }
+    else
+    {
+        NSMutableArray<UIView*>* sorted=[NSMutableArray arrayWithArray:[managedViews sortedArrayUsingComparator:^NSComparisonResult(UIView *one, UIView *two){
+            return one.frame.origin.x>two.frame.origin.x;
+        }]];
+        NSInteger index=0;
+        while(index<sorted.count)
+        {
+            if(sorted[index].frame.origin.x>=frame.origin.x)
+            {
+                break;
+            }
+            index++;
+        }
+        return index;
+    }
 }
 
 -(void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -339,7 +384,17 @@
     {
         [view removeFromSuperview];
     }
+    managedViews=nil;
 }
 
+-(void)scrollIndexToVisible:(NSInteger)index animated:(BOOL)animated
+{
+    if(_dataSource==nil||index<0||index>=managedViews.count)
+    {
+        return;
+    }
+    CGRect frame=[self frameForViewAtIndex:index];
+    [self scrollRectToVisible:CGRectMake(frame.origin.x-_margin, frame.origin.y, frame.size.width+_margin*2, frame.size.height) animated:animated];
+}
 
 @end

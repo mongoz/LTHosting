@@ -10,6 +10,9 @@
 #import "borderPicker.h"
 #import "colorTool.h"
 #import "shadeTool.h"
+//#import "sizeTool.h"
+//#import "fontTool.h"
+//#import "textAlignmentTool.h"
 
 @interface tool(){
     __weak editingLayer *targetLayer;
@@ -49,11 +52,20 @@
         case shadePickerTool:
             self=[[shadeTool alloc] init];
             break;
+        case sizePickerTool:
+            //self=[[sizeTool alloc] init];
+            break;
+        case fontPickerTool:
+            //self=[[fontTool alloc] init];
+            break;
+        case alignmentTool:
+            //self=[[textAlignmentTool alloc] init];
+            break;
         default:
             self=[self init];
             break;
     }
-    targetLayer=target;
+    self.targetLayer=target;
     return self;
 }
 
@@ -66,7 +78,13 @@
 
 -(void)dissolveIn:(BOOL)comingIn completion:(void (^)())completionBlock
 {
-    [UIView transitionWithView:self duration:.15 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+    CGFloat alph=0;
+    if(comingIn)
+    {
+        alph=1;
+        [self updateCurrentValueAnimated:NO];
+    }
+    [UIView transitionWithView:self duration:.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         self.hidden=!comingIn;
     }completion:^(BOOL finished){
         if(completionBlock!=nil)
@@ -74,6 +92,28 @@
             completionBlock();
         }
     }];
+}
+
+-(void)updateCurrentValueAnimated:(BOOL)animated
+{
+    
+}
+
+-(BOOL)isHidden
+{
+    return self.alpha==0.0f;
+}
+
+-(void)setHidden:(BOOL)hidden
+{
+    if(hidden)
+    {
+        self.alpha=0.0f;
+    }
+    else
+    {
+        self.alpha=1.0f;
+    }
 }
 
 @end

@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "textEditingLayer.h"
+#import "textEditor.h"
 
-@interface flyerViewController : UIViewController
+@interface flyerViewController : UIViewController <textEditorDelegate>
 
+@property BOOL toolsShowing;
+
+-(void)setToolsShowing:(BOOL)toolsShowing animated:(BOOL)animated;
+
+-(void)beginTextEditingWithLayer:(textEditingLayer*)layer;
 
 @end
 

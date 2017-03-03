@@ -9,10 +9,8 @@
 #import "borderToolView.h"
 #import "borderPicker.h"
 #import "editorView.h"
-#import "borderEditingLayer.h"
 
 @interface borderToolView(){
-    borderPicker *picker;
     
 }
 
@@ -47,12 +45,11 @@ NSArray<toolViewItem*>* items=nil;
     if(items==nil)
     {
         NSMutableArray *objects=[[NSMutableArray alloc] init];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:borderPickerTool target:[[editorView shared] borderLayer] toolView:self]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:colorPickerTool target:[[editorView shared] borderLayer] toolView:self]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:shadePickerTool target:[[editorView shared] borderLayer] toolView:self]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:borderPickerTool target:[[editorView shared] borderLayer]]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:colorPickerTool target:[[editorView shared] borderLayer]]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:shadePickerTool target:[[editorView shared] borderLayer]]];
         for(toolViewItem *t in self.subviews)
         {
-            
             [t setFrame:CGRectMake(0, 0, self.frame.size.height/self.toolPicker.heightWidthRatio, self.frame.size.height)];
         }
         items=objects;
@@ -63,7 +60,11 @@ NSArray<toolViewItem*>* items=nil;
 
 -(void)checkForBorder
 {
-    BOOL shouldbe=[borderPicker selectedIndex]!=0;
+    BOOL shouldbe=[[[editorView shared] borderLayer] mask]!=nil||[[[editorView shared] borderLayer] contents]!=nil;
+    if(!shouldbe)
+    {
+        [borderPicker setSelectedIndex:0];
+    }
     for(NSInteger i=1; i<[self items].count; i++)
     {
         [self items][i].selectable=shouldbe;
@@ -74,5 +75,17 @@ NSArray<toolViewItem*>* items=nil;
 {
     [self checkForBorder];
     [super endUsingTool];
+}
+
+-(void)willAppear
+{
+    [super willAppear];
+    [self checkForBorder];
+}
+
+-(void)willDisappear
+{
+    [super willDisappear];
+    
 }
 @end

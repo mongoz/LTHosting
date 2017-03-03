@@ -11,6 +11,7 @@
 
 @interface colorTool(){
     UISlider *mySlider;
+    UIButton *clearColor;
 }
 
 @end
@@ -45,9 +46,27 @@
             mySlider.minimumValue=0;
             mySlider.maximumValue=1;
             [self addSubview:mySlider];
+            [self addGradientToSlider:mySlider WithColors:[self colorArray]];
+            CGRect trackRect=[mySlider trackRectForBounds:mySlider.bounds];
+            CGFloat height=trackRect.size.height*1.25f;
+            clearColor=[[UIButton alloc] initWithFrame:CGRectMake(margin, self.bounds.size.height/2-height/2, height, height)];
+            [clearColor.layer setCornerRadius:clearColor.frame.size.height/2];
+            [clearColor.layer setBorderWidth:2.0f];
+            clearColor.layer.masksToBounds=YES;
+            [clearColor setBackgroundColor:[UIColor clearColor]];
+            [mySlider setFrame:CGRectMake(clearColor.frame.origin.x+clearColor.frame.size.width+margin/2, margin, self.bounds.size.width-margin*2.5f-clearColor.frame.size.width, self.bounds.size.height-margin*2)];
+            [self addSubview:clearColor];
+            [self addGradientToSlider:mySlider WithColors:[self colorArray]];
+            [clearColor addTarget:self action:@selector(clearCurrentColor:) forControlEvents:UIControlEventTouchUpInside];
         }
-        [self addGradientToSlider:mySlider WithColors:[self colorArray]];
     }
+}
+
+-(IBAction)clearCurrentColor:(id)sender
+{
+    [self.targetLayer setColor:[UIColor clearColor]];
+    [clearColor setBackgroundColor:[UIColor clearColor]];
+    [self updateCurrentValueAnimated:YES];
 }
 
 -(NSArray<id>*)colorArray
@@ -100,6 +119,33 @@
         brightness=1;
     }
     [self.targetLayer setColor:[UIColor colorWithHue:slider.value*5.0f/6.0f saturation:1 brightness:brightness alpha:1]];
+    [self updateClearColor];
+}
+
+-(void)updateCurrentValueAnimated:(BOOL)animated
+{
+    [super updateCurrentValueAnimated:animated];
+    [mySlider setValue:[self currentValue] animated:animated];
+    [self updateClearColor];
+}
+
+-(void)updateClearColor
+{
+    [clearColor setBackgroundColor:[self.targetLayer color]];
+}
+
+-(CGFloat)currentValue
+{
+    CGFloat hue;
+    CGFloat brightness;
+    CGFloat saturation;
+    CGFloat alpha;
+    [[self.targetLayer color] getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+    if(saturation==0)
+    {
+        return 0;
+    }
+    return hue;
 }
 
 @end

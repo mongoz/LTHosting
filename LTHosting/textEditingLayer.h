@@ -10,6 +10,20 @@
 
 @interface textEditingLayer : editingLayer
 
-@property (strong, nonatomic) UILabel *textLabel;
+@property (strong, nonatomic) CATextLayer *textLabel;
+
+-(CGFloat)maxTextSize;
+
+-(void)autoAdjustFontSize;
+
+@property BOOL flexibleHeight;
+
+@property UIFont *font;
+
+@property (nonatomic) NSString *text;
+
+@property (readonly) NSAttributedString *attributedText;
+
+@property (nonatomic) NSTextAlignment textAlignment;
 
 @end

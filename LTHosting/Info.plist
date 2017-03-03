@@ -4,13 +4,26 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>aliens and cows_trial.ttf</string>
-		<string>CODE Bold.otf</string>
-		<string>KeepCalm-Medium.ttf</string>
-		<string>Nike Total 90.ttf</string>
-		<string>NOVABOLD.otf</string>
-		<string>PRIMETIME ∏ PERSONAL USE ONLY.ttf</string>
-		<string>TOMMY___.TTF</string>
+		<string>BebasNeue.otf</string>
+		<string>bullpen hv it.ttf</string>
+		<string>Chosence Bold Italic.otf</string>
+		<string>Comfortaa-Regular.ttf</string>
+		<string>Crapaud_petit.otf</string>
+		<string>fv_almeo-webfont.ttf</string>
+		<string>hero.ttf</string>
+		<string>Kingthings Organica.ttf</string>
+		<string>LemonMilk.otf</string>
+		<string>LinLibertine_aBL.ttf</string>
+		<string>Lissain didone.ttf</string>
+		<string>Martell-Bold.otf</string>
+		<string>PoetsenOne-Regular.ttf</string>
+		<string>Reckoner.ttf</string>
+		<string>Rounded_Elegance.ttf</string>
+		<string>royal-serif.ttf</string>
+		<string>stentiga.ttf</string>
+		<string>Subway-Black.ttf</string>
+		<string>SugarcubesRegular.ttf</string>
+		<string>Typo GeoSlab Regular Demo.otf</string>
 	</array>
 	<key>NSAppleMusicUsageDescription</key>
 	<string>some usage</string>

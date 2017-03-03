@@ -9,6 +9,7 @@
 #import "flyerViewController.h"
 #import "editorView.h"
 #import "toolView.h"
+#import "toolsContainer.h"
 #import "event.h"
 
 @interface flyerViewController (){
@@ -28,6 +29,7 @@
     [self.view addSubview:[editorView shared]];
     
     [[editorView shared] setFrame:self.view.bounds];
+    [[editorView shared] setViewController:self];
     toolViewer=nil;
     toolsShowing=NO;
     
@@ -52,7 +54,14 @@
     [super viewWillAppear:animated];
     [[editorView shared] setImage:[[event sharedInstance] image]];
     [[editorView shared] setFrame:self.view.bounds];
-    
+    [[editorView shared] setTitleText:[[event sharedInstance] name]];
+    [[editorView shared] setBodyText:[[event sharedInstance] flyerBodyForCurrentState].string];
+    self.toolsShowing=YES;
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
 }
 
 -(IBAction)backPressed:(UIBarButtonItem*)button
@@ -98,19 +107,34 @@ BOOL set=NO;
         [self.view addSubview:toolViewer];
         set=YES;
     }
+    [toolViewer viewWillAppear:YES];
     CGRect editorDestFrame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-toolViewer.frame.size.height);
     CGRect toolDestFrame=CGRectMake(toolViewer.frame.origin.x, toolViewer.frame.origin.y-toolViewer.frame.size.height, toolViewer.frame.size.width, toolViewer.frame.size.height);
-    [UIView animateWithDuration:.25 animations:^{
+    if(animated)
+    {
+        [UIView animateWithDuration:.25 animations:^{
+            [toolViewer setFrame:toolDestFrame];
+            [[editorView shared] setFrame:editorDestFrame];
+        } completion:^(BOOL finished){
+            [[editorView shared] setIsEditing:YES];
+            if(completionBlock!=nil)
+            {
+                completionBlock();
+            }
+        }];
+        toolsShowing=YES;
+    }
+    else
+    {
         [toolViewer setFrame:toolDestFrame];
         [[editorView shared] setFrame:editorDestFrame];
-    } completion:^(BOOL finished){
-        
+        [[editorView shared] setIsEditing:YES];
         if(completionBlock!=nil)
         {
             completionBlock();
         }
-    }];
-    toolsShowing=YES;
+        toolsShowing=YES;
+    }
 }
 
 -(void)hideToolViewAnimated:(BOOL)animated completion:(void(^)())completionBlock
@@ -119,18 +143,34 @@ BOOL set=NO;
     {
         return;
     }
+    [toolViewer viewWillDisappear:YES];
     CGRect editorDestFrame=self.view.bounds;
     CGRect toolDestFrame=CGRectMake(toolViewer.frame.origin.x, toolViewer.frame.origin.y+toolViewer.frame.size.height, toolViewer.frame.size.width, toolViewer.frame.size.height);
-    [UIView animateWithDuration:.25 animations:^{
+    [[editorView shared] setIsEditing:NO];
+    if(animated)
+    {
+        [UIView animateWithDuration:.25 animations:^{
+            [[editorView shared] setFrame:editorDestFrame];
+            [toolViewer setFrame:toolDestFrame];
+        } completion:^(BOOL finished){
+            if(completionBlock!=nil)
+            {
+                completionBlock();
+            }
+        }];
+        toolsShowing=NO;
+    }
+    else
+    {
+        
         [[editorView shared] setFrame:editorDestFrame];
         [toolViewer setFrame:toolDestFrame];
-    } completion:^(BOOL finished){
         if(completionBlock!=nil)
         {
             completionBlock();
         }
-    }];
-    toolsShowing=NO;
+        toolsShowing=NO;
+    }
 }
 
 //Managing mode button
@@ -185,5 +225,45 @@ BOOL set=NO;
     }];
 }
 
+-(BOOL)toolsShowing
+{
+    return toolsShowing;
+}
+
+-(void)setToolsShowing:(BOOL)toolsShowinga
+{
+    [self setToolsShowing:toolsShowinga animated:NO];
+}
+
+-(void)setToolsShowing:(BOOL)toolsShowinga animated:(BOOL)animated
+{
+    if(toolsShowinga!=toolsShowing)
+    {
+        [self toggleToolViewAnimated:animated completion:nil];
+    }
+}
+
+-(void)beginTextEditingWithLayer:(textEditingLayer *)layer
+{
+    textEditor *editor=[[textEditor alloc] init];
+    [editor setFrame:self.view.bounds];
+    editor.delegate=self;
+    editor.attributedText=layer.attributedText;
+    editor.alpha=0;
+    editor.target=layer;
+    [self.view addSubview:editor];
+    [UIView transitionWithView:editor duration:.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        editor.alpha=1.0f;
+    }completion:^(BOOL finished){
+        [editor becomeFirstResponder];
+        [self setToolsShowing:YES animated:YES];
+    }];
+}
+
+-(void)textEditor:(textEditor *)editor finishedEditingWithResult:(NSAttributedString *)resultString
+{
+    [(textEditingLayer*)editor.target setText:resultString.string];
+    editor=nil;
+}
 
 @end

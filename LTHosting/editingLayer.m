@@ -17,7 +17,17 @@
     return self;
 }
 
--(void)setColor:(UIColor*)color{}
+-(void)setFrame:(CGRect)frame
+{
+    [super setFrame:frame];
+    if(_layoutManager!=nil&&[_layoutManager respondsToSelector:@selector(editingLayer:frameWillChangeTo:)])
+    {
+        [_layoutManager editingLayer:self frameWillChangeTo:frame];
+    }
+}
+
+-(void)setColor:(UIColor*)color{
+}
 
 -(UIColor*)color
 {

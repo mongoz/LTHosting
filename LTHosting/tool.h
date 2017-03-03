@@ -10,6 +10,8 @@
 #import "toolViewItem.h"
 #import "editingLayer.h"
 
+@protocol toolDelegate;
+
 @interface tool : UIView
 
 @property (weak, nonatomic) id<toolDelegate> toolDelegate;
@@ -21,5 +23,7 @@
 -(void)dissolveIn:(BOOL)in completion:(void(^)())completionBlock;
 
 @property (weak, nonatomic) editingLayer *targetLayer;
+
+-(void)updateCurrentValueAnimated:(BOOL)animated;
 
 @end

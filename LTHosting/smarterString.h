@@ -13,3 +13,9 @@
 -(NSInteger)numberOfLinesRequiredForLineWidth:(CGFloat)lineWidth;
 
 @end
+
+@interface NSString (smart)
+
+-(NSInteger)numberOfOccurancesOfString:(NSString*)string;
+
+@end

@@ -7,15 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "toolView.h"
 
 @class editingLayer;
 @class tool;
+@class toolView;
+@protocol buttonTouchDelegate;
 
 typedef enum types{
     borderPickerTool,
     colorPickerTool,
     shadePickerTool,
+    sizePickerTool,
+    fontPickerTool,
+    alignmentTool
 }toolSkew;
 
 @interface toolViewItem : UIButton
@@ -24,12 +28,14 @@ typedef enum types{
 
 @property (strong, nonatomic) UIImage *image;
 
--(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target toolView:(toolView*)view;
+-(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target;
 
 -(tool*)correspondingTool;
 
 -(void)setButtonDelegate:(id<buttonTouchDelegate>)del;
 
 @property BOOL selectable;
+
+@property (nonatomic) UIFont *labelFont;
 
 @end

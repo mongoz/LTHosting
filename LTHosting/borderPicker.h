@@ -13,4 +13,6 @@
 
 +(NSInteger)selectedIndex;
 
++(void)setSelectedIndex:(NSInteger)index;
+
 @end

@@ -10,4 +10,8 @@
 
 @interface colorTool : tool
 
+-(CGFloat)currentValue;
+
+-(void)updateClearColor;
+
 @end

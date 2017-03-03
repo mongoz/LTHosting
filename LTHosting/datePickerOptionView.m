@@ -52,6 +52,7 @@
     pick=[[LTDatePicker alloc] initWithFrame:self.accessoryView.bounds];
     pick.delegate=self;
     [pick setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
+    [pick setDate:currentDate animated:NO];
     //[pick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventPrimaryActionTriggered];
     //[pick setMinimumDate:[NSDate date]];
     [self.accessoryView addSubview:pick];

@@ -124,6 +124,10 @@
     [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"Start: %@",dateString]]];
     if(![_about isEqualToString:@""])
     {
+        while([[_about substringFromIndex:_about.length-1] isEqualToString:@"\n"])
+        {
+            _about=[_about substringToIndex:_about.length-1];
+        }
         [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"About: %@",_about]]];
     }
     if(![_music isEqualToString:@"Music"])

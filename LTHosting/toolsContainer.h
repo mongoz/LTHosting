@@ -15,6 +15,10 @@
 
 -(void)toolView:(toolView*)view isEditingWillChangeTo:(BOOL)isEditing;
 
+-(void)viewWillAppear:(BOOL)animated;
+
+-(void)viewWillDisappear:(BOOL)animated;
+
 @end
 
 @interface toolsContainer : UIView <toolViewSuper>

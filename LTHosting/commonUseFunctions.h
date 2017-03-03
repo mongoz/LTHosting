@@ -49,3 +49,9 @@
 -(NSInteger)currentNumberOfLines;
 
 @end
+
+@interface NSOperationQueue (extension)
+
+-(void)addOperationWithBlock:(void (^)(void))block completion:(void(^)())completionBlock;
+
+@end

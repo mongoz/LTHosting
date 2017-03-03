@@ -13,13 +13,26 @@
 +(NSArray<NSString*>*)bodyFontPostScriptNames
 {
     NSMutableArray *temp=[[NSMutableArray alloc] init];
-    [temp addObject:@"aliens and cows"];
-    [temp addObject:@"Code Bold"];
-    [temp addObject:@"Keep Calm"];
-    [temp addObject:@"Nike Total 90"];
-    [temp addObject:@"NOVA"];
-    [temp addObject:@"PRIMETIME"];
-    [temp addObject:@"TOMMY HILFIGER AF"];
+    [temp addObject:@"System"];
+    [temp addObject:@"Bebas Neue"];
+    [temp addObject:@"BullpenHv-Italic"];
+    [temp addObject:@"Chosence-BoldItalic"];
+    [temp addObject:@"Comfortaa"];
+    [temp addObject:@"Crapaud-petit"];
+    [temp addObject:@"Hero"];
+    [temp addObject:@"Kingthings Organica"];
+    [temp addObject:@"Lemon/Milk"];
+    [temp addObject:@"Linux Libertine Slanted"];
+    [temp addObject:@"Lissain Didone"];
+    [temp addObject:@"Martell-Bold"];
+    [temp addObject:@"Poetsen One"];
+    [temp addObject:@"Reckoner"];
+    [temp addObject:@"Rounded Elegance"];
+    [temp addObject:@"Royal Serif"];
+    [temp addObject:@"Stentiga-Regular"];
+    [temp addObject:@"Subway-Black"];
+    [temp addObject:@"SugarcubesRegular"];
+    [temp addObject:@"Typo GeoSlab Regular Demo"];
     return [NSArray arrayWithArray:temp];
 }
 
@@ -84,8 +97,10 @@
 {
     NSMutableArray *temp=[[NSMutableArray alloc] init];
     NSArray<NSString*>* names=[self bodyFontPostScriptNames];
-    for(NSInteger i=0; i<names.count; i++)
+    [temp addObject:[UIFont systemFontOfSize:size]];
+    for(NSInteger i=1; i<names.count; i++)
     {
+        NSLog(@"i=%ld",(long)i);
         [temp addObject:[UIFont fontWithName:names[i] size:size]];
     }
     return [NSArray arrayWithArray:temp];

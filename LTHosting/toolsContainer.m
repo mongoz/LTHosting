@@ -13,6 +13,8 @@
     HMSegmentedControl *bottom;
     
     toolView *activeToolView;
+    
+    BOOL barShowing;
 }
 
 @end
@@ -65,6 +67,7 @@ NSInteger tCount=3;
 -(id)init
 {
     self=[super init];
+    barShowing=NO;
     bottom=[[HMSegmentedControl alloc] init];
     [self addSubview:bottom];
     [bottom setSectionTitles:[self titles]];
@@ -123,18 +126,9 @@ NSInteger tCount=3;
 }
 
 UIButton *barView=nil;
-BOOL barShowing=NO;
 
 -(void)toolView:(toolView *)view isEditingWillChangeTo:(BOOL)isEditing
 {
-    if(isEditing)
-    {
-        NSLog(@"began");
-    }
-    else
-    {
-        NSLog(@"ended");
-    }
     if(barShowing!=isEditing)
     {
         [self toggleBar];
@@ -180,6 +174,22 @@ BOOL barShowing=NO;
 -(IBAction)donePressed:(UIButton*)done
 {
     [activeToolView endUsingTool];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    if(activeToolView!=nil)
+    {
+        [activeToolView willAppear];
+    }
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    if(activeToolView!=nil)
+    {
+        [activeToolView willDisappear];
+    }
 }
 
 @end

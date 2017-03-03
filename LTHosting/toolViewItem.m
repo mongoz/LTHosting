@@ -8,6 +8,7 @@
 
 #import "toolViewItem.h"
 #import "tool.h"
+#import "toolView.h"
 
 
 @interface toolViewItem(){
@@ -39,6 +40,8 @@
     [imageView setContentMode:UIViewContentModeScaleAspectFit];
     label=[[UILabel alloc] init];
     [label setTextAlignment:NSTextAlignmentCenter];
+    [label setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
+    label.adjustsFontSizeToFitWidth=NO;
     [self addSubview:imageView];
     [self addSubview:label];
     [self setSelectable:YES];
@@ -61,13 +64,12 @@
     [self layoutIfNeeded];
 }
 
--(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target toolView:(toolView *)view
+-(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target
 {
     self=[self init];
     mySkew=skew;
     myTarget=target;
     [self configure];
-    [self setButtonDelegate:view];
     return self;
 }
 
@@ -96,6 +98,12 @@
             return @"Color";
         case shadePickerTool:
             return @"Shade";
+        case sizePickerTool:
+            return @"Size";
+        case fontPickerTool:
+            return @"Font";
+        case alignmentTool:
+            return @"Alignment";
         default:
             return @"";
     }
@@ -150,6 +158,16 @@ BOOL isSelectable=YES;
     {
         [super setUserInteractionEnabled:userInteractionEnabled];
     }
+}
+
+-(UIFont*)labelFont
+{
+    return label.font;
+}
+
+-(void)setLabelFont:(UIFont *)labelFont
+{
+    label.font=labelFont;
 }
 
 @end

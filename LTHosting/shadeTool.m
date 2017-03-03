@@ -7,6 +7,7 @@
 //
 
 #import "shadeTool.h"
+#import "borderEditingLayer.h"
 
 @implementation shadeTool
 
@@ -41,7 +42,7 @@
     {
         brightness=1;
     }
-    if(self.targetLayer.mask==nil)
+    if(self.targetLayer.mask==nil&&self.targetLayer.class==[borderEditingLayer class])
     {
         [self.targetLayer setColor:[UIColor colorWithWhite:1.0f-slider.value alpha:1.0f]];
     }
@@ -49,6 +50,21 @@
     {
         [self.targetLayer setColor:[UIColor colorWithHue:hue saturation:saturation brightness:1.0f-slider.value alpha:1]];
     }
+    [self updateClearColor];
+}
+
+-(CGFloat)currentValue
+{
+    CGFloat hue;
+    CGFloat brightness;
+    CGFloat saturation;
+    CGFloat alpha;
+    [[self.targetLayer color] getHue:&hue saturation:&saturation brightness:&brightness alpha:&alpha];
+    if(saturation==0)
+    {
+        return 0;
+    }
+    return 1.0f-brightness;
 }
 
 @end

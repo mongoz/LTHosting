@@ -42,6 +42,8 @@
 
 @property BOOL showsSelection;
 
+-(void)scrollIndexToVisible:(NSInteger)index animated:(BOOL)animated;
+
 @end
 
 @protocol horizontalViewPickerDataSource <NSObject>

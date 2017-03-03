@@ -14,6 +14,10 @@
     BOOL hasCount;
     
     UIFont *font;
+    
+    
+    NSInteger initialHourSelection;
+    NSInteger initialMinuteSelection;
 }
 
 @end
@@ -36,6 +40,8 @@
     _picker.dataSource=self;
     [self addSubview:_picker];
     font=[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
+    initialHourSelection=0;
+    initialMinuteSelection=0;
     return self;
 }
 
@@ -162,8 +168,6 @@
     [self pickerScrollingDidEndInComponent:component atRow:[_picker selectedRowInComponent:component]];
 }
 
-NSInteger initialHourSelection=0;
-NSInteger initialMinuteSelection=0;
 -(void)pickerScrollingDidBeginInComponent:(NSInteger)component atRow:(NSInteger)row
 {
     if(component==1)
@@ -378,7 +382,9 @@ NSInteger initialMinuteSelection=0;
     }
     [_picker selectRow:dayIndex inComponent:0 animated:animated];
     [_picker selectRow:hourIndex inComponent:1 animated:animated];
+    initialHourSelection=[_picker selectedRowInComponent:1];
     [_picker selectRow:minuteIndex inComponent:2 animated:animated];
+    initialMinuteSelection=[_picker selectedRowInComponent:2];
     [_picker selectRow:ind inComponent:3 animated:animated];
     
     if(self.delegate!=nil)

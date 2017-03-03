@@ -83,3 +83,14 @@
 }
 
 @end
+
+@implementation NSOperationQueue (extension)
+
+-(void)addOperationWithBlock:(void (^)(void))block completion:(void (^)())completionBlock
+{
+    NSBlockOperation *blocka=[NSBlockOperation blockOperationWithBlock:block];
+    [blocka setCompletionBlock:completionBlock];
+    [self addOperation:blocka];
+}
+
+@end

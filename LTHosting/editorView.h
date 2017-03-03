@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "textEditingLayer.h"
+#import "borderEditingLayer.h"
+#import "flyerViewController.h"
 
 @class textEditingLayer;
 @class borderEditingLayer;
 
-@interface editorView : UIView
+@interface editorView : UIView<editingLayoutManager>
 
 +(id)shared;
 
@@ -23,6 +26,10 @@
 
 -(void)setBorder:(UIImage*)bimage;
 
+-(void)setTitleText:(NSString*)title;
+
+-(void)setBodyText:(NSString*)body;
+
 //Getters
 
 -(textEditingLayer*)titleLayer;
@@ -30,5 +37,9 @@
 -(textEditingLayer*)bodyLayer;
 
 -(borderEditingLayer*)borderLayer;
+
+@property (nonatomic) BOOL isEditing;
+
+@property (weak, nonatomic) flyerViewController *viewController;
 
 @end

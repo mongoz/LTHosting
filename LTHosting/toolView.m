@@ -9,8 +9,10 @@
 #import "toolView.h"
 #import "editorView.h"
 #import "borderToolView.h"
+#import "textToolView.h"
 #import "toolViewItem.h"
 #import "tool.h"
+#import "toolsContainer.h"
 
 @interface toolView(){
     tool *activeTool;
@@ -34,12 +36,14 @@
     self=[super init];
     _myType=toolTypeNone;
     _toolPicker=[[horizontalViewPicker alloc] init];
+    _toolPicker.showsSelection=NO;
     [_toolPicker setHeightWidthRatio:640.0f/480.0f];
     _toolPicker.hDelegate=self;
     _toolPicker.dataSource=self;
-    _toolPicker.showsSelection=NO;
+    _toolPicker.bounces=NO;
     [self addSubview:_toolPicker];
     activeTool=nil;
+    self.backgroundColor=[UIColor groupTableViewBackgroundColor];
     return self;
 }
 
@@ -52,15 +56,13 @@
             self=[[borderToolView alloc] init];
             break;
         case bodyTextTool:
-            [self setBackgroundColor:[UIColor yellowColor]];
-            break;
         case titleTextTool:
-            [self setBackgroundColor:[UIColor greenColor]];
+            self=[[textToolView alloc] init];
             break;
         default:
             break;
     }
-    _myType=type;
+    self.type=type;
     _container=cont;
     return self;
 }
@@ -99,13 +101,10 @@
     switch(_myType)
     {
         case borderTool:
-            [self setBackgroundColor:[UIColor redColor]];
             break;
         case bodyTextTool:
-            [self setBackgroundColor:[UIColor yellowColor]];
             break;
         case titleTextTool:
-            [self setBackgroundColor:[UIColor greenColor]];
             break;
         default:
             break;
@@ -133,7 +132,8 @@
 //Horizontal View Picker
 -(UIView*)viewForIndex:(NSInteger)index
 {
-    return (UIView*)[self items][index];
+    toolViewItem *view=[self items][index];
+    return (UIView*)view;
 }
 
 -(BOOL)shouldUseLabels
@@ -148,7 +148,14 @@
 
 -(BOOL)shouldHandleViewResizing
 {
-    return NO;
+    return YES;
+}
+
+-(UIView*)view:(UIView *)view inFrame:(CGRect)frame
+{
+    [view setFrame:frame];
+    [(toolViewItem*)view setLabelFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
+    return view;
 }
 
 -(void)horizontalPickerDidSelectViewAtIndex:(NSInteger)index
@@ -162,6 +169,7 @@
     NSBlockOperation *createTool=[NSBlockOperation blockOperationWithBlock:^{
         new=[[self items][index] correspondingTool];
         [new setFrame:self.bounds];
+        [new layoutIfNeeded];
         new.hidden=YES;
     }];
     [createTool setCompletionBlock:^{
@@ -223,6 +231,33 @@
 {
     [activeTool dissolveIn:NO completion:nil];
     [_container toolView:self isEditingWillChangeTo:NO];
+}
+
+-(void)willAppear
+{
+    
+}
+
+-(void)willDisappear
+{
+    
+}
+
+-(BOOL)isHidden
+{
+    return self.alpha==0.0f;
+}
+
+-(void)setHidden:(BOOL)hidden
+{
+    if(hidden)
+    {
+        self.alpha=0.0f;
+    }
+    else
+    {
+        self.alpha=1.0f;
+    }
 }
 
 @end

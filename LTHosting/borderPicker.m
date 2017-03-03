@@ -12,6 +12,7 @@
 #import "borderEditingLayer.h"
 #import "textEditingLayer.h"
 #import "event.h"
+#import "toolView.h"
 
 @interface borderPicker(){
     horizontalViewPicker *scroller;
@@ -41,28 +42,27 @@ static NSInteger selectedIndex=0;
 -(id)init
 {
     self=[super init];
-    scroller=nil;
+    scroller=[[horizontalViewPicker alloc] init];
+    scroller.bounces=NO;
+    [scroller setHeightWidthRatio:640.0f/480.0f];
+    [scroller setLabelTextColor:[UIColor blackColor]];
+    scroller.hDelegate=self;
+    scroller.dataSource=self;
+    [self addSubview:scroller];
+    [self updateCurrentValueAnimated:NO];
     return self;
+}
+
+-(void)updateCurrentValueAnimated:(BOOL)animated
+{
+    [super updateCurrentValueAnimated:animated];
+    [scroller selectRowAtIndex:selectedIndex];
 }
 
 -(void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-    if(scroller==nil&frame.size.height>0)
-    {
-        scroller=[[horizontalViewPicker alloc] initWithFrame:self.bounds];
-        scroller.bounces=NO;
-        [scroller setHeightWidthRatio:640.0f/480.0f];
-        [scroller setLabelTextColor:[UIColor blackColor]];
-        scroller.hDelegate=self;
-        scroller.dataSource=self;
-        [self addSubview:scroller];
-        [scroller selectRowAtIndex:selectedIndex];
-    }
-    if(scroller!=nil)
-    {
-        [scroller setFrame:[self visibleFrame]];
-    }
+    [scroller setFrame:self.bounds];
 }
 
 -(CGRect)frameForIndex:(NSInteger)index
@@ -130,6 +130,10 @@ static NSInteger selectedIndex=0;
 
 -(NSInteger)numberOfViews
 {
+    if(self.frame.size.height<=0)
+    {
+        return 0;
+    }
     return [usefulArray borderNames].count+1;
 }
 
@@ -150,6 +154,7 @@ static NSInteger selectedIndex=0;
     {
         [vi setFrame:view.bounds];
     }
+    [view layoutIfNeeded];
     return view;
 }
 
@@ -177,6 +182,15 @@ static NSInteger selectedIndex=0;
     }
 }
 
++(void)setSelectedIndex:(NSInteger)index
+{
+    selectedIndex=index;
+}
 
+-(void)dissolveIn:(BOOL)ind completion:(void (^)())completionBlock
+{
+    [scroller scrollIndexToVisible:[borderPicker selectedIndex] animated:NO];
+    [super dissolveIn:ind completion:completionBlock];
+}
 
 @end

@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "horizontalViewPicker.h"
-#import "toolsContainer.h"
 
 @protocol buttonTouchDelegate <NSObject>
 
@@ -22,6 +21,7 @@
 
 @class tool;
 @class toolViewItem;
+@class toolsContainer;
 
 typedef enum toolsTypes{
     borderTool,
@@ -50,6 +50,10 @@ typedef enum toolsTypes{
 -(void)transitionToToolAtIndex:(NSInteger)index completion:(void(^)())completionBlock;
 
 -(void)endUsingTool;
+
+-(void)willAppear;
+
+-(void)willDisappear;
 
 @end
 
