@@ -32,6 +32,7 @@
     [segControl setBackgroundColor:[UIColor clearColor]];
     [segControl setTintColor:[UIColor blackColor]];
     [self addSubview:segControl];
+    [segControl setTitleTextAttributes:@{NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]} forState:UIControlStateNormal];
     [segControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
     return self;
 }
@@ -39,8 +40,9 @@
 -(void)setFrame:(CGRect)frame
 {
     [super setFrame:frame];
-    CGFloat margin=24.0f;
-    [segControl setFrame:CGRectMake(margin, margin, self.bounds.size.width-margin*2, self.bounds.size.height-margin*2)];
+    CGFloat marginx=24.0f;
+    CGFloat height=frame.size.height/3;
+    [segControl setFrame:CGRectMake(marginx, self.bounds.size.height/2-height/2, self.bounds.size.width-marginx*2, height)];
 }
 
 -(void)segmentChanged:(UISegmentedControl*)control

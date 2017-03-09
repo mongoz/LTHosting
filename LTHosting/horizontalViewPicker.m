@@ -31,6 +31,14 @@
     
     NSArray<UIView*>* managedViews;
     
+    BOOL impliesSize;
+    
+    UIView *leftIndicationIndicator;
+    UIView *rightIndicationIndicator;
+    
+    BOOL leftShowing;
+    BOOL rightShowing;
+    
 }
 @end
 
@@ -56,6 +64,26 @@
     labelTextColor=[UIColor whiteColor];
     labelFont=[UIFont preferredFontForTextStyle:UIFontTextStyleCaption2];
     _showsSelection=YES;
+    impliesSize=NO;
+    leftIndicationIndicator=[[UIView alloc] init];
+    leftIndicationIndicator.backgroundColor=[UIColor blackColor];
+    leftIndicationIndicator.hidden=YES;
+    leftShowing=NO;
+    rightIndicationIndicator=[[UIView alloc] init];
+    rightIndicationIndicator.backgroundColor=[UIColor blackColor];
+    rightIndicationIndicator.hidden=YES;
+    rightShowing=NO;
+    
+    void (^addShadowToLayer)(CALayer *layer)=^(CALayer *layer){
+        [layer setShadowOpacity:0.9f];
+        [layer setShadowColor:[UIColor blackColor].CGColor];
+        [layer setShadowRadius:8.0f];
+        layer.masksToBounds=NO;
+    };
+    addShadowToLayer(leftIndicationIndicator.layer);
+    addShadowToLayer(rightIndicationIndicator.layer);
+    [self addSubview:leftIndicationIndicator];
+    [self addSubview:rightIndicationIndicator];
     return self;
 }
 
@@ -81,6 +109,17 @@
             }];
         }
     }
+}
+
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
+    CGFloat indicatorWidth=12.0f;
+    [leftIndicationIndicator setFrame:CGRectMake(self.contentOffset.x-indicatorWidth, 0, indicatorWidth, self.frame.size.height)];
+    [rightIndicationIndicator setFrame:CGRectMake(self.contentOffset.x+self.frame.size.width, 0, indicatorWidth, self.frame.size.height)];
+    
+    [self bringSubviewToFront:leftIndicationIndicator];
+    [self bringSubviewToFront:rightIndicationIndicator];
 }
 
 -(NSInteger)selectedIndex
@@ -385,6 +424,8 @@
         [view removeFromSuperview];
     }
     managedViews=nil;
+    [self addSubview:leftIndicationIndicator];
+    [self addSubview:rightIndicationIndicator];
 }
 
 -(void)scrollIndexToVisible:(NSInteger)index animated:(BOOL)animated
@@ -395,6 +436,81 @@
     }
     CGRect frame=[self frameForViewAtIndex:index];
     [self scrollRectToVisible:CGRectMake(frame.origin.x-_margin, frame.origin.y, frame.size.width+_margin*2, frame.size.height) animated:animated];
+}
+
+-(void)setImpliesContentSize:(BOOL)impliesContentSize
+{
+    impliesSize=impliesContentSize;
+    leftIndicationIndicator.hidden=!impliesSize;
+    rightIndicationIndicator.hidden=!impliesSize;
+    self.contentOffset=self.contentOffset;
+}
+
+-(BOOL)impliesContentSize
+{
+    return impliesSize;
+}
+
+-(void)setContentOffset:(CGPoint)contentOffset
+{
+    [super setContentOffset:contentOffset];
+    if(contentOffset.x==0)
+    {
+        [self setView:leftIndicationIndicator showing:NO animated:YES completion:nil];
+    }
+    else{
+        [self setView:leftIndicationIndicator showing:YES animated:YES completion:nil];
+        if(contentOffset.x==self.contentSize.width-self.frame.size.width)
+        {
+            [self setView:rightIndicationIndicator showing:NO animated:YES completion:nil];
+        }
+        else
+        {
+            [self setView:rightIndicationIndicator showing:YES animated:YES completion:nil];
+        }
+    }
+}
+
+-(void)toggleShowing:(UIView*)view animated:(BOOL)animated completion:(void(^)())completionBlock
+{
+    CGFloat final=0;
+    if(view.alpha==0)
+    {
+        final=1;
+    }
+    void (^actionBlock)()=^{
+        view.alpha=final;
+    };
+    if(animated)
+    {
+        [UIView animateWithDuration:.25 animations:actionBlock completion:^(BOOL finished){
+            if(completionBlock!=nil)
+            {
+                completionBlock();
+            }
+        }];
+    }
+    else
+    {
+        actionBlock();
+        if(completionBlock!=nil)
+        {
+            completionBlock();
+        }
+    }
+}
+
+-(void)setView:(UIView*)view showing:(BOOL)showing animated:(BOOL)animated completion:(void(^)())completionBlock
+{
+    BOOL current=YES;
+    if(view.alpha==0)
+    {
+        current=NO;
+    }
+    if(current!=showing)
+    {
+        [self toggleShowing:view animated:animated completion:completionBlock];
+    }
 }
 
 @end

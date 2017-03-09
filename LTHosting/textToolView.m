@@ -34,11 +34,11 @@
     if(items==nil)
     {
         NSMutableArray *objects=[[NSMutableArray alloc] init];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:colorPickerTool target:target]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:shadePickerTool target:target]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:sizePickerTool target:target]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:fontPickerTool target:target]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:alignmentTool target:target]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:colorPickerTool target:target toolType:self.type]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:shadePickerTool target:target toolType:self.type]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:sizePickerTool target:target toolType:self.type]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:fontPickerTool target:target toolType:self.type]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:alignmentTool target:target toolType:self.type]];
         items=objects;
     }
     return items;

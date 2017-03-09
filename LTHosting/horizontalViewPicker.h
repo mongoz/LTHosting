@@ -44,6 +44,8 @@
 
 -(void)scrollIndexToVisible:(NSInteger)index animated:(BOOL)animated;
 
+@property BOOL impliesContentSize;
+
 @end
 
 @protocol horizontalViewPickerDataSource <NSObject>

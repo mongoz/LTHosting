@@ -1,9 +1,10 @@
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/GoogleMaps/Base/Frameworks" "${PODS_ROOT}/GooglePlaces/Frameworks"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/GoogleMaps" "${PODS_ROOT}/Headers/Public/GooglePlaces"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/GoogleMaps" -isystem "${PODS_ROOT}/Headers/Public/GooglePlaces"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"z" -framework "CoreData" -framework "CoreGraphics" -framework "CoreLocation" -framework "GoogleMapsBase" -framework "GooglePlaces" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ChameleonFramework" "${PODS_ROOT}/Headers/Public/GoogleMaps" "${PODS_ROOT}/Headers/Public/GooglePlaces" "${PODS_ROOT}/Headers/Public/HMSegmentedControl" "${PODS_ROOT}/Headers/Public/REFormattedNumberField" "${PODS_ROOT}/Headers/Public/RETableViewManager" "${PODS_ROOT}/Headers/Public/REValidation"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/ChameleonFramework" "$PODS_CONFIGURATION_BUILD_DIR/HMSegmentedControl" "$PODS_CONFIGURATION_BUILD_DIR/REFormattedNumberField" "$PODS_CONFIGURATION_BUILD_DIR/RETableViewManager" "$PODS_CONFIGURATION_BUILD_DIR/REValidation"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/ChameleonFramework" -isystem "${PODS_ROOT}/Headers/Public/GoogleMaps" -isystem "${PODS_ROOT}/Headers/Public/GooglePlaces" -isystem "${PODS_ROOT}/Headers/Public/HMSegmentedControl" -isystem "${PODS_ROOT}/Headers/Public/REFormattedNumberField" -isystem "${PODS_ROOT}/Headers/Public/RETableViewManager" -isystem "${PODS_ROOT}/Headers/Public/REValidation"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"ChameleonFramework" -l"HMSegmentedControl" -l"REFormattedNumberField" -l"RETableViewManager" -l"REValidation" -l"c++" -l"z" -framework "CoreData" -framework "CoreGraphics" -framework "CoreLocation" -framework "GoogleMapsBase" -framework "GooglePlaces" -framework "QuartzCore" -framework "SystemConfiguration" -framework "UIKit"
 PODS_BUILD_DIR = $BUILD_DIR
 PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_ROOT = ${SRCROOT}/Pods

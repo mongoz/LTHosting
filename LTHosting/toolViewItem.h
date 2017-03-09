@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "toolView.h"
 
 @class editingLayer;
 @class tool;
-@class toolView;
 @protocol buttonTouchDelegate;
 
 typedef enum types{
@@ -19,7 +19,8 @@ typedef enum types{
     shadePickerTool,
     sizePickerTool,
     fontPickerTool,
-    alignmentTool
+    alignmentTool,
+    tintTool
 }toolSkew;
 
 @interface toolViewItem : UIButton
@@ -28,7 +29,7 @@ typedef enum types{
 
 @property (strong, nonatomic) UIImage *image;
 
--(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target;
+-(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target toolType:(toolType)type;
 
 -(tool*)correspondingTool;
 

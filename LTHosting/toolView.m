@@ -37,7 +37,8 @@
     _myType=toolTypeNone;
     _toolPicker=[[horizontalViewPicker alloc] init];
     _toolPicker.showsSelection=NO;
-    [_toolPicker setHeightWidthRatio:640.0f/480.0f];
+    _toolPicker.impliesContentSize=YES;
+    [_toolPicker setHeightWidthRatio:1.0f];
     _toolPicker.hDelegate=self;
     _toolPicker.dataSource=self;
     _toolPicker.bounces=NO;

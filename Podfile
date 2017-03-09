@@ -9,6 +9,7 @@ target 'LTHosting' do
 	pod ‘GooglePlaces’
 	pod ‘ChameleonFramework’
 	pod ‘HMSegmentedControl’
+	pod ‘RETableViewManager’
 
   target 'LTHostingTests' do
     inherit! :search_paths

@@ -38,7 +38,6 @@
         if(v.class==[UITextField class])
         {
             field=(UITextField*)v;
-            field.inputAccessoryView=self.inputAccessoryView;
             field.delegate=self;
             break;
         }
@@ -75,7 +74,7 @@
     self.accessoryView.hidden=YES;
     
     field.placeholder=@"Add Address...";
-    field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[[UIColor flatTealColorDark] colorWithAlphaComponent:.75] forKey:NSForegroundColorAttributeName]];
+    field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[UIColor lightGrayColor] forKey:NSForegroundColorAttributeName]];
     [self.barView addSubview:field];
     
     [self.accessoryView setAutoresizesSubviews:YES];
@@ -174,7 +173,12 @@
     [[event sharedInstance] setAddress:field.text];
     if(mostRecentPrediction!=nil)
     {
-        [[event sharedInstance] setFullAddressInfo:mostRecentPrediction];
+        [[GMSPlacesClient sharedClient] lookUpPlaceID:mostRecentPrediction.placeID callback:^(GMSPlace *place, NSError *error){
+            if(!error)
+            {
+                [[event sharedInstance] setFullAddressInfo:place];
+            }
+        }];
     }
 }
 

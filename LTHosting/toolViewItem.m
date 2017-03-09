@@ -8,15 +8,17 @@
 
 #import "toolViewItem.h"
 #import "tool.h"
-#import "toolView.h"
 
 
 @interface toolViewItem(){
     toolSkew mySkew;
     editingLayer *myTarget;
+    toolType myType;
     
     UIImageView *imageView;
     UILabel *label;
+    
+    UIImage *myImage;
     
 }
 
@@ -36,6 +38,8 @@
 {
     self=[super init];
     myTarget=nil;
+    myImage=nil;
+    myType=toolTypeNone;
     imageView=[[UIImageView alloc] init];
     [imageView setContentMode:UIViewContentModeScaleAspectFit];
     label=[[UILabel alloc] init];
@@ -47,6 +51,7 @@
     [self setSelectable:YES];
     return self;
 }
+
 
 -(void)setFrame:(CGRect)frame
 {
@@ -64,10 +69,11 @@
     [self layoutIfNeeded];
 }
 
--(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target
+-(id)initWithSkew:(toolSkew)skew target:(editingLayer*)target toolType:(toolType)type
 {
     self=[self init];
     mySkew=skew;
+    myType=type;
     myTarget=target;
     [self configure];
     return self;
@@ -104,18 +110,56 @@
             return @"Font";
         case alignmentTool:
             return @"Alignment";
+        case tintTool:
+            return @"Tint";
         default:
             return @"";
     }
 }
 
-UIImage *myImage=nil;
-
 -(UIImage*)image
 {
     if(myImage==nil)
     {
-        myImage=[UIImage imageNamed:@"test3.png"];
+        NSString *name=@"";
+        switch(mySkew)
+        {
+            case borderPickerTool:
+                name=@"frame.png";
+                break;
+            case colorPickerTool:
+                switch(myType)
+                {
+                    case titleTextTool:
+                    case bodyTextTool:
+                        name=@"font Color.png";
+                        break;
+                    case borderTool:
+                        name=@"frame color.png";
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            case fontPickerTool:
+                name=@"font icon.png";
+                break;
+            case shadePickerTool:
+                name=@"shade.png";
+                break;
+            case sizePickerTool:
+                name=@"Text size.png";
+                break;
+            case alignmentTool:
+                name=@"alignment.png";
+                break;
+            case tintTool:
+                name=@"tint color.png";
+                break;
+            default:
+                break;
+        }
+        myImage=[UIImage imageNamed:name];
     }
     return myImage;
 }

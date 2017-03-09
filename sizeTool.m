@@ -37,12 +37,22 @@
         {
             mySlider=[[UISlider alloc] initWithFrame:CGRectMake(margin, margin, self.bounds.size.width-margin*2, self.bounds.size.height-margin*2)];
             [mySlider addTarget:self action:@selector(sliderValueChanged:) forControlEvents:UIControlEventValueChanged];
-            mySlider.minimumValue=8.0f;
-            mySlider.maximumValue=[(textEditingLayer*)self.targetLayer maxTextSize];
+            mySlider.minimumValue=[self minimumValue];
+            mySlider.maximumValue=[self maximumValue];
             [self addSubview:mySlider];
             [self layoutIfNeeded];
         }
     }
+}
+
+-(CGFloat)minimumValue
+{
+    return 8.0f;
+}
+
+-(CGFloat)maximumValue
+{
+    return [(textEditingLayer*)self.targetLayer maxTextSize];
 }
 
 -(IBAction)sliderValueChanged:(UISlider*)slider

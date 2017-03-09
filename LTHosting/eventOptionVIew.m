@@ -53,7 +53,7 @@ BOOL hasAddedBaseline=NO;
 -(UIView*)defaultBarView
 {
     stackView *new=[[stackView alloc] initWithFrame:CGRectMake(0, 0, self.bounds.size.width, barHeight)];;
-    [new setBackgroundColor:[UIColor flatWhiteColor]];
+    [new setBackgroundColor:[UIColor whiteColor]];
     CGFloat width=0.5f;
     UIView *bottom=[[UIView alloc] initWithFrame:CGRectMake(0, new.frame.size.height-width, new.frame.size.width, width)];
     [bottom setBackgroundColor:[UIColor blackColor]];

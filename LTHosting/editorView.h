@@ -10,6 +10,7 @@
 #import "textEditingLayer.h"
 #import "borderEditingLayer.h"
 #import "flyerViewController.h"
+#import "tintEditinglayer.h"
 
 @class textEditingLayer;
 @class borderEditingLayer;
@@ -37,6 +38,8 @@
 -(textEditingLayer*)bodyLayer;
 
 -(borderEditingLayer*)borderLayer;
+
+-(tintEditinglayer*)backgroundTintLayer;
 
 @property (nonatomic) BOOL isEditing;
 

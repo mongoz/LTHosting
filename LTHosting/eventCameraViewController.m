@@ -31,7 +31,6 @@
 -(void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];self.view.translatesAutoresizingMaskIntoConstraints=YES;
-    
     [_imageView setFrame:CGRectMake(_imageView.frame.origin.x, _imageView.frame.origin.y, _imageView.frame.size.width, _imageView.frame.size.width*640/480)];
     [_libraryBar setFrame:CGRectMake(_imageView.frame.origin.x, _imageView.frame.origin.y+_imageView.frame.size.height, _imageView.frame.size.width, self.view.bounds.size.height-_imageView.frame.origin.y-_imageView.frame.size.height)];
     [self configureView];
@@ -54,7 +53,13 @@
     [libraryTap setDelegate:self];
     [_libraryBarImageView addGestureRecognizer:libraryTap];
     [_libraryBarImageView setUserInteractionEnabled:YES];
-    [_libraryBar setBackgroundColor:[UIColor flatTealColor]];
+    _libraryBarImageView.layer.borderColor=[UIColor whiteColor].CGColor;
+    _libraryBarImageView.layer.borderWidth=1.0f;
+    [_libraryBar setBackgroundColor:[UIColor blackColor]];
+    UIView *top=[[UIView alloc] initWithFrame:CGRectMake(0, 0, _libraryBar.frame.size.width, 1.0f)];
+    top.backgroundColor=[UIColor whiteColor];
+    [_libraryBar addSubview:top];
+    
     
     //Disable good and bad photo buttons until photo is taken
     [self hideGoodBadButtons];
@@ -469,8 +474,17 @@
 }
 
 - (IBAction)goodButtonPressed:(id)sender {
-    [[event sharedInstance] setImage:imagePreviewView.image];
+    [[event sharedInstance] setImage:[self captureImageView:imagePreviewView]];
     [self performSegueWithIdentifier:@"editPhoto" sender:nil];
+}
+
+-(UIImage*)captureImageView:(UIImageView*)view
+{
+    UIGraphicsBeginImageContextWithOptions(view.frame.size, YES, 5.0f);
+    [view drawViewHierarchyInRect:view.bounds afterScreenUpdates:YES];
+    UIImage *im=UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return im;
 }
 
 - (IBAction)badButtonPressed:(id)sender {

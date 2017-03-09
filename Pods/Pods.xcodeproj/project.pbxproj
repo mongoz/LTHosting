@@ -7,60 +7,215 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0469C725F8B3D7B2CBDAA62CB3122314 /* UIButtonBarArrowLeft@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ED5286EC9AB3BC3AB1885BB10F931964 /* UIButtonBarArrowLeft@2x.png */; };
+		04AFB680C2985A993CEBADBD765AE423 /* REInlinePickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C04401DB1FFAFEBE0C2C4EC61B5E8191 /* REInlinePickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06D1C531DC71475B725988DA463DA43B /* RETableViewManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6943D6DD57BAC29C199D2A0068EFD6D3 /* RETableViewManager-dummy.m */; };
 		06E7D2E442D29969F491F4E267EB28BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		0CEA1E3942EFBD610278839916EAF8DB /* Pods-LTHosting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E52115C14FC7DF906AD8E723998389 /* Pods-LTHosting-dummy.m */; };
-		189D95130E0E34C7EFBD3F5680425DC4 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB38AF5CA241FFAE066A7AFF065613F /* UIButton+Chameleon.m */; };
-		19B414A7BCEC677124DDE9CEEAA746F3 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = BB7B63FF6C6663426D0D842416E72DF4 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C8E49542CBC7F970D66954AC4961A5C /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 762BF5FBB4285F4801F3DDA37B88E926 /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3748655A81D2AEB5701D1A1BCAFB35D2 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C0C597CD1F685FDB19DBE8D6FF63842 /* UIView+ChameleonPrivate.m */; };
-		458C8B2C0346386AA021AE2CB51C2C29 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EE55B4E4396CCBF004966851D71B63F /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		47B181B78F57FAD82F110F5197D96DA8 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = A2C981F01BF91AF0AD9429D01AFE44E1 /* Chameleon_.m */; };
-		487857079B7BF67244CE9010019CF1E5 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 361C1DA3D3461239877C1B200824342F /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48BB63C4BBB631037E93B4E025C0572D /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = A34E3C9BBD4B137277FF245BD932F140 /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DD9D094B2451429DA249515BA5742C5 /* REPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 72B4CB682C52212CB248FDA8D8D1D0A6 /* REPlaceholderTextView.m */; };
+		1035A4F6D8D466BC81F8ABD25B70AE44 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		14802842504EFE67301921776FB3902F /* REEmailValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = D73D28E4D0091013C0E4228E8E8AEC1A /* REEmailValidator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		176E4F081F9CDBC6CA2E8E32C1A957F3 /* REBoolItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FAFE425CE2867AC265AA8B957D58E5C /* REBoolItem.m */; };
+		189D95130E0E34C7EFBD3F5680425DC4 /* UIButton+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = F2E77C71EB0A154F8C974D928757B337 /* UIButton+Chameleon.m */; };
+		19B414A7BCEC677124DDE9CEEAA746F3 /* NSArray+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = EB1DD42DC0CE4DF270E0C932ADA444D3 /* NSArray+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1A3FDEB683194962B9BAFF990E480D7E /* Card_Stack.png in Resources */ = {isa = PBXBuildFile; fileRef = A47268B160C5F9F53EC55EA74469838B /* Card_Stack.png */; };
+		1BDA069C1E55E577D5E3823176E7FFC3 /* REFormattedNumberField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69D05F1E1B72641CED4884B78DCB73 /* REFormattedNumberField-dummy.m */; };
+		1C8E49542CBC7F970D66954AC4961A5C /* UILabel+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = D7E00EEE03C92D18B7417F5FD788C17C /* UILabel+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DFFA7CB2E65091F7FAB86A5AF6F3E94 /* REBoolItem.h in Headers */ = {isa = PBXBuildFile; fileRef = EA2D3363088BD0398ADB96F7B884A8BC /* REBoolItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F7990AAEBD89B1F71BA85A90686CE8E /* REPickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F32A71B3FBED17B1F4DBF7C69AACB3FE /* REPickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		203A51EA915598E88E088E1C2A351ADB /* Pods-LTHosting-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E52115C14FC7DF906AD8E723998389 /* Pods-LTHosting-dummy.m */; };
+		20E465BCF0844DD518304D55E3336F57 /* Transparent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C7A262A72CF165B73C07880277A39A4D /* Transparent@2x.png */; };
+		2100EB61B5AD5078FDED2732837F23D4 /* RETableViewLongTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 56FFF1B490755E53C4C3A7C21DD70018 /* RETableViewLongTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21636F4B6D3E4C6512B300E7920C21DE /* RETableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 138703D51139B4EBF324C356156C8D3F /* RETableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2409289120684BEA8B4CD3B2BF68730B /* Card_Amex.png in Resources */ = {isa = PBXBuildFile; fileRef = 814DB7380F10CEEB3634499DC23DB8A0 /* Card_Amex.png */; };
+		245AE655DA48A218EE9E2499B4853C23 /* REPresenceValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8A6A4E0556ADC989D19C5139B622FD /* REPresenceValidator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		253338C5CA41A530CE892F712436BC96 /* RETableViewPickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = AAA2823FF9AD1F93FF8BDBA8B19ADEE0 /* RETableViewPickerCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26CF4D8B429CE6A9493A52AD4E53BE99 /* RETableViewInlineDatePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDA0F2A234C7ABDA38BEA9880DBD4A10 /* RETableViewInlineDatePickerCell.m */; };
+		2704BB4FC7C78B528B82E109114C1510 /* RELongTextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 707368332E8D3FA960B44F4127AD64C6 /* RELongTextItem.m */; };
+		2745EAC7706E5A3453CC3912E11A5DC0 /* RETableViewCreditCardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6301AD37B45BC63752C2DAB0CD1676E /* RETableViewCreditCardCell.m */; };
+		3189350388AB76EA01A107E1C42E5177 /* Card_Mastercard.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EABD0D076C66D3AD39ACA0C26B25734 /* Card_Mastercard.png */; };
+		34E9EDED4C546C12F817E088EB7E8EB0 /* RETableViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E12A9F8F66FF8F0E95F3E8E3804F52B /* RETableViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3748655A81D2AEB5701D1A1BCAFB35D2 /* UIView+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D45369FE42BA02246B4FEE1903910DA /* UIView+ChameleonPrivate.m */; };
+		388087FFCEE40741EC2E612AEDF5D893 /* RETableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D2B5671751FA314C601D3690EA1218A7 /* RETableViewManager.m */; };
+		38ED81EFCCBFE08CA7D1295DB10AA582 /* UIButtonBarArrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 38B5F489971194C1CD1FFD988143BB10 /* UIButtonBarArrowRight.png */; };
+		3E171B097FF465B91C5D54E417A87D05 /* NSString+RETableViewManagerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC0530BFA6C17ED564D53CCFCA51C8A /* NSString+RETableViewManagerAdditions.m */; };
+		3F1861598FF6ADF0AFE126104DCD7592 /* RETableViewNumberCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 96C7A28062471BBA893A75DC02A5DA9A /* RETableViewNumberCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42AA670A644FB0A89B5A3932F0D8DA39 /* REValidation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A34B159B61B7B89D655E1D4C976C487 /* REValidation-dummy.m */; };
+		458C8B2C0346386AA021AE2CB51C2C29 /* ChameleonEnums.h in Headers */ = {isa = PBXBuildFile; fileRef = 864E9F85DD14B62E279A1EF551DF19EC /* ChameleonEnums.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		471D37E1BBE2FCA64F0FE292F347B6AA /* RETableViewOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 80B866F93BFBB234D5F6953F3378A2A1 /* RETableViewOptionCell.m */; };
+		4759F76DBE01C113AC0AE6FECE192D4C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		47B181B78F57FAD82F110F5197D96DA8 /* Chameleon_.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E82131C4F757DD87DF0B00B4E213FED /* Chameleon_.m */; };
+		487857079B7BF67244CE9010019CF1E5 /* UIImage+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 667A7A9D5A9FA668B8BCFBDDE46B4E65 /* UIImage+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		48BB63C4BBB631037E93B4E025C0572D /* UIViewController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = C2C50AD683FFE0526341E18A2E54010C /* UIViewController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4970AF6B2D5D3BBCF91B78E431DAFA26 /* REEmailValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D298BEA4D0D1256457236544673ED30 /* REEmailValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		49C411CDD4C74145AE8726F95938CD22 /* UIButtonBarArrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 80F1FC427A811E27A708FC6D7C3AB4D3 /* UIButtonBarArrowLeft.png */; };
+		4BD42456337F2EF38B391AF7BA3C93F1 /* REPickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = A860FECDD14A99D0B90ED60FAEFD1A6B /* REPickerItem.m */; };
 		51108773117EA1EB38120CBE77614ACC /* Pods-LTHostingTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53A01725D0247429FD1FCC0F1471E027 /* Pods-LTHostingTests-dummy.m */; };
-		6140FA9151F304FDD10E084CB7A10442 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C5132B2B59C41B9AE78E3238DE58EAE /* HMSegmentedControl.m */; };
-		73F5A380DCDA2D3961E941B1E9B4320C /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 6755177395DEA8755A8D5FA87625A1C1 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		549CBAB00A2149B9A7E21CF6A2D7A202 /* RETextItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1732F620AC5F410AA677E28FA158A244 /* RETextItem.m */; };
+		55FF9B263BD67F7939F98D4CF5C86BA4 /* REFormattedNumberField.h in Headers */ = {isa = PBXBuildFile; fileRef = C1FC46878FBC4B5F479F8F4A19C7664E /* REFormattedNumberField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		571AFBA96E9CC0CFFB6305DD86641449 /* RETableViewFloatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B35728DE90AF5D8A367F553065CD3BFD /* RETableViewFloatCell.m */; };
+		5C28F6DEDFF1EEBFB8D83EEE38D5BD65 /* RETableViewOptionsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 929DDADEAB0D5BDF4401F22F318D6E85 /* RETableViewOptionsController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5E447C1F76A8F6CA372F3F35698C174D /* Card_Mastercard@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 68F5F9B8BBF9A1B2848EA33D7D700EFB /* Card_Mastercard@2x.png */; };
+		6140FA9151F304FDD10E084CB7A10442 /* HMSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 54202FE6254D2CF530DF38985FA18810 /* HMSegmentedControl.m */; };
+		6207A18047AA694DADCF0EFC6AE5ED1A /* RETableViewCreditCardCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E79BDB68D1609AD8671E2641217BBB3 /* RETableViewCreditCardCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		624995B4BC24B979BC3DB8E1E2DCADF0 /* RERadioItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C0BDE337338E30BE7E8B69AB0BC0EA5 /* RERadioItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		64791FE90235C86BD0B7D77FD7A1515E /* RELengthValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = D8E757F2527311FC4A232BD32AAA365F /* RELengthValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65FCDC7C6EA145469882AC12C8348E9F /* RETableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7A34F053153F34154F05F065F3C6C22 /* RETableViewItem.m */; };
+		66556A702C6CE15025B3036A519775F1 /* Card_Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5D3E1CDECA24E2FDC588CC897EC8AB /* Card_Back.png */; };
+		6A371B454F783C9E047B5E6170DD9914 /* RETableViewSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 46FA7011EDFDD42177CFB16C5B0FB803 /* RETableViewSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6A42FDC0D5983A3E86BB5CB24426A951 /* REValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2AA6D2DADC768B9F49997E25F26642 /* REValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AC7ED17ACA83E387BE731BABE571960 /* RETableViewLongTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 06E1E6FC618CAC2E5D1A82440402F125 /* RETableViewLongTextCell.m */; };
+		6B65E1AD4FCA5CFE188571D8D327A6F9 /* NSError+REValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = 352420262E260763A6F150FB8458F97F /* NSError+REValidation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		6F2DCCCE24211BBA85B26C235240D7D6 /* RETableViewCellStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F42DF9552D6B47586A831F58EFD054D /* RETableViewCellStyle.m */; };
+		72D104A94635276E51EA70BF298A7D09 /* RESegmentedItem.h in Headers */ = {isa = PBXBuildFile; fileRef = A2F6D4088741A41A18C3A6A234972FE0 /* RESegmentedItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		736F6EDCBC5FE72C3B4FE1439733BEFD /* REValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = BABEB138509D7C438CF2CB1A3ADC425C /* REValidator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		737FD36CD6C0D0060B16A09DC6D144E4 /* RETableViewDateTimeCell.h in Headers */ = {isa = PBXBuildFile; fileRef = C5A0CE0F4E69F8D08AD4872458F472BF /* RETableViewDateTimeCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73F5A380DCDA2D3961E941B1E9B4320C /* UIButton+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3DDC1158633D87F4C0DA485BD2C598A2 /* UIButton+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7646651962E88F9CB06617724E57F159 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */; };
-		76A14BDF94501D1F6E7F04EAF00C910E /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE2995E76D7D0852E1F837ABB53A88C /* UIColor+Chameleon.m */; };
-		7B3E3E404773B80255C516BA035E47B3 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C8ACFEB5D0CCA89BEFC9D58502A467 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8854F330A9EF4E0632BEAB1D18DA6F5B /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = D975ED68935119481DAE909221D8E89C /* ChameleonConstants.m */; };
+		76A14BDF94501D1F6E7F04EAF00C910E /* UIColor+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = B1CEE8FDBF929902E5E08DFA3D7E28D2 /* UIColor+Chameleon.m */; };
+		77301E4774BB5451A44F599CE5ADAF8E /* RETableViewInlinePickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EFD3ECF677600ED68F1BAAFBE51592E /* RETableViewInlinePickerCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		778B370C9FF708547B864E5C9D1F6B29 /* NSBundle+RETableViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B989FF1C82FE75BB136DB930C8F7B058 /* NSBundle+RETableViewManager.m */; };
+		7A9C37A850F24F87FBD7CACA6C8FFAE5 /* RENumberItem.h in Headers */ = {isa = PBXBuildFile; fileRef = DAFA35F65DCA2488AD3273CF12943494 /* RENumberItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7AD0DFA4803DC8E29FCD6C72BD45D601 /* RELengthValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 7608EEC2C04939BC3F5D4CE9FB8777FE /* RELengthValidator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7B3E3E404773B80255C516BA035E47B3 /* UIAppearance+Swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EE6633CD21ADB56F983CD856D3F7BD1 /* UIAppearance+Swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C25B973D4F818679394E47B43A54B0F /* REURLValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFBFC91AAE0744A1292391D6C3F141B /* REURLValidator.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7C67EDB2525AB8B3C074F7B408887135 /* REURLValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = FDA61DE12652912115F64A4FDCDD4227 /* REURLValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D88D281C8D51D83C7AAC67BDFA50298 /* REValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = CFDA544A1B41738042F8E7C3C5DE51B4 /* REValidation.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7DCF2F928D30B7095FEA723D388522FD /* REInlinePickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 36A26EDE7E9F28C4F1220A33972E03FD /* REInlinePickerItem.m */; };
+		7FD5CA18A61ED2AF28D2744C7ECFD759 /* REValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 873F439A6D914F8790C1CD603A369542 /* REValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80FC629819EE719B13D1D724E9F4FC90 /* NSString+RETableViewManagerAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 893B9F57B133113F5AA7B91B24C73279 /* NSString+RETableViewManagerAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8254722A07315B2E9EC9E6916549DE54 /* Ribbon_Expired.png in Resources */ = {isa = PBXBuildFile; fileRef = 7A4966BD915E2D8FAAA16B915598CC15 /* Ribbon_Expired.png */; };
+		8764811AAE725DB6947C0B7D26912D71 /* RETableViewPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B975BA17845EB18252F56A4F1B76F2 /* RETableViewPickerCell.m */; };
+		8854F330A9EF4E0632BEAB1D18DA6F5B /* ChameleonConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = E6575D22DF2F4909DB3425667CD946DE /* ChameleonConstants.m */; };
 		889D843442116DE6D3786858CC9775F2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		8B7F22A8AF5E56A49D3F3DCD86C47071 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ABEF96F6B5C62C2D202D08658BBB331 /* UIColor+ChameleonPrivate.m */; };
-		908E15E10551EEA9F0F4BE64BF0EAFA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		960DFDBC513E356857B63D42FF0933CB /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = C972EA57D82F18F39C36055232520C02 /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98DE52ED56F29381A72098A75B5A4E08 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AD1F345357E0B4D0D07BE26C87DF05B /* NSArray+Chameleon.m */; };
-		9A292300ABA66ADFBC69F7AB4CF440C9 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = C60483D5331FF1763971FBD9B7410457 /* UINavigationController+Chameleon.m */; };
-		9DD7780E908382B8A64268E50207E157 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D554D103DC5AC55FB40CF2CCD4384D37 /* UIViewController+Chameleon.m */; };
+		8920E0893ADA8937494B224B2477EEA1 /* UIButtonBarArrowRight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 062B48EF89FAEA73B666144496ED3CA5 /* UIButtonBarArrowRight@2x.png */; };
+		8B09BB9536E3A25C3FA707CC8F24CD49 /* RETableViewInlinePickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBDC185B01A84C96B0BBD2A603A5783 /* RETableViewInlinePickerCell.m */; };
+		8B7F22A8AF5E56A49D3F3DCD86C47071 /* UIColor+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE7093868EAFECCCAB24A8A003A9ED8D /* UIColor+ChameleonPrivate.m */; };
+		8FD04B6EBCA5AC7805168C3DF7A0FA34 /* RETableViewCellStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 16CAA977C6C0BED87DC46A399AB9CB6C /* RETableViewCellStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94A4811142581B0D460A793F397B79C2 /* RETableViewInlineDatePickerCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DFC03E4A7CFAFDAF991CC47933F25E1 /* RETableViewInlineDatePickerCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9573D19704C41A5C6DE228CB5833070A /* REInlineDatePickerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 446AFDA4F9587A66107BEB59CE50D0BD /* REInlineDatePickerItem.m */; };
+		960DFDBC513E356857B63D42FF0933CB /* UINavigationController+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = B5AA7EAF5660A0C97E22FF0A4E634E8C /* UINavigationController+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98DE52ED56F29381A72098A75B5A4E08 /* NSArray+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5498E5676D7ACE2791222911BD17E0 /* NSArray+Chameleon.m */; };
+		9A292300ABA66ADFBC69F7AB4CF440C9 /* UINavigationController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = 391FDCB47F0B2E7D4AE9DBC165A1A71D /* UINavigationController+Chameleon.m */; };
+		9D9EF2EDFFFA6A3AFBC48E31769B112E /* RETableViewOptionCell.h in Headers */ = {isa = PBXBuildFile; fileRef = E2149E4460564914E563787DEC98EE75 /* RETableViewOptionCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DD7780E908382B8A64268E50207E157 /* UIViewController+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = AAEE3231E009976CD815C01D9C6FBB0E /* UIViewController+Chameleon.m */; };
+		9EE96F59777A9CB2077BCFCA460C1344 /* REPresenceValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F63E884A9A0B66A6F0B793428F711B33 /* REPresenceValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9F93C5CACF2FE8A9EC5A553050F947A5 /* NSBundle+RETableViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F018F76FA229D6F63BAA6A03666FC7D /* NSBundle+RETableViewManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A10039E94D13ED5D499AF39BE9184A62 /* Card_Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13A68137F0026930EC69E9894AEDA8CB /* Card_Back@2x.png */; };
+		A3846DDC82D6F1E4F08A7DDD2EF369D7 /* Card_Visa@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D992B35EC17442F5905282C047D27CE1 /* Card_Visa@2x.png */; };
+		A50CCE287DFC3F617929F42181189232 /* Card_Discover.png in Resources */ = {isa = PBXBuildFile; fileRef = 20A8E234BD6F4B5E14BBEEC61AD8F853 /* Card_Discover.png */; };
 		A5C58E98A560F8E832748A2B309736A1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
-		B0D1D186C9B10E7C4BD4CA2DE67062D5 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = E57621960D7476636A3D1BADD0E9259B /* UILabel+Chameleon.m */; };
+		A70668C98DC77A8095AC348EC2475EE4 /* RETableViewFloatCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3175C445F46C5FF22873F914AD333D /* RETableViewFloatCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A8051EC34D7F872D90F9B6874B3FC325 /* RETableViewSegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6D9D3B631215DCB3F6BDAA519E6113 /* RETableViewSegmentedCell.m */; };
+		AD750C8C616D27918FDE07B1FE598D7E /* Ribbon_Expired@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23D55F989B0826B01A07F826F8BD3607 /* Ribbon_Expired@2x.png */; };
+		AED0A269B0D9FAEBA3B42EAE6486D511 /* REActionBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 263A87D20B6C8D8A0E681E1EC318B1D2 /* REActionBar.m */; };
+		AF0C736B2B5968A680395B772D44A89A /* RECreditCardItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C3CF2D8B1F0A85E228219B658AD81261 /* RECreditCardItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0D1D186C9B10E7C4BD4CA2DE67062D5 /* UILabel+Chameleon.m in Sources */ = {isa = PBXBuildFile; fileRef = D400362829B56B0213D7320CDFD388F6 /* UILabel+Chameleon.m */; };
+		B19E23EE963265057ABF88CE4EA92FBD /* RETableViewTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C5F84D6D75CDC2556F5DD402B760683 /* RETableViewTextCell.m */; };
 		B35DB3E2FE26A8FCD22FA7D7F04489EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */; };
+		B5753B8D85719A9EBE6407F29EBDD19D /* NSString+RENumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC226822E0EC1DD461BD29A9D271202 /* NSString+RENumberFormat.m */; };
+		B72670BA8237612AC55E106F84EF8C22 /* REPlaceholderTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B8E61D3D42E80CAD5DCFA1A0DAF694C /* REPlaceholderTextView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B9CA5FACCF8F81D1FFEE83BCBCF05BD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		BBD42AF76472A79C3881088E62C8CA60 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF9D3BA237FD1BF77B65DB48279DB9 /* UIImage+ChameleonPrivate.m */; };
-		BBDFE569C91BEF78191ED77D8B5C35D5 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C7043888CD5955B20583DDB5FC1B7E8 /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDFD18B3FAB1DE3FD2FC2307E4A4F6A3 /* HMSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A21A1803F0BAD3068C02ABA61F75DD44 /* HMSegmentedControl-dummy.m */; };
-		BFC487AF0EF719A47A77BDEB3A8B8FB6 /* HMSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F11C2C86C4D021553F4BC62786CB96 /* HMSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BBD42AF76472A79C3881088E62C8CA60 /* UIImage+ChameleonPrivate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7D38196277272056008D94EB0EEDD /* UIImage+ChameleonPrivate.m */; };
+		BBDFE569C91BEF78191ED77D8B5C35D5 /* ChameleonMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = CB93B140C3DE5F1EC7C54B83C54D6DAE /* ChameleonMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BD73BA3E7A115D7D339B6709DB061CA8 /* RETableViewBoolCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7694BC50C67FB3B11D7F8D64AF6BAB0A /* RETableViewBoolCell.m */; };
+		BDFD18B3FAB1DE3FD2FC2307E4A4F6A3 /* HMSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65D1C9EB58BD6266A873CBAF9D118CA0 /* HMSegmentedControl-dummy.m */; };
+		BF0ACD119206734151DFEEC89D81352B /* RERadioItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FEDA9553420DBE83DCC390BF0722890 /* RERadioItem.m */; };
+		BFC487AF0EF719A47A77BDEB3A8B8FB6 /* HMSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CA1EE16D623554FCF75B052C56691B2 /* HMSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0E0D317A910968CC4C2526ABD7C50FB /* RETableViewOptionsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BA367289964B1905B9CA0A8D5D9177 /* RETableViewOptionsController.m */; };
 		C1CE01DA2C4B1997A9EECFEF53701E75 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */; };
-		C95178CC895456CE0C2472EB3FE8330B /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 107CE1D42510B87C370385E3E3A73EC0 /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C32F0997D69EC71D9A38946E7C92F23B /* RETableViewSegmentedCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 205996266751E4D62755E759799E9865 /* RETableViewSegmentedCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C700FB7BE6C2FF7B265DFDE26E9DC7E8 /* REInlineDatePickerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 3441986BCAC453DDAFA4AAA87F434268 /* REInlineDatePickerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8D53A2656DA4235D1FB62155D15A893 /* RETableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = EE5D2B195502D3E036B304E45503A494 /* RETableViewSection.m */; };
+		C95178CC895456CE0C2472EB3FE8330B /* Chameleon_.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AD5E79B57558700A6285AB22C2A07B9 /* Chameleon_.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C991EC3AE8A6E44C5328CA416D055DAB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		C9BCCFA66B660A76DB5E746F58BA3AAD /* Card_Discover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F1882215447CE8C9B08E484DCEAB6D8 /* Card_Discover@2x.png */; };
+		CB399A21A0B29F09AD00685D9695C131 /* REFloatItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CEE65ED16C74D24943629D9F48DC51D /* REFloatItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC78B08F37B8EDA87728347F7076163E /* RETableViewTextCell.h in Headers */ = {isa = PBXBuildFile; fileRef = D292B610BF7E00433B7FD829192ED5A3 /* RETableViewTextCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC9AFD03FACD81CAE8D9F15F0293092D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
-		D2EEF9446FE5C07C8024F4663876D4C0 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 96EC8C3580EFB132B1E233C7A57348E2 /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D9F3430DA94CB631B7545F3F289B9AF7 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 4155844BF2EDC81177FA71479EC4BE5C /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DAC640157E80AD4BDABC537B8C5D556F /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E373BB81DD864D7252593862C00469B4 /* ChameleonFramework-dummy.m */; };
-		E5BF16209EAB243FDF571F307D219376 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 48DF092823554FC0CC34702ED608F4F9 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E85B04CFD68ACC582EF3C13E5EBF95FA /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D95B9CEE3B1CE03EF5DA7D061E51E74 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F46E1A50A8F08769ADAAA5CF429457A1 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 096D7C9A65215E34DD2ABA8228C64B59 /* UIAppearance+Swift.m */; };
+		CE0E829D6E7318742BB5AF9AB5095A0F /* REDateTimeItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DA2A2E408FA721B2746A498187092E6 /* REDateTimeItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CF31DCA09573D3282D6CF19E540D7724 /* RETableViewNumberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D9A156A33F4A909D08A4BCB830294D /* RETableViewNumberCell.m */; };
+		D2EEF9446FE5C07C8024F4663876D4C0 /* UIView+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 66A55FE674925118A438F297D09B02BC /* UIView+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D78AEC147EDA4E653983166B156700CA /* REActionBar.h in Headers */ = {isa = PBXBuildFile; fileRef = B39CCB41C3D2E686704F91257242B0B0 /* REActionBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9C8A5EB969910C90636A412F83BA102 /* REMultipleChoiceItem.h in Headers */ = {isa = PBXBuildFile; fileRef = D8D043B847CB5007CEAC8F7C569FC796 /* REMultipleChoiceItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9F3430DA94CB631B7545F3F289B9AF7 /* UIColor+ChameleonPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DA8BAD2073FAE546E770D2F4A6E38F4 /* UIColor+ChameleonPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DAC640157E80AD4BDABC537B8C5D556F /* ChameleonFramework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 89D5EE09320DA3F7B69DD4680073B64B /* ChameleonFramework-dummy.m */; };
+		DB6ECFBB60320AFD4F079A3E6ABAB47D /* RETextItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 747ECA84CA383894112F6F6BD9C62265 /* RETextItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2354CDE61E7E04FCD11B84A15FB7F60 /* NSString+RENumberFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = C9A7E4FB232F4E8DAD57148BF80A336E /* NSString+RENumberFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3CA0783A60DEF5D1216A3CE345AAFD7 /* RETableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 10FDBD3BC67A61FEE8B2361C92EB82BF /* RETableViewCell.m */; };
+		E474191147C235A11650EFF1299179D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */; };
+		E580B3996F04B12DD2543E8FBC975FC2 /* RETableViewItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 875BD429589B4113E0BC4DA05E363648 /* RETableViewItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5BF16209EAB243FDF571F307D219376 /* ChameleonConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = E3EC2DD5D08CDC40E076F658AB82AD71 /* ChameleonConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E61B5B4AE0740E447858E3EDDA5331C8 /* Card_Stack@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90EAE12DA90E6EC5F92529EA7C44AC78 /* Card_Stack@2x.png */; };
+		E85B04CFD68ACC582EF3C13E5EBF95FA /* UIColor+Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = FC029B5349E7439F4C06BD602163EEF5 /* UIColor+Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8689925D592376802C0DA95D7F2BD81 /* NSError+REValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 31F89B44719C1F2E5AC931D47938D7FB /* NSError+REValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF178ABA7227E51305DF821CD241B30A /* RELongTextItem.h in Headers */ = {isa = PBXBuildFile; fileRef = E662DA45D64852BD1CAF23D8B164DE72 /* RELongTextItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F219BC4E7DEB39C3015BDC5F113A271D /* REDateTimeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A26C78A5CBCB08CD7BAEEF5D7EDFAFE /* REDateTimeItem.m */; };
+		F3ED18CC49282E6266C160B3B13B63AE /* Card_Visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CA6CBA8DAC4D8BDCA2E67B76BE68896 /* Card_Visa.png */; };
+		F4339BF1C5D04D935850034860C7D620 /* RENumberItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4EE7D2B96633AF16CEFCDFE3165998 /* RENumberItem.m */; };
+		F46E1A50A8F08769ADAAA5CF429457A1 /* UIAppearance+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = E67CC3041A4880950CF5099E026FBB31 /* UIAppearance+Swift.m */; };
+		F522329B43B0C505AF6927E058FA67AF /* RESegmentedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E7CBA5B1D09206054024442E9E753CB /* RESegmentedItem.m */; };
+		F7073188ABFD42CFEF452DAC6C714B14 /* REFormattedNumberField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D8800643DEC47BFDECA90BF771D0B48 /* REFormattedNumberField.m */; };
+		F7C1B59ED62D1C2B7B2E127FB669EAC1 /* RETableViewDateTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0BDA5ED47920647A0570226EB9C5C3 /* RETableViewDateTimeCell.m */; };
+		F89A8B1FB28A4D2AA929527A56F5FA81 /* Card_Amex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1178755CAEC9492194790C26EC62B52E /* Card_Amex@2x.png */; };
 		F89F8E81C406AFD1FDFA91F013C07D0C /* Pods-LTHostingUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0B3612BCDBB0F22196CD9ED36F1408 /* Pods-LTHostingUITests-dummy.m */; };
-		FEAAB03EA07B91C563BEAFAC737FE237 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D4C395118D907870A23524ADE6A67FD /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAFD48C8C4DFD63728CD6C35F28167C9 /* RETableViewBoolCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E57E7926C2A343C5FA7568F3142F9B /* RETableViewBoolCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBD419AC61EA5DECD14873357C44933F /* REFloatItem.m in Sources */ = {isa = PBXBuildFile; fileRef = DB7268E3B9A9AC1670393E3F386456A7 /* REFloatItem.m */; };
+		FC01372A1D9C91AF0838394E68B501C6 /* REMultipleChoiceItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 81491B2950C3B334B3590211A00D4CC7 /* REMultipleChoiceItem.m */; };
+		FC9D1178B159E969C4A843AE5B460267 /* RECreditCardItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B0E07B0613DEA479552378C55057C8F /* RECreditCardItem.m */; };
+		FEAAB03EA07B91C563BEAFAC737FE237 /* Chameleon.h in Headers */ = {isa = PBXBuildFile; fileRef = 68338B4C622D9BFBA511C3BF7C6D080B /* Chameleon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		14C0D481D307432427612D1151623518 /* PBXContainerItemProxy */ = {
+		1EE31A5B5992919FF96F580A969C7484 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBFCA926A9A43611501F56ADD0BEBD47;
+			remoteInfo = REValidation;
+		};
+		2EC897EB883FF8B3CB581EAA9F6C0BD0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB29D21AE756F61DD89CD3F72EF0A320;
+			remoteInfo = REFormattedNumberField;
+		};
+		3CA644E8B2E8CEE6CD911E12AD67DBCB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D57F6DD7CBDE11E457971075B0805982;
 			remoteInfo = ChameleonFramework;
 		};
-		C760765A57AC571791D3C0826232A3BA /* PBXContainerItemProxy */ = {
+		43E1C3DF7400A28F6EC212F28BD5068C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB29D21AE756F61DD89CD3F72EF0A320;
+			remoteInfo = REFormattedNumberField;
+		};
+		A98646D9CA120E6893F337CC73EB3B19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBFCA926A9A43611501F56ADD0BEBD47;
+			remoteInfo = REValidation;
+		};
+		CA7D29DBBF041A5CB31D63675EDB9A7D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7580EAE7B735603C43DCADB633A11E58;
+			remoteInfo = "RETableViewManager-RETableViewManager";
+		};
+		D406195C168CFE2C5A5674CF4F631B8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0305D326B13311BFEC31AA42573A5D61;
+			remoteInfo = RETableViewManager;
+		};
+		DBF00953D396EDF21EB2404CD4949CE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -70,75 +225,196 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		08C8ACFEB5D0CCA89BEFC9D58502A467 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
-		096D7C9A65215E34DD2ABA8228C64B59 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		062B48EF89FAEA73B666144496ED3CA5 /* UIButtonBarArrowRight@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIButtonBarArrowRight@2x.png"; path = "RETableViewManager/Resources/UIButtonBarArrowRight@2x.png"; sourceTree = "<group>"; };
+		06E1E6FC618CAC2E5D1A82440402F125 /* RETableViewLongTextCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewLongTextCell.m; path = RETableViewManager/Cells/RETableViewLongTextCell.m; sourceTree = "<group>"; };
+		07EEDCAA109298732BE82BEA9BD61D49 /* libPods-LTHostingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingUITests.a"; path = "libPods-LTHostingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		08A197D1FD0F57299AE2DE67901FE181 /* ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
 		0D8EF2301073B01E30612B5B1BD94446 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		107CE1D42510B87C370385E3E3A73EC0 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
+		0E69D05F1E1B72641CED4884B78DCB73 /* REFormattedNumberField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "REFormattedNumberField-dummy.m"; sourceTree = "<group>"; };
+		0E7EA14537942ECE90CA8DF98A0D4304 /* REValidation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = REValidation.xcconfig; sourceTree = "<group>"; };
+		0FEDA9553420DBE83DCC390BF0722890 /* RERadioItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RERadioItem.m; path = RETableViewManager/Items/RERadioItem.m; sourceTree = "<group>"; };
+		10A45C787365BB12B79F3CE8AFDAAF3F /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		10FDBD3BC67A61FEE8B2361C92EB82BF /* RETableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewCell.m; path = RETableViewManager/RETableViewCell.m; sourceTree = "<group>"; };
+		1178755CAEC9492194790C26EC62B52E /* Card_Amex@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Card_Amex@2x.png"; path = "RETableViewManager/Resources/Card_Amex@2x.png"; sourceTree = "<group>"; };
 		1263E67EA77958DDDF1141A96454ABBF /* Pods-LTHostingTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingTests-frameworks.sh"; sourceTree = "<group>"; };
+		138703D51139B4EBF324C356156C8D3F /* RETableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewCell.h; path = RETableViewManager/RETableViewCell.h; sourceTree = "<group>"; };
+		13A68137F0026930EC69E9894AEDA8CB /* Card_Back@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Card_Back@2x.png"; path = "RETableViewManager/Resources/Card_Back@2x.png"; sourceTree = "<group>"; };
 		151B47A6AC4E71302543C2BE65633246 /* Pods-LTHostingTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingTests-resources.sh"; sourceTree = "<group>"; };
-		1A09BD0277D6F4F7896481BE4833A4C9 /* ChameleonFramework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChameleonFramework-prefix.pch"; sourceTree = "<group>"; };
+		16CAA977C6C0BED87DC46A399AB9CB6C /* RETableViewCellStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewCellStyle.h; path = RETableViewManager/RETableViewCellStyle.h; sourceTree = "<group>"; };
+		1732F620AC5F410AA677E28FA158A244 /* RETextItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETextItem.m; path = RETableViewManager/Items/RETextItem.m; sourceTree = "<group>"; };
+		1AB7D38196277272056008D94EB0EEDD /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		1C0BDE337338E30BE7E8B69AB0BC0EA5 /* RERadioItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RERadioItem.h; path = RETableViewManager/Items/RERadioItem.h; sourceTree = "<group>"; };
+		1CA1EE16D623554FCF75B052C56691B2 /* HMSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HMSegmentedControl.h; path = HMSegmentedControl/HMSegmentedControl.h; sourceTree = "<group>"; };
+		1DA8BAD2073FAE546E770D2F4A6E38F4 /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
 		1E73A7D5D56E892F9CEB3875531EF79D /* Pods-LTHosting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHosting.debug.xcconfig"; sourceTree = "<group>"; };
-		1EE55B4E4396CCBF004966851D71B63F /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
+		1E79BDB68D1609AD8671E2641217BBB3 /* RETableViewCreditCardCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewCreditCardCell.h; path = RETableViewManager/Cells/RETableViewCreditCardCell.h; sourceTree = "<group>"; };
+		205996266751E4D62755E759799E9865 /* RETableViewSegmentedCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewSegmentedCell.h; path = RETableViewManager/Cells/RETableViewSegmentedCell.h; sourceTree = "<group>"; };
+		20A8E234BD6F4B5E14BBEEC61AD8F853 /* Card_Discover.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Card_Discover.png; path = RETableViewManager/Resources/Card_Discover.png; sourceTree = "<group>"; };
+		20D9A156A33F4A909D08A4BCB830294D /* RETableViewNumberCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewNumberCell.m; path = RETableViewManager/Cells/RETableViewNumberCell.m; sourceTree = "<group>"; };
 		2351CBD67DB91B6B12726F3B56A1CA6D /* Pods-LTHosting-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHosting-resources.sh"; sourceTree = "<group>"; };
+		23D55F989B0826B01A07F826F8BD3607 /* Ribbon_Expired@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Ribbon_Expired@2x.png"; path = "RETableViewManager/Resources/Ribbon_Expired@2x.png"; sourceTree = "<group>"; };
+		263A87D20B6C8D8A0E681E1EC318B1D2 /* REActionBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REActionBar.m; path = RETableViewManager/REActionBar.m; sourceTree = "<group>"; };
 		2956EBECEDD9717F509D117727B521E6 /* Pods-LTHosting-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHosting-frameworks.sh"; sourceTree = "<group>"; };
-		2ABEF96F6B5C62C2D202D08658BBB331 /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		361C1DA3D3461239877C1B200824342F /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		2B0E07B0613DEA479552378C55057C8F /* RECreditCardItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RECreditCardItem.m; path = RETableViewManager/Items/RECreditCardItem.m; sourceTree = "<group>"; };
+		2F018F76FA229D6F63BAA6A03666FC7D /* NSBundle+RETableViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+RETableViewManager.h"; path = "RETableViewManager/NSBundle+RETableViewManager.h"; sourceTree = "<group>"; };
+		31F89B44719C1F2E5AC931D47938D7FB /* NSError+REValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+REValidation.h"; path = "REValidation/NSError+REValidation.h"; sourceTree = "<group>"; };
+		3441986BCAC453DDAFA4AAA87F434268 /* REInlineDatePickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REInlineDatePickerItem.h; path = RETableViewManager/Items/REInlineDatePickerItem.h; sourceTree = "<group>"; };
+		352420262E260763A6F150FB8458F97F /* NSError+REValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+REValidation.m"; path = "REValidation/NSError+REValidation.m"; sourceTree = "<group>"; };
+		36A26EDE7E9F28C4F1220A33972E03FD /* REInlinePickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REInlinePickerItem.m; path = RETableViewManager/Items/REInlinePickerItem.m; sourceTree = "<group>"; };
 		36B6D56CDC1DA44E6EFFCCA5DAB7841F /* Pods-LTHosting-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTHosting-acknowledgements.markdown"; sourceTree = "<group>"; };
-		3AD1F345357E0B4D0D07BE26C87DF05B /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
-		3C0C597CD1F685FDB19DBE8D6FF63842 /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		3C5132B2B59C41B9AE78E3238DE58EAE /* HMSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HMSegmentedControl.m; path = HMSegmentedControl/HMSegmentedControl.m; sourceTree = "<group>"; };
-		4155844BF2EDC81177FA71479EC4BE5C /* UIColor+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.h"; sourceTree = "<group>"; };
-		48DF092823554FC0CC34702ED608F4F9 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
+		38B5F489971194C1CD1FFD988143BB10 /* UIButtonBarArrowRight.png */ = {isa = PBXFileReference; includeInIndex = 1; name = UIButtonBarArrowRight.png; path = RETableViewManager/Resources/UIButtonBarArrowRight.png; sourceTree = "<group>"; };
+		391FDCB47F0B2E7D4AE9DBC165A1A71D /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
+		3B2AA6D2DADC768B9F49997E25F26642 /* REValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REValidator.h; path = REValidation/REValidator.h; sourceTree = "<group>"; };
+		3DDC1158633D87F4C0DA485BD2C598A2 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
+		3F5D3E1CDECA24E2FDC588CC897EC8AB /* Card_Back.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Card_Back.png; path = RETableViewManager/Resources/Card_Back.png; sourceTree = "<group>"; };
+		413D254AE86077B773A47499D80B4E9A /* libPods-LTHosting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHosting.a"; path = "libPods-LTHosting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42BBC06083DAB7CBAD1E668731A54E81 /* RETableViewManager.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = RETableViewManager.bundle; path = RETableViewManager.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		446AFDA4F9587A66107BEB59CE50D0BD /* REInlineDatePickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REInlineDatePickerItem.m; path = RETableViewManager/Items/REInlineDatePickerItem.m; sourceTree = "<group>"; };
+		46E57E7926C2A343C5FA7568F3142F9B /* RETableViewBoolCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewBoolCell.h; path = RETableViewManager/Cells/RETableViewBoolCell.h; sourceTree = "<group>"; };
+		46FA7011EDFDD42177CFB16C5B0FB803 /* RETableViewSection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewSection.h; path = RETableViewManager/RETableViewSection.h; sourceTree = "<group>"; };
+		48BA367289964B1905B9CA0A8D5D9177 /* RETableViewOptionsController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewOptionsController.m; path = RETableViewManager/RETableViewOptionsController.m; sourceTree = "<group>"; };
 		4A1D80B20B5643D6F2D6EE9DC82AAE3D /* Pods-LTHostingUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTHostingUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		4B29225369B75A39E934894DF55B13F3 /* libChameleonFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libChameleonFramework.a; path = libChameleonFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B3175C445F46C5FF22873F914AD333D /* RETableViewFloatCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewFloatCell.h; path = RETableViewManager/Cells/RETableViewFloatCell.h; sourceTree = "<group>"; };
+		4C5F84D6D75CDC2556F5DD402B760683 /* RETableViewTextCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewTextCell.m; path = RETableViewManager/Cells/RETableViewTextCell.m; sourceTree = "<group>"; };
+		4C799DD8CBA72B20630DC7924A626BA1 /* libPods-LTHostingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingTests.a"; path = "libPods-LTHostingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EFD3ECF677600ED68F1BAAFBE51592E /* RETableViewInlinePickerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewInlinePickerCell.h; path = RETableViewManager/Cells/RETableViewInlinePickerCell.h; sourceTree = "<group>"; };
 		51498E299B7CB17BCC8B54F93C150FAA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		52E52115C14FC7DF906AD8E723998389 /* Pods-LTHosting-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTHosting-dummy.m"; sourceTree = "<group>"; };
 		53A01725D0247429FD1FCC0F1471E027 /* Pods-LTHostingTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTHostingTests-dummy.m"; sourceTree = "<group>"; };
+		54202FE6254D2CF530DF38985FA18810 /* HMSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HMSegmentedControl.m; path = HMSegmentedControl/HMSegmentedControl.m; sourceTree = "<group>"; };
 		55CDD57B0ED687495520CCE07324E916 /* Pods-LTHostingTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTHostingTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		56AF8CE8C549F8A0EFB7A0E66898DDFF /* Pods-LTHostingUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingUITests-frameworks.sh"; sourceTree = "<group>"; };
-		5F03FF6D17F5E8814E9E75BECDE45D2F /* HMSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HMSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
-		62DF9D3BA237FD1BF77B65DB48279DB9 /* UIImage+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.m"; sourceTree = "<group>"; };
-		65FF7CAF14DC883830CA835C3342E0B7 /* libPods-LTHostingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingTests.a"; path = "libPods-LTHostingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		56FFF1B490755E53C4C3A7C21DD70018 /* RETableViewLongTextCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewLongTextCell.h; path = RETableViewManager/Cells/RETableViewLongTextCell.h; sourceTree = "<group>"; };
+		5A26C78A5CBCB08CD7BAEEF5D7EDFAFE /* REDateTimeItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REDateTimeItem.m; path = RETableViewManager/Items/REDateTimeItem.m; sourceTree = "<group>"; };
+		5AA4DC06DE23EC08EEBE7A8A4DCADD8A /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		5AD5E79B57558700A6285AB22C2A07B9 /* Chameleon_.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon_.h; path = "Pod/Classes/Objective-C/Chameleon_.h"; sourceTree = "<group>"; };
+		5CA6CBA8DAC4D8BDCA2E67B76BE68896 /* Card_Visa.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Card_Visa.png; path = RETableViewManager/Resources/Card_Visa.png; sourceTree = "<group>"; };
+		5D45369FE42BA02246B4FEE1903910DA /* UIView+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		5DA2A2E408FA721B2746A498187092E6 /* REDateTimeItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REDateTimeItem.h; path = RETableViewManager/Items/REDateTimeItem.h; sourceTree = "<group>"; };
+		5E4EE7D2B96633AF16CEFCDFE3165998 /* RENumberItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RENumberItem.m; path = RETableViewManager/Items/RENumberItem.m; sourceTree = "<group>"; };
+		5E7CBA5B1D09206054024442E9E753CB /* RESegmentedItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RESegmentedItem.m; path = RETableViewManager/Items/RESegmentedItem.m; sourceTree = "<group>"; };
+		65D1C9EB58BD6266A873CBAF9D118CA0 /* HMSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HMSegmentedControl-dummy.m"; sourceTree = "<group>"; };
 		6647ACC906E3FCEEFF3813BB32B1FCF6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6755177395DEA8755A8D5FA87625A1C1 /* UIButton+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+Chameleon.h"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.h"; sourceTree = "<group>"; };
-		6B5CFC9AED7C1101B62EA8587E3BEB1C /* libPods-LTHosting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHosting.a"; path = "libPods-LTHosting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		667A7A9D5A9FA668B8BCFBDDE46B4E65 /* UIImage+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIImage+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		66A55FE674925118A438F297D09B02BC /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		68338B4C622D9BFBA511C3BF7C6D080B /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
+		68F5F9B8BBF9A1B2848EA33D7D700EFB /* Card_Mastercard@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Card_Mastercard@2x.png"; path = "RETableViewManager/Resources/Card_Mastercard@2x.png"; sourceTree = "<group>"; };
+		6943D6DD57BAC29C199D2A0068EFD6D3 /* RETableViewManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "RETableViewManager-dummy.m"; sourceTree = "<group>"; };
+		6DFC03E4A7CFAFDAF991CC47933F25E1 /* RETableViewInlineDatePickerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewInlineDatePickerCell.h; path = RETableViewManager/Cells/RETableViewInlineDatePickerCell.h; sourceTree = "<group>"; };
 		6E723F01CE4C8CAD7B807FC2EC54C71E /* Pods-LTHostingUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LTHostingUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		762BF5FBB4285F4801F3DDA37B88E926 /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
+		6EE6633CD21ADB56F983CD856D3F7BD1 /* UIAppearance+Swift.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIAppearance+Swift.h"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.h"; sourceTree = "<group>"; };
+		6F1882215447CE8C9B08E484DCEAB6D8 /* Card_Discover@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Card_Discover@2x.png"; path = "RETableViewManager/Resources/Card_Discover@2x.png"; sourceTree = "<group>"; };
+		707368332E8D3FA960B44F4127AD64C6 /* RELongTextItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RELongTextItem.m; path = RETableViewManager/Items/RELongTextItem.m; sourceTree = "<group>"; };
+		72B4CB682C52212CB248FDA8D8D1D0A6 /* REPlaceholderTextView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REPlaceholderTextView.m; path = RETableViewManager/REPlaceholderTextView.m; sourceTree = "<group>"; };
+		747ECA84CA383894112F6F6BD9C62265 /* RETextItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETextItem.h; path = RETableViewManager/Items/RETextItem.h; sourceTree = "<group>"; };
+		7608EEC2C04939BC3F5D4CE9FB8777FE /* RELengthValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RELengthValidator.m; path = REValidation/Validators/RELengthValidator.m; sourceTree = "<group>"; };
+		7694BC50C67FB3B11D7F8D64AF6BAB0A /* RETableViewBoolCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewBoolCell.m; path = RETableViewManager/Cells/RETableViewBoolCell.m; sourceTree = "<group>"; };
 		794D50E645F93921DDBA7FEC832B90F4 /* Pods-LTHostingTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingTests.debug.xcconfig"; sourceTree = "<group>"; };
-		7C7043888CD5955B20583DDB5FC1B7E8 /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
+		7A4966BD915E2D8FAAA16B915598CC15 /* Ribbon_Expired.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Ribbon_Expired.png; path = RETableViewManager/Resources/Ribbon_Expired.png; sourceTree = "<group>"; };
+		7D8464EE4B1D4146DFA5D934DEE12C0B /* libREValidation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libREValidation.a; path = libREValidation.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DEC844753B83224767A1EF3688322FA /* Pods-LTHostingUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		8BCB532134F9620495E35973D5978231 /* libPods-LTHostingUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-LTHostingUITests.a"; path = "libPods-LTHostingUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D95B9CEE3B1CE03EF5DA7D061E51E74 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		7E12A9F8F66FF8F0E95F3E8E3804F52B /* RETableViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewManager.h; path = RETableViewManager/RETableViewManager.h; sourceTree = "<group>"; };
+		7E82131C4F757DD87DF0B00B4E213FED /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
+		7EABD0D076C66D3AD39ACA0C26B25734 /* Card_Mastercard.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Card_Mastercard.png; path = RETableViewManager/Resources/Card_Mastercard.png; sourceTree = "<group>"; };
+		7EBDC185B01A84C96B0BBD2A603A5783 /* RETableViewInlinePickerCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewInlinePickerCell.m; path = RETableViewManager/Cells/RETableViewInlinePickerCell.m; sourceTree = "<group>"; };
+		7F0BDA5ED47920647A0570226EB9C5C3 /* RETableViewDateTimeCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewDateTimeCell.m; path = RETableViewManager/Cells/RETableViewDateTimeCell.m; sourceTree = "<group>"; };
+		80B866F93BFBB234D5F6953F3378A2A1 /* RETableViewOptionCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewOptionCell.m; path = RETableViewManager/Cells/RETableViewOptionCell.m; sourceTree = "<group>"; };
+		80F1FC427A811E27A708FC6D7C3AB4D3 /* UIButtonBarArrowLeft.png */ = {isa = PBXFileReference; includeInIndex = 1; name = UIButtonBarArrowLeft.png; path = RETableViewManager/Resources/UIButtonBarArrowLeft.png; sourceTree = "<group>"; };
+		81491B2950C3B334B3590211A00D4CC7 /* REMultipleChoiceItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REMultipleChoiceItem.m; path = RETableViewManager/Items/REMultipleChoiceItem.m; sourceTree = "<group>"; };
+		814DB7380F10CEEB3634499DC23DB8A0 /* Card_Amex.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Card_Amex.png; path = RETableViewManager/Resources/Card_Amex.png; sourceTree = "<group>"; };
+		8318BA164D55C9FE799863F5C6DFC319 /* libChameleonFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libChameleonFramework.a; path = libChameleonFramework.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		864E9F85DD14B62E279A1EF551DF19EC /* ChameleonEnums.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonEnums.h; path = "Pod/Classes/Objective-C/ChameleonEnums.h"; sourceTree = "<group>"; };
+		86B975BA17845EB18252F56A4F1B76F2 /* RETableViewPickerCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewPickerCell.m; path = RETableViewManager/Cells/RETableViewPickerCell.m; sourceTree = "<group>"; };
+		873F439A6D914F8790C1CD603A369542 /* REValidation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REValidation.h; path = REValidation/REValidation.h; sourceTree = "<group>"; };
+		875BD429589B4113E0BC4DA05E363648 /* RETableViewItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewItem.h; path = RETableViewManager/RETableViewItem.h; sourceTree = "<group>"; };
+		87C3C5DC79B1822D033FC784154A2F0D /* HMSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HMSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
+		893B9F57B133113F5AA7B91B24C73279 /* NSString+RETableViewManagerAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+RETableViewManagerAdditions.h"; path = "RETableViewManager/NSString+RETableViewManagerAdditions.h"; sourceTree = "<group>"; };
+		89D5EE09320DA3F7B69DD4680073B64B /* ChameleonFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-dummy.m"; sourceTree = "<group>"; };
+		8A34B159B61B7B89D655E1D4C976C487 /* REValidation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "REValidation-dummy.m"; sourceTree = "<group>"; };
+		8B8E61D3D42E80CAD5DCFA1A0DAF694C /* REPlaceholderTextView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REPlaceholderTextView.h; path = RETableViewManager/REPlaceholderTextView.h; sourceTree = "<group>"; };
+		8D8800643DEC47BFDECA90BF771D0B48 /* REFormattedNumberField.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REFormattedNumberField.m; path = REFormattedNumberField/REFormattedNumberField.m; sourceTree = "<group>"; };
+		8E6D9D3B631215DCB3F6BDAA519E6113 /* RETableViewSegmentedCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewSegmentedCell.m; path = RETableViewManager/Cells/RETableViewSegmentedCell.m; sourceTree = "<group>"; };
+		8F42DF9552D6B47586A831F58EFD054D /* RETableViewCellStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewCellStyle.m; path = RETableViewManager/RETableViewCellStyle.m; sourceTree = "<group>"; };
+		90EAE12DA90E6EC5F92529EA7C44AC78 /* Card_Stack@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Card_Stack@2x.png"; path = "RETableViewManager/Resources/Card_Stack@2x.png"; sourceTree = "<group>"; };
+		91581EF2AD56AEAEB607A450211379E7 /* RETableViewManager.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = RETableViewManager.xcconfig; sourceTree = "<group>"; };
+		929DDADEAB0D5BDF4401F22F318D6E85 /* RETableViewOptionsController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewOptionsController.h; path = RETableViewManager/RETableViewOptionsController.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96DC2366806705CA6D86F142B68F9584 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
-		96EC8C3580EFB132B1E233C7A57348E2 /* UIView+ChameleonPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+ChameleonPrivate.h"; path = "Pod/Classes/Objective-C/UIView+ChameleonPrivate.h"; sourceTree = "<group>"; };
+		96C7A28062471BBA893A75DC02A5DA9A /* RETableViewNumberCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewNumberCell.h; path = RETableViewManager/Cells/RETableViewNumberCell.h; sourceTree = "<group>"; };
 		97409FBB5CA248F54B31121E1E5230D7 /* Pods-LTHosting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHosting.release.xcconfig"; sourceTree = "<group>"; };
-		9D4C395118D907870A23524ADE6A67FD /* Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Chameleon.h; path = "Pod/Classes/Objective-C/Chameleon.h"; sourceTree = "<group>"; };
+		9CEE65ED16C74D24943629D9F48DC51D /* REFloatItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REFloatItem.h; path = RETableViewManager/Items/REFloatItem.h; sourceTree = "<group>"; };
+		9D298BEA4D0D1256457236544673ED30 /* REEmailValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REEmailValidator.h; path = REValidation/Validators/REEmailValidator.h; sourceTree = "<group>"; };
 		9DE90F0C9A1DD7C6CB0AF1C7A87CA6F6 /* Pods-LTHostingTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTHostingTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		A11E8E1759F59F2386CE16FB9EC188F4 /* libHMSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHMSegmentedControl.a; path = libHMSegmentedControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HMSegmentedControl.xcconfig; sourceTree = "<group>"; };
-		A21A1803F0BAD3068C02ABA61F75DD44 /* HMSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HMSegmentedControl-dummy.m"; sourceTree = "<group>"; };
-		A2C981F01BF91AF0AD9429D01AFE44E1 /* Chameleon_.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Chameleon_.m; path = "Pod/Classes/Objective-C/Chameleon_.m"; sourceTree = "<group>"; };
-		A34E3C9BBD4B137277FF245BD932F140 /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
-		ABB38AF5CA241FFAE066A7AFF065613F /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		9FAFE425CE2867AC265AA8B957D58E5C /* REBoolItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REBoolItem.m; path = RETableViewManager/Items/REBoolItem.m; sourceTree = "<group>"; };
+		9FB2194977EBDB6056FD696A19238B4F /* libRETableViewManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libRETableViewManager.a; path = libRETableViewManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2F6D4088741A41A18C3A6A234972FE0 /* RESegmentedItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RESegmentedItem.h; path = RETableViewManager/Items/RESegmentedItem.h; sourceTree = "<group>"; };
+		A47268B160C5F9F53EC55EA74469838B /* Card_Stack.png */ = {isa = PBXFileReference; includeInIndex = 1; name = Card_Stack.png; path = RETableViewManager/Resources/Card_Stack.png; sourceTree = "<group>"; };
+		A860FECDD14A99D0B90ED60FAEFD1A6B /* REPickerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REPickerItem.m; path = RETableViewManager/Items/REPickerItem.m; sourceTree = "<group>"; };
+		AAA2823FF9AD1F93FF8BDBA8B19ADEE0 /* RETableViewPickerCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewPickerCell.h; path = RETableViewManager/Cells/RETableViewPickerCell.h; sourceTree = "<group>"; };
+		AAA376193A9DF62B0A315A73387B3E1F /* REFormattedNumberField.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = REFormattedNumberField.xcconfig; sourceTree = "<group>"; };
+		AAEE3231E009976CD815C01D9C6FBB0E /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
+		B1CEE8FDBF929902E5E08DFA3D7E28D2 /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
+		B35728DE90AF5D8A367F553065CD3BFD /* RETableViewFloatCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewFloatCell.m; path = RETableViewManager/Cells/RETableViewFloatCell.m; sourceTree = "<group>"; };
+		B39CCB41C3D2E686704F91257242B0B0 /* REActionBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REActionBar.h; path = RETableViewManager/REActionBar.h; sourceTree = "<group>"; };
+		B5AA7EAF5660A0C97E22FF0A4E634E8C /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
+		B7A34F053153F34154F05F065F3C6C22 /* RETableViewItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewItem.m; path = RETableViewManager/RETableViewItem.m; sourceTree = "<group>"; };
+		B8AE36F9327A1B3AEE0897DD3BA44D46 /* REFormattedNumberField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "REFormattedNumberField-prefix.pch"; sourceTree = "<group>"; };
 		B9384DB8586765A12739751E2D2D7378 /* Pods-LTHosting-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LTHosting-acknowledgements.plist"; sourceTree = "<group>"; };
-		BB7B63FF6C6663426D0D842416E72DF4 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
-		C1BEE4BD3077DA1386F023D587715D97 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
-		C4F11C2C86C4D021553F4BC62786CB96 /* HMSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HMSegmentedControl.h; path = HMSegmentedControl/HMSegmentedControl.h; sourceTree = "<group>"; };
-		C60483D5331FF1763971FBD9B7410457 /* UINavigationController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UINavigationController+Chameleon.m"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.m"; sourceTree = "<group>"; };
-		C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.xcconfig; sourceTree = "<group>"; };
-		C972EA57D82F18F39C36055232520C02 /* UINavigationController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UINavigationController+Chameleon.h"; path = "Pod/Classes/Objective-C/UINavigationController+Chameleon.h"; sourceTree = "<group>"; };
-		D554D103DC5AC55FB40CF2CCD4384D37 /* UIViewController+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+Chameleon.m"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.m"; sourceTree = "<group>"; };
-		D975ED68935119481DAE909221D8E89C /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
+		B989FF1C82FE75BB136DB930C8F7B058 /* NSBundle+RETableViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+RETableViewManager.m"; path = "RETableViewManager/NSBundle+RETableViewManager.m"; sourceTree = "<group>"; };
+		BABEB138509D7C438CF2CB1A3ADC425C /* REValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REValidator.m; path = REValidation/REValidator.m; sourceTree = "<group>"; };
+		BC8A6A4E0556ADC989D19C5139B622FD /* REPresenceValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REPresenceValidator.m; path = REValidation/Validators/REPresenceValidator.m; sourceTree = "<group>"; };
+		C04401DB1FFAFEBE0C2C4EC61B5E8191 /* REInlinePickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REInlinePickerItem.h; path = RETableViewManager/Items/REInlinePickerItem.h; sourceTree = "<group>"; };
+		C1FC46878FBC4B5F479F8F4A19C7664E /* REFormattedNumberField.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REFormattedNumberField.h; path = REFormattedNumberField/REFormattedNumberField.h; sourceTree = "<group>"; };
+		C2C50AD683FFE0526341E18A2E54010C /* UIViewController+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIViewController+Chameleon.h"; path = "Pod/Classes/Objective-C/UIViewController+Chameleon.h"; sourceTree = "<group>"; };
+		C3CF2D8B1F0A85E228219B658AD81261 /* RECreditCardItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RECreditCardItem.h; path = RETableViewManager/Items/RECreditCardItem.h; sourceTree = "<group>"; };
+		C5A0CE0F4E69F8D08AD4872458F472BF /* RETableViewDateTimeCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewDateTimeCell.h; path = RETableViewManager/Cells/RETableViewDateTimeCell.h; sourceTree = "<group>"; };
+		C6894E12BA5E02FA965DB386B6F235F8 /* HMSegmentedControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HMSegmentedControl.xcconfig; sourceTree = "<group>"; };
+		C7A262A72CF165B73C07880277A39A4D /* Transparent@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Transparent@2x.png"; path = "RETableViewManager/Resources/Transparent@2x.png"; sourceTree = "<group>"; };
+		C9A7E4FB232F4E8DAD57148BF80A336E /* NSString+RENumberFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+RENumberFormat.h"; path = "REFormattedNumberField/NSString+RENumberFormat.h"; sourceTree = "<group>"; };
+		CAFBFC91AAE0744A1292391D6C3F141B /* REURLValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REURLValidator.m; path = REValidation/Validators/REURLValidator.m; sourceTree = "<group>"; };
+		CB93B140C3DE5F1EC7C54B83C54D6DAE /* ChameleonMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonMacros.h; path = "Pod/Classes/Objective-C/ChameleonMacros.h"; sourceTree = "<group>"; };
+		CBC226822E0EC1DD461BD29A9D271202 /* NSString+RENumberFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+RENumberFormat.m"; path = "REFormattedNumberField/NSString+RENumberFormat.m"; sourceTree = "<group>"; };
+		CD3D2C71563D9CA08203864EE0FD38CB /* ResourceBundle-RETableViewManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-RETableViewManager-Info.plist"; sourceTree = "<group>"; };
+		CFDA544A1B41738042F8E7C3C5DE51B4 /* REValidation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REValidation.m; path = REValidation/REValidation.m; sourceTree = "<group>"; };
+		D292B610BF7E00433B7FD829192ED5A3 /* RETableViewTextCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewTextCell.h; path = RETableViewManager/Cells/RETableViewTextCell.h; sourceTree = "<group>"; };
+		D2B5671751FA314C601D3690EA1218A7 /* RETableViewManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewManager.m; path = RETableViewManager/RETableViewManager.m; sourceTree = "<group>"; };
+		D400362829B56B0213D7320CDFD388F6 /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
+		D73D28E4D0091013C0E4228E8E8AEC1A /* REEmailValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REEmailValidator.m; path = REValidation/Validators/REEmailValidator.m; sourceTree = "<group>"; };
+		D7E00EEE03C92D18B7417F5FD788C17C /* UILabel+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UILabel+Chameleon.h"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.h"; sourceTree = "<group>"; };
+		D8A5B59BB94E8F0DA02A4D1BD63D053D /* RETableViewManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "RETableViewManager-prefix.pch"; sourceTree = "<group>"; };
+		D8D043B847CB5007CEAC8F7C569FC796 /* REMultipleChoiceItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REMultipleChoiceItem.h; path = RETableViewManager/Items/REMultipleChoiceItem.h; sourceTree = "<group>"; };
+		D8E757F2527311FC4A232BD32AAA365F /* RELengthValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RELengthValidator.h; path = REValidation/Validators/RELengthValidator.h; sourceTree = "<group>"; };
+		D992B35EC17442F5905282C047D27CE1 /* Card_Visa@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "Card_Visa@2x.png"; path = "RETableViewManager/Resources/Card_Visa@2x.png"; sourceTree = "<group>"; };
 		DA06A93D6E14C9AD102C59E76B6B0DDB /* Pods-LTHostingUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LTHostingUITests-resources.sh"; sourceTree = "<group>"; };
-		DAE2995E76D7D0852E1F837ABB53A88C /* UIColor+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Chameleon.m"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.m"; sourceTree = "<group>"; };
-		E1252ADE5EF37A785249CE7CF79A96CB /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		E373BB81DD864D7252593862C00469B4 /* ChameleonFramework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChameleonFramework-dummy.m"; sourceTree = "<group>"; };
+		DAFA35F65DCA2488AD3273CF12943494 /* RENumberItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RENumberItem.h; path = RETableViewManager/Items/RENumberItem.h; sourceTree = "<group>"; };
+		DB7268E3B9A9AC1670393E3F386456A7 /* REFloatItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = REFloatItem.m; path = RETableViewManager/Items/REFloatItem.m; sourceTree = "<group>"; };
+		DDA0F2A234C7ABDA38BEA9880DBD4A10 /* RETableViewInlineDatePickerCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewInlineDatePickerCell.m; path = RETableViewManager/Cells/RETableViewInlineDatePickerCell.m; sourceTree = "<group>"; };
+		DE2287870E85E72B2997A8AA3027246E /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		DE5AC78CE9AF6D6D3336CF5EA1596759 /* ChameleonFramework.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChameleonFramework.xcconfig; sourceTree = "<group>"; };
+		DE7093868EAFECCCAB24A8A003A9ED8D /* UIColor+ChameleonPrivate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+ChameleonPrivate.m"; path = "Pod/Classes/Objective-C/UIColor+ChameleonPrivate.m"; sourceTree = "<group>"; };
+		E2149E4460564914E563787DEC98EE75 /* RETableViewOptionCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RETableViewOptionCell.h; path = RETableViewManager/Cells/RETableViewOptionCell.h; sourceTree = "<group>"; };
+		E3EC2DD5D08CDC40E076F658AB82AD71 /* ChameleonConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ChameleonConstants.h; path = "Pod/Classes/Objective-C/ChameleonConstants.h"; sourceTree = "<group>"; };
 		E4E936ADC50CF0FB47446D45813CE048 /* Pods-LTHostingUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E53DD1C00C851219DCC05E789B42075D /* Pods-LTHostingTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LTHostingTests.release.xcconfig"; sourceTree = "<group>"; };
-		E57621960D7476636A3D1BADD0E9259B /* UILabel+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UILabel+Chameleon.m"; path = "Pod/Classes/Objective-C/UILabel+Chameleon.m"; sourceTree = "<group>"; };
+		E6575D22DF2F4909DB3425667CD946DE /* ChameleonConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ChameleonConstants.m; path = "Pod/Classes/Objective-C/ChameleonConstants.m"; sourceTree = "<group>"; };
+		E662DA45D64852BD1CAF23D8B164DE72 /* RELongTextItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RELongTextItem.h; path = RETableViewManager/Items/RELongTextItem.h; sourceTree = "<group>"; };
+		E67CC3041A4880950CF5099E026FBB31 /* UIAppearance+Swift.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIAppearance+Swift.m"; path = "Pod/Classes/Objective-C/UIAppearance+Swift.m"; sourceTree = "<group>"; };
+		EA2D3363088BD0398ADB96F7B884A8BC /* REBoolItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REBoolItem.h; path = RETableViewManager/Items/REBoolItem.h; sourceTree = "<group>"; };
+		EB1DD42DC0CE4DF270E0C932ADA444D3 /* NSArray+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+Chameleon.h"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.h"; sourceTree = "<group>"; };
 		EC1FD743D031D373EDF29CC526F758E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EC5498E5676D7ACE2791222911BD17E0 /* NSArray+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Chameleon.m"; path = "Pod/Classes/Objective-C/NSArray+Chameleon.m"; sourceTree = "<group>"; };
+		ECE6A67B1A44999FDFFBAE050CC59154 /* libREFormattedNumberField.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libREFormattedNumberField.a; path = libREFormattedNumberField.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0B3612BCDBB0F22196CD9ED36F1408 /* Pods-LTHostingUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LTHostingUITests-dummy.m"; sourceTree = "<group>"; };
+		ED5286EC9AB3BC3AB1885BB10F931964 /* UIButtonBarArrowLeft@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; name = "UIButtonBarArrowLeft@2x.png"; path = "RETableViewManager/Resources/UIButtonBarArrowLeft@2x.png"; sourceTree = "<group>"; };
+		EE5D2B195502D3E036B304E45503A494 /* RETableViewSection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewSection.m; path = RETableViewManager/RETableViewSection.m; sourceTree = "<group>"; };
+		EFA76DF749244B068C849015C744ABAF /* REValidation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "REValidation-prefix.pch"; sourceTree = "<group>"; };
+		F2E77C71EB0A154F8C974D928757B337 /* UIButton+Chameleon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIButton+Chameleon.m"; path = "Pod/Classes/Objective-C/UIButton+Chameleon.m"; sourceTree = "<group>"; };
+		F32A71B3FBED17B1F4DBF7C69AACB3FE /* REPickerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REPickerItem.h; path = RETableViewManager/Items/REPickerItem.h; sourceTree = "<group>"; };
+		F6301AD37B45BC63752C2DAB0CD1676E /* RETableViewCreditCardCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RETableViewCreditCardCell.m; path = RETableViewManager/Cells/RETableViewCreditCardCell.m; sourceTree = "<group>"; };
+		F63E884A9A0B66A6F0B793428F711B33 /* REPresenceValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REPresenceValidator.h; path = REValidation/Validators/REPresenceValidator.h; sourceTree = "<group>"; };
+		FC029B5349E7439F4C06BD602163EEF5 /* UIColor+Chameleon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Chameleon.h"; path = "Pod/Classes/Objective-C/UIColor+Chameleon.h"; sourceTree = "<group>"; };
+		FD863D3D412135DCEC9D2059BA71A0C7 /* libHMSegmentedControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHMSegmentedControl.a; path = libHMSegmentedControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDA61DE12652912115F64A4FDCDD4227 /* REURLValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = REURLValidator.h; path = REValidation/Validators/REURLValidator.h; sourceTree = "<group>"; };
+		FFC0530BFA6C17ED564D53CCFCA51C8A /* NSString+RETableViewManagerAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+RETableViewManagerAdditions.m"; path = "RETableViewManager/NSString+RETableViewManagerAdditions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +435,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4DC498F3AD9DB39260C83F72D39CBD6D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C991EC3AE8A6E44C5328CA416D055DAB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73EF2BA67FA5CE227D70BD6E3B675E7D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1035A4F6D8D466BC81F8ABD25B70AE44 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		75DD72EF4CAA2B262B0A96C9CA0FFE6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +462,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		90B50A9993216A8CCCF32006EC1EC74D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4759F76DBE01C113AC0AE6FECE192D4C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		925861FDF62A0AE0A2D526F166F53B3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,11 +478,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EB33A65C42C77B6BF5F923505B9ACFF0 /* Frameworks */ = {
+		A60E04D238B5D6893BE675F74BE53D5A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				908E15E10551EEA9F0F4BE64BF0EAFA4 /* Foundation.framework in Frameworks */,
+				E474191147C235A11650EFF1299179D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFA1D7118959CC7E014DCC5EAF661D5B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,13 +504,63 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1C73671220ECC7F1E5CDF9232A04F00E /* GoogleMaps */ = {
+		1C037EFF0312A4360F80FCF45073DB74 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				E6D4D3FD28805C92D200B122669C3E44 /* Base */,
+				CD3D2C71563D9CA08203864EE0FD38CB /* ResourceBundle-RETableViewManager-Info.plist */,
+				91581EF2AD56AEAEB607A450211379E7 /* RETableViewManager.xcconfig */,
+				6943D6DD57BAC29C199D2A0068EFD6D3 /* RETableViewManager-dummy.m */,
+				D8A5B59BB94E8F0DA02A4D1BD63D053D /* RETableViewManager-prefix.pch */,
 			);
-			name = GoogleMaps;
-			path = GoogleMaps;
+			name = "Support Files";
+			path = "../Target Support Files/RETableViewManager";
+			sourceTree = "<group>";
+		};
+		1E4A69B60ECC2280BE9659F819011374 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				814DB7380F10CEEB3634499DC23DB8A0 /* Card_Amex.png */,
+				1178755CAEC9492194790C26EC62B52E /* Card_Amex@2x.png */,
+				3F5D3E1CDECA24E2FDC588CC897EC8AB /* Card_Back.png */,
+				13A68137F0026930EC69E9894AEDA8CB /* Card_Back@2x.png */,
+				20A8E234BD6F4B5E14BBEEC61AD8F853 /* Card_Discover.png */,
+				6F1882215447CE8C9B08E484DCEAB6D8 /* Card_Discover@2x.png */,
+				7EABD0D076C66D3AD39ACA0C26B25734 /* Card_Mastercard.png */,
+				68F5F9B8BBF9A1B2848EA33D7D700EFB /* Card_Mastercard@2x.png */,
+				A47268B160C5F9F53EC55EA74469838B /* Card_Stack.png */,
+				90EAE12DA90E6EC5F92529EA7C44AC78 /* Card_Stack@2x.png */,
+				5CA6CBA8DAC4D8BDCA2E67B76BE68896 /* Card_Visa.png */,
+				D992B35EC17442F5905282C047D27CE1 /* Card_Visa@2x.png */,
+				7A4966BD915E2D8FAAA16B915598CC15 /* Ribbon_Expired.png */,
+				23D55F989B0826B01A07F826F8BD3607 /* Ribbon_Expired@2x.png */,
+				C7A262A72CF165B73C07880277A39A4D /* Transparent@2x.png */,
+				80F1FC427A811E27A708FC6D7C3AB4D3 /* UIButtonBarArrowLeft.png */,
+				ED5286EC9AB3BC3AB1885BB10F931964 /* UIButtonBarArrowLeft@2x.png */,
+				38B5F489971194C1CD1FFD988143BB10 /* UIButtonBarArrowRight.png */,
+				062B48EF89FAEA73B666144496ED3CA5 /* UIButtonBarArrowRight@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1FB72801D975F9A8CFF0B96B37A0F2AE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE2287870E85E72B2997A8AA3027246E /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		215818F7B886152BC65F14DC76897899 /* REFormattedNumberField */ = {
+			isa = PBXGroup;
+			children = (
+				C9A7E4FB232F4E8DAD57148BF80A336E /* NSString+RENumberFormat.h */,
+				CBC226822E0EC1DD461BD29A9D271202 /* NSString+RENumberFormat.m */,
+				C1FC46878FBC4B5F479F8F4A19C7664E /* REFormattedNumberField.h */,
+				8D8800643DEC47BFDECA90BF771D0B48 /* REFormattedNumberField.m */,
+				400B340E6C573F6568495A1BEB2CA93E /* Support Files */,
+			);
+			name = REFormattedNumberField;
+			path = REFormattedNumberField;
 			sourceTree = "<group>";
 		};
 		2691F93227E549B2A03FB9E6D0C3C623 /* iOS */ = {
@@ -217,26 +574,137 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		2D40AED609A9FCB2D3D4B8AD1540EBBA /* Support Files */ = {
+		2B9ED029A6B5029BC04F4421DCF75B39 /* REValidation */ = {
 			isa = PBXGroup;
 			children = (
-				C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */,
-				E373BB81DD864D7252593862C00469B4 /* ChameleonFramework-dummy.m */,
-				1A09BD0277D6F4F7896481BE4833A4C9 /* ChameleonFramework-prefix.pch */,
+				31F89B44719C1F2E5AC931D47938D7FB /* NSError+REValidation.h */,
+				352420262E260763A6F150FB8458F97F /* NSError+REValidation.m */,
+				9D298BEA4D0D1256457236544673ED30 /* REEmailValidator.h */,
+				D73D28E4D0091013C0E4228E8E8AEC1A /* REEmailValidator.m */,
+				D8E757F2527311FC4A232BD32AAA365F /* RELengthValidator.h */,
+				7608EEC2C04939BC3F5D4CE9FB8777FE /* RELengthValidator.m */,
+				F63E884A9A0B66A6F0B793428F711B33 /* REPresenceValidator.h */,
+				BC8A6A4E0556ADC989D19C5139B622FD /* REPresenceValidator.m */,
+				FDA61DE12652912115F64A4FDCDD4227 /* REURLValidator.h */,
+				CAFBFC91AAE0744A1292391D6C3F141B /* REURLValidator.m */,
+				873F439A6D914F8790C1CD603A369542 /* REValidation.h */,
+				CFDA544A1B41738042F8E7C3C5DE51B4 /* REValidation.m */,
+				3B2AA6D2DADC768B9F49997E25F26642 /* REValidator.h */,
+				BABEB138509D7C438CF2CB1A3ADC425C /* REValidator.m */,
+				F012A080DAAA8139CB402F473675E50E /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ChameleonFramework";
+			name = REValidation;
+			path = REValidation;
 			sourceTree = "<group>";
 		};
-		3330B477DECAF7BFEEEA7BE3983CE7BC /* HMSegmentedControl */ = {
+		2E0503CFE8965B57101C316F1C6E2DE7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C4F11C2C86C4D021553F4BC62786CB96 /* HMSegmentedControl.h */,
-				3C5132B2B59C41B9AE78E3238DE58EAE /* HMSegmentedControl.m */,
-				49E817C7ECB29312A0440239A4C62C0A /* Support Files */,
+				A06F24E097CA8B23B7772E61A4593C08 /* ChameleonFramework */,
+				40B5293852A7DEC331C55BB4ADD416C1 /* GoogleMaps */,
+				45FCAC755B52BAC456D7CA0C324159D6 /* GooglePlaces */,
+				4C91DAEA224463094BBB272013DB6C19 /* HMSegmentedControl */,
+				215818F7B886152BC65F14DC76897899 /* REFormattedNumberField */,
+				36C263134A03B7AF069464603F874056 /* RETableViewManager */,
+				2B9ED029A6B5029BC04F4421DCF75B39 /* REValidation */,
 			);
-			name = HMSegmentedControl;
-			path = HMSegmentedControl;
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		33B19C266AA359F2BEE31DE02A27FBD3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8318BA164D55C9FE799863F5C6DFC319 /* libChameleonFramework.a */,
+				FD863D3D412135DCEC9D2059BA71A0C7 /* libHMSegmentedControl.a */,
+				413D254AE86077B773A47499D80B4E9A /* libPods-LTHosting.a */,
+				4C799DD8CBA72B20630DC7924A626BA1 /* libPods-LTHostingTests.a */,
+				07EEDCAA109298732BE82BEA9BD61D49 /* libPods-LTHostingUITests.a */,
+				ECE6A67B1A44999FDFFBAE050CC59154 /* libREFormattedNumberField.a */,
+				9FB2194977EBDB6056FD696A19238B4F /* libRETableViewManager.a */,
+				7D8464EE4B1D4146DFA5D934DEE12C0B /* libREValidation.a */,
+				42BBC06083DAB7CBAD1E668731A54E81 /* RETableViewManager.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36C263134A03B7AF069464603F874056 /* RETableViewManager */ = {
+			isa = PBXGroup;
+			children = (
+				2F018F76FA229D6F63BAA6A03666FC7D /* NSBundle+RETableViewManager.h */,
+				B989FF1C82FE75BB136DB930C8F7B058 /* NSBundle+RETableViewManager.m */,
+				893B9F57B133113F5AA7B91B24C73279 /* NSString+RETableViewManagerAdditions.h */,
+				FFC0530BFA6C17ED564D53CCFCA51C8A /* NSString+RETableViewManagerAdditions.m */,
+				B39CCB41C3D2E686704F91257242B0B0 /* REActionBar.h */,
+				263A87D20B6C8D8A0E681E1EC318B1D2 /* REActionBar.m */,
+				EA2D3363088BD0398ADB96F7B884A8BC /* REBoolItem.h */,
+				9FAFE425CE2867AC265AA8B957D58E5C /* REBoolItem.m */,
+				C3CF2D8B1F0A85E228219B658AD81261 /* RECreditCardItem.h */,
+				2B0E07B0613DEA479552378C55057C8F /* RECreditCardItem.m */,
+				5DA2A2E408FA721B2746A498187092E6 /* REDateTimeItem.h */,
+				5A26C78A5CBCB08CD7BAEEF5D7EDFAFE /* REDateTimeItem.m */,
+				9CEE65ED16C74D24943629D9F48DC51D /* REFloatItem.h */,
+				DB7268E3B9A9AC1670393E3F386456A7 /* REFloatItem.m */,
+				3441986BCAC453DDAFA4AAA87F434268 /* REInlineDatePickerItem.h */,
+				446AFDA4F9587A66107BEB59CE50D0BD /* REInlineDatePickerItem.m */,
+				C04401DB1FFAFEBE0C2C4EC61B5E8191 /* REInlinePickerItem.h */,
+				36A26EDE7E9F28C4F1220A33972E03FD /* REInlinePickerItem.m */,
+				E662DA45D64852BD1CAF23D8B164DE72 /* RELongTextItem.h */,
+				707368332E8D3FA960B44F4127AD64C6 /* RELongTextItem.m */,
+				D8D043B847CB5007CEAC8F7C569FC796 /* REMultipleChoiceItem.h */,
+				81491B2950C3B334B3590211A00D4CC7 /* REMultipleChoiceItem.m */,
+				DAFA35F65DCA2488AD3273CF12943494 /* RENumberItem.h */,
+				5E4EE7D2B96633AF16CEFCDFE3165998 /* RENumberItem.m */,
+				F32A71B3FBED17B1F4DBF7C69AACB3FE /* REPickerItem.h */,
+				A860FECDD14A99D0B90ED60FAEFD1A6B /* REPickerItem.m */,
+				8B8E61D3D42E80CAD5DCFA1A0DAF694C /* REPlaceholderTextView.h */,
+				72B4CB682C52212CB248FDA8D8D1D0A6 /* REPlaceholderTextView.m */,
+				1C0BDE337338E30BE7E8B69AB0BC0EA5 /* RERadioItem.h */,
+				0FEDA9553420DBE83DCC390BF0722890 /* RERadioItem.m */,
+				A2F6D4088741A41A18C3A6A234972FE0 /* RESegmentedItem.h */,
+				5E7CBA5B1D09206054024442E9E753CB /* RESegmentedItem.m */,
+				46E57E7926C2A343C5FA7568F3142F9B /* RETableViewBoolCell.h */,
+				7694BC50C67FB3B11D7F8D64AF6BAB0A /* RETableViewBoolCell.m */,
+				138703D51139B4EBF324C356156C8D3F /* RETableViewCell.h */,
+				10FDBD3BC67A61FEE8B2361C92EB82BF /* RETableViewCell.m */,
+				16CAA977C6C0BED87DC46A399AB9CB6C /* RETableViewCellStyle.h */,
+				8F42DF9552D6B47586A831F58EFD054D /* RETableViewCellStyle.m */,
+				1E79BDB68D1609AD8671E2641217BBB3 /* RETableViewCreditCardCell.h */,
+				F6301AD37B45BC63752C2DAB0CD1676E /* RETableViewCreditCardCell.m */,
+				C5A0CE0F4E69F8D08AD4872458F472BF /* RETableViewDateTimeCell.h */,
+				7F0BDA5ED47920647A0570226EB9C5C3 /* RETableViewDateTimeCell.m */,
+				4B3175C445F46C5FF22873F914AD333D /* RETableViewFloatCell.h */,
+				B35728DE90AF5D8A367F553065CD3BFD /* RETableViewFloatCell.m */,
+				6DFC03E4A7CFAFDAF991CC47933F25E1 /* RETableViewInlineDatePickerCell.h */,
+				DDA0F2A234C7ABDA38BEA9880DBD4A10 /* RETableViewInlineDatePickerCell.m */,
+				4EFD3ECF677600ED68F1BAAFBE51592E /* RETableViewInlinePickerCell.h */,
+				7EBDC185B01A84C96B0BBD2A603A5783 /* RETableViewInlinePickerCell.m */,
+				875BD429589B4113E0BC4DA05E363648 /* RETableViewItem.h */,
+				B7A34F053153F34154F05F065F3C6C22 /* RETableViewItem.m */,
+				56FFF1B490755E53C4C3A7C21DD70018 /* RETableViewLongTextCell.h */,
+				06E1E6FC618CAC2E5D1A82440402F125 /* RETableViewLongTextCell.m */,
+				7E12A9F8F66FF8F0E95F3E8E3804F52B /* RETableViewManager.h */,
+				D2B5671751FA314C601D3690EA1218A7 /* RETableViewManager.m */,
+				96C7A28062471BBA893A75DC02A5DA9A /* RETableViewNumberCell.h */,
+				20D9A156A33F4A909D08A4BCB830294D /* RETableViewNumberCell.m */,
+				E2149E4460564914E563787DEC98EE75 /* RETableViewOptionCell.h */,
+				80B866F93BFBB234D5F6953F3378A2A1 /* RETableViewOptionCell.m */,
+				929DDADEAB0D5BDF4401F22F318D6E85 /* RETableViewOptionsController.h */,
+				48BA367289964B1905B9CA0A8D5D9177 /* RETableViewOptionsController.m */,
+				AAA2823FF9AD1F93FF8BDBA8B19ADEE0 /* RETableViewPickerCell.h */,
+				86B975BA17845EB18252F56A4F1B76F2 /* RETableViewPickerCell.m */,
+				46FA7011EDFDD42177CFB16C5B0FB803 /* RETableViewSection.h */,
+				EE5D2B195502D3E036B304E45503A494 /* RETableViewSection.m */,
+				205996266751E4D62755E759799E9865 /* RETableViewSegmentedCell.h */,
+				8E6D9D3B631215DCB3F6BDAA519E6113 /* RETableViewSegmentedCell.m */,
+				D292B610BF7E00433B7FD829192ED5A3 /* RETableViewTextCell.h */,
+				4C5F84D6D75CDC2556F5DD402B760683 /* RETableViewTextCell.m */,
+				747ECA84CA383894112F6F6BD9C62265 /* RETextItem.h */,
+				1732F620AC5F410AA677E28FA158A244 /* RETextItem.m */,
+				1E4A69B60ECC2280BE9659F819011374 /* Resources */,
+				1C037EFF0312A4360F80FCF45073DB74 /* Support Files */,
+			);
+			name = RETableViewManager;
+			path = RETableViewManager;
 			sourceTree = "<group>";
 		};
 		36D720E2831551C60C15D5DBEFBCBF7C /* Pods-LTHostingTests */ = {
@@ -254,57 +722,56 @@
 			path = "Target Support Files/Pods-LTHostingTests";
 			sourceTree = "<group>";
 		};
-		3B8ECE7BE088E9C635E970A714419233 /* Resources */ = {
+		390B8A6CD250DD8E1A2C664BF93E8509 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C1BEE4BD3077DA1386F023D587715D97 /* GooglePlaces.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		49E817C7ECB29312A0440239A4C62C0A /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */,
-				A21A1803F0BAD3068C02ABA61F75DD44 /* HMSegmentedControl-dummy.m */,
-				5F03FF6D17F5E8814E9E75BECDE45D2F /* HMSegmentedControl-prefix.pch */,
+				C6894E12BA5E02FA965DB386B6F235F8 /* HMSegmentedControl.xcconfig */,
+				65D1C9EB58BD6266A873CBAF9D118CA0 /* HMSegmentedControl-dummy.m */,
+				87C3C5DC79B1822D033FC784154A2F0D /* HMSegmentedControl-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/HMSegmentedControl";
 			sourceTree = "<group>";
 		};
-		4A525DC13F0C18AB1E3C182B4F0593F3 /* Default */ = {
+		400B340E6C573F6568495A1BEB2CA93E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9D4C395118D907870A23524ADE6A67FD /* Chameleon.h */,
-				107CE1D42510B87C370385E3E3A73EC0 /* Chameleon_.h */,
-				A2C981F01BF91AF0AD9429D01AFE44E1 /* Chameleon_.m */,
-				48DF092823554FC0CC34702ED608F4F9 /* ChameleonConstants.h */,
-				D975ED68935119481DAE909221D8E89C /* ChameleonConstants.m */,
-				1EE55B4E4396CCBF004966851D71B63F /* ChameleonEnums.h */,
-				7C7043888CD5955B20583DDB5FC1B7E8 /* ChameleonMacros.h */,
-				BB7B63FF6C6663426D0D842416E72DF4 /* NSArray+Chameleon.h */,
-				3AD1F345357E0B4D0D07BE26C87DF05B /* NSArray+Chameleon.m */,
-				08C8ACFEB5D0CCA89BEFC9D58502A467 /* UIAppearance+Swift.h */,
-				096D7C9A65215E34DD2ABA8228C64B59 /* UIAppearance+Swift.m */,
-				6755177395DEA8755A8D5FA87625A1C1 /* UIButton+Chameleon.h */,
-				ABB38AF5CA241FFAE066A7AFF065613F /* UIButton+Chameleon.m */,
-				8D95B9CEE3B1CE03EF5DA7D061E51E74 /* UIColor+Chameleon.h */,
-				DAE2995E76D7D0852E1F837ABB53A88C /* UIColor+Chameleon.m */,
-				4155844BF2EDC81177FA71479EC4BE5C /* UIColor+ChameleonPrivate.h */,
-				2ABEF96F6B5C62C2D202D08658BBB331 /* UIColor+ChameleonPrivate.m */,
-				361C1DA3D3461239877C1B200824342F /* UIImage+ChameleonPrivate.h */,
-				62DF9D3BA237FD1BF77B65DB48279DB9 /* UIImage+ChameleonPrivate.m */,
-				762BF5FBB4285F4801F3DDA37B88E926 /* UILabel+Chameleon.h */,
-				E57621960D7476636A3D1BADD0E9259B /* UILabel+Chameleon.m */,
-				C972EA57D82F18F39C36055232520C02 /* UINavigationController+Chameleon.h */,
-				C60483D5331FF1763971FBD9B7410457 /* UINavigationController+Chameleon.m */,
-				96EC8C3580EFB132B1E233C7A57348E2 /* UIView+ChameleonPrivate.h */,
-				3C0C597CD1F685FDB19DBE8D6FF63842 /* UIView+ChameleonPrivate.m */,
-				A34E3C9BBD4B137277FF245BD932F140 /* UIViewController+Chameleon.h */,
-				D554D103DC5AC55FB40CF2CCD4384D37 /* UIViewController+Chameleon.m */,
+				AAA376193A9DF62B0A315A73387B3E1F /* REFormattedNumberField.xcconfig */,
+				0E69D05F1E1B72641CED4884B78DCB73 /* REFormattedNumberField-dummy.m */,
+				B8AE36F9327A1B3AEE0897DD3BA44D46 /* REFormattedNumberField-prefix.pch */,
 			);
-			name = Default;
+			name = "Support Files";
+			path = "../Target Support Files/REFormattedNumberField";
+			sourceTree = "<group>";
+		};
+		40B5293852A7DEC331C55BB4ADD416C1 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				C550FF1AC5380D53F700A7CE605FD3C8 /* Base */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		45FCAC755B52BAC456D7CA0C324159D6 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				556C983495700114E9B6A2FDBE826E5C /* Frameworks */,
+				1FB72801D975F9A8CFF0B96B37A0F2AE /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		4C91DAEA224463094BBB272013DB6C19 /* HMSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				1CA1EE16D623554FCF75B052C56691B2 /* HMSegmentedControl.h */,
+				54202FE6254D2CF530DF38985FA18810 /* HMSegmentedControl.m */,
+				390B8A6CD250DD8E1A2C664BF93E8509 /* Support Files */,
+			);
+			name = HMSegmentedControl;
+			path = HMSegmentedControl;
 			sourceTree = "<group>";
 		};
 		541437032DEC0171FCEFC0FD1E35C58C /* Targets Support Files */ = {
@@ -317,24 +784,12 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		71294C13C01620507319C243FFD2E4D5 /* GooglePlaces */ = {
+		556C983495700114E9B6A2FDBE826E5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FE02951EF7AC6560E090BDD4A231547C /* Frameworks */,
-				3B8ECE7BE088E9C635E970A714419233 /* Resources */,
+				10A45C787365BB12B79F3CE8AFDAAF3F /* GooglePlaces.framework */,
 			);
-			name = GooglePlaces;
-			path = GooglePlaces;
-			sourceTree = "<group>";
-		};
-		74F354D8D2AA4CC76EECD3D2A884905C /* ChameleonFramework */ = {
-			isa = PBXGroup;
-			children = (
-				4A525DC13F0C18AB1E3C182B4F0593F3 /* Default */,
-				2D40AED609A9FCB2D3D4B8AD1540EBBA /* Support Files */,
-			);
-			name = ChameleonFramework;
-			path = ChameleonFramework;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -342,18 +797,10 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				14B8B9B15ECBE87983FF987239AB2D7B /* Frameworks */,
-				E5C6F74D8736B160D28E93655D93C0D0 /* Pods */,
-				ACBFECABAE3A2ABC7D2A4EE3ECE36CA0 /* Products */,
+				2E0503CFE8965B57101C316F1C6E2DE7 /* Pods */,
+				33B19C266AA359F2BEE31DE02A27FBD3 /* Products */,
 				541437032DEC0171FCEFC0FD1E35C58C /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		8882D3BD3FA62C5361B517B804F7F1FA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E1252ADE5EF37A785249CE7CF79A96CB /* GoogleMapsBase.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8988A1C9721FC426EA689074135FDC57 /* Pods-LTHostingUITests */ = {
@@ -371,16 +818,56 @@
 			path = "Target Support Files/Pods-LTHostingUITests";
 			sourceTree = "<group>";
 		};
-		ACBFECABAE3A2ABC7D2A4EE3ECE36CA0 /* Products */ = {
+		90A21F4CAB21DF059BB124F1F8418F69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4B29225369B75A39E934894DF55B13F3 /* libChameleonFramework.a */,
-				A11E8E1759F59F2386CE16FB9EC188F4 /* libHMSegmentedControl.a */,
-				6B5CFC9AED7C1101B62EA8587E3BEB1C /* libPods-LTHosting.a */,
-				65FF7CAF14DC883830CA835C3342E0B7 /* libPods-LTHostingTests.a */,
-				8BCB532134F9620495E35973D5978231 /* libPods-LTHostingUITests.a */,
+				5AA4DC06DE23EC08EEBE7A8A4DCADD8A /* GoogleMapsBase.framework */,
 			);
-			name = Products;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D6F68E0933F3B9889D8E7CB13F1738F /* Default */ = {
+			isa = PBXGroup;
+			children = (
+				68338B4C622D9BFBA511C3BF7C6D080B /* Chameleon.h */,
+				5AD5E79B57558700A6285AB22C2A07B9 /* Chameleon_.h */,
+				7E82131C4F757DD87DF0B00B4E213FED /* Chameleon_.m */,
+				E3EC2DD5D08CDC40E076F658AB82AD71 /* ChameleonConstants.h */,
+				E6575D22DF2F4909DB3425667CD946DE /* ChameleonConstants.m */,
+				864E9F85DD14B62E279A1EF551DF19EC /* ChameleonEnums.h */,
+				CB93B140C3DE5F1EC7C54B83C54D6DAE /* ChameleonMacros.h */,
+				EB1DD42DC0CE4DF270E0C932ADA444D3 /* NSArray+Chameleon.h */,
+				EC5498E5676D7ACE2791222911BD17E0 /* NSArray+Chameleon.m */,
+				6EE6633CD21ADB56F983CD856D3F7BD1 /* UIAppearance+Swift.h */,
+				E67CC3041A4880950CF5099E026FBB31 /* UIAppearance+Swift.m */,
+				3DDC1158633D87F4C0DA485BD2C598A2 /* UIButton+Chameleon.h */,
+				F2E77C71EB0A154F8C974D928757B337 /* UIButton+Chameleon.m */,
+				FC029B5349E7439F4C06BD602163EEF5 /* UIColor+Chameleon.h */,
+				B1CEE8FDBF929902E5E08DFA3D7E28D2 /* UIColor+Chameleon.m */,
+				1DA8BAD2073FAE546E770D2F4A6E38F4 /* UIColor+ChameleonPrivate.h */,
+				DE7093868EAFECCCAB24A8A003A9ED8D /* UIColor+ChameleonPrivate.m */,
+				667A7A9D5A9FA668B8BCFBDDE46B4E65 /* UIImage+ChameleonPrivate.h */,
+				1AB7D38196277272056008D94EB0EEDD /* UIImage+ChameleonPrivate.m */,
+				D7E00EEE03C92D18B7417F5FD788C17C /* UILabel+Chameleon.h */,
+				D400362829B56B0213D7320CDFD388F6 /* UILabel+Chameleon.m */,
+				B5AA7EAF5660A0C97E22FF0A4E634E8C /* UINavigationController+Chameleon.h */,
+				391FDCB47F0B2E7D4AE9DBC165A1A71D /* UINavigationController+Chameleon.m */,
+				66A55FE674925118A438F297D09B02BC /* UIView+ChameleonPrivate.h */,
+				5D45369FE42BA02246B4FEE1903910DA /* UIView+ChameleonPrivate.m */,
+				C2C50AD683FFE0526341E18A2E54010C /* UIViewController+Chameleon.h */,
+				AAEE3231E009976CD815C01D9C6FBB0E /* UIViewController+Chameleon.m */,
+			);
+			name = Default;
+			sourceTree = "<group>";
+		};
+		A06F24E097CA8B23B7772E61A4593C08 /* ChameleonFramework */ = {
+			isa = PBXGroup;
+			children = (
+				9D6F68E0933F3B9889D8E7CB13F1738F /* Default */,
+				C97F0CA1072205FC1A67A926C0EF1E6B /* Support Files */,
+			);
+			name = ChameleonFramework;
+			path = ChameleonFramework;
 			sourceTree = "<group>";
 		};
 		C0601039AA97DD4A93D61B6943AB5AAB /* Pods-LTHosting */ = {
@@ -398,31 +885,34 @@
 			path = "Target Support Files/Pods-LTHosting";
 			sourceTree = "<group>";
 		};
-		E5C6F74D8736B160D28E93655D93C0D0 /* Pods */ = {
+		C550FF1AC5380D53F700A7CE605FD3C8 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				74F354D8D2AA4CC76EECD3D2A884905C /* ChameleonFramework */,
-				1C73671220ECC7F1E5CDF9232A04F00E /* GoogleMaps */,
-				71294C13C01620507319C243FFD2E4D5 /* GooglePlaces */,
-				3330B477DECAF7BFEEEA7BE3983CE7BC /* HMSegmentedControl */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		E6D4D3FD28805C92D200B122669C3E44 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				8882D3BD3FA62C5361B517B804F7F1FA /* Frameworks */,
+				90A21F4CAB21DF059BB124F1F8418F69 /* Frameworks */,
 			);
 			name = Base;
 			sourceTree = "<group>";
 		};
-		FE02951EF7AC6560E090BDD4A231547C /* Frameworks */ = {
+		C97F0CA1072205FC1A67A926C0EF1E6B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				96DC2366806705CA6D86F142B68F9584 /* GooglePlaces.framework */,
+				DE5AC78CE9AF6D6D3336CF5EA1596759 /* ChameleonFramework.xcconfig */,
+				89D5EE09320DA3F7B69DD4680073B64B /* ChameleonFramework-dummy.m */,
+				08A197D1FD0F57299AE2DE67901FE181 /* ChameleonFramework-prefix.pch */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/ChameleonFramework";
+			sourceTree = "<group>";
+		};
+		F012A080DAAA8139CB402F473675E50E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0E7EA14537942ECE90CA8DF98A0D4304 /* REValidation.xcconfig */,
+				8A34B159B61B7B89D655E1D4C976C487 /* REValidation-dummy.m */,
+				EFA76DF749244B068C849015C744ABAF /* REValidation-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/REValidation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,25 +948,92 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C8836BDB35A335C9A3C89B61E539C7B8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E2354CDE61E7E04FCD11B84A15FB7F60 /* NSString+RENumberFormat.h in Headers */,
+				55FF9B263BD67F7939F98D4CF5C86BA4 /* REFormattedNumberField.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAF72441DAD3B4ADDE2BE9327B5FA811 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8689925D592376802C0DA95D7F2BD81 /* NSError+REValidation.h in Headers */,
+				4970AF6B2D5D3BBCF91B78E431DAFA26 /* REEmailValidator.h in Headers */,
+				64791FE90235C86BD0B7D77FD7A1515E /* RELengthValidator.h in Headers */,
+				9EE96F59777A9CB2077BCFCA460C1344 /* REPresenceValidator.h in Headers */,
+				7C67EDB2525AB8B3C074F7B408887135 /* REURLValidator.h in Headers */,
+				7FD5CA18A61ED2AF28D2744C7ECFD759 /* REValidation.h in Headers */,
+				6A42FDC0D5983A3E86BB5CB24426A951 /* REValidator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4574F90CCD569F772AB46E0D0B5794B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9F93C5CACF2FE8A9EC5A553050F947A5 /* NSBundle+RETableViewManager.h in Headers */,
+				80FC629819EE719B13D1D724E9F4FC90 /* NSString+RETableViewManagerAdditions.h in Headers */,
+				D78AEC147EDA4E653983166B156700CA /* REActionBar.h in Headers */,
+				1DFFA7CB2E65091F7FAB86A5AF6F3E94 /* REBoolItem.h in Headers */,
+				AF0C736B2B5968A680395B772D44A89A /* RECreditCardItem.h in Headers */,
+				CE0E829D6E7318742BB5AF9AB5095A0F /* REDateTimeItem.h in Headers */,
+				CB399A21A0B29F09AD00685D9695C131 /* REFloatItem.h in Headers */,
+				C700FB7BE6C2FF7B265DFDE26E9DC7E8 /* REInlineDatePickerItem.h in Headers */,
+				04AFB680C2985A993CEBADBD765AE423 /* REInlinePickerItem.h in Headers */,
+				EF178ABA7227E51305DF821CD241B30A /* RELongTextItem.h in Headers */,
+				D9C8A5EB969910C90636A412F83BA102 /* REMultipleChoiceItem.h in Headers */,
+				7A9C37A850F24F87FBD7CACA6C8FFAE5 /* RENumberItem.h in Headers */,
+				1F7990AAEBD89B1F71BA85A90686CE8E /* REPickerItem.h in Headers */,
+				B72670BA8237612AC55E106F84EF8C22 /* REPlaceholderTextView.h in Headers */,
+				624995B4BC24B979BC3DB8E1E2DCADF0 /* RERadioItem.h in Headers */,
+				72D104A94635276E51EA70BF298A7D09 /* RESegmentedItem.h in Headers */,
+				FAFD48C8C4DFD63728CD6C35F28167C9 /* RETableViewBoolCell.h in Headers */,
+				21636F4B6D3E4C6512B300E7920C21DE /* RETableViewCell.h in Headers */,
+				8FD04B6EBCA5AC7805168C3DF7A0FA34 /* RETableViewCellStyle.h in Headers */,
+				6207A18047AA694DADCF0EFC6AE5ED1A /* RETableViewCreditCardCell.h in Headers */,
+				737FD36CD6C0D0060B16A09DC6D144E4 /* RETableViewDateTimeCell.h in Headers */,
+				A70668C98DC77A8095AC348EC2475EE4 /* RETableViewFloatCell.h in Headers */,
+				94A4811142581B0D460A793F397B79C2 /* RETableViewInlineDatePickerCell.h in Headers */,
+				77301E4774BB5451A44F599CE5ADAF8E /* RETableViewInlinePickerCell.h in Headers */,
+				E580B3996F04B12DD2543E8FBC975FC2 /* RETableViewItem.h in Headers */,
+				2100EB61B5AD5078FDED2732837F23D4 /* RETableViewLongTextCell.h in Headers */,
+				34E9EDED4C546C12F817E088EB7E8EB0 /* RETableViewManager.h in Headers */,
+				3F1861598FF6ADF0AFE126104DCD7592 /* RETableViewNumberCell.h in Headers */,
+				9D9EF2EDFFFA6A3AFBC48E31769B112E /* RETableViewOptionCell.h in Headers */,
+				5C28F6DEDFF1EEBFB8D83EEE38D5BD65 /* RETableViewOptionsController.h in Headers */,
+				253338C5CA41A530CE892F712436BC96 /* RETableViewPickerCell.h in Headers */,
+				6A371B454F783C9E047B5E6170DD9914 /* RETableViewSection.h in Headers */,
+				C32F0997D69EC71D9A38946E7C92F23B /* RETableViewSegmentedCell.h in Headers */,
+				CC78B08F37B8EDA87728347F7076163E /* RETableViewTextCell.h in Headers */,
+				DB6ECFBB60320AFD4F079A3E6ABAB47D /* RETextItem.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		172ADAA87AB014F18238DF2043DB4AA8 /* Pods-LTHosting */ = {
+		0305D326B13311BFEC31AA42573A5D61 /* RETableViewManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B26812F56928C74DA428EB12FB18C7F3 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */;
+			buildConfigurationList = 8FE98E0EB195872286EA8FCB2855A96A /* Build configuration list for PBXNativeTarget "RETableViewManager" */;
 			buildPhases = (
-				D13D99810308C457AA9E4EF5225DBB38 /* Sources */,
-				EB33A65C42C77B6BF5F923505B9ACFF0 /* Frameworks */,
+				B115C7BD842257AB6663CD377435EACC /* Sources */,
+				73EF2BA67FA5CE227D70BD6E3B675E7D /* Frameworks */,
+				F4574F90CCD569F772AB46E0D0B5794B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				57B18402F0E89D0196CF1775725DB0AF /* PBXTargetDependency */,
-				6974DDEE950BF6F2E93B72949D1E53E0 /* PBXTargetDependency */,
+				CEC5C20A1A7CD3E435876B9F551E2E73 /* PBXTargetDependency */,
+				1DED56D63D1993291061DEFF2C5167A9 /* PBXTargetDependency */,
+				BFA5A7ABA2FD1FAAEBBCF5E6893A8CA5 /* PBXTargetDependency */,
 			);
-			name = "Pods-LTHosting";
-			productName = "Pods-LTHosting";
-			productReference = 6B5CFC9AED7C1101B62EA8587E3BEB1C /* libPods-LTHosting.a */;
+			name = RETableViewManager;
+			productName = RETableViewManager;
+			productReference = 9FB2194977EBDB6056FD696A19238B4F /* libRETableViewManager.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		4339401AA38C748D86F3C2E3C3C633E8 /* Pods-LTHostingUITests */ = {
@@ -492,7 +1049,7 @@
 			);
 			name = "Pods-LTHostingUITests";
 			productName = "Pods-LTHostingUITests";
-			productReference = 8BCB532134F9620495E35973D5978231 /* libPods-LTHostingUITests.a */;
+			productReference = 07EEDCAA109298732BE82BEA9BD61D49 /* libPods-LTHostingUITests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6E66B362AE57238557E51E1B585B5C93 /* HMSegmentedControl */ = {
@@ -509,8 +1066,25 @@
 			);
 			name = HMSegmentedControl;
 			productName = HMSegmentedControl;
-			productReference = A11E8E1759F59F2386CE16FB9EC188F4 /* libHMSegmentedControl.a */;
+			productReference = FD863D3D412135DCEC9D2059BA71A0C7 /* libHMSegmentedControl.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		7580EAE7B735603C43DCADB633A11E58 /* RETableViewManager-RETableViewManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 490D8AA3A435C8969DDDE031C85679E6 /* Build configuration list for PBXNativeTarget "RETableViewManager-RETableViewManager" */;
+			buildPhases = (
+				56DB4C82CF6FAC41A4EE947ED5185AC7 /* Sources */,
+				AFA1D7118959CC7E014DCC5EAF661D5B /* Frameworks */,
+				F631430283F96B963E81D189E70BF688 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RETableViewManager-RETableViewManager";
+			productName = "RETableViewManager-RETableViewManager";
+			productReference = 42BBC06083DAB7CBAD1E668731A54E81 /* RETableViewManager.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		9455971C31FD6B46D95862CED71A0D8A /* Pods-LTHostingTests */ = {
 			isa = PBXNativeTarget;
@@ -525,7 +1099,45 @@
 			);
 			name = "Pods-LTHostingTests";
 			productName = "Pods-LTHostingTests";
-			productReference = 65FF7CAF14DC883830CA835C3342E0B7 /* libPods-LTHostingTests.a */;
+			productReference = 4C799DD8CBA72B20630DC7924A626BA1 /* libPods-LTHostingTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CA92E9023195C98A7A12996061B759D4 /* Pods-LTHosting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0C698B3CF1481F1EA64CE9D674132359 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */;
+			buildPhases = (
+				1092D767A52637D512892AE9C4B0D7F5 /* Sources */,
+				A60E04D238B5D6893BE675F74BE53D5A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B2C2DDCB4DE7875956C409F0B12BF4A1 /* PBXTargetDependency */,
+				8FF7554E8D70BE0DC233FAA34FDDC24E /* PBXTargetDependency */,
+				90A21674EA9641720E240D59C5503AF5 /* PBXTargetDependency */,
+				190B964E43556D96F1E9729E0B4209A5 /* PBXTargetDependency */,
+				C5CBA6BE279943D35C7E2D051E616A93 /* PBXTargetDependency */,
+			);
+			name = "Pods-LTHosting";
+			productName = "Pods-LTHosting";
+			productReference = 413D254AE86077B773A47499D80B4E9A /* libPods-LTHosting.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CBFCA926A9A43611501F56ADD0BEBD47 /* REValidation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4691BC3EB92C4BE8DCE02A62BB47B10A /* Build configuration list for PBXNativeTarget "REValidation" */;
+			buildPhases = (
+				9121D030F8939CB62BE3FB9DB9C0D099 /* Sources */,
+				90B50A9993216A8CCCF32006EC1EC74D /* Frameworks */,
+				DAF72441DAD3B4ADDE2BE9327B5FA811 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = REValidation;
+			productName = REValidation;
+			productReference = 7D8464EE4B1D4146DFA5D934DEE12C0B /* libREValidation.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		D57F6DD7CBDE11E457971075B0805982 /* ChameleonFramework */ = {
@@ -542,7 +1154,24 @@
 			);
 			name = ChameleonFramework;
 			productName = ChameleonFramework;
-			productReference = 4B29225369B75A39E934894DF55B13F3 /* libChameleonFramework.a */;
+			productReference = 8318BA164D55C9FE799863F5C6DFC319 /* libChameleonFramework.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		DB29D21AE756F61DD89CD3F72EF0A320 /* REFormattedNumberField */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96A9C9E63367E51387A9C56F6EF86C34 /* Build configuration list for PBXNativeTarget "REFormattedNumberField" */;
+			buildPhases = (
+				2EFC4B825A41C3F3579A84401D508DF5 /* Sources */,
+				4DC498F3AD9DB39260C83F72D39CBD6D /* Frameworks */,
+				C8836BDB35A335C9A3C89B61E539C7B8 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = REFormattedNumberField;
+			productName = REFormattedNumberField;
+			productReference = ECE6A67B1A44999FDFFBAE050CC59154 /* libREFormattedNumberField.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -562,20 +1191,61 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = ACBFECABAE3A2ABC7D2A4EE3ECE36CA0 /* Products */;
+			productRefGroup = 33B19C266AA359F2BEE31DE02A27FBD3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D57F6DD7CBDE11E457971075B0805982 /* ChameleonFramework */,
 				6E66B362AE57238557E51E1B585B5C93 /* HMSegmentedControl */,
-				172ADAA87AB014F18238DF2043DB4AA8 /* Pods-LTHosting */,
+				CA92E9023195C98A7A12996061B759D4 /* Pods-LTHosting */,
 				9455971C31FD6B46D95862CED71A0D8A /* Pods-LTHostingTests */,
 				4339401AA38C748D86F3C2E3C3C633E8 /* Pods-LTHostingUITests */,
+				DB29D21AE756F61DD89CD3F72EF0A320 /* REFormattedNumberField */,
+				0305D326B13311BFEC31AA42573A5D61 /* RETableViewManager */,
+				7580EAE7B735603C43DCADB633A11E58 /* RETableViewManager-RETableViewManager */,
+				CBFCA926A9A43611501F56ADD0BEBD47 /* REValidation */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		F631430283F96B963E81D189E70BF688 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2409289120684BEA8B4CD3B2BF68730B /* Card_Amex.png in Resources */,
+				F89A8B1FB28A4D2AA929527A56F5FA81 /* Card_Amex@2x.png in Resources */,
+				66556A702C6CE15025B3036A519775F1 /* Card_Back.png in Resources */,
+				A10039E94D13ED5D499AF39BE9184A62 /* Card_Back@2x.png in Resources */,
+				A50CCE287DFC3F617929F42181189232 /* Card_Discover.png in Resources */,
+				C9BCCFA66B660A76DB5E746F58BA3AAD /* Card_Discover@2x.png in Resources */,
+				3189350388AB76EA01A107E1C42E5177 /* Card_Mastercard.png in Resources */,
+				5E447C1F76A8F6CA372F3F35698C174D /* Card_Mastercard@2x.png in Resources */,
+				1A3FDEB683194962B9BAFF990E480D7E /* Card_Stack.png in Resources */,
+				E61B5B4AE0740E447858E3EDDA5331C8 /* Card_Stack@2x.png in Resources */,
+				F3ED18CC49282E6266C160B3B13B63AE /* Card_Visa.png in Resources */,
+				A3846DDC82D6F1E4F08A7DDD2EF369D7 /* Card_Visa@2x.png in Resources */,
+				8254722A07315B2E9EC9E6916549DE54 /* Ribbon_Expired.png in Resources */,
+				AD750C8C616D27918FDE07B1FE598D7E /* Ribbon_Expired@2x.png in Resources */,
+				20E465BCF0844DD518304D55E3336F57 /* Transparent@2x.png in Resources */,
+				49C411CDD4C74145AE8726F95938CD22 /* UIButtonBarArrowLeft.png in Resources */,
+				0469C725F8B3D7B2CBDAA62CB3122314 /* UIButtonBarArrowLeft@2x.png in Resources */,
+				38ED81EFCCBFE08CA7D1295DB10AA582 /* UIButtonBarArrowRight.png in Resources */,
+				8920E0893ADA8937494B224B2477EEA1 /* UIButtonBarArrowRight@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		1092D767A52637D512892AE9C4B0D7F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				203A51EA915598E88E088E1C2A351ADB /* Pods-LTHosting-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		12B0937F9BE3BF6804980CD41425D339 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -590,6 +1260,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				F89F8E81C406AFD1FDFA91F013C07D0C /* Pods-LTHostingUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EFC4B825A41C3F3579A84401D508DF5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5753B8D85719A9EBE6407F29EBDD19D /* NSString+RENumberFormat.m in Sources */,
+				1BDA069C1E55E577D5E3823176E7FFC3 /* REFormattedNumberField-dummy.m in Sources */,
+				F7073188ABFD42CFEF452DAC6C714B14 /* REFormattedNumberField.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56DB4C82CF6FAC41A4EE947ED5185AC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9121D030F8939CB62BE3FB9DB9C0D099 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B65E1AD4FCA5CFE188571D8D327A6F9 /* NSError+REValidation.m in Sources */,
+				14802842504EFE67301921776FB3902F /* REEmailValidator.m in Sources */,
+				7AD0DFA4803DC8E29FCD6C72BD45D601 /* RELengthValidator.m in Sources */,
+				245AE655DA48A218EE9E2499B4853C23 /* REPresenceValidator.m in Sources */,
+				7C25B973D4F818679394E47B43A54B0F /* REURLValidator.m in Sources */,
+				42AA670A644FB0A89B5A3932F0D8DA39 /* REValidation-dummy.m in Sources */,
+				7D88D281C8D51D83C7AAC67BDFA50298 /* REValidation.m in Sources */,
+				736F6EDCBC5FE72C3B4FE1439733BEFD /* REValidator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,35 +1323,106 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D13D99810308C457AA9E4EF5225DBB38 /* Sources */ = {
+		B115C7BD842257AB6663CD377435EACC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CEA1E3942EFBD610278839916EAF8DB /* Pods-LTHosting-dummy.m in Sources */,
+				778B370C9FF708547B864E5C9D1F6B29 /* NSBundle+RETableViewManager.m in Sources */,
+				3E171B097FF465B91C5D54E417A87D05 /* NSString+RETableViewManagerAdditions.m in Sources */,
+				AED0A269B0D9FAEBA3B42EAE6486D511 /* REActionBar.m in Sources */,
+				176E4F081F9CDBC6CA2E8E32C1A957F3 /* REBoolItem.m in Sources */,
+				FC9D1178B159E969C4A843AE5B460267 /* RECreditCardItem.m in Sources */,
+				F219BC4E7DEB39C3015BDC5F113A271D /* REDateTimeItem.m in Sources */,
+				FBD419AC61EA5DECD14873357C44933F /* REFloatItem.m in Sources */,
+				9573D19704C41A5C6DE228CB5833070A /* REInlineDatePickerItem.m in Sources */,
+				7DCF2F928D30B7095FEA723D388522FD /* REInlinePickerItem.m in Sources */,
+				2704BB4FC7C78B528B82E109114C1510 /* RELongTextItem.m in Sources */,
+				FC01372A1D9C91AF0838394E68B501C6 /* REMultipleChoiceItem.m in Sources */,
+				F4339BF1C5D04D935850034860C7D620 /* RENumberItem.m in Sources */,
+				4BD42456337F2EF38B391AF7BA3C93F1 /* REPickerItem.m in Sources */,
+				0DD9D094B2451429DA249515BA5742C5 /* REPlaceholderTextView.m in Sources */,
+				BF0ACD119206734151DFEEC89D81352B /* RERadioItem.m in Sources */,
+				F522329B43B0C505AF6927E058FA67AF /* RESegmentedItem.m in Sources */,
+				BD73BA3E7A115D7D339B6709DB061CA8 /* RETableViewBoolCell.m in Sources */,
+				E3CA0783A60DEF5D1216A3CE345AAFD7 /* RETableViewCell.m in Sources */,
+				6F2DCCCE24211BBA85B26C235240D7D6 /* RETableViewCellStyle.m in Sources */,
+				2745EAC7706E5A3453CC3912E11A5DC0 /* RETableViewCreditCardCell.m in Sources */,
+				F7C1B59ED62D1C2B7B2E127FB669EAC1 /* RETableViewDateTimeCell.m in Sources */,
+				571AFBA96E9CC0CFFB6305DD86641449 /* RETableViewFloatCell.m in Sources */,
+				26CF4D8B429CE6A9493A52AD4E53BE99 /* RETableViewInlineDatePickerCell.m in Sources */,
+				8B09BB9536E3A25C3FA707CC8F24CD49 /* RETableViewInlinePickerCell.m in Sources */,
+				65FCDC7C6EA145469882AC12C8348E9F /* RETableViewItem.m in Sources */,
+				6AC7ED17ACA83E387BE731BABE571960 /* RETableViewLongTextCell.m in Sources */,
+				06D1C531DC71475B725988DA463DA43B /* RETableViewManager-dummy.m in Sources */,
+				388087FFCEE40741EC2E612AEDF5D893 /* RETableViewManager.m in Sources */,
+				CF31DCA09573D3282D6CF19E540D7724 /* RETableViewNumberCell.m in Sources */,
+				471D37E1BBE2FCA64F0FE292F347B6AA /* RETableViewOptionCell.m in Sources */,
+				C0E0D317A910968CC4C2526ABD7C50FB /* RETableViewOptionsController.m in Sources */,
+				8764811AAE725DB6947C0B7D26912D71 /* RETableViewPickerCell.m in Sources */,
+				C8D53A2656DA4235D1FB62155D15A893 /* RETableViewSection.m in Sources */,
+				A8051EC34D7F872D90F9B6874B3FC325 /* RETableViewSegmentedCell.m in Sources */,
+				B19E23EE963265057ABF88CE4EA92FBD /* RETableViewTextCell.m in Sources */,
+				549CBAB00A2149B9A7E21CF6A2D7A202 /* RETextItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		57B18402F0E89D0196CF1775725DB0AF /* PBXTargetDependency */ = {
+		190B964E43556D96F1E9729E0B4209A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = ChameleonFramework;
-			target = D57F6DD7CBDE11E457971075B0805982 /* ChameleonFramework */;
-			targetProxy = 14C0D481D307432427612D1151623518 /* PBXContainerItemProxy */;
+			name = RETableViewManager;
+			target = 0305D326B13311BFEC31AA42573A5D61 /* RETableViewManager */;
+			targetProxy = D406195C168CFE2C5A5674CF4F631B8D /* PBXContainerItemProxy */;
 		};
-		6974DDEE950BF6F2E93B72949D1E53E0 /* PBXTargetDependency */ = {
+		1DED56D63D1993291061DEFF2C5167A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RETableViewManager-RETableViewManager";
+			target = 7580EAE7B735603C43DCADB633A11E58 /* RETableViewManager-RETableViewManager */;
+			targetProxy = CA7D29DBBF041A5CB31D63675EDB9A7D /* PBXContainerItemProxy */;
+		};
+		8FF7554E8D70BE0DC233FAA34FDDC24E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HMSegmentedControl;
 			target = 6E66B362AE57238557E51E1B585B5C93 /* HMSegmentedControl */;
-			targetProxy = C760765A57AC571791D3C0826232A3BA /* PBXContainerItemProxy */;
+			targetProxy = DBF00953D396EDF21EB2404CD4949CE4 /* PBXContainerItemProxy */;
+		};
+		90A21674EA9641720E240D59C5503AF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = REFormattedNumberField;
+			target = DB29D21AE756F61DD89CD3F72EF0A320 /* REFormattedNumberField */;
+			targetProxy = 43E1C3DF7400A28F6EC212F28BD5068C /* PBXContainerItemProxy */;
+		};
+		B2C2DDCB4DE7875956C409F0B12BF4A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChameleonFramework;
+			target = D57F6DD7CBDE11E457971075B0805982 /* ChameleonFramework */;
+			targetProxy = 3CA644E8B2E8CEE6CD911E12AD67DBCB /* PBXContainerItemProxy */;
+		};
+		BFA5A7ABA2FD1FAAEBBCF5E6893A8CA5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = REValidation;
+			target = CBFCA926A9A43611501F56ADD0BEBD47 /* REValidation */;
+			targetProxy = 1EE31A5B5992919FF96F580A969C7484 /* PBXContainerItemProxy */;
+		};
+		C5CBA6BE279943D35C7E2D051E616A93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = REValidation;
+			target = CBFCA926A9A43611501F56ADD0BEBD47 /* REValidation */;
+			targetProxy = A98646D9CA120E6893F337CC73EB3B19 /* PBXContainerItemProxy */;
+		};
+		CEC5C20A1A7CD3E435876B9F551E2E73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = REFormattedNumberField;
+			target = DB29D21AE756F61DD89CD3F72EF0A320 /* REFormattedNumberField */;
+			targetProxy = 2EC897EB883FF8B3CB581EAA9F6C0BD0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0B029688D6709A4CB39F90CAED5AEB3A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */;
+			baseConfigurationReference = C6894E12BA5E02FA965DB386B6F235F8 /* HMSegmentedControl.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -665,6 +1438,29 @@
 				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		128D2D0D02BBF08B46FC8FCD3AA809A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97409FBB5CA248F54B31121E1E5230D7 /* Pods-LTHosting.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -693,6 +1489,69 @@
 			};
 			name = Release;
 		};
+		19AD757734C41BFC426F734F52DBE3F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91581EF2AD56AEAEB607A450211379E7 /* RETableViewManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RETableViewManager/RETableViewManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		1F66DA2031661F34D36E7EA1298E1ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91581EF2AD56AEAEB607A450211379E7 /* RETableViewManager.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RETableViewManager";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/RETableViewManager/ResourceBundle-RETableViewManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = RETableViewManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3F3CA9BDF573E18C1DBAA647390AAD03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7EA14537942ECE90CA8DF98A0D4304 /* REValidation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/REValidation/REValidation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		5110EAE7A615422EA2F47F2788450716 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E53DD1C00C851219DCC05E789B42075D /* Pods-LTHostingTests.release.xcconfig */;
@@ -716,26 +1575,20 @@
 			};
 			name = Release;
 		};
-		6644FDC36715F515D1FF249236B742E9 /* Debug */ = {
+		614067FF447A5D5100FB526D1CA0F946 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E73A7D5D56E892F9CEB3875531EF79D /* Pods-LTHosting.debug.xcconfig */;
+			baseConfigurationReference = 91581EF2AD56AEAEB607A450211379E7 /* RETableViewManager.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/RETableViewManager";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "Target Support Files/RETableViewManager/ResourceBundle-RETableViewManager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = RETableViewManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
 			};
 			name = Debug;
 		};
@@ -779,9 +1632,32 @@
 			};
 			name = Release;
 		};
-		6FA311A7FEB2DD8CA51BAFAF13F7B4C3 /* Release */ = {
+		88C499A7CD09306155A6BE5A857EA6A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97409FBB5CA248F54B31121E1E5230D7 /* Pods-LTHosting.release.xcconfig */;
+			baseConfigurationReference = 1E73A7D5D56E892F9CEB3875531EF79D /* Pods-LTHosting.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		91FC844FB84B77B6F317C2C63E06E4CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA376193A9DF62B0A315A73387B3E1F /* REFormattedNumberField.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -789,14 +1665,14 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
-				MACH_O_TYPE = staticlib;
+				GCC_PREFIX_HEADER = "Target Support Files/REFormattedNumberField/REFormattedNumberField-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
@@ -827,7 +1703,7 @@
 		};
 		9EE9D2D435242AC06C2B8F5B20B04D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */;
+			baseConfigurationReference = DE5AC78CE9AF6D6D3336CF5EA1596759 /* ChameleonFramework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -873,7 +1749,7 @@
 		};
 		BD4722E7E8CB33D0C8A84DBFE1794777 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C6EB48D735ABD9CCD0F762A7A074DAB0 /* ChameleonFramework.xcconfig */;
+			baseConfigurationReference = DE5AC78CE9AF6D6D3336CF5EA1596759 /* ChameleonFramework.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -894,9 +1770,32 @@
 			};
 			name = Release;
 		};
+		C053F2F972C464873ABD4F123A8851A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91581EF2AD56AEAEB607A450211379E7 /* RETableViewManager.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/RETableViewManager/RETableViewManager-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		D9EFFB85B6BAED55C96513504D459EB8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A1C88E8E26EAA3B247451D1EF44B74F7 /* HMSegmentedControl.xcconfig */;
+			baseConfigurationReference = C6894E12BA5E02FA965DB386B6F235F8 /* HMSegmentedControl.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -905,6 +1804,29 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/HMSegmentedControl/HMSegmentedControl-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		E393EA3906635B5C7464D98B393BB349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAA376193A9DF62B0A315A73387B3E1F /* REFormattedNumberField.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/REFormattedNumberField/REFormattedNumberField-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
@@ -961,9 +1883,41 @@
 			};
 			name = Debug;
 		};
+		EB64ED447DE7408358A5A3863089B5FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7EA14537942ECE90CA8DF98A0D4304 /* REValidation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/REValidation/REValidation-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C698B3CF1481F1EA64CE9D674132359 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88C499A7CD09306155A6BE5A857EA6A6 /* Debug */,
+				128D2D0D02BBF08B46FC8FCD3AA809A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -973,20 +1927,47 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4691BC3EB92C4BE8DCE02A62BB47B10A /* Build configuration list for PBXNativeTarget "REValidation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3CA9BDF573E18C1DBAA647390AAD03 /* Debug */,
+				EB64ED447DE7408358A5A3863089B5FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		490D8AA3A435C8969DDDE031C85679E6 /* Build configuration list for PBXNativeTarget "RETableViewManager-RETableViewManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				614067FF447A5D5100FB526D1CA0F946 /* Debug */,
+				1F66DA2031661F34D36E7EA1298E1ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FE98E0EB195872286EA8FCB2855A96A /* Build configuration list for PBXNativeTarget "RETableViewManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AD757734C41BFC426F734F52DBE3F8 /* Debug */,
+				C053F2F972C464873ABD4F123A8851A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96A9C9E63367E51387A9C56F6EF86C34 /* Build configuration list for PBXNativeTarget "REFormattedNumberField" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E393EA3906635B5C7464D98B393BB349 /* Debug */,
+				91FC844FB84B77B6F317C2C63E06E4CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A2C2EA64CD5AA31F8FD3779DCAB1EA5B /* Build configuration list for PBXNativeTarget "HMSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D9EFFB85B6BAED55C96513504D459EB8 /* Debug */,
 				0B029688D6709A4CB39F90CAED5AEB3A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B26812F56928C74DA428EB12FB18C7F3 /* Build configuration list for PBXNativeTarget "Pods-LTHosting" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				6644FDC36715F515D1FF249236B742E9 /* Debug */,
-				6FA311A7FEB2DD8CA51BAFAF13F7B4C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -70,7 +70,7 @@
         [barLabel setText:@"Venue"];
     }
     [barLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
-    barLabel.textColor=[UIColor flatTealColorDark];
+    barLabel.textColor=[UIColor blackColor];
     [self.barView addSubview:barLabel];
     
     [self addArrangedSubview:self.accessoryView];

@@ -18,7 +18,6 @@
     [temp addObject:@"BullpenHv-Italic"];
     [temp addObject:@"Chosence-BoldItalic"];
     [temp addObject:@"Comfortaa"];
-    [temp addObject:@"Crapaud-petit"];
     [temp addObject:@"Hero"];
     [temp addObject:@"Kingthings Organica"];
     [temp addObject:@"Lemon/Milk"];
@@ -31,7 +30,6 @@
     [temp addObject:@"Royal Serif"];
     [temp addObject:@"Stentiga-Regular"];
     [temp addObject:@"Subway-Black"];
-    [temp addObject:@"SugarcubesRegular"];
     [temp addObject:@"Typo GeoSlab Regular Demo"];
     return [NSArray arrayWithArray:temp];
 }

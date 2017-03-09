@@ -32,7 +32,7 @@
 CGFloat bottomHeight=40;
 
 //This array dictates the order the options are presented in the segmented control
-static toolType types[]={borderTool, bodyTextTool, titleTextTool};
+static toolType types[]={titleTextTool, bodyTextTool, borderTool};
 NSInteger tCount=3;
 
 -(NSArray<NSString*>*)titles
@@ -74,11 +74,10 @@ NSInteger tCount=3;
     [bottom setType:HMSegmentedControlTypeText];
     [bottom setSelectionStyle:HMSegmentedControlSelectionStyleFullWidthStripe];
     [bottom setSelectionIndicatorLocation:HMSegmentedControlSelectionIndicatorLocationDown];
+    [bottom setSelectionIndicatorColor:[UIColor blackColor]];
     [bottom setShouldAnimateUserSelection:YES];
-    [bottom setBackgroundColor:[UIColor lightGrayColor]];
-    [bottom setTitleFormatter:^NSAttributedString*(HMSegmentedControl *cont, NSString *string, NSUInteger index, BOOL tf){
-        return [[NSAttributedString alloc] initWithString:string attributes:[NSDictionary dictionaryWithObject:[UIFont preferredFontForTextStyle:UIFontTextStyleBody] forKey:NSFontAttributeName]];
-    }];
+    [bottom setSelectedTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
+    [bottom setTitleTextAttributes:@{NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody],NSForegroundColorAttributeName:[UIColor lightGrayColor]}];
     
     __weak typeof(self) ref=self;
     [bottom setIndexChangeBlock:^(NSInteger index){

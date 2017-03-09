@@ -13,6 +13,7 @@
 #import "sizeTool.h"
 #import "fontTool.h"
 #import "textAlignmentTool.h"
+#import "backgroundTintTool.h"
 
 @interface tool(){
     __weak editingLayer *targetLayer;
@@ -60,6 +61,9 @@
             break;
         case alignmentTool:
             self=[[textAlignmentTool alloc] init];
+            break;
+        case tintTool:
+            self=[[backgroundTintTool alloc] init];
             break;
         default:
             self=[self init];

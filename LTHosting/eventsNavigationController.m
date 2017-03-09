@@ -80,7 +80,11 @@
     if(_navBar==nil)
     {
         _navBar=[super navigationBar];
-        [_navBar setBarTintColor:[UIColor flatTealColor]];
+        [_navBar setBarTintColor:[UIColor blackColor]];
+        CGFloat bottomHeight=1.0f;
+        UIView *navBarView=[[UIView alloc] initWithFrame:CGRectMake(0, _navBar.frame.origin.y+_navBar.frame.size.height-bottomHeight, self.view.frame.size.width, bottomHeight)];
+        navBarView.backgroundColor=[UIColor whiteColor];
+        [_navBar addSubview:navBarView];
     }
     return _navBar;
 }
@@ -242,6 +246,11 @@
 -(BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRequireFailureOfGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
 {
     return YES;
+}
+
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end

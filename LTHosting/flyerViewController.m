@@ -14,6 +14,7 @@
 
 @interface flyerViewController (){
     UIButton *modeButton;
+    NSArray<UIView*>* modeArrows;
     
     toolsContainer *toolViewer;
     
@@ -34,7 +35,7 @@
     toolsShowing=NO;
     
     CGFloat margin=8;
-    CGFloat width=64;
+    CGFloat width=54;
     modeButton=[[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-margin-width, [[editorView shared] frame].origin.y+margin, width, width)];
     [modeButton addTarget:self action:@selector(modeButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
     [modeButton addTarget:self action:@selector(modeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
@@ -43,6 +44,22 @@
     [modeButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
     [modeButton.layer setCornerRadius:modeButton.frame.size.height/2];
     [modeButton.layer setMasksToBounds:YES];
+    
+    modeButton.layer.borderColor=[UIColor whiteColor].CGColor;
+    modeButton.layer.borderWidth=1.0f;
+    
+    NSMutableArray *a=[[NSMutableArray alloc] init];
+    for(NSInteger i=0; i<4; i++)
+    {
+        UIImageView *arrow=[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"expandcollapsearrow.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        [arrow setContentMode:UIViewContentModeScaleAspectFit];
+        [arrow setTintColor:[UIColor whiteColor]];
+        [modeButton addSubview:arrow];
+        [a addObject:arrow];
+    }
+    modeArrows=a;
+    [self setModeButtonFrames];
+    
     [self.view addSubview:modeButton];
     
     UIBarButtonItem *backbutton=[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
@@ -57,6 +74,67 @@
     [[editorView shared] setTitleText:[[event sharedInstance] name]];
     [[editorView shared] setBodyText:[[event sharedInstance] flyerBodyForCurrentState].string];
     self.toolsShowing=YES;
+}
+
+-(void)setModeButtonFrames
+{
+    CGFloat fullWidth=modeButton.frame.size.height/sqrtf(2.0f);
+    CGFloat inset=(modeButton.frame.size.height-fullWidth)/2;
+    CGFloat seperation=fullWidth/10.0f;
+    inset+=seperation;
+    CGFloat viewWidth=(fullWidth-seperation*3)/2;
+    CGFloat x=0;
+    CGFloat y=0;
+    NSInteger rotationCounter=1;
+    CGFloat extra=0;
+    if(self.toolsShowing)
+    {
+        extra=M_PI;
+    }
+    for(NSInteger i=0; i<modeArrows.count; i++)
+    {
+        if(x==(viewWidth+seperation)*2)
+        {
+            x=0;
+            y=viewWidth+seperation;
+            rotationCounter=0;
+        }
+        [modeArrows[i] setFrame:CGRectMake(inset+x, inset+y, viewWidth, viewWidth)];
+        [modeArrows[i] setTransform:CGAffineTransformMakeRotation(M_PI_2*rotationCounter+extra)];
+        x+=viewWidth+seperation;
+        rotationCounter++;
+        if(rotationCounter==1)
+        {
+            rotationCounter+=2;
+        }
+    }
+}
+
+-(void)rotateArrowsAnimated:(BOOL)animated completion:(void(^)())completionBlock
+{
+    void (^actionBlock)()=^{
+        for(UIView *v in modeArrows)
+        {
+            [v setTransform:CGAffineTransformRotate(v.transform, M_PI)];
+        }
+    };
+    if(animated)
+    {
+        [UIView animateWithDuration:.25 animations:actionBlock completion:^(BOOL finished){
+            if(completionBlock!=nil)
+            {
+                completionBlock();
+            }
+        }];
+    }
+    else
+    {
+        actionBlock();
+        if(completionBlock!=nil)
+        {
+            completionBlock();
+        }
+    }
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -110,6 +188,7 @@ BOOL set=NO;
     [toolViewer viewWillAppear:YES];
     CGRect editorDestFrame=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height-toolViewer.frame.size.height);
     CGRect toolDestFrame=CGRectMake(toolViewer.frame.origin.x, toolViewer.frame.origin.y-toolViewer.frame.size.height, toolViewer.frame.size.width, toolViewer.frame.size.height);
+    [self rotateArrowsAnimated:animated completion:nil];
     if(animated)
     {
         [UIView animateWithDuration:.25 animations:^{
@@ -147,6 +226,7 @@ BOOL set=NO;
     CGRect editorDestFrame=self.view.bounds;
     CGRect toolDestFrame=CGRectMake(toolViewer.frame.origin.x, toolViewer.frame.origin.y+toolViewer.frame.size.height, toolViewer.frame.size.width, toolViewer.frame.size.height);
     [[editorView shared] setIsEditing:NO];
+    [self rotateArrowsAnimated:animated completion:nil];
     if(animated)
     {
         [UIView animateWithDuration:.25 animations:^{
@@ -182,14 +262,6 @@ BOOL set=NO;
 
 -(IBAction)modeButtonTouchUpInside:(UIButton*)mButton
 {
-    if(modeButton.layer.backgroundColor==[UIColor blackColor].CGColor)
-    {
-        modeButton.layer.backgroundColor=[UIColor redColor].CGColor;
-    }
-    else
-    {
-        modeButton.layer.backgroundColor=[UIColor blackColor].CGColor;
-    }
     [self modeTouchedUp];
     [self toggleToolViewAnimated:YES completion:nil];
 }
@@ -217,6 +289,10 @@ BOOL set=NO;
     [UIView animateWithDuration:.15 animations:^{
         [button setFrame:endFrame];
         [button.layer setCornerRadius:button.layer.cornerRadius*sizeConstant];
+        if(button==modeButton)
+        {
+            [self setModeButtonFrames];
+        }
     } completion:^(BOOL finished){
         if(completionBlock!=nil)
         {
@@ -256,7 +332,7 @@ BOOL set=NO;
         editor.alpha=1.0f;
     }completion:^(BOOL finished){
         [editor becomeFirstResponder];
-        [self setToolsShowing:YES animated:YES];
+        [self setToolsShowing:YES animated:NO];
     }];
 }
 

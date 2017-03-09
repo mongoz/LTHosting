@@ -8,6 +8,7 @@
 
 #import "aboutOptionView.h"
 #import "stackView.h"
+#import "keyboardAccessory.h"
 
 @interface aboutOptionView(){
     UITextView *tView;
@@ -44,7 +45,12 @@
     [tView setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
     [tView setTextColor:[UIColor flatTealColorDark]];
     [tView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
-    tView.inputAccessoryView=self.inputAccessoryView;
+    tView.inputAccessoryView=[keyboardAccessory accessoryWithType:dismissAccessory width:self.frame.size.width];
+    __weak typeof(self) weakSelf=self;
+    [(keyboardAccessory*)tView.inputAccessoryView setDismissBlock:^(keyboardAccessory* acc){
+        [weakSelf tapBar];
+    }];
+    tView.autocorrectionType=UITextAutocorrectionTypeNo;
     [self.accessoryView.layer setShadowColor:self.barView.layer.shadowColor];
     [self.accessoryView.layer setShadowRadius:self.barView.layer.shadowRadius];
     [self.accessoryView.layer setShadowOpacity:self.barView.layer.shadowOpacity];
@@ -58,7 +64,7 @@
             UITextField *field=(UITextField*)v;
             [v setUserInteractionEnabled:NO];
             [(UITextField*)v setPlaceholder:@"Add About..."];
-            field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[[UIColor flatTealColorDark] colorWithAlphaComponent:.75] forKey:NSForegroundColorAttributeName]];
+            field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[UIColor lightGrayColor] forKey:NSForegroundColorAttributeName]];
             [self.barView addSubview:field];
         }
     }

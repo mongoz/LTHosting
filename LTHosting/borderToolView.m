@@ -45,9 +45,10 @@ NSArray<toolViewItem*>* items=nil;
     if(items==nil)
     {
         NSMutableArray *objects=[[NSMutableArray alloc] init];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:borderPickerTool target:[[editorView shared] borderLayer]]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:colorPickerTool target:[[editorView shared] borderLayer]]];
-        [objects addObject:[[toolViewItem alloc] initWithSkew:shadePickerTool target:[[editorView shared] borderLayer]]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:borderPickerTool target:[[editorView shared] borderLayer] toolType:borderTool]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:tintTool target:[[editorView shared] backgroundTintLayer] toolType:borderTool]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:colorPickerTool target:[[editorView shared] borderLayer] toolType:borderTool]];
+        [objects addObject:[[toolViewItem alloc] initWithSkew:shadePickerTool target:[[editorView shared] borderLayer] toolType:borderTool]];
         for(toolViewItem *t in self.subviews)
         {
             [t setFrame:CGRectMake(0, 0, self.frame.size.height/self.toolPicker.heightWidthRatio, self.frame.size.height)];
@@ -65,7 +66,7 @@ NSArray<toolViewItem*>* items=nil;
     {
         [borderPicker setSelectedIndex:0];
     }
-    for(NSInteger i=1; i<[self items].count; i++)
+    for(NSInteger i=2; i<[self items].count; i++)
     {
         [self items][i].selectable=shouldbe;
     }

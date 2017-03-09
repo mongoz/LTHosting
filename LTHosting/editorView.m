@@ -15,6 +15,7 @@
     textEditingLayer *title;
     textEditingLayer *body;
     borderEditingLayer *border;
+    CALayer *backgroundTintLayer;
     
     BOOL isEditing;
 }
@@ -51,6 +52,10 @@ static editorView *instance=nil;
     backgroundLayer=[CALayer layer];
     [self.layer addSublayer:backgroundLayer];
     [backgroundLayer setContentsGravity:kCAGravityResizeAspect];
+    backgroundTintLayer=[[tintEditinglayer alloc] init];
+    backgroundTintLayer.backgroundColor=[UIColor blackColor].CGColor;
+    backgroundTintLayer.opacity=0.0f;
+    [backgroundLayer addSublayer:backgroundTintLayer];
     
     //Editing layers
     border=[[borderEditingLayer alloc] init];
@@ -68,6 +73,7 @@ static editorView *instance=nil;
     [self.layer addSublayer:body];
     isEditing=YES;
     self.backgroundColor=[UIColor whiteColor];
+    
     
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] init];
     tap.numberOfTapsRequired=1;
@@ -139,6 +145,7 @@ static editorView *instance=nil;
         newSize=CGSizeMake(newSize.width, newSize.width*imageSize.height/imageSize.width);
     }
     [backgroundLayer setFrame:CGRectMake(self.bounds.size.width/2-newSize.width/2, self.bounds.size.height/2-newSize.height/2, newSize.width, newSize.height)];
+    backgroundTintLayer.frame=backgroundLayer.bounds;
     if(cover!=nil)
     {
         [cover setFrame:backgroundLayer.frame];
@@ -174,6 +181,11 @@ static editorView *instance=nil;
 -(borderEditingLayer*)borderLayer
 {
     return border;
+}
+
+-(CALayer*)backgroundTintLayer
+{
+    return backgroundTintLayer;
 }
 
 -(void)updateImageContainerWithImage:(UIImage *)image

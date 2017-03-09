@@ -31,6 +31,7 @@
     [super viewDidLoad];
     _scrollView.delegate=self;
     _scrollView.bounces=NO;
+    _scrollView.delaysContentTouches=NO;
     [self registerForKeyboardNotifications];
     self.view.translatesAutoresizingMaskIntoConstraints=YES;
     [_stackView setDistribution:UIStackViewDistributionFill];
@@ -39,7 +40,6 @@
     animator=[[UIDynamicAnimator alloc] init];
     animator.delegate=self;
     // Do any additional setup after loading the view.
-    _scrollView.delaysContentTouches=NO;
     [self configureView];
 }
 
@@ -93,6 +93,7 @@
 
 -(void)accessoryShowingWillChangeForEventOptionView:(eventOptionView *)view
 {
+    BOOL oneOpen=NO;
     for(NSInteger i=1; i<allViews.count; i++)
     {
         if(allViews[i]==view)
@@ -104,6 +105,7 @@
                 if([allViews[i] isAccessoryViewShowing])
                 {
                     [allViews[i] tapBar];
+                    oneOpen=YES;
                 }
             }
             i=savei;
@@ -113,13 +115,24 @@
                 if([allViews[i] isAccessoryViewShowing])
                 {
                     [allViews[i] tapBar];
+                    oneOpen=YES;
                 }
                 
             }
             break;
         }
     }
-    
+    if([view isAccessoryViewShowing])
+    {
+        CGPoint offset=_scrollView.contentOffset;
+        [UIView animateWithDuration:.25 animations:^{
+            [_scrollView setContentSize:CGSizeMake(_scrollView.contentSize.width, _scrollView.contentSize.height-view.accessoryView.frame.size.height)];
+            if(oneOpen)
+            {
+                _scrollView.contentOffset=offset;
+            }
+        }];
+    }
 }
 
 

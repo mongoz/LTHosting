@@ -7,6 +7,7 @@
 //
 
 #import "nameOptionView.h"
+#import "keyboardAccessory.h"
 
 @interface nameOptionView(){
     UITextField *field;
@@ -36,11 +37,16 @@
     CGFloat margin=8;
     CGRect textFieldRect=CGRectMake(margin, margin, self.barView.frame.size.width-margin*2, self.barView.frame.size.height-margin*2);
     field=[[UITextField alloc] initWithFrame:textFieldRect];
-    field.inputAccessoryView=[self inputAccessoryView];
-    field.textColor=[UIColor flatTealColorDark];
+    keyboardAccessory *acc=[keyboardAccessory accessoryWithType:dismissAccessory width:self.frame.size.width];
+    acc.dismissBlock=^(keyboardAccessory *accessory){
+        [self donePressed:field];
+    };
+    field.inputAccessoryView=acc;
+    field.autocorrectionType=UITextAutocorrectionTypeNo;
+    field.textColor=[UIColor blackColor];
     [field setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
     [field setPlaceholder:@"Add Name..."];
-    field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[[UIColor flatTealColorDark] colorWithAlphaComponent:.75] forKey:NSForegroundColorAttributeName]];
+    field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[UIColor lightGrayColor] forKey:NSForegroundColorAttributeName]];
     [self.barView addSubview:field];
     [field setReturnKeyType:UIReturnKeyDone];
     [field addTarget:self action:@selector(donePressed:) forControlEvents:UIControlEventPrimaryActionTriggered];

@@ -36,35 +36,45 @@
     UIButton *goButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, (self.barView.frame.size.width/self.barView.frame.size.height)*self.barView.frame.size.height-margin*2, self.barView.frame.size.height-margin*2)];
     [goButton setCenter:self.barView.center];
     [goButton setTitle:@"Go" forState:UIControlStateNormal];
-    [goButton setBackgroundColor:[UIColor flatMintColor]];
+    [goButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [goButton setBackgroundColor:[UIColor blackColor]];
+    goButton.layer.borderColor=goButton.backgroundColor.CGColor;
+    goButton.layer.borderWidth=2.0f;
     [goButton.layer setCornerRadius:goButton.frame.size.height/2];
     [goButton.layer setMasksToBounds:YES];
-    [goButton addTarget:self action:@selector(goPressed:) forControlEvents:UIControlEventTouchDown];
+    [goButton addTarget:self action:@selector(goPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [goButton addTarget:self action:@selector(goTouchDown:) forControlEvents:UIControlEventTouchDown];
+    [goButton addTarget:self action:@selector(goTouchUp:) forControlEvents:UIControlEventTouchUpInside];
+    [goButton addTarget:self action:@selector(goTouchUp:) forControlEvents:UIControlEventTouchUpOutside];
     [goButton setShowsTouchWhenHighlighted:YES];
     self.barView.layer.shadowOpacity=0.0f;
     goButton.showsTouchWhenHighlighted=NO;
     [self.barView addSubview:goButton];
 }
 
+-(void)goTouchDown:(UIButton*)goButton
+{
+    [self swapButtonColors:goButton];
+}
+
+-(void)goTouchUp:(UIButton*)goButton
+{
+    [self swapButtonColors:goButton];
+}
+
+-(void)swapButtonColors:(UIButton*)button
+{
+    UIColor *title=button.currentTitleColor;
+    [button setTitleColor:button.backgroundColor forState:UIControlStateNormal];
+    button.backgroundColor=title;
+}
+
 -(IBAction)goPressed:(UIButton*)sender
 {
-    CALayer *highlightLayer=[CALayer layer];
-    [highlightLayer setFrame:sender.bounds];
-    [highlightLayer setCornerRadius:sender.layer.cornerRadius];
-    [highlightLayer setBackgroundColor:[UIColor whiteColor].CGColor];
-    [highlightLayer setOpacity:0.0f];
-    [sender.layer addSublayer:highlightLayer];
-    [UIView animateWithDuration:.25 animations:^{
-        [highlightLayer setOpacity:0.5f];
-    } completion:^(BOOL finished){
-        [UIView animateWithDuration:.25 animations:^{
-            [highlightLayer setOpacity:0.0f];
-        } completion:^(BOOL finished){
-            [highlightLayer removeFromSuperlayer];
-            [self.myDelegate goWasPressed];
-        }];
-    }];
-    
+    if(self.myDelegate!=nil)
+    {
+        [self.myDelegate goWasPressed];
+    }
 }
 
 @end
