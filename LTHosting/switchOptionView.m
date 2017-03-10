@@ -132,4 +132,20 @@
 {
     return YES;
 }
+
+-(BOOL)isComplete
+{
+    return YES;
+}
+
+-(NSString*)optionName
+{
+    switch(self.toolType)
+    {
+        case LTswitchOptionFree:
+            return @"Free/Paid";
+        case LTswitchOptionPrivate:
+            return @"Private/Public";
+    }
+}
 @end

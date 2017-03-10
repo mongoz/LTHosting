@@ -43,7 +43,7 @@
     tView=[[UITextView alloc] initWithFrame:self.accessoryView.bounds];
     [self.accessoryView addSubview:tView];
     [tView setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]];
-    [tView setTextColor:[UIColor flatTealColorDark]];
+    [tView setTextColor:[UIColor blackColor]];
     [tView setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     tView.inputAccessoryView=[keyboardAccessory accessoryWithType:dismissAccessory width:self.frame.size.width];
     __weak typeof(self) weakSelf=self;
@@ -120,5 +120,14 @@
     [[event sharedInstance] setAbout:tView.text];
 }
 
+-(BOOL)isComplete
+{
+    return tView.text.length>0;
+}
+
+-(NSString*)optionName
+{
+    return @"About";
+}
 
 @end

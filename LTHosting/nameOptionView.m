@@ -81,4 +81,14 @@
     [[event sharedInstance] setName:field.text];
 }
 
+-(NSString*)optionName
+{
+    return @"Name";
+}
+
+-(BOOL)isComplete
+{
+    return field.text.length>0;
+}
+
 @end

@@ -184,4 +184,14 @@
     
 }
 
+-(BOOL)isComplete
+{
+    return YES;
+}
+
+-(NSString*)optionName
+{
+    return @"Date";
+}
+
 @end

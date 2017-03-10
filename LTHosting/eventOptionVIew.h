@@ -33,6 +33,10 @@
 
 -(void)detailEditingWillEnd;
 
+-(BOOL)isComplete;
+
+@property (readonly) NSString *optionName;
+
 @property CGFloat barHeight;
 
 @end

@@ -229,13 +229,49 @@ NSDate *lastUpdate=nil;
     [self performSegueWithIdentifier:@"toCamera" sender:self];
 }
 
--(void)goWasPressed
+-(NSArray<NSString*>*)incompleteOptions
 {
+    NSMutableArray *arr=[[NSMutableArray alloc] init];
     for(eventOptionView *v in allViews)
     {
-        [v detailEditingWillEnd];
+        if(!v.isComplete)
+        {
+            [arr addObject:v.optionName];
+        }
     }
-    [self pressedGo];
+    return arr;
+}
+
+-(void)goWasPressed
+{
+    NSArray<NSString*>* incompleteArray=[self incompleteOptions];
+    if(incompleteArray.count==0)
+    {
+        for(eventOptionView *v in allViews)
+        {
+            [v detailEditingWillEnd];
+        }
+        [self pressedGo];
+    }
+    else
+    {
+        NSMutableString *completeString=[[NSMutableString alloc] init];
+        [completeString appendString:@"Complete the following fields to continue:"];
+        for(NSString *op in incompleteArray)
+        {
+            [completeString appendString:[NSString stringWithFormat:@"\n-%@",op]];
+        }
+        UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"Incomplete Event" message:completeString preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *ok=[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+            [alert dismissViewControllerAnimated:YES completion:^{
+                
+            }];
+        }];
+        [alert addAction:ok];
+        [self presentViewController:alert animated:YES completion:^{
+            
+        }];
+    }
 }
 
 @end

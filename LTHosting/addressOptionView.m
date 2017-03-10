@@ -73,7 +73,7 @@
     [field addTarget:self action:@selector(textChanged:) forControlEvents:UIControlEventEditingChanged];
     self.accessoryView.hidden=YES;
     
-    field.placeholder=@"Add Address...";
+    field.placeholder=@"Add Location...";
     field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[UIColor lightGrayColor] forKey:NSForegroundColorAttributeName]];
     [self.barView addSubview:field];
     
@@ -181,5 +181,12 @@
         }];
     }
 }
+
+-(NSString*)optionName
+{
+    return @"Location";
+}
+
+
 
 @end

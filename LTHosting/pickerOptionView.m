@@ -148,4 +148,21 @@
         [[event sharedInstance] setVenue:barLabel.text];
     }
 }
+
+-(BOOL)isComplete
+{
+    return YES;
+}
+
+-(NSString*)optionName
+{
+    switch(self.toolType)
+    {
+        case LTPickerOptionMusic:
+            return @"Music";
+        case LTPickerOptionVenue:
+            return @"Venue";
+    }
+}
+
 @end

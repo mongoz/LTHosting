@@ -77,4 +77,14 @@
     }
 }
 
+-(BOOL)isComplete
+{
+    return YES;
+}
+
+-(NSString*)optionName
+{
+    return @"Go";
+}
+
 @end

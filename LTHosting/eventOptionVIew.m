@@ -141,4 +141,14 @@ BOOL hasAddedBaseline=NO;
     
 }
 
+-(NSString*)optionName
+{
+    return @"Option";
+}
+
+-(BOOL)isComplete
+{
+    return YES;
+}
+
 @end
