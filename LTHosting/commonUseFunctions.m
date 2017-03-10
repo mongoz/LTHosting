@@ -7,7 +7,6 @@
 //
 
 #import "commonUseFunctions.h"
-#import "imageEditorView.h"
 #import <ChameleonFramework/Chameleon.h>
 
 @implementation NSObject(extension)
