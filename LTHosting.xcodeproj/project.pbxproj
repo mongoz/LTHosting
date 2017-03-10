@@ -65,7 +65,7 @@
 		3282740E1E723E860077722B /* seperatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273F61E723E860077722B /* seperatorCell.m */; };
 		3282740F1E723E860077722B /* seperatorTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273F81E723E860077722B /* seperatorTableViewItem.m */; };
 		328274101E723E860077722B /* user.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273FA1E723E860077722B /* user.m */; };
-		328274131E724E7F0077722B /* EventPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328274121E724E7F0077722B /* EventPage.storyboard */; };
+		328274151E724F200077722B /* EventPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328274141E724F200077722B /* EventPage.storyboard */; };
 		3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6CD1E48766100042C26 /* navigationScrollView.m */; };
 		3290A6E31E496E0A00042C26 /* eventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6E21E496E0A00042C26 /* eventViewController.m */; };
 		3290A6F21E49BF9F00042C26 /* eventOptionVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A6F11E49BF9F00042C26 /* eventOptionVIew.m */; };
@@ -255,7 +255,7 @@
 		328273F81E723E860077722B /* seperatorTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = seperatorTableViewItem.m; path = "Event Page Code Files/seperatorTableViewItem.m"; sourceTree = SOURCE_ROOT; };
 		328273F91E723E860077722B /* user.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = user.h; path = "Event Page Code Files/user.h"; sourceTree = SOURCE_ROOT; };
 		328273FA1E723E860077722B /* user.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = user.m; path = "Event Page Code Files/user.m"; sourceTree = SOURCE_ROOT; };
-		328274121E724E7F0077722B /* EventPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventPage.storyboard; path = "../Event Page Code Files/EventPage.storyboard"; sourceTree = "<group>"; };
+		328274141E724F200077722B /* EventPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventPage.storyboard; path = "../Event Page Code Files/EventPage.storyboard"; sourceTree = "<group>"; };
 		3290A6CC1E48766100042C26 /* navigationScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = navigationScrollView.h; sourceTree = "<group>"; };
 		3290A6CD1E48766100042C26 /* navigationScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = navigationScrollView.m; sourceTree = "<group>"; };
 		3290A6E11E496E0A00042C26 /* eventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewController.h; sourceTree = "<group>"; };
@@ -773,7 +773,7 @@
 				32C024CA1E72019500D6F39F /* Hosting */,
 				324BC1761E38018D00C9B629 /* usefulArray.h */,
 				324BC1771E38018D00C9B629 /* usefulArray.m */,
-				328274121E724E7F0077722B /* EventPage.storyboard */,
+				328274141E724F200077722B /* EventPage.storyboard */,
 				32AF047A1E180F67006D4E19 /* Hosting.storyboard */,
 				3290A7261E4AB91A00042C26 /* Unused.storyboard */,
 				32AF04801E180F67006D4E19 /* Assets.xcassets */,
@@ -998,6 +998,7 @@
 				32EB4A0F1E68E30400E9E714 /* Kingthings Organica.ttf in Resources */,
 				32EB4A101E68E30400E9E714 /* LemonMilk.otf in Resources */,
 				3249C4DE1E6BCB1900F23B60 /* alignment.png in Resources */,
+				328274151E724F200077722B /* EventPage.storyboard in Resources */,
 				3249C4E81E6BD5E000F23B60 /* expandcollapsearrow.png in Resources */,
 				32EB4A111E68E30400E9E714 /* LinLibertine_aBL.ttf in Resources */,
 				32EB4A121E68E30400E9E714 /* Lissain didone.ttf in Resources */,
@@ -1030,7 +1031,6 @@
 				3249C4E11E6BCB1900F23B60 /* font icon.png in Resources */,
 				3234D0CF1E540EAE008245B7 /* pizzaborder.png in Resources */,
 				327708151E2DF74F000FE30A /* maptrash.png in Resources */,
-				328274131E724E7F0077722B /* EventPage.storyboard in Resources */,
 				3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */,
 				32AF04811E180F67006D4E19 /* Assets.xcassets in Resources */,
 				32AF047C1E180F67006D4E19 /* Hosting.storyboard in Resources */,
