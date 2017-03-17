@@ -52,11 +52,6 @@
 		323C9B2B1E79E42D009FB0F6 /* skulls.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C9B1D1E79E42D009FB0F6 /* skulls.png */; };
 		323C9B2C1E79E42D009FB0F6 /* stars.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C9B1E1E79E42D009FB0F6 /* stars.png */; };
 		323C9B2D1E79E42D009FB0F6 /* triangles.png in Resources */ = {isa = PBXBuildFile; fileRef = 323C9B1F1E79E42D009FB0F6 /* triangles.png */; };
-		323C9B301E7A1745009FB0F6 /* LTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C9B2F1E7A1745009FB0F6 /* LTImagePickerController.m */; };
-		323C9B331E7A175C009FB0F6 /* LTImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C9B321E7A175C009FB0F6 /* LTImagePicker.m */; };
-		323C9B361E7A17E4009FB0F6 /* LTImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C9B351E7A17E4009FB0F6 /* LTImageManager.m */; };
-		323C9B391E7A44E7009FB0F6 /* LTImagePickerThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 323C9B381E7A44E6009FB0F6 /* LTImagePickerThumbnail.m */; };
-		323DD00E1E7B063300F3F7AF /* eventPageFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 323DD00D1E7B063300F3F7AF /* eventPageFooterView.m */; };
 		3249C4BA1E69083000F23B60 /* fontTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249C4B81E69083000F23B60 /* fontTool.m */; };
 		3249C4BD1E69083E00F23B60 /* textAlignmentTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249C4BB1E69083E00F23B60 /* textAlignmentTool.m */; };
 		3249C4C01E69084900F23B60 /* sizeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 3249C4BE1E69084900F23B60 /* sizeTool.m */; };
@@ -154,11 +149,16 @@
 		32C82E4D1E5FDEFB00D557A5 /* test3.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C82E4C1E5FDEFB00D557A5 /* test3.png */; };
 		32D4E1851E1EDF9800616488 /* eventOptionsImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4E1841E1EDF9800616488 /* eventOptionsImageTableViewCell.m */; };
 		32DEA0371E65715300FCFFFF /* textToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DEA0351E65715300FCFFFF /* textToolView.m */; };
-		32E9ACBE1E7B4B5A00703EDF /* LTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACBD1E7B4B5A00703EDF /* LTTextView.m */; };
-		32E9ACC11E7B4E7D00703EDF /* LTTextViewImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACC01E7B4E7D00703EDF /* LTTextViewImageContainer.m */; };
 		32E9ACC51E7B680D00703EDF /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC21E7B680D00703EDF /* fire.png */; };
 		32E9ACC61E7B680D00703EDF /* PIZZA.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC31E7B680D00703EDF /* PIZZA.png */; };
 		32E9ACC71E7B680D00703EDF /* SPEAKER.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC41E7B680D00703EDF /* SPEAKER.png */; };
+		32E9ACCC1E7B7F9D00703EDF /* LTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACC91E7B7F9D00703EDF /* LTTextView.m */; };
+		32E9ACCD1E7B7F9D00703EDF /* LTTextViewImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACCB1E7B7F9D00703EDF /* LTTextViewImageContainer.m */; };
+		32E9ACD61E7B7FB900703EDF /* LTImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACCF1E7B7FB900703EDF /* LTImageManager.m */; };
+		32E9ACD71E7B7FB900703EDF /* LTImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACD11E7B7FB900703EDF /* LTImagePicker.m */; };
+		32E9ACD81E7B7FB900703EDF /* LTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACD31E7B7FB900703EDF /* LTImagePickerController.m */; };
+		32E9ACD91E7B7FB900703EDF /* LTImagePickerThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACD51E7B7FB900703EDF /* LTImagePickerThumbnail.m */; };
+		32E9ACDC1E7B7FC600703EDF /* eventPageFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACDB1E7B7FC600703EDF /* eventPageFooterView.m */; };
 		32EB4A081E68E30400E9E714 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F41E68DFA000E9E714 /* BebasNeue.otf */; };
 		32EB4A091E68E30400E9E714 /* bullpen hv it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F51E68DFA000E9E714 /* bullpen hv it.ttf */; };
 		32EB4A0A1E68E30400E9E714 /* Chosence Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F61E68DFA000E9E714 /* Chosence Bold Italic.otf */; };
@@ -248,16 +248,6 @@
 		323C9B1D1E79E42D009FB0F6 /* skulls.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skulls.png; sourceTree = "<group>"; };
 		323C9B1E1E79E42D009FB0F6 /* stars.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stars.png; sourceTree = "<group>"; };
 		323C9B1F1E79E42D009FB0F6 /* triangles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = triangles.png; sourceTree = "<group>"; };
-		323C9B2E1E7A1744009FB0F6 /* LTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTImagePickerController.h; sourceTree = "<group>"; };
-		323C9B2F1E7A1745009FB0F6 /* LTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTImagePickerController.m; sourceTree = "<group>"; };
-		323C9B311E7A175B009FB0F6 /* LTImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTImagePicker.h; sourceTree = "<group>"; };
-		323C9B321E7A175C009FB0F6 /* LTImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTImagePicker.m; sourceTree = "<group>"; };
-		323C9B341E7A17E4009FB0F6 /* LTImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImageManager.h; path = Assets.xcassets/LTImageManager.h; sourceTree = "<group>"; };
-		323C9B351E7A17E4009FB0F6 /* LTImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImageManager.m; path = Assets.xcassets/LTImageManager.m; sourceTree = "<group>"; };
-		323C9B371E7A44E5009FB0F6 /* LTImagePickerThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTImagePickerThumbnail.h; sourceTree = "<group>"; };
-		323C9B381E7A44E6009FB0F6 /* LTImagePickerThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTImagePickerThumbnail.m; sourceTree = "<group>"; };
-		323DD00C1E7B063300F3F7AF /* eventPageFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventPageFooterView.h; sourceTree = "<group>"; };
-		323DD00D1E7B063300F3F7AF /* eventPageFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventPageFooterView.m; sourceTree = "<group>"; };
 		3249C4B81E69083000F23B60 /* fontTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fontTool.m; sourceTree = SOURCE_ROOT; };
 		3249C4B91E69083000F23B60 /* fontTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fontTool.h; sourceTree = SOURCE_ROOT; };
 		3249C4BB1E69083E00F23B60 /* textAlignmentTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = textAlignmentTool.m; sourceTree = SOURCE_ROOT; };
@@ -437,13 +427,23 @@
 		32D4E1841E1EDF9800616488 /* eventOptionsImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionsImageTableViewCell.m; sourceTree = "<group>"; };
 		32DEA0351E65715300FCFFFF /* textToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = textToolView.m; path = LTHosting/textToolView.m; sourceTree = SOURCE_ROOT; };
 		32DEA0361E65715300FCFFFF /* textToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = textToolView.h; path = LTHosting/textToolView.h; sourceTree = SOURCE_ROOT; };
-		32E9ACBC1E7B4B5A00703EDF /* LTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextView.h; sourceTree = "<group>"; };
-		32E9ACBD1E7B4B5A00703EDF /* LTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextView.m; sourceTree = "<group>"; };
-		32E9ACBF1E7B4E7C00703EDF /* LTTextViewImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextViewImageContainer.h; sourceTree = "<group>"; };
-		32E9ACC01E7B4E7D00703EDF /* LTTextViewImageContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextViewImageContainer.m; sourceTree = "<group>"; };
 		32E9ACC21E7B680D00703EDF /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		32E9ACC31E7B680D00703EDF /* PIZZA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PIZZA.png; sourceTree = "<group>"; };
 		32E9ACC41E7B680D00703EDF /* SPEAKER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPEAKER.png; sourceTree = "<group>"; };
+		32E9ACC81E7B7F9D00703EDF /* LTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTextView.h; path = code/LTTextView.h; sourceTree = SOURCE_ROOT; };
+		32E9ACC91E7B7F9D00703EDF /* LTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTextView.m; path = code/LTTextView.m; sourceTree = SOURCE_ROOT; };
+		32E9ACCA1E7B7F9D00703EDF /* LTTextViewImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTextViewImageContainer.h; path = code/LTTextViewImageContainer.h; sourceTree = SOURCE_ROOT; };
+		32E9ACCB1E7B7F9D00703EDF /* LTTextViewImageContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTextViewImageContainer.m; path = code/LTTextViewImageContainer.m; sourceTree = SOURCE_ROOT; };
+		32E9ACCE1E7B7FB900703EDF /* LTImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImageManager.h; path = code/LTImageManager.h; sourceTree = SOURCE_ROOT; };
+		32E9ACCF1E7B7FB900703EDF /* LTImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImageManager.m; path = code/LTImageManager.m; sourceTree = SOURCE_ROOT; };
+		32E9ACD01E7B7FB900703EDF /* LTImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePicker.h; path = code/LTImagePicker.h; sourceTree = SOURCE_ROOT; };
+		32E9ACD11E7B7FB900703EDF /* LTImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePicker.m; path = code/LTImagePicker.m; sourceTree = SOURCE_ROOT; };
+		32E9ACD21E7B7FB900703EDF /* LTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePickerController.h; path = code/LTImagePickerController.h; sourceTree = SOURCE_ROOT; };
+		32E9ACD31E7B7FB900703EDF /* LTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePickerController.m; path = code/LTImagePickerController.m; sourceTree = SOURCE_ROOT; };
+		32E9ACD41E7B7FB900703EDF /* LTImagePickerThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePickerThumbnail.h; path = code/LTImagePickerThumbnail.h; sourceTree = SOURCE_ROOT; };
+		32E9ACD51E7B7FB900703EDF /* LTImagePickerThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePickerThumbnail.m; path = code/LTImagePickerThumbnail.m; sourceTree = SOURCE_ROOT; };
+		32E9ACDA1E7B7FC600703EDF /* eventPageFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageFooterView.h; path = code/eventPageFooterView.h; sourceTree = SOURCE_ROOT; };
+		32E9ACDB1E7B7FC600703EDF /* eventPageFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageFooterView.m; path = code/eventPageFooterView.m; sourceTree = SOURCE_ROOT; };
 		32EB49F41E68DFA000E9E714 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		32EB49F51E68DFA000E9E714 /* bullpen hv it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bullpen hv it.ttf"; sourceTree = "<group>"; };
 		32EB49F61E68DFA000E9E714 /* Chosence Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chosence Bold Italic.otf"; sourceTree = "<group>"; };
@@ -546,14 +546,14 @@
 		323C9B3A1E7A6A69009FB0F6 /* LTImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
-				323C9B2E1E7A1744009FB0F6 /* LTImagePickerController.h */,
-				323C9B2F1E7A1745009FB0F6 /* LTImagePickerController.m */,
-				323C9B311E7A175B009FB0F6 /* LTImagePicker.h */,
-				323C9B321E7A175C009FB0F6 /* LTImagePicker.m */,
-				323C9B341E7A17E4009FB0F6 /* LTImageManager.h */,
-				323C9B351E7A17E4009FB0F6 /* LTImageManager.m */,
-				323C9B371E7A44E5009FB0F6 /* LTImagePickerThumbnail.h */,
-				323C9B381E7A44E6009FB0F6 /* LTImagePickerThumbnail.m */,
+				32E9ACCE1E7B7FB900703EDF /* LTImageManager.h */,
+				32E9ACCF1E7B7FB900703EDF /* LTImageManager.m */,
+				32E9ACD01E7B7FB900703EDF /* LTImagePicker.h */,
+				32E9ACD11E7B7FB900703EDF /* LTImagePicker.m */,
+				32E9ACD21E7B7FB900703EDF /* LTImagePickerController.h */,
+				32E9ACD31E7B7FB900703EDF /* LTImagePickerController.m */,
+				32E9ACD41E7B7FB900703EDF /* LTImagePickerThumbnail.h */,
+				32E9ACD51E7B7FB900703EDF /* LTImagePickerThumbnail.m */,
 			);
 			name = LTImagePickerController;
 			sourceTree = "<group>";
@@ -735,17 +735,17 @@
 				328273EA1E723E860077722B /* fullEventDetailViewController.m */,
 				328273EF1E723E860077722B /* LTTableViewSection.h */,
 				328273F01E723E860077722B /* LTTableViewSection.m */,
-				32E9ACBC1E7B4B5A00703EDF /* LTTextView.h */,
-				32E9ACBD1E7B4B5A00703EDF /* LTTextView.m */,
-				32E9ACBF1E7B4E7C00703EDF /* LTTextViewImageContainer.h */,
-				32E9ACC01E7B4E7D00703EDF /* LTTextViewImageContainer.m */,
+				32E9ACC81E7B7F9D00703EDF /* LTTextView.h */,
+				32E9ACC91E7B7F9D00703EDF /* LTTextView.m */,
+				32E9ACCA1E7B7F9D00703EDF /* LTTextViewImageContainer.h */,
+				32E9ACCB1E7B7F9D00703EDF /* LTTextViewImageContainer.m */,
 				323C9B3A1E7A6A69009FB0F6 /* LTImagePickerController */,
 				328273CF1E723E850077722B /* commentAddContainer.h */,
 				328273D01E723E850077722B /* commentAddContainer.m */,
 				328273D11E723E850077722B /* commentAddView.h */,
 				328273D21E723E850077722B /* commentAddView.m */,
-				323DD00C1E7B063300F3F7AF /* eventPageFooterView.h */,
-				323DD00D1E7B063300F3F7AF /* eventPageFooterView.m */,
+				32E9ACDA1E7B7FC600703EDF /* eventPageFooterView.h */,
+				32E9ACDB1E7B7FC600703EDF /* eventPageFooterView.m */,
 				328274111E723F620077722B /* Header Views */,
 				3282739E1E720D220077722B /* Table View Cells */,
 				328273AB1E720D220077722B /* Table View Items */,
@@ -1372,26 +1372,26 @@
 				3249C4BA1E69083000F23B60 /* fontTool.m in Sources */,
 				328273FE1E723E860077722B /* event.m in Sources */,
 				323498641E481EB9000148DF /* eventsNavigationController.m in Sources */,
+				32E9ACD71E7B7FB900703EDF /* LTImagePicker.m in Sources */,
 				32AF04791E180F67006D4E19 /* eventCameraViewController.m in Sources */,
 				3290A7091E49F8B800042C26 /* stackDatePicker.m in Sources */,
+				32E9ACD61E7B7FB900703EDF /* LTImageManager.m in Sources */,
 				3282740C1E723E860077722B /* REAttributedStringCell.m in Sources */,
 				32998EB51E5FF4C300DFA698 /* editorView.m in Sources */,
-				323C9B361E7A17E4009FB0F6 /* LTImageManager.m in Sources */,
 				328274011E723E860077722B /* eventPageHeaderView.m in Sources */,
-				32E9ACC11E7B4E7D00703EDF /* LTTextViewImageContainer.m in Sources */,
 				32998EAE1E5FF4C300DFA698 /* textEditingLayer.m in Sources */,
+				32E9ACCD1E7B7F9D00703EDF /* LTTextViewImageContainer.m in Sources */,
 				32998EB41E5FF4C300DFA698 /* editingLayer.m in Sources */,
 				328274001E723E860077722B /* eventDetailTableViewCell.m in Sources */,
 				3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */,
-				323DD00E1E7B063300F3F7AF /* eventPageFooterView.m in Sources */,
+				32E9ACCC1E7B7F9D00703EDF /* LTTextView.m in Sources */,
 				32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */,
 				328273CE1E720DE20077722B /* selectionViewController.m in Sources */,
 				32998EAF1E5FF4C300DFA698 /* tool.m in Sources */,
 				32998EB61E5FF4C300DFA698 /* flyerViewController.m in Sources */,
-				323C9B301E7A1745009FB0F6 /* LTImagePickerController.m in Sources */,
+				32E9ACD91E7B7FB900703EDF /* LTImagePickerThumbnail.m in Sources */,
 				3234D0CC1E53F5DA008245B7 /* LTDatePicker.m in Sources */,
 				3238760F1E248E14000ECEEB /* eventCamera.m in Sources */,
-				323C9B331E7A175C009FB0F6 /* LTImagePicker.m in Sources */,
 				3290A7221E4A7E0D00042C26 /* switchOptionView.m in Sources */,
 				32998EB11E5FF4C300DFA698 /* toolViewItem.m in Sources */,
 				32ADD0D61E18280500C42207 /* eventOptionsFieldTableViewCell.m in Sources */,
@@ -1401,7 +1401,6 @@
 				328274031E723E860077722B /* eventPageTableViewItem.m in Sources */,
 				3290A7011E49F09400042C26 /* stackTableView.m in Sources */,
 				32D4E1851E1EDF9800616488 /* eventOptionsImageTableViewCell.m in Sources */,
-				323C9B391E7A44E7009FB0F6 /* LTImagePickerThumbnail.m in Sources */,
 				3290A6E31E496E0A00042C26 /* eventViewController.m in Sources */,
 				32ADD0DD1E19E58300C42207 /* eventOptionTableViewCell.m in Sources */,
 				32998EB01E5FF4C300DFA698 /* toolView.m in Sources */,
@@ -1420,11 +1419,11 @@
 				328274061E723E860077722B /* flyerTableViewCell.m in Sources */,
 				328273FD1E723E860077722B /* commentsHeaderView.m in Sources */,
 				3290A6F51E49C1A400042C26 /* stackView.m in Sources */,
-				32E9ACBE1E7B4B5A00703EDF /* LTTextView.m in Sources */,
 				32998EAC1E5FF4C300DFA698 /* colorTool.m in Sources */,
 				3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */,
 				32B1E67D1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m in Sources */,
 				3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */,
+				32E9ACDC1E7B7FC600703EDF /* eventPageFooterView.m in Sources */,
 				3282740B1E723E860077722B /* LTTableViewSection.m in Sources */,
 				32998EB31E5FF4C300DFA698 /* borderPicker.m in Sources */,
 				3290A7251E4AAEC500042C26 /* goOptionView.m in Sources */,
@@ -1433,6 +1432,7 @@
 				328273FB1E723E860077722B /* commentAddContainer.m in Sources */,
 				32998EB71E5FF4C300DFA698 /* shadeTool.m in Sources */,
 				32AF04A91E181DFC006D4E19 /* eventDetailViewController.m in Sources */,
+				32E9ACD81E7B7FB900703EDF /* LTImagePickerController.m in Sources */,
 				32AF04AC1E18213C006D4E19 /* eventOptionsTextTableViewCell.m in Sources */,
 				3290A6F21E49BF9F00042C26 /* eventOptionVIew.m in Sources */,
 				32AF04731E180F67006D4E19 /* main.m in Sources */,
