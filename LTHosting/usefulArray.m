@@ -76,6 +76,9 @@
     [temp addObject:[self imageWithContentsOfFileWithName:@"skulls"]];
     [temp addObject:[self imageWithContentsOfFileWithName:@"stars"]];
     [temp addObject:[self imageWithContentsOfFileWithName:@"triangles"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"fire"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"PIZZA"]];;
+    [temp addObject:[self imageWithContentsOfFileWithName:@"SPEAKER"]];
     ret=temp;
     return ret;
 }
@@ -104,6 +107,9 @@
         [temp addObject:@"Skulls"];
         [temp addObject:@"Stars"];
         [temp addObject:@"Triangles"];
+        [temp addObject:@"Fire"];
+        [temp addObject:@"Pizza"];
+        [temp addObject:@"Speaker"];
         ret=temp;
     });
     return ret;

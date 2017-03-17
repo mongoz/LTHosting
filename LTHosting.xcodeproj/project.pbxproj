@@ -156,6 +156,9 @@
 		32DEA0371E65715300FCFFFF /* textToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DEA0351E65715300FCFFFF /* textToolView.m */; };
 		32E9ACBE1E7B4B5A00703EDF /* LTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACBD1E7B4B5A00703EDF /* LTTextView.m */; };
 		32E9ACC11E7B4E7D00703EDF /* LTTextViewImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACC01E7B4E7D00703EDF /* LTTextViewImageContainer.m */; };
+		32E9ACC51E7B680D00703EDF /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC21E7B680D00703EDF /* fire.png */; };
+		32E9ACC61E7B680D00703EDF /* PIZZA.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC31E7B680D00703EDF /* PIZZA.png */; };
+		32E9ACC71E7B680D00703EDF /* SPEAKER.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC41E7B680D00703EDF /* SPEAKER.png */; };
 		32EB4A081E68E30400E9E714 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F41E68DFA000E9E714 /* BebasNeue.otf */; };
 		32EB4A091E68E30400E9E714 /* bullpen hv it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F51E68DFA000E9E714 /* bullpen hv it.ttf */; };
 		32EB4A0A1E68E30400E9E714 /* Chosence Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F61E68DFA000E9E714 /* Chosence Bold Italic.otf */; };
@@ -438,6 +441,9 @@
 		32E9ACBD1E7B4B5A00703EDF /* LTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextView.m; sourceTree = "<group>"; };
 		32E9ACBF1E7B4E7C00703EDF /* LTTextViewImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTTextViewImageContainer.h; sourceTree = "<group>"; };
 		32E9ACC01E7B4E7D00703EDF /* LTTextViewImageContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LTTextViewImageContainer.m; sourceTree = "<group>"; };
+		32E9ACC21E7B680D00703EDF /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
+		32E9ACC31E7B680D00703EDF /* PIZZA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PIZZA.png; sourceTree = "<group>"; };
+		32E9ACC41E7B680D00703EDF /* SPEAKER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPEAKER.png; sourceTree = "<group>"; };
 		32EB49F41E68DFA000E9E714 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		32EB49F51E68DFA000E9E714 /* bullpen hv it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bullpen hv it.ttf"; sourceTree = "<group>"; };
 		32EB49F61E68DFA000E9E714 /* Chosence Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chosence Bold Italic.otf"; sourceTree = "<group>"; };
@@ -802,6 +808,9 @@
 		3298890D1E41410F00397E3A /* Border Images */ = {
 			isa = PBXGroup;
 			children = (
+				32E9ACC21E7B680D00703EDF /* fire.png */,
+				32E9ACC31E7B680D00703EDF /* PIZZA.png */,
+				32E9ACC41E7B680D00703EDF /* SPEAKER.png */,
 				323C9B121E79E42D009FB0F6 /* aceofspade.png */,
 				323C9B131E79E42D009FB0F6 /* altered.png */,
 				323C9B141E79E42D009FB0F6 /* arrows.png */,
@@ -1151,6 +1160,7 @@
 				32EB4A101E68E30400E9E714 /* LemonMilk.otf in Resources */,
 				3249C4DE1E6BCB1900F23B60 /* alignment.png in Resources */,
 				328274151E724F200077722B /* EventPage.storyboard in Resources */,
+				32E9ACC61E7B680D00703EDF /* PIZZA.png in Resources */,
 				3249C4E81E6BD5E000F23B60 /* expandcollapsearrow.png in Resources */,
 				323C9B251E79E42D009FB0F6 /* diamonds.png in Resources */,
 				323C9B2A1E79E42D009FB0F6 /* rounded square.png in Resources */,
@@ -1174,11 +1184,13 @@
 				3249C4E51E6BCB1900F23B60 /* Text size.png in Resources */,
 				32EB4A1B1E68E30400E9E714 /* Typo GeoSlab Regular Demo.otf in Resources */,
 				32C024C91E7200B800D6F39F /* tint color.png in Resources */,
+				32E9ACC71E7B680D00703EDF /* SPEAKER.png in Resources */,
 				323C9B221E79E42D009FB0F6 /* arrows.png in Resources */,
 				3234D0D41E542985008245B7 /* SwitchCamera.png in Resources */,
 				323C9B261E79E42D009FB0F6 /* hearts.png in Resources */,
 				3234D0D21E541866008245B7 /* CameraButton.png in Resources */,
 				32AF04841E180F67006D4E19 /* LaunchScreen.storyboard in Resources */,
+				32E9ACC51E7B680D00703EDF /* fire.png in Resources */,
 				3249C4E11E6BCB1900F23B60 /* font icon.png in Resources */,
 				327708151E2DF74F000FE30A /* maptrash.png in Resources */,
 				3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */,
