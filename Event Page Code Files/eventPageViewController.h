@@ -10,7 +10,10 @@
 #import <RETableViewManager/RETableViewManager.h>
 #import "event.h"
 #import "commentAddView.h"
+#import "eventPageFooterView.h"
+#import "LTImagePickerController.h"
 
+@class eventPageHeaderView;
 @class commentAddContainer;
 @class commentsHeaderView;
 
@@ -24,15 +27,19 @@
 
 -(void)shouldBeginCommentEditingWithHeader:(commentsHeaderView*)header;
 
+-(void)showImagePicker;
+
 @end
 
-@interface eventPageViewController : UIViewController<RETableViewManagerDelegate, transitionController, CLLocationManagerDelegate>
+@interface eventPageViewController : UIViewController<RETableViewManagerDelegate, transitionController, CLLocationManagerDelegate, eventPageFooterViewDelegate, LTImagePickerControllerDelegate>
 
 @property (strong, nonatomic) RETableViewManager *manager;
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (strong, nonatomic) event *event;
+
+@property (strong, nonatomic) IBOutlet eventPageHeaderView *header;
 
 @end
 

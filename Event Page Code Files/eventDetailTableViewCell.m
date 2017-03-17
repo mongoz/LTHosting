@@ -37,24 +37,41 @@
 
 -(void)cellDidLoad
 {
+    UIColor *mainColor=[UIColor blackColor];
+    UIColor *shadowColor=[UIColor whiteColor];
     [super cellDidLoad];
     leftLabel=[[UILabel alloc] init];
     leftLabel.numberOfLines=0;
+    leftLabel.textColor=mainColor;
     rightLabel=[[UILabel alloc] init];
     rightLabel.numberOfLines=0;
+    rightLabel.textColor=mainColor;
     [self addSubview:leftLabel];
     [self addSubview:rightLabel];
     leftLabel.textAlignment=NSTextAlignmentLeft;
     [rightLabel setTextAlignment:NSTextAlignmentRight];
     leftImage=[[UIImageView alloc] init];
     leftImage.contentMode=UIViewContentModeScaleAspectFit;
+    leftImage.tintColor=mainColor;
     rightImage=[[UIImageView alloc] init];
     rightImage.contentMode=UIViewContentModeScaleAspectFit;
+    rightImage.tintColor=mainColor;
+    void (^addShadowToLayer)(CALayer *)=^(CALayer *layer){
+        layer.shadowColor=shadowColor.CGColor;
+        layer.shadowOpacity=0.5f;
+        layer.shadowRadius=4.0f;
+        layer.shadowOffset=CGSizeZero;
+    };
+    addShadowToLayer(rightImage.layer);
+    addShadowToLayer(leftImage.layer);
+    addShadowToLayer(leftLabel.layer);
+    addShadowToLayer(rightLabel.layer);
     [self addSubview:leftImage];
     [self addSubview:rightImage];
     
     divider=[[UIView alloc] init];
-    divider.backgroundColor=[UIColor blackColor];
+    divider.backgroundColor=mainColor;
+    addShadowToLayer(divider.layer);
     [self addSubview:divider];
 }
 
@@ -91,9 +108,21 @@
     [rightLabel setText:[self stringForDistance:dist]];
     NSTimeInterval timeUntilEvent=[self.item.event.date timeIntervalSinceNow];
     [leftLabel setText:[self stringForInterval:timeUntilEvent]];
-    
-    leftImage.image=[UIImage imageNamed:@"hourglass.png"];
-    rightImage.image=[UIImage imageNamed:@"location-pointer.png"];
+    self.backgroundColor=[self backgroundColorForInterval:[self.item.event.date timeIntervalSinceNow]];
+    leftImage.image=[[UIImage imageNamed:@"hourglass.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+    rightImage.image=[[UIImage imageNamed:@"location-pointer.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];;
+}
+
+-(UIColor*)backgroundColorForInterval:(NSTimeInterval)interval{
+    CGFloat hue=1.0f;
+    if(interval>0){
+        CGFloat days=interval/(24.0f*60.0f*60.0f);
+        CGFloat (^f)(CGFloat)=^CGFloat(CGFloat x){
+            return .2f/(1.0f+expf(-6*(x-1)));
+        };
+        hue=f(days);
+    }
+    return [UIColor colorWithHue:hue saturation:1.0f brightness:1.0f alpha:1.0f];
 }
 
 -(NSString*)stringForInterval:(NSTimeInterval)interval

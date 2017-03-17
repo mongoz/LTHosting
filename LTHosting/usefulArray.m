@@ -13,7 +13,6 @@
 +(NSArray<NSString*>*)bodyFontPostScriptNames
 {
     NSMutableArray *temp=[[NSMutableArray alloc] init];
-    [temp addObject:@"System"];
     [temp addObject:@"Bebas Neue"];
     [temp addObject:@"BullpenHv-Italic"];
     [temp addObject:@"Chosence-BoldItalic"];
@@ -34,18 +33,49 @@
     return [NSArray arrayWithArray:temp];
 }
 
++(NSArray<NSString*>*)titleFontPostScriptNames{
+    NSMutableArray *temp=[[NSMutableArray alloc] init];
+    [temp addObject:@"Bebas Neue"];
+    [temp addObject:@"Allstar-Regular"];
+    [temp addObject:@"BluePrinted"];
+    [temp addObject:@"CloisterBlack-Light"];
+    [temp addObject:@"CurlyShirley"];
+    [temp addObject:@"DoubleBubbleShadow"];
+    [temp addObject:@"DS-Digital"];
+    [temp addObject:@"Easy3D"];
+    //[temp addObject:@"jibriiRegular"];
+    [temp addObject:@"JohnnyTorchRotalic"];
+    [temp addObject:@"KGDarkSide"];
+    [temp addObject:@"KGTrueColors"];
+    [temp addObject:@"MarketDeco"];
+    [temp addObject:@"NeonLights-"];
+    [temp addObject:@"Originalbyfnkfrsh"];
+    [temp addObject:@"ParkLaneNF"];
+    //[temp addObject:@"PrettyGirlsScriptDemo"];
+    //[temp addObject:@"RoyalAcidBath"];
+    [temp addObject:@"SketchHandwriting"];
+    //[temp addObject:@"Stranger-back-in-the-Night"];
+    [temp addObject:@"TradizionalDEMO-Regular"];
+    return [NSArray arrayWithArray:temp];
+}
+
 +(NSArray<UIImage*>*)borderImages
 {
     static NSArray *ret=nil;
     NSMutableArray *temp=[[NSMutableArray alloc] init];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"border4 copy"]];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"border5 copy"]];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"border12 copy"]];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"border14 copy"]];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"border15 copy"]];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"border17 copy"]];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"fireborder"]];
-    [temp addObject:[self imageWithContentsOfFileWithName:@"pizzaborder"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"aceofspade"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"altered"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"arrows"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"arrows2"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"diamonds"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"hearts"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"leaves"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"paws"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"pointer"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"rounded square"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"skulls"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"stars"]];
+    [temp addObject:[self imageWithContentsOfFileWithName:@"triangles"]];
     ret=temp;
     return ret;
 }
@@ -61,14 +91,19 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         NSMutableArray *temp=[[NSMutableArray alloc] init];
-        [temp addObject:@"Aztec"];
-        [temp addObject:@"Checker"];
-        [temp addObject:@"Sublime"];
-        [temp addObject:@"Pointer"];
+        [temp addObject:@"Ace of Spades"];
+        [temp addObject:@"Altered"];
         [temp addObject:@"Arrows"];
-        [temp addObject:@"Memory"];
-        [temp addObject:@"Fire"];
-        [temp addObject:@"Pizza"];
+        [temp addObject:@"Arrows2"];
+        [temp addObject:@"Diamonds"];
+        [temp addObject:@"Hearts"];
+        [temp addObject:@"Leaves"];
+        [temp addObject:@"Paws"];
+        [temp addObject:@"Pointer"];
+        [temp addObject:@"Rounded Square"];
+        [temp addObject:@"Skulls"];
+        [temp addObject:@"Stars"];
+        [temp addObject:@"Triangles"];
         ret=temp;
     });
     return ret;
@@ -91,14 +126,18 @@
     return ret;
 }
 
-+(NSArray<UIFont*>*)bodyFontsWithSize:(CGFloat)size
-{
++(NSArray<UIFont*>*)bodyFontsWithSize:(CGFloat)size{
+    return [self  fontsWithNames:[self bodyFontPostScriptNames] size:size];
+}
+
++(NSArray<UIFont*>*)titleFontsWithSize:(CGFloat)size{
+    return [self fontsWithNames:[self titleFontPostScriptNames] size:size];
+}
+
++(NSArray<UIFont*>*)fontsWithNames:(NSArray<NSString*>*)names size:(CGFloat)size{
     NSMutableArray *temp=[[NSMutableArray alloc] init];
-    NSArray<NSString*>* names=[self bodyFontPostScriptNames];
-    [temp addObject:[UIFont systemFontOfSize:size]];
-    for(NSInteger i=1; i<names.count; i++)
+    for(NSInteger i=0; i<names.count; i++)
     {
-        NSLog(@"i=%ld",(long)i);
         [temp addObject:[UIFont fontWithName:names[i] size:size]];
     }
     return [NSArray arrayWithArray:temp];

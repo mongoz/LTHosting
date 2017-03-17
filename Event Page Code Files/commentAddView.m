@@ -8,6 +8,7 @@
 
 #import "commentAddView.h"
 #import "commentAddContainer.h"
+#import "commentsHeaderView.h"
 
 @interface commentAddView(){
     CGRect initialFrame;
@@ -43,10 +44,15 @@
     field.textColor=[UIColor lightGrayColor];
     field.font=[UIFont preferredFontForTextStyle:UIFontTextStyleTitle3];
     cameraButton=[[UIButton alloc] init];
+    [cameraButton addTarget:self action:@selector(cameraPressed:) forControlEvents:UIControlEventTouchUpInside];
     cameraButton.layer.backgroundColor=[UIColor blackColor].CGColor;
     [self addSubview:cameraButton];
     [self addSubview:field];
     return self;
+}
+
+-(void)cameraPressed:(UIButton*)cameraButton{
+    [self.home.transitionController showImagePicker];
 }
 
 -(id)initWithUser:(user *)someUser

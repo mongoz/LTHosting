@@ -13,7 +13,11 @@
 
 +(NSArray<NSString*>*)bodyFontPostScriptNames;
 
++(NSArray<NSString*>*)titleFontPostScriptNames;
+
 +(NSArray<UIFont*>*)bodyFontsWithSize:(CGFloat)size;
+
++(NSArray<UIFont*>*)titleFontsWithSize:(CGFloat)size;
 
 +(NSArray<UIImage*>*)borderImages;
 

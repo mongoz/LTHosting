@@ -61,7 +61,7 @@
     [self.accessoryView.layer setMasksToBounds:YES];
     CGFloat margin=8;
     dateLabel=[[UILabel alloc] initWithFrame:CGRectMake(margin,margin,self.barView.frame.size.width-margin*2, self.barView.frame.size.height-margin*2)];
-    [dateLabel setText:[self stringForDate:[NSDate date]]];
+    [dateLabel setText:[NSString stringWithFormat:@"%@?",[self stringForDate:[NSDate date]]]];
     [dateLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
     [dateLabel setTextColor:[UIColor blackColor]];
     [self.barView addSubview:dateLabel];

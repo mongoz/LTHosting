@@ -20,9 +20,10 @@
     RETableViewSection *info;
     RETableViewSection *comments;
     CLLocationManager *locationManager;
-    eventPageHeaderView *header;
+    eventPageFooterView *footer;
     commentsHeaderView *commentsHeader;
     commentAddContainer *commentEditingContainer;
+    BOOL laidout;
 }
 
 @end
@@ -31,6 +32,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    laidout=NO;
     commentEditingContainer=nil;
     // Do any additional setup after loading the view, typically from a nib
     [_tableView setFrame:self.view.bounds];
@@ -38,12 +40,15 @@
     _manager[@"flyerTableViewItem"]=@"flyerTableViewCell";
     _manager[@"seperatorTableViewItem"]=@"seperatorCell";
     _manager[@"eventTableViewItem"]=@"eventDetailTableViewCell";
-    header=[eventPageHeaderView headerViewForUser:_event.poster withWidth:self.view.frame.size.width];
-    header.profileTransitionController=self;
-    [self.view addSubview:header];
+   _header=[eventPageHeaderView headerViewForUser:_event.poster withWidth:self.view.frame.size.width];
+    _header.profileTransitionController=self;
+    [self.view addSubview:_header];
+    footer=[eventPageFooterView footerViewWithWidth:self.view.frame.size.width];
+    footer.delegate=self;
+    [self.view addSubview:footer];
     [self startStandardUpdates];
     [self createSampleEvent:^{
-        header.poster=_event.poster;
+        _header.poster=_event.poster;
         info=[[RETableViewSection alloc] initWithHeaderView:nil];
         [info addItem:[flyerTableViewItem itemWithFlyer:[UIImage imageNamed:@"exampleFlyer.jpg"] transitionController:self]];
         [info addItem:[eventTableViewItem itemWithEvent:_event locationManager:locationManager transitionController:self]];
@@ -52,9 +57,18 @@
         commentsHeader=[[commentsHeaderView alloc] initWithUser:_event.poster transitionController:self];
         commentsHeader.frame=CGRectMake(0, 0, self.view.frame.size.width, 64.0f);
         comments=[[RETableViewSection alloc] initWithHeaderView:commentsHeader];
+        [comments addItem:[seperatorTableViewItem itemWithColor:[UIColor whiteColor] height:footer.frame.size.height]];
         [_manager addSection:comments];
         [_tableView reloadData];
     }];
+}
+
+-(void)didPressAccept:(eventPageFooterView *)view{
+    
+}
+
+-(void)didPressDeny:(eventPageFooterView *)view{
+    
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -66,8 +80,18 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    [_tableView setFrame:CGRectMake(header.frame.origin.x, header.frame.origin.y+header.frame.size.height, header.frame.size.width, self.view.frame.size.height-header.frame.size.height-header.frame.origin.y)];
-    [self reloadData];
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if(!laidout){
+        footer.frame=CGRectMake(0, self.view.frame.size.height-footer.frame.size.height, footer.frame.size.width, footer.frame.size.height);
+        [footer layoutIfNeeded];
+        [_tableView setFrame:CGRectMake(_header.frame.origin.x, _header.frame.origin.y+_header.frame.size.height, _header.frame.size.width, self.view.frame.size.height-_header.frame.size.height-_header.frame.origin.y)];
+        [self.view bringSubviewToFront:footer];
+        [self reloadData];
+        laidout=YES;
+    }
     
 }
 
@@ -237,6 +261,21 @@
         return 0;
     }
     return [[item.section.tableViewManager classForCellAtIndexPath:item.indexPath] heightWithItem:item tableViewManager:item.section.tableViewManager];
+}
+
+-(void)showImagePicker{
+    LTImagePickerController *cont=[[LTImagePickerController alloc] init];
+    cont.view.frame=self.navigationController.view.bounds;
+    cont.delegate=self;
+    [self presentViewController:cont animated:YES completion:nil];
+}
+
+-(void)controller:(LTImagePickerController *)controller didFinishPickingImage:(UIImage *)image{
+    
+}
+
+-(void)controllerDidCancelPicking:(LTImagePickerController *)controller{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

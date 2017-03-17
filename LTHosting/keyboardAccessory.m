@@ -92,20 +92,28 @@
 
 -(void)configureToDismissAccessory
 {
+    self.backgroundColor=[UIColor whiteColor];
+    CGFloat topHeight=1.0f;
     UIButton *accessoryButton=[[UIButton alloc] init];
-    accessoryButton.backgroundColor=[UIColor blackColor];
-    [accessoryButton setTitle:@"Dismiss" forState:UIControlStateNormal];
+    [accessoryButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [accessoryButton setTitle:@"Done" forState:UIControlStateNormal];
     accessoryButton.titleLabel.textAlignment=NSTextAlignmentCenter;
     accessoryButton.titleLabel.font=[UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    [self setFrame:CGRectMake(0, 0, self.frame.size.width, accessoryButton.titleLabel.font.lineHeight*1.618f)];
-    accessoryButton.frame=self.bounds;
-    accessoryButton.layer.borderColor=[UIColor blackColor].CGColor;
-    accessoryButton.layer.borderWidth=2.0f;
+    [self setFrame:CGRectMake(0, 0, self.frame.size.width, 44.0f)];
+    CGFloat height=self.frame.size.height;
+    CGFloat margin=2.0f;
+    height-=margin*2;
+    height-=topHeight;
+    CGFloat width=height*1.618;
+    accessoryButton.frame=CGRectMake(self.frame.size.width-margin-width, margin+topHeight, width, height);
     [accessoryButton addTarget:self action:@selector(dismissAccessoryTouchDown:) forControlEvents:UIControlEventTouchDown];
     [accessoryButton addTarget:self action:@selector(dismissAccessoryTouchUp:) forControlEvents:UIControlEventTouchUpInside];
     [accessoryButton addTarget:self action:@selector(dismissAccessoryTouchUp:) forControlEvents:UIControlEventTouchUpOutside];
     [accessoryButton addTarget:self action:@selector(dismissAccessoryTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:accessoryButton];
+    UIView *top=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, topHeight)];
+    top.backgroundColor=[UIColor lightGrayColor];
+    [self addSubview:top];
     _frameChangeBlock=^(keyboardAccessory *acc){
         //[accessoryButton setFrame:acc.bounds];
     };
@@ -113,14 +121,12 @@
 
 -(void)dismissAccessoryTouchDown:(UIButton*)accessoryButton
 {
-    accessoryButton.backgroundColor=[UIColor whiteColor];
-    [accessoryButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [accessoryButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
 }
 
 -(void)dismissAccessoryTouchUp:(UIButton*)accessoryButton
 {
-    accessoryButton.backgroundColor=[UIColor blackColor];
-    [accessoryButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [accessoryButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
 }
 
 -(void)dismissAccessoryTouchUpInside:(UIButton*)accessoryButton

@@ -149,7 +149,7 @@
         <scene sceneID="Q9r-56-5Mk">
             <objects>
                 <navigationController id="XyJ-hE-aa7" customClass="eventsNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="F3E-rx-OpE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F3E-rx-OpE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -174,11 +174,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-7b-jAr">
-                                <rect key="frame" x="16" y="64" width="343" height="301.5"/>
+                                <rect key="frame" x="16" y="64" width="343" height="302"/>
                                 <state key="normal" title="Hosting"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-v0-51k">
-                                <rect key="frame" x="16" y="365.5" width="343" height="301.5"/>
+                                <rect key="frame" x="16" y="366" width="343" height="301"/>
                                 <state key="normal" title="Event Page"/>
                             </button>
                         </subviews>

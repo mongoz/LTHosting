@@ -21,23 +21,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="96a-JL-Hk1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWT-HE-QAw" customClass="eventPageHeaderView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="64"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="96a-JL-Hk1">
+                                <rect key="frame" x="0.0" y="84" width="375" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="96a-JL-Hk1" secondAttribute="trailing" id="7qa-Bo-66z"/>
+                            <constraint firstItem="lWT-HE-QAw" firstAttribute="leading" secondItem="jjm-eB-mA7" secondAttribute="leading" id="98t-uZ-1Le"/>
+                            <constraint firstItem="9hI-0u-zqj" firstAttribute="top" secondItem="96a-JL-Hk1" secondAttribute="bottom" id="HvO-92-OHd"/>
+                            <constraint firstItem="96a-JL-Hk1" firstAttribute="top" secondItem="lWT-HE-QAw" secondAttribute="bottom" id="PcT-Jx-o4O"/>
+                            <constraint firstItem="lWT-HE-QAw" firstAttribute="top" secondItem="YlR-BS-6oP" secondAttribute="bottom" id="WUy-zY-nPj"/>
+                            <constraint firstAttribute="trailing" secondItem="lWT-HE-QAw" secondAttribute="trailing" id="gY2-Oh-Svp"/>
+                            <constraint firstItem="96a-JL-Hk1" firstAttribute="leading" secondItem="jjm-eB-mA7" secondAttribute="leading" id="yFj-GC-yuL"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Wg-eA-92O"/>
                     <connections>
+                        <outlet property="header" destination="lWT-HE-QAw" id="fbP-YW-d8f"/>
                         <outlet property="tableView" destination="96a-JL-Hk1" id="Wh3-6e-AVp"/>
                         <segue destination="52O-RW-p2n" kind="show" identifier="eventDetails" id="Blc-Os-F4l"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ong-MD-TiM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="592"/>
+            <point key="canvasLocation" x="101.59999999999999" y="591.45427286356824"/>
         </scene>
         <!--Full Event Detail View Controller-->
         <scene sceneID="ua7-Wd-MjK">

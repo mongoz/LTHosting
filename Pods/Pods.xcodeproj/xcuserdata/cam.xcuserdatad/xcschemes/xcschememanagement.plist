@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BBView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>ChameleonFramework.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,12 +57,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0305D326B13311BFEC31AA42573A5D61</key>
+		<key>4339401AA38C748D86F3C2E3C3C633E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4339401AA38C748D86F3C2E3C3C633E8</key>
+		<key>497302CB179B27E8958A24969B789C76</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -67,7 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7580EAE7B735603C43DCADB633A11E58</key>
+		<key>942A401B66D65A05DF94B2E52F039911</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -77,12 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CA92E9023195C98A7A12996061B759D4</key>
+		<key>A0445F360D72C0E09313C9DAB4460899</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CBFCA926A9A43611501F56ADD0BEBD47</key>
+		<key>CCBF48787E48B5599E4CDBB2DB2DAB60</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DB29D21AE756F61DD89CD3F72EF0A320</key>
+		<key>E7BFFB8F86EBDF2D90B54F53956FABD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EAE03C93054ABB5DD5A08AF8ED4CD48C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

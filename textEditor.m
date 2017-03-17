@@ -35,6 +35,8 @@
     
     [self addSubview:textField];
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewTapped:)];
+    tap.numberOfTouchesRequired=1;
+    tap.numberOfTapsRequired=1;
     tap.delegate=self;
     [textField addGestureRecognizer:tap];
     //textField.autocorrectionType=UITextAutocorrectionTypeNo;

@@ -42,6 +42,7 @@ static NSInteger titleIndex=0;
     return titleIndex;
 }
 
+
 -(id)init
 {
     self=[super init];
@@ -74,6 +75,7 @@ static NSInteger titleIndex=0;
 -(void)setTargetLayer:(editingLayer *)targetLayer
 {
     [super setTargetLayer:targetLayer];
+    [scroller reloadData];
     NSInteger t=[self selectedIndex];
     NSLog(@"selected: %ld",(long)t);
     [scroller selectRowAtIndex:t];
@@ -94,7 +96,7 @@ static NSInteger titleIndex=0;
 //Horizontal picker view
 -(UIView*)viewForIndex:(NSInteger)index
 {
-    UIFont *thisFont=[UIFont fontWithName:[usefulArray bodyFontPostScriptNames][index] size:72.0f];
+    UIFont *thisFont=[self currentFontsWithSize:72.0f][index];
     return [self viewForFont:thisFont];    
 }
 
@@ -114,7 +116,7 @@ static NSInteger titleIndex=0;
 
 -(NSInteger)numberOfViews
 {
-    return [usefulArray bodyFontPostScriptNames].count;
+    return [self currentFontNames].count;
 }
 
 -(BOOL)shouldUseLabels
@@ -124,7 +126,21 @@ static NSInteger titleIndex=0;
 
 -(NSString*)labelForIndex:(NSInteger)index
 {
-    return [usefulArray bodyFontPostScriptNames][index];
+    return [self currentFontNames][index];
+}
+
+-(NSArray<NSString*>*)currentFontNames{
+    if([self title]){
+        return [usefulArray titleFontPostScriptNames];
+    }
+    return [usefulArray bodyFontPostScriptNames];
+}
+
+-(NSArray<UIFont*>*)currentFontsWithSize:(CGFloat)size{
+    if([self title]){
+        return [usefulArray titleFontsWithSize:size];
+    }
+    return [usefulArray bodyFontsWithSize:size];
 }
 
 -(BOOL)shouldHandleViewResizing
@@ -145,7 +161,7 @@ static NSInteger titleIndex=0;
 -(void)horizontalPickerDidSelectViewAtIndex:(NSInteger)index
 {
     [self setSelectedIndex:index];
-    [(textEditingLayer*)self.targetLayer setFont:[usefulArray bodyFontsWithSize:[(textEditingLayer*)self.targetLayer font].pointSize][index]];
+    [(textEditingLayer*)self.targetLayer setFont:[self currentFontsWithSize:[(textEditingLayer*)self.targetLayer font].pointSize][index]];
     if(self.toolDelegate!=nil&&[self.toolDelegate respondsToSelector:@selector(toolValueChanged:)])
     {
         [self.toolDelegate toolValueChanged:self];
@@ -176,6 +192,16 @@ static NSInteger titleIndex=0;
     {
         return &titleIndex;
     }
+}
+
+-(BOOL)title{
+    if(self.targetLayer==nil){
+        return NO;
+    }
+    if(self.targetLayer==[[editorView shared] bodyLayer]) {
+        return NO;
+    }
+    return YES;
 }
 
 -(NSInteger)selectedIndex

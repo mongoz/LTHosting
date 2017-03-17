@@ -9,6 +9,7 @@
 #import "textEditingLayer.h"
 #import "smarterString.h"
 #import "editorView.h"
+#import "usefulArray.h"
 
 @interface textEditingLayer(){
     BOOL flexibleHeight;
@@ -30,7 +31,8 @@
     _textLabel.shadowOpacity=0.5f;
     _textLabel.shadowOffset=CGSizeZero;
     [_textLabel setBackgroundColor:[UIColor clearColor].CGColor];
-    _textLabel.font=[self CGFontFromUIFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle1]];
+    UIFont *bebas=[UIFont fontWithName:[usefulArray bodyFontPostScriptNames].firstObject size:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle1].pointSize];
+    _textLabel.font=[self CGFontFromUIFont:bebas];
     _textLabel.rasterizationScale=5.0f;
     _textLabel.contentsScale=[[UIScreen mainScreen] scale];
     _textLabel.alignmentMode=kCAAlignmentLeft;

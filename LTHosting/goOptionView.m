@@ -32,12 +32,13 @@
 
 -(void)configureBarView
 {
-    CGFloat margin=self.barView.frame.size.height/5;
-    UIButton *goButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, (self.barView.frame.size.width/self.barView.frame.size.height)*self.barView.frame.size.height-margin*2, self.barView.frame.size.height-margin*2)];
+    CGFloat margin=4.0f;
+    CGFloat height=self.barView.frame.size.height-margin*2;
+    UIButton *goButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, height, height)];
     [goButton setCenter:self.barView.center];
     [goButton setTitle:@"Go" forState:UIControlStateNormal];
     [goButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [goButton setBackgroundColor:[UIColor blackColor]];
+    [goButton setBackgroundColor:[UIColor flatGreenColor]];
     goButton.layer.borderColor=goButton.backgroundColor.CGColor;
     goButton.layer.borderWidth=2.0f;
     [goButton.layer setCornerRadius:goButton.frame.size.height/2];
