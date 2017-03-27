@@ -179,9 +179,7 @@
     {
         eventComment *current=self.currentComment;
         [self clearCurrent];
-        if(current.text.length>0||current.image!=nil){
-            [_container sendTappedWithComment:current];
-        }
+        [_container sendTappedWithComment:(current.text.length>0||current.image!=nil)?current:nil];
     }
 }
 

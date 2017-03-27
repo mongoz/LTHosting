@@ -112,7 +112,9 @@ void (^keyboardWillShowCompletionBlock)(CGRect)=nil;
 -(void)sendTappedWithComment:(eventComment *)comment
 {
     [self tapped:nil];
-    [self.transitionController postComment:comment];
+    if(comment!=nil){
+        [self.transitionController postComment:comment];
+    }
 }
 
 -(id)initWithTransitionController:(id<transitionController>)controller
