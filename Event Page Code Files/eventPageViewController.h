@@ -29,6 +29,8 @@
 
 -(void)showImagePicker;
 
+-(void)postComment:(eventComment*)comment;
+
 @end
 
 @interface eventPageViewController : UIViewController<RETableViewManagerDelegate, transitionController, CLLocationManagerDelegate, eventPageFooterViewDelegate, LTImagePickerControllerDelegate>

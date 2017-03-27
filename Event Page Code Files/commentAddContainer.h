@@ -19,6 +19,10 @@
 
 -(id)initWithTransitionController:(id<transitionController>)controller;
 
--(void)sendTapped;
+-(void)sendTappedWithComment:(eventComment*)comment;
+
+-(void)cameraTapped;
+
+@property (readonly, nonatomic) commentAddView *addView;
 
 @end

@@ -30,6 +30,7 @@
     imageView=[[UIImageView alloc] init];
     imageView.layer.cornerRadius=8.0f;
     imageView.layer.masksToBounds=YES;
+    imageView.contentMode=UIViewContentModeScaleAspectFill;
     [self addSubview:imageView];
     xButton=[[UIButton alloc] init];
     xButton.frame=CGRectMake(0, 0, 32, 32);
@@ -37,6 +38,7 @@
     xButton.layer.masksToBounds=YES;
     xButton.backgroundColor=[UIColor blackColor];
     [xButton setTitle:@"X" forState:UIControlStateNormal];
+    [xButton addTarget:self action:@selector(xPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:xButton];
     return self;
 }
@@ -50,7 +52,8 @@
 -(void)setFrame:(CGRect)frame{
     [super setFrame:frame];
     imageView.frame=self.bounds;
-    xButton.center=self.bounds.origin;
+    xButton.center=CGPointMake(xButton.frame.size.width/2, xButton.frame.size.height/2);
+    imageView.bounds=CGRectMake(0,0,imageView.frame.size.width-xButton.frame.size.width, imageView.frame.size.height-xButton.frame.size.height);
 }
 
 -(void)setImage:(UIImage *)image{

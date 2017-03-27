@@ -14,6 +14,7 @@
 #import "fullEventDetailViewController.h"
 #import "commentsHeaderView.h"
 #import "commentAddContainer.h"
+#import "eventCommentTableViewItem.h"
 @import GooglePlaces;
 
 @interface eventPageViewController (){
@@ -40,6 +41,7 @@
     _manager[@"flyerTableViewItem"]=@"flyerTableViewCell";
     _manager[@"seperatorTableViewItem"]=@"seperatorCell";
     _manager[@"eventTableViewItem"]=@"eventDetailTableViewCell";
+    _manager[@"eventCommentTableViewItem"]=@"eventCommentTableViewCell";
    _header=[eventPageHeaderView headerViewForUser:_event.poster withWidth:self.view.frame.size.width];
     _header.profileTransitionController=self;
     [self.view addSubview:_header];
@@ -271,11 +273,28 @@
 }
 
 -(void)controller:(LTImagePickerController *)controller didFinishPickingImage:(UIImage *)image{
-    
+    if(commentEditingContainer.superview==nil){
+        [self shouldBeginCommentEditingWithHeader:commentsHeader];
+    }
+    [commentEditingContainer.addView addImage:image];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)controllerDidCancelPicking:(LTImagePickerController *)controller{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)addCommentToComments:(eventComment*)comment{
+    eventCommentTableViewItem *com=[[eventCommentTableViewItem alloc] initWithComment:comment];
+    [_tableView beginUpdates];
+    [comments insertItem:com atIndex:comments.items.count-1];
+    [_tableView insertRowsAtIndexPaths:@[com.indexPath] withRowAnimation:UITableViewRowAnimationTop];
+    [_tableView endUpdates];
+}
+
+-(void)postComment:(eventComment *)comment{
+    NSLog(@"post comment");
+    [self addCommentToComments:comment];
 }
 
 @end

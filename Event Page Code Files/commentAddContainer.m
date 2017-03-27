@@ -30,6 +30,10 @@
 }
 */
 
+-(commentAddView*)addView{
+    return addView;
+}
+
 -(id)init
 {
     self=[super init];
@@ -88,18 +92,27 @@ void (^keyboardWillShowCompletionBlock)(CGRect)=nil;
 -(void)tapped:(UITapGestureRecognizer*)tap
 {
     [addView endEditingWithCompletion:^{
-        [self dropToInitialFrameWithCompletion:^{
-            if(self.transitionController!=nil)
-            {
+        if(initialFrame.origin.y>0){
+            [self dropToInitialFrameWithCompletion:^{
+                if(self.transitionController!=nil)
+                {
+                    [_transitionController containerDidEndEditing:self];
+                }
+            }];
+        }
+        else{
+            addView.frame=initialFrame;
+            if(self.transitionController!=nil){
                 [_transitionController containerDidEndEditing:self];
             }
-        }];
+        }
     }];
 }
 
--(void)sendTapped
+-(void)sendTappedWithComment:(eventComment *)comment
 {
     [self tapped:nil];
+    [self.transitionController postComment:comment];
 }
 
 -(id)initWithTransitionController:(id<transitionController>)controller
@@ -127,6 +140,12 @@ void (^keyboardWillShowCompletionBlock)(CGRect)=nil;
             [addView beginEditingWithCompletion:^{
                 
             }];
+        }];
+    }
+    else{
+        view.frame=CGRectMake(view.frame.origin.x,0,view.frame.size.width, view.frame.size.height);
+        [addView beginEditingWithCompletion:^{
+            
         }];
     }
 }

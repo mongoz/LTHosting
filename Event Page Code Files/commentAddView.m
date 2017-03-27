@@ -9,12 +9,15 @@
 #import "commentAddView.h"
 #import "commentAddContainer.h"
 #import "commentsHeaderView.h"
+#import "LTTextView.h"
 
 @interface commentAddView(){
     CGRect initialFrame;
-    UITextView *field;
+    LTTextView *field;
     UIButton *cameraButton;
     BOOL layoutEditing;
+    NSString *commentText;
+    UIView *bottom;
 }
 
 @end
@@ -32,12 +35,15 @@
 -(id)init
 {
     self=[super init];
+    commentText=@"";
     _container=nil;
     layoutEditing=NO;
-    self.layer.borderColor=[UIColor redColor].CGColor;
-    self.layer.borderWidth=2.0f;
+    bottom=[[UIView alloc] init];
+    [self addSubview:bottom];
+    bottom.backgroundColor=[UIColor blackColor];
+    field.canDismiss=!layoutEditing;
     self.backgroundColor=[UIColor whiteColor];
-    field=[[UITextView alloc] init];
+    field=[[LTTextView alloc] init];
     field.autocorrectionType=UITextAutocorrectionTypeNo;
     field.userInteractionEnabled=NO;
     [field setText:@"Add Comment"];
@@ -84,16 +90,18 @@
     {
         field.frame=self.bounds;
     }
+    bottom.frame=CGRectMake(0, self.frame.size.height-1.0f, self.frame.size.width, 1.0f);
 }
 
 -(void)beginEditingWithCompletion:(void (^)())completionBlock
 {
     initialFrame=self.frame;
     layoutEditing=YES;
+    field.canDismiss=!layoutEditing;
     self.frame=self.frame;
     [UIView animateWithDuration:.15 animations:^{
         cameraButton.alpha=0;
-        field.text=@"";
+        field.text=commentText;
     }completion:^(BOOL finished){
         field.userInteractionEnabled=YES;
         field.textColor=[UIColor blackColor];
@@ -108,6 +116,7 @@
 
 -(void)endEditingWithCompletion:(void (^)())completionBlock
 {
+    field.canDismiss=YES;
     [self endEditing:YES];
     field.userInteractionEnabled=NO;
     [UIView animateWithDuration:.25 animations:^{
@@ -115,6 +124,7 @@
     } completion:^(BOOL finished){
         layoutEditing=NO;
         self.frame=self.frame;
+        commentText=field.text;
         [UIView animateWithDuration:.25 animations:^{
             cameraButton.alpha=1.0f;
             field.text=@"Add Comment";
@@ -152,15 +162,45 @@
     UIView *top=[[UIView alloc] initWithFrame:CGRectMake(0, 0, container.frame.size.width, topHeight)];
     top.backgroundColor=[UIColor blackColor];
     [container addSubview:top];
+    UIButton *cButton=[[UIButton alloc] initWithFrame:CGRectMake(margin, margin+topHeight, height, height)];
+    cButton.backgroundColor=[UIColor blackColor];
+    [cButton addTarget:self action:@selector(cameraTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [container addSubview:cButton];
     return container;
+}
+
+-(void)cameraTouched:(UIButton*)cameraButton{
+    [self.home.transitionController showImagePicker];
 }
 
 -(void)sendTouchUp:(UIButton*)sendButton
 {
     if(_container!=nil)
     {
-        [_container sendTapped];
+        eventComment *current=self.currentComment;
+        [self clearCurrent];
+        if(current.text.length>0||current.image!=nil){
+            [_container sendTappedWithComment:current];
+        }
     }
+}
+
+-(eventComment*)currentComment{
+    eventComment *comm=[[eventComment alloc] init];
+    comm.poster=self.poster;
+    if(field.images.count>0){
+        comm.image=field.images.firstObject;
+    }
+    comm.postingDate=[NSDate date];
+    comm.text=field.textView.text;
+    return comm;
+}
+
+-(void)clearCurrent{
+    while(field.images.count>0){
+        [field removeImage:nil];
+    }
+    field.text=@"";
 }
 
 -(void)sendUp:(UIButton*)sendButton
@@ -179,21 +219,21 @@
 
 -(BOOL)becomeFirstResponder
 {
-    if(field.inputAccessoryView==nil)
+    if(field.textView.inputAccessoryView==nil)
     {
-        field.inputAccessoryView=[self textViewAccessoryView];
+        field.textView.inputAccessoryView=[self textViewAccessoryView];
     }
-    return [field becomeFirstResponder];
+    return [field.textView becomeFirstResponder];
 }
 
 -(BOOL)canBecomeFirstResponder
 {
-    return [field canBecomeFirstResponder];
+    return [field.textView canBecomeFirstResponder];
 }
 
 -(BOOL)endEditing:(BOOL)force
 {
-    return [field endEditing:force];
+    return [field.textView endEditing:force];
 }
 
 -(void)endEditing
@@ -203,7 +243,19 @@
 
 -(BOOL)resignFirstResponder
 {
-    return [field resignFirstResponder];
+    return [field.textView resignFirstResponder];
+}
+
+-(void)addImage:(UIImage *)image{
+    [field addImage:image];
+}
+
+-(void)removeImage:(UIImage *)image{
+    [field removeImage:image];
+}
+
+-(NSArray<UIImage*>*)images{
+    return field.images;
 }
 
 @end
