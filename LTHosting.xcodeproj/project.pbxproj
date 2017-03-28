@@ -65,8 +65,8 @@
 		3249C4E51E6BCB1900F23B60 /* Text size.png in Resources */ = {isa = PBXBuildFile; fileRef = 3249C4DD1E6BCB1900F23B60 /* Text size.png */; };
 		3249C4E81E6BD5E000F23B60 /* expandcollapsearrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3249C4E71E6BD5E000F23B60 /* expandcollapsearrow.png */; };
 		324BC1781E38018D00C9B629 /* usefulArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 324BC1771E38018D00C9B629 /* usefulArray.m */; };
-		32574B041E89B51C000AFCEA /* eventCommentTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B031E89B51C000AFCEA /* eventCommentTableViewItem.m */; };
-		32574B071E89B5D0000AFCEA /* eventCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B061E89B5D0000AFCEA /* eventCommentTableViewCell.m */; };
+		32574B0A1E89E0F0000AFCEA /* eventCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */; };
+		32574B0D1E89E0FB000AFCEA /* eventCommentTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */; };
 		327708151E2DF74F000FE30A /* maptrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 327708141E2DF74F000FE30A /* maptrash.png */; };
 		3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277081E1E3037D5000FE30A /* commonUseFunctions.m */; };
 		3278EA681E64E392002E68A4 /* datePickerOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998EA81E5FF4C300DFA698 /* datePickerOptionView.m */; };
@@ -268,10 +268,10 @@
 		3249C4E71E6BD5E000F23B60 /* expandcollapsearrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expandcollapsearrow.png; sourceTree = "<group>"; };
 		324BC1761E38018D00C9B629 /* usefulArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usefulArray.h; sourceTree = "<group>"; };
 		324BC1771E38018D00C9B629 /* usefulArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = usefulArray.m; sourceTree = "<group>"; };
-		32574B021E89B51C000AFCEA /* eventCommentTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCommentTableViewItem.h; sourceTree = "<group>"; };
-		32574B031E89B51C000AFCEA /* eventCommentTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewItem.m; sourceTree = "<group>"; };
-		32574B051E89B5D0000AFCEA /* eventCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCommentTableViewCell.h; sourceTree = "<group>"; };
-		32574B061E89B5D0000AFCEA /* eventCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewCell.m; sourceTree = "<group>"; };
+		32574B081E89E0F0000AFCEA /* eventCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCommentTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		32574B0B1E89E0FB000AFCEA /* eventCommentTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCommentTableViewItem.h; sourceTree = SOURCE_ROOT; };
+		32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewItem.m; sourceTree = SOURCE_ROOT; };
 		327708141E2DF74F000FE30A /* maptrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maptrash.png; sourceTree = "<group>"; };
 		3277081D1E3037D5000FE30A /* commonUseFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonUseFunctions.h; sourceTree = "<group>"; };
 		3277081E1E3037D5000FE30A /* commonUseFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commonUseFunctions.m; sourceTree = "<group>"; };
@@ -709,8 +709,8 @@
 				328273EC1E723E860077722B /* locationCell.m */,
 				328273F11E723E860077722B /* REAttributedStringCell.h */,
 				328273F21E723E860077722B /* REAttributedStringCell.m */,
-				32574B051E89B5D0000AFCEA /* eventCommentTableViewCell.h */,
-				32574B061E89B5D0000AFCEA /* eventCommentTableViewCell.m */,
+				32574B081E89E0F0000AFCEA /* eventCommentTableViewCell.h */,
+				32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -730,8 +730,8 @@
 				328273F81E723E860077722B /* seperatorTableViewItem.m */,
 				328273ED1E723E860077722B /* locationItem.h */,
 				328273EE1E723E860077722B /* locationItem.m */,
-				32574B021E89B51C000AFCEA /* eventCommentTableViewItem.h */,
-				32574B031E89B51C000AFCEA /* eventCommentTableViewItem.m */,
+				32574B0B1E89E0FB000AFCEA /* eventCommentTableViewItem.h */,
+				32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */,
 			);
 			name = "Table View Items";
 			sourceTree = "<group>";
@@ -1375,6 +1375,7 @@
 				32998EAB1E5FF4C300DFA698 /* borderToolView.m in Sources */,
 				32B1E6801E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m in Sources */,
 				328274041E723E860077722B /* eventPageViewController.m in Sources */,
+				32574B0D1E89E0FB000AFCEA /* eventCommentTableViewItem.m in Sources */,
 				3249C4C01E69084900F23B60 /* sizeTool.m in Sources */,
 				328273FF1E723E860077722B /* eventComment.m in Sources */,
 				3282740A1E723E860077722B /* locationItem.m in Sources */,
@@ -1396,6 +1397,7 @@
 				3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */,
 				32E9ACCC1E7B7F9D00703EDF /* LTTextView.m in Sources */,
 				32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */,
+				32574B0A1E89E0F0000AFCEA /* eventCommentTableViewCell.m in Sources */,
 				328273CE1E720DE20077722B /* selectionViewController.m in Sources */,
 				32998EAF1E5FF4C300DFA698 /* tool.m in Sources */,
 				32998EB61E5FF4C300DFA698 /* flyerViewController.m in Sources */,
@@ -1420,7 +1422,6 @@
 				32C024C41E71FC9C00D6F39F /* backgroundTintTool.m in Sources */,
 				32998EB81E5FF4C300DFA698 /* toolsContainer.m in Sources */,
 				328274021E723E860077722B /* eventPageTableViewCell.m in Sources */,
-				32574B041E89B51C000AFCEA /* eventCommentTableViewItem.m in Sources */,
 				3229AF921E1B500400405137 /* dateSliderViewController.m in Sources */,
 				32ADD0E01E1A001500C42207 /* pickerSliderViewController.m in Sources */,
 				3290A6FE1E49E0FD00042C26 /* aboutOptionView.m in Sources */,
@@ -1433,7 +1434,6 @@
 				32998EAC1E5FF4C300DFA698 /* colorTool.m in Sources */,
 				3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */,
 				32B1E67D1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m in Sources */,
-				32574B071E89B5D0000AFCEA /* eventCommentTableViewCell.m in Sources */,
 				3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */,
 				32E9ACDC1E7B7FC600703EDF /* eventPageFooterView.m in Sources */,
 				3282740B1E723E860077722B /* LTTableViewSection.m in Sources */,
