@@ -31,6 +31,8 @@
 
 -(void)postComment:(eventComment*)comment;
 
+-(void)displayImageView:(UIImageView*)view;
+
 @end
 
 @interface eventPageViewController : UIViewController<RETableViewManagerDelegate, transitionController, CLLocationManagerDelegate, eventPageFooterViewDelegate, LTImagePickerControllerDelegate>
