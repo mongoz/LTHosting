@@ -8,6 +8,7 @@
 
 #import "eventCameraViewController.h"
 #import <ChameleonFramework/Chameleon.h>
+#import "cblock.h"
 
 @interface eventCameraViewController () {
     AVCaptureVideoPreviewLayer *videoPreviewLayer;
@@ -25,7 +26,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
+        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+        CGFloat cushion=8.0f;
+        CGFloat right=24.0f;
+        [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
+        return item;
+    }]];
     
+}
+
+-(void)backPressed:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)viewDidLayoutSubviews
@@ -228,9 +240,6 @@
     [super performSegueWithIdentifier:identifier sender:sender];
 }
 
-- (IBAction)backPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-}
 
 - (IBAction)switchCameraView:(id)sender {
     [_switchCameraButton setUserInteractionEnabled:NO];

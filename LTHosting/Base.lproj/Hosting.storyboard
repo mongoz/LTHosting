@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="bottom" id="LGl-Of-XPK"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ucW-hE-ypU">
@@ -95,21 +95,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Take Photo" id="FSS-7q-Od5">
-                        <barButtonItem key="leftBarButtonItem" title="Back" style="plain" id="dsE-ib-Thl">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Y4f-4t-a0u">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="backPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a0H-yk-kfn"/>
-                                </connections>
-                            </button>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Take Photo" id="FSS-7q-Od5"/>
                     <connections>
                         <outlet property="badPictureButton" destination="0Ag-OX-KEa" id="weR-30-qV5"/>
                         <outlet property="captureButton" destination="o54-4R-H8j" id="Tlz-Am-sDI"/>
@@ -135,7 +121,7 @@
                         <viewControllerLayoutGuide type="bottom" id="tYY-Oi-SvE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4VR-lM-WyY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -145,13 +131,15 @@
             </objects>
             <point key="canvasLocation" x="560" y="866"/>
         </scene>
-        <!--Events Navigation Controller-->
+        <!--Navigation Controller-->
         <scene sceneID="Q9r-56-5Mk">
             <objects>
-                <navigationController id="XyJ-hE-aa7" customClass="eventsNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="F3E-rx-OpE">
+                <navigationController id="XyJ-hE-aa7" customClass="LTNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="F3E-rx-OpE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </navigationBar>
                     <connections>
                         <segue destination="l4Z-tD-ObI" kind="relationship" relationship="rootViewController" id="EKe-py-p39"/>
@@ -170,15 +158,15 @@
                         <viewControllerLayoutGuide type="bottom" id="onF-bk-lyb"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="poX-Wl-tJQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-7b-jAr">
-                                <rect key="frame" x="16" y="64" width="343" height="302"/>
+                                <rect key="frame" x="16" y="0.0" width="343" height="302"/>
                                 <state key="normal" title="Hosting"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdX-v0-51k">
-                                <rect key="frame" x="16" y="366" width="343" height="301"/>
+                                <rect key="frame" x="16" y="302" width="343" height="301"/>
                                 <state key="normal" title="Event Page"/>
                             </button>
                         </subviews>
@@ -214,10 +202,10 @@
                         <viewControllerLayoutGuide type="bottom" id="2l6-YQ-CCZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="khL-EE-NVn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQ6-QU-lbA">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kQ6-QU-lbA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jfj-rf-3Cf">

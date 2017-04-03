@@ -76,7 +76,8 @@
 -(id)initWithFrame:(CGRect)frame target:(editingLayer *)target skew:(toolSkew)skew
 {
     self=[self initWithTarget:target skew:skew];
-    [self setFrame:frame];
+    self.frame=frame;
+    [self layoutIfNeeded];
     return self;
 }
 

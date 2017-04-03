@@ -43,8 +43,19 @@
     textLabel=[[UILabel alloc] initWithFrame:CGRectMake(profPicView.frame.origin.x+profPicView.frame.size.width+margin, profPicView.frame.origin.y, self.tableViewManager.tableView.frame.size.width-(profPicView.frame.origin.x+profPicView.frame.size.width+margin)-margin, 64.0f)];
     textLabel.numberOfLines=0;
     imageView=[[UIImageView alloc] initWithFrame:CGRectMake(margin, textLabel.frame.origin.y+textLabel.frame.size.height+margin, self.tableViewManager.tableView.frame.size.width-margin*2, self.tableViewManager.tableView.frame.size.width-margin*2)];
+    imageView.userInteractionEnabled=YES;
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
+    [imageView addGestureRecognizer:tap];
     [self addSubview:profPicView];
     [self addSubview:textLabel];
+}
+
+-(void)imageViewTapped:(UITapGestureRecognizer*)tap{
+    UIImageView *copy=[[UIImageView alloc] initWithFrame:imageView.frame];
+    copy.image=imageView.image;
+    copy.contentMode=imageView.contentMode;
+    copy.layer.masksToBounds=imageView.layer.masksToBounds;
+    [self.item.transitionController displayImageView:copy];
 }
 
 -(void)layoutSubviews{

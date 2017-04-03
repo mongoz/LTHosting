@@ -11,13 +11,14 @@
 #import "toolView.h"
 #import "toolsContainer.h"
 #import "event.h"
+#import "cblock.h"
 
 @interface flyerViewController (){
     UIButton *modeButton;
     NSArray<UIView*>* modeArrows;
     
     toolsContainer *toolViewer;
-    
+    BOOL laidOut;
     BOOL toolsShowing;
 }
 @end
@@ -26,54 +27,75 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    [self.view addSubview:[editorView shared]];
-    
     [[editorView shared] setFrame:self.view.bounds];
-    [[editorView shared] setViewController:self];
-    toolViewer=nil;
-    toolsShowing=NO;
-    
-    CGFloat margin=8;
-    CGFloat width=54;
-    modeButton=[[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-margin-width, [[editorView shared] frame].origin.y+margin, width, width)];
-    [modeButton addTarget:self action:@selector(modeButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
-    [modeButton addTarget:self action:@selector(modeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-    [modeButton addTarget:self action:@selector(modeButtonTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
-    
-    [modeButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
-    [modeButton.layer setCornerRadius:modeButton.frame.size.height/2];
-    [modeButton.layer setMasksToBounds:YES];
-    
-    modeButton.layer.borderColor=[UIColor whiteColor].CGColor;
-    modeButton.layer.borderWidth=1.0f;
-    
-    NSMutableArray *a=[[NSMutableArray alloc] init];
-    for(NSInteger i=0; i<4; i++)
-    {
-        UIImageView *arrow=[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"expandcollapsearrow.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-        [arrow setContentMode:UIViewContentModeScaleAspectFit];
-        [arrow setTintColor:[UIColor whiteColor]];
-        [modeButton addSubview:arrow];
-        [a addObject:arrow];
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if(!laidOut){
+        laidOut=NO;
+        // Do any additional setup after loading the view, typically from a nib.
+        [self.view addSubview:[editorView shared]];
+        
+        [[editorView shared] setFrame:self.view.bounds];
+        [[editorView shared] setViewController:self];
+        toolViewer=nil;
+        toolsShowing=NO;
+        
+        CGFloat margin=8;
+        CGFloat width=54;
+        modeButton=[[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-margin-width, [[editorView shared] frame].origin.y+margin, width, width)];
+        [modeButton addTarget:self action:@selector(modeButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
+        [modeButton addTarget:self action:@selector(modeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
+        [modeButton addTarget:self action:@selector(modeButtonTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
+        
+        [modeButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
+        [modeButton.layer setCornerRadius:modeButton.frame.size.height/2];
+        [modeButton.layer setMasksToBounds:YES];
+        
+        modeButton.layer.borderColor=[UIColor whiteColor].CGColor;
+        modeButton.layer.borderWidth=1.0f;
+        
+        NSMutableArray *a=[[NSMutableArray alloc] init];
+        for(NSInteger i=0; i<4; i++)
+        {
+            UIImageView *arrow=[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"expandcollapsearrow.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+            [arrow setContentMode:UIViewContentModeScaleAspectFit];
+            [arrow setTintColor:[UIColor whiteColor]];
+            [modeButton addSubview:arrow];
+            [a addObject:arrow];
+        }
+        modeArrows=a;
+        [self setModeButtonFrames];
+        
+        [self.view addSubview:modeButton];
+        [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
+            UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+            CGFloat cushion=8.0f;
+            CGFloat right=24.0f;
+            [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
+            return item;
+        }]];
+        [self.navigationItem setRightBarButtonItem:[cblock make:^id{
+            UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
+            return item;
+        }]];
+        laidOut=YES;
+        self.toolsShowing=YES;
     }
-    modeArrows=a;
-    [self setModeButtonFrames];
-    
-    [self.view addSubview:modeButton];
-    
-    UIBarButtonItem *backbutton=[[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
-    [self.navigationItem setLeftBarButtonItem:backbutton];
+}
+
+-(void)donePressed:(id)sender{
+    [[event sharedInstance] setFlyer:[[editorView shared] currentImage]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     [[editorView shared] setImage:[[event sharedInstance] image]];
-    [[editorView shared] setFrame:self.view.bounds];
     [[editorView shared] setTitleText:[[event sharedInstance] name]];
     [[editorView shared] setBodyText:[[event sharedInstance] flyerBodyForCurrentState].string];
-    self.toolsShowing=YES;
+    //self.toolsShowing=YES;
 }
 
 -(void)setModeButtonFrames
@@ -145,12 +167,6 @@
 -(IBAction)backPressed:(UIBarButtonItem*)button
 {
     [self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];
-    
 }
 
 

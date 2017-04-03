@@ -13,6 +13,8 @@
 #import "pickerOptionView.h"
 #import "switchOptionView.h"
 #import "goOptionView.h"
+#import "cblock.h"
+#import "usefulArray.h"
 
 @interface eventViewController (){
     
@@ -21,6 +23,8 @@
     NSMutableArray<eventOptionView*>* allViews;
     
     CGRect keyboardFrame;
+    
+    eventOptionView *selectedView;
 }
 @end
 
@@ -29,6 +33,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
+        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+        CGFloat cushion=8.0f;
+        CGFloat right=24.0f;
+        [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
+        return item;
+    }]];
+    [self.navigationItem setTitleView:[cblock make:^id{
+        UILabel *lab=[[UILabel alloc] init];
+        [lab setAttributedText:[[NSAttributedString alloc] initWithString:@"H O S T" attributes:@{NSForegroundColorAttributeName:[UIColor whiteColor],NSFontAttributeName:[usefulArray bodyFontsWithSize:36.0f][6]}]];
+        [lab sizeToFit];
+        return lab;
+    }]];
+    selectedView=nil;
     _scrollView.delegate=self;
     _scrollView.bounces=NO;
     _scrollView.delaysContentTouches=NO;
@@ -41,6 +59,10 @@
     animator.delegate=self;
     // Do any additional setup after loading the view.
     [self configureView];
+}
+                                               
+-(void)backPressed:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)registerForKeyboardNotifications
@@ -65,18 +87,28 @@
 
 -(void)configureView
 {
-    CGFloat barHeight=_scrollView.frame.size.height/9;
+    CGFloat goHeight=self.view.frame.size.height/6.0f;
+    CGFloat barHeight=(_scrollView.frame.size.height-goHeight)/8;
     NSMutableArray *views=[[NSMutableArray alloc] init];
-    CGRect rect=CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height/3);
-    [views addObject:[[nameOptionView alloc] initWithFrame:rect barHeight:barHeight]];
-    [views addObject:[[addressOptionView alloc] initWithFrame:rect barHeight:barHeight]];
-    [views addObject:[[aboutOptionView alloc] initWithFrame:rect barHeight:barHeight]];
-    [views addObject:[[datePickerOptionView alloc] initWithFrame:rect barHeight:barHeight]];
+    CGRect rect=CGRectMake(0, 0, self.view.bounds.size.width, barHeight+_scrollView.frame.size.height/3.0f);
+    void (^addOptionType)(NSString *name, NSString *imageName)=^(NSString *name, NSString *imageName){
+        [views addObject:[cblock make:^id{
+            eventOptionView *ob=[[NSClassFromString(name) alloc] initWithFrame:rect barHeight:barHeight];
+            if(imageName!=nil&&imageName.length>0){
+                ob.optionImage=[UIImage imageNamed:imageName];
+            }
+            return ob;
+        }]];
+    };
+    addOptionType(@"nameOptionView",@"event name");
+    addOptionType(@"addressOptionView",@"location");
+    addOptionType(@"aboutOptionView",@"about section");
+    addOptionType(@"datePickerOptionView",@"Calendar-50");
     [views addObject:[[switchOptionView alloc] initWithFrame:rect type:LTswitchOptionPrivate barHeight:barHeight]];
     [views addObject:[[switchOptionView alloc] initWithFrame:rect type:LTswitchOptionFree barHeight:barHeight]];
     [views addObject:[[pickerOptionView alloc] initWithFrame:rect type:LTPickerOptionMusic barHeight:barHeight]];
     [views addObject:[[pickerOptionView alloc] initWithFrame:rect type:LTPickerOptionVenue barHeight:barHeight]];
-    [views addObject:[[goOptionView alloc] initWithFrame:rect barHeight:barHeight]];
+    [views addObject:[[goOptionView alloc] initWithFrame:rect barHeight:goHeight]];
     allViews=views;
     
     for(NSInteger i=allViews.count-1; i>=0; i--)
@@ -89,10 +121,16 @@
 -(void)accessoryShowingDidChangeForEventOptionView:(eventOptionView *)view
 {
     [self recalculateContentSize];
+    if(view.isAccessoryViewShowing){
+        CGRect viewFrame=[view convertRect:view.bounds toView:_scrollView];
+        [_scrollView scrollRectToVisible:viewFrame animated:YES];
+    }
+    
 }
 
 -(void)accessoryShowingWillChangeForEventOptionView:(eventOptionView *)view
 {
+    [self invalidateSelectedView];
     BOOL oneOpen=NO;
     for(NSInteger i=1; i<allViews.count; i++)
     {
@@ -122,15 +160,9 @@
             break;
         }
     }
-    if([view isAccessoryViewShowing])
-    {
-        CGPoint offset=_scrollView.contentOffset;
-        [UIView animateWithDuration:.25 animations:^{
-            [_scrollView setContentSize:CGSizeMake(_scrollView.contentSize.width, _scrollView.contentSize.height-view.accessoryView.frame.size.height)];
-            if(oneOpen)
-            {
-                _scrollView.contentOffset=offset;
-            }
+    if(view.isAccessoryViewShowing){
+        [UIView animateWithDuration:.2 animations:^{
+            [self.scrollView setContentSize:CGSizeMake(self.scrollView.contentSize.width, self.scrollView.contentSize.height-view.accessoryView.frame.size.height)];
         }];
     }
 }
@@ -261,17 +293,73 @@ NSDate *lastUpdate=nil;
         {
             [completeString appendString:[NSString stringWithFormat:@"\n-%@",op]];
         }
+        if(self.selectedOption!=nil){
+            [self.selectedOption tapBar];
+        }
         UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"Incomplete Event" message:completeString preferredStyle:UIAlertControllerStyleAlert];
         UIAlertAction *ok=[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-            [alert dismissViewControllerAnimated:YES completion:^{
-                
-            }];
+            NSMutableArray *ops=[[NSMutableArray alloc] init];
+            for(NSString *op in incompleteArray){
+                [ops addObject:[self viewForOptionName:op]];
+            }
+            [self flashOptionsRed:ops completion:nil];
         }];
         [alert addAction:ok];
         [self presentViewController:alert animated:YES completion:^{
             
         }];
     }
+}
+
+-(eventOptionView*)viewForOptionName:(NSString *)optionName{
+    for(eventOptionView *v in allViews){
+        if([v.optionName isEqualToString:optionName]){
+            return v;
+        }
+    }
+    return nil;
+}
+
+-(void)flashOptionsRed:(NSArray<eventOptionView*>*)options completion:(void(^)())completionBlock{
+    NSMutableDictionary<NSString*,UIColor*> *prevColors=[[NSMutableDictionary alloc] init];
+    for(eventOptionView *op in options){
+        prevColors[op.optionName]=op.backgroundColor;
+    }
+    NSTimeInterval time=.2;
+    [UIView animateWithDuration:time animations:^{
+        for(eventOptionView *v in options){
+            v.red=YES;
+        }
+    }completion:^(BOOL finished){
+        while(!finished){
+            
+        }
+        [UIView animateWithDuration:time animations:^{
+            for(eventOptionView *v in options){
+                v.red=NO;
+            }
+        }completion:^(BOOL finished){
+            if(completionBlock!=nil){
+                completionBlock();
+            }
+        }];
+    }];
+}
+
+-(eventOptionView*)selectedOption{
+    if(selectedView==nil){
+        for(eventOptionView *v in allViews){
+            if(v.isAccessoryViewShowing){
+                selectedView=v;
+                break;
+            }
+        }
+    }
+    return selectedView;
+}
+
+-(void)invalidateSelectedView{
+    selectedView=nil;
 }
 
 @end

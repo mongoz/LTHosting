@@ -13,7 +13,7 @@
 
 @interface datePickerOptionView(){
     UILabel *dateLabel;
-    
+    UIImageView *imageView;
     LTDatePicker *pick;
     
     NSDate *currentDate;
@@ -34,6 +34,7 @@
 {
     self=[super initWithFrame:frame barHeight:barHeight];
     currentDate=[NSDate date];
+    imageView=[[UIImageView alloc] init];
     [self configureAccessoryView];
     return self;
 }
@@ -41,6 +42,11 @@
 -(BOOL)hasAccessoryView
 {
     return YES;
+}
+
+-(void)setOptionImage:(UIImage *)optionImage{
+    [super setOptionImage:optionImage];
+    imageView.image=self.optionImage;
 }
 
 -(void)configureAccessoryView
@@ -60,11 +66,21 @@
     self.accessoryView.hidden=YES;
     [self.accessoryView.layer setMasksToBounds:YES];
     CGFloat margin=8;
-    dateLabel=[[UILabel alloc] initWithFrame:CGRectMake(margin,margin,self.barView.frame.size.width-margin*2, self.barView.frame.size.height-margin*2)];
-    [dateLabel setText:[NSString stringWithFormat:@"%@?",[self stringForDate:[NSDate date]]]];
+    CGFloat height=self.barView.frame.size.height-margin*2;
+    imageView.frame=CGRectMake(margin, margin, height, height);
+    
+    void (^scaleBy)(UIView *v, CGFloat scale)=^(UIView *v, CGFloat scale){
+        CGPoint center=v.center;
+        [v setBounds:CGRectMake(0, 0, v.frame.size.width*scale, v.frame.size.height*scale)];
+        v.center=center;
+    };
+    dateLabel=[[UILabel alloc] initWithFrame:CGRectMake(imageView.frame.origin.x+imageView.frame.size.width+margin,margin,self.barView.frame.size.width-margin*3-height, height)];
+    scaleBy(imageView,.75f);
+    [dateLabel setText:@"What Time?"];
     [dateLabel setFont:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2]];
-    [dateLabel setTextColor:[UIColor blackColor]];
+    [dateLabel setTextColor:[UIColor lightGrayColor]];
     [self.barView addSubview:dateLabel];
+    [self.barView addSubview:imageView];
 }
 
 -(NSString*)stringForDate:(NSDate*)date
@@ -174,6 +190,7 @@
     {
         dateLabel.alpha=0.0f;
         [dateLabel setText:[self stringForDate:[picker date]]];
+        dateLabel.textColor=[UIColor blackColor];
         currentDate=[picker date];
         dateLabel.alpha=1.0f;
     }
@@ -186,6 +203,9 @@
 
 -(BOOL)isComplete
 {
+    if([dateLabel.text isEqualToString:@"What Time?"]){
+        return NO;
+    }
     return YES;
 }
 

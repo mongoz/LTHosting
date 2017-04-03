@@ -68,10 +68,13 @@
     leftIndicationIndicator=[[UIView alloc] init];
     leftIndicationIndicator.backgroundColor=[UIColor blackColor];
     leftIndicationIndicator.hidden=YES;
+    CGFloat z=CGFLOAT_MAX;
+    leftIndicationIndicator.layer.zPosition=z;
     leftShowing=NO;
     rightIndicationIndicator=[[UIView alloc] init];
     rightIndicationIndicator.backgroundColor=[UIColor blackColor];
     rightIndicationIndicator.hidden=YES;
+    leftIndicationIndicator.layer.zPosition=z;
     rightShowing=NO;
     
     void (^addShadowToLayer)(CALayer *layer)=^(CALayer *layer){
@@ -117,9 +120,6 @@
     CGFloat indicatorWidth=12.0f;
     [leftIndicationIndicator setFrame:CGRectMake(self.contentOffset.x-indicatorWidth, 0, indicatorWidth, self.frame.size.height)];
     [rightIndicationIndicator setFrame:CGRectMake(self.contentOffset.x+self.frame.size.width, 0, indicatorWidth, self.frame.size.height)];
-    
-    [self bringSubviewToFront:leftIndicationIndicator];
-    [self bringSubviewToFront:rightIndicationIndicator];
 }
 
 -(NSInteger)selectedIndex
@@ -419,9 +419,9 @@
 
 -(void)reset
 {
-    for(UIView *view in self.subviews)
+    for(NSInteger i=self.subviews.count-1; i>=0; i--)
     {
-        [view removeFromSuperview];
+        [self.subviews[i] removeFromSuperview];
     }
     managedViews=nil;
     [self addSubview:leftIndicationIndicator];

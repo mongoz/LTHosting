@@ -67,18 +67,17 @@
         [_picker selectRow:[self pickerView:_picker numberOfRowsInComponent:i]/2 inComponent:i animated:NO];
     }
     [_picker selectRow:0 inComponent:0 animated:NO];
-    [self setDate:[NSDate date] animated:NO];
 }
 
 -(void)reloadAllComponents
 {
     [_picker reloadAllComponents];
+    [self setDate:[NSDate date] animated:NO silent:YES];
 }
 
 -(void)setFrame:(CGRect)frame{
     [super setFrame:frame];
     [_picker setFrame:self.bounds];
-    [self reloadAllComponents];
 }
 
 //UIPickerViewDataSource Methods
@@ -335,6 +334,10 @@
 
 -(void)setDate:(NSDate *)date animated:(BOOL)animated
 {
+    [self setDate:date animated:animated silent:NO];
+}
+
+-(void)setDate:(NSDate*)date animated:(BOOL)animated silent:(BOOL)silent{
     NSDateComponents *comps=[[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
     for(NSInteger i=1; i<3; i++)
     {
@@ -387,11 +390,10 @@
     initialMinuteSelection=[_picker selectedRowInComponent:2];
     [_picker selectRow:ind inComponent:3 animated:animated];
     
-    if(self.delegate!=nil)
+    if(self.delegate!=nil&&!silent)
     {
         [_delegate datePicker:self dateDidChangeTo:[self date]];
     }
-    
 }
 
 //Set delegate methods

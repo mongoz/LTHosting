@@ -12,8 +12,9 @@
 @interface eventOptionView(){
     
     BOOL accessoryShowing;
-    
+    BOOL red;
     CGFloat barHeight;
+    UIColor *naturalBackgroundColor;
 }
 @end
 
@@ -38,6 +39,7 @@ BOOL hasAddedBaseline=NO;
 -(id)initWithFrame:(CGRect)frame barHeight:(CGFloat)barHeigh
 {
     self=[super initWithFrame:frame];
+    red=NO;
     barHeight=barHeigh;
     accessoryShowing=NO;
     _barView=[self defaultBarView];
@@ -65,13 +67,30 @@ BOOL hasAddedBaseline=NO;
     [new.layer setShadowColor:[UIColor darkGrayColor].CGColor];
     [new.layer setShadowRadius:8.0f];
     [new.layer setShadowOpacity:.5f];
-    if([self hasAccessoryView])
-    {
-        UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
-        [new addGestureRecognizer:tap];
-        tap.delegate=self;
-    }
+    UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
+    [new addGestureRecognizer:tap];
+    tap.delegate=self;
     return new;
+}
+
+-(BOOL)red{
+    return red;
+}
+
+-(void)setRed:(BOOL)r{
+    if(r!=red){
+        red=r;
+        red?[self makeRed]:[self unMakeRed];
+    }
+}
+
+-(void)makeRed{
+    naturalBackgroundColor=self.barView.backgroundColor;
+    [self.barView setBackgroundColor:[[UIColor redColor] colorWithAlphaComponent:0.5f]];
+}
+
+-(void)unMakeRed{
+    [self.barView setBackgroundColor:naturalBackgroundColor];
 }
 
 -(IBAction)tapped:(id)sender{
@@ -95,7 +114,7 @@ BOOL hasAddedBaseline=NO;
 
 -(void)tapBar
 {
-    if(_accessoryView!=nil)
+    if(self.hasAccessoryView)
     {
         if(_myDelegate!=nil)
         {
@@ -105,6 +124,7 @@ BOOL hasAddedBaseline=NO;
             _accessoryView.hidden=!_accessoryView.hidden;
         } completion:^(BOOL finished){
             accessoryShowing=!_accessoryView.hidden;
+            [self barTouched];
             if(_myDelegate!=nil)
             {
                 [_myDelegate accessoryShowingDidChangeForEventOptionView:self];
@@ -112,6 +132,13 @@ BOOL hasAddedBaseline=NO;
         }];
         
     }
+    else{
+        [self barTouched];
+    }
+}
+
+-(void)barTouched{
+    
 }
 
 -(void)setBarHeight:(CGFloat)barHeigh

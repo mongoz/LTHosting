@@ -11,6 +11,7 @@
 
 @interface nameOptionView(){
     UITextField *field;
+    UIImageView *imageView;
 }
 @end
 
@@ -28,6 +29,7 @@
 {
     self=[super initWithFrame:frame barHeight:barHeight];
     field=nil;
+    imageView=[[UIImageView alloc] init];
     [self configureBarView];
     return self;
 }
@@ -35,8 +37,17 @@
 -(void)configureBarView
 {
     CGFloat margin=8;
-    CGRect textFieldRect=CGRectMake(margin, margin, self.barView.frame.size.width-margin*2, self.barView.frame.size.height-margin*2);
+    CGFloat height=self.barView.frame.size.height-margin*2;
+    CGRect imageViewRect=CGRectMake(margin, margin, height, height);
+    CGRect textFieldRect=CGRectMake(imageViewRect.origin.x+imageViewRect.size.width+margin, margin, self.barView.frame.size.width-height-margin*3, height);
     field=[[UITextField alloc] initWithFrame:textFieldRect];
+    void (^scaleBy)(UIView *v, CGFloat scale)=^(UIView *v, CGFloat scale){
+        CGPoint center=v.center;
+        [v setBounds:CGRectMake(0, 0, v.frame.size.width*scale, v.frame.size.height*scale)];
+        v.center=center;
+    };
+    imageView.frame=imageViewRect;
+    scaleBy(imageView,.75f);
     keyboardAccessory *acc=[keyboardAccessory accessoryWithType:dismissAccessory width:self.frame.size.width];
     acc.dismissBlock=^(keyboardAccessory *accessory){
         [self donePressed:field];
@@ -48,8 +59,14 @@
     [field setPlaceholder:@"Add Name..."];
     field.attributedPlaceholder=[[NSAttributedString alloc] initWithString:field.placeholder attributes:[NSDictionary dictionaryWithObject:[UIColor lightGrayColor] forKey:NSForegroundColorAttributeName]];
     [self.barView addSubview:field];
+    [self.barView addSubview:imageView];
     [field setReturnKeyType:UIReturnKeyDone];
     [field addTarget:self action:@selector(donePressed:) forControlEvents:UIControlEventPrimaryActionTriggered];
+}
+
+-(void)setOptionImage:(UIImage *)optionImage{
+    [super setOptionImage:optionImage];
+    imageView.image=self.optionImage;
 }
 
 -(IBAction)donePressed:(UITextField*)tField
@@ -58,6 +75,26 @@
     if(self.isAccessoryViewShowing)
     {
         [self tapBar];
+    }
+}
+
+-(void)barTouched{
+    [super barTouched];
+    if(!self.hasAccessoryView){
+        if(field.isFirstResponder){
+            [field endEditing:YES];
+        }
+        else{
+            [field becomeFirstResponder];
+        }
+    }
+    else{
+        if(self.isAccessoryViewShowing){
+            [field becomeFirstResponder];
+        }
+        else{
+            [field endEditing:YES];
+        }
     }
 }
 

@@ -13,7 +13,7 @@
     HMSegmentedControl *bottom;
     
     toolView *activeToolView;
-    
+    CGFloat bottomHeight;
     BOOL barShowing;
 }
 
@@ -28,8 +28,6 @@
     // Drawing code
 }
 */
-
-CGFloat bottomHeight=40;
 
 //This array dictates the order the options are presented in the segmented control
 static toolType types[]={titleTextTool, bodyTextTool, borderTool};
@@ -67,6 +65,7 @@ NSInteger tCount=3;
 -(id)init
 {
     self=[super init];
+    bottomHeight=40.0f;
     barShowing=NO;
     bottom=[[HMSegmentedControl alloc] init];
     [self addSubview:bottom];
@@ -110,6 +109,7 @@ NSInteger tCount=3;
     __weak toolView *old=activeToolView;
     activeToolView=[[toolView alloc] initWithFrame:[self contentFrame] type:tool container:self];
     activeToolView.hidden=YES;
+    [activeToolView layoutIfNeeded];
     [self addSubview:activeToolView];
     [activeToolView dissolveIn:YES completion:^{
         if(old!=nil)

@@ -28,7 +28,9 @@
 -(id)init
 {
     self=[super init];
+    segControl=nil;
     segControl=[[UISegmentedControl alloc] initWithItems:@[@"Left",@"Center",@"Right"]];
+    //[segControl setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.0f]} forState:UIControlStateNormal];
     [segControl setBackgroundColor:[UIColor clearColor]];
     [segControl setTintColor:[UIColor blackColor]];
     [self addSubview:segControl];
@@ -41,8 +43,9 @@
 {
     [super setFrame:frame];
     CGFloat marginx=24.0f;
-    CGFloat height=frame.size.height/3;
+    CGFloat height=self.frame.size.height/3;
     [segControl setFrame:CGRectMake(marginx, self.bounds.size.height/2-height/2, self.bounds.size.width-marginx*2, height)];
+    [self layoutIfNeeded];
 }
 
 -(void)segmentChanged:(UISegmentedControl*)control

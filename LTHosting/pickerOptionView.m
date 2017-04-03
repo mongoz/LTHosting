@@ -47,7 +47,7 @@
 
 -(void)configureAccessoryView
 {
-    self.accessoryView=[[stackView alloc] initWithFrame:CGRectMake(0, self.barView.frame.origin.y+self.barView.frame.size.height, self.barView.frame.size.width, self.frame.size.height-self.barView.frame.size.width)];
+    self.accessoryView=[[stackView alloc] initWithFrame:CGRectMake(0, self.barView.frame.origin.y+self.barView.frame.size.height, self.barView.frame.size.width, self.frame.size.height-self.barView.frame.size.height)];
     [self.accessoryView.layer setMasksToBounds:YES];
     UIPickerView *pick=[[UIPickerView alloc] initWithFrame:self.accessoryView.bounds];
     pick.delegate=self;

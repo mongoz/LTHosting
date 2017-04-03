@@ -12,6 +12,7 @@
 #import "commentAddView.h"
 #import "eventPageFooterView.h"
 #import "LTImagePickerController.h"
+#import "imageInspectionView.h"
 
 @class eventPageHeaderView;
 @class commentAddContainer;
@@ -35,7 +36,7 @@
 
 @end
 
-@interface eventPageViewController : UIViewController<RETableViewManagerDelegate, transitionController, CLLocationManagerDelegate, eventPageFooterViewDelegate, LTImagePickerControllerDelegate>
+@interface eventPageViewController : UIViewController<RETableViewManagerDelegate, transitionController, CLLocationManagerDelegate, eventPageFooterViewDelegate, LTImagePickerControllerDelegate, imageInspectionViewDelegate>
 
 @property (strong, nonatomic) RETableViewManager *manager;
 

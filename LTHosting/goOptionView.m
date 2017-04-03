@@ -7,6 +7,8 @@
 //
 
 #import "goOptionView.h"
+#import "usefulArray.h"
+#import "cblock.h"
 
 @implementation goOptionView
 
@@ -32,22 +34,23 @@
 
 -(void)configureBarView
 {
-    CGFloat margin=4.0f;
-    CGFloat height=self.barView.frame.size.height-margin*2;
+    CGFloat height=64.0f;
     UIButton *goButton=[[UIButton alloc] initWithFrame:CGRectMake(0, 0, height, height)];
     [goButton setCenter:self.barView.center];
-    [goButton setTitle:@"Go" forState:UIControlStateNormal];
-    [goButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [goButton setBackgroundColor:[UIColor flatGreenColor]];
-    goButton.layer.borderColor=goButton.backgroundColor.CGColor;
+    [goButton setAttributedTitle:[[NSAttributedString alloc] initWithString:@"GO" attributes:@{NSFontAttributeName:[usefulArray titleFontsWithSize:32.0f].firstObject,NSForegroundColorAttributeName:[UIColor whiteColor]}] forState:UIControlStateNormal];
+    [goButton setBackgroundColor:[UIColor flatLimeColor]];
+    goButton.layer.borderColor=[UIColor blackColor].CGColor;
     goButton.layer.borderWidth=2.0f;
     [goButton.layer setCornerRadius:goButton.frame.size.height/2];
-    [goButton.layer setMasksToBounds:YES];
     [goButton addTarget:self action:@selector(goPressed:) forControlEvents:UIControlEventTouchUpInside];
     [goButton addTarget:self action:@selector(goTouchDown:) forControlEvents:UIControlEventTouchDown];
     [goButton addTarget:self action:@selector(goTouchUp:) forControlEvents:UIControlEventTouchUpInside];
     [goButton addTarget:self action:@selector(goTouchUp:) forControlEvents:UIControlEventTouchUpOutside];
     [goButton setShowsTouchWhenHighlighted:YES];
+    goButton.layer.shadowColor=[UIColor blackColor].CGColor;
+    goButton.layer.shadowRadius=4.0f;
+    goButton.layer.shadowOpacity=0.0f;
+    goButton.layer.shadowOffset=CGSizeZero;
     self.barView.layer.shadowOpacity=0.0f;
     goButton.showsTouchWhenHighlighted=NO;
     [self.barView addSubview:goButton];
@@ -55,12 +58,28 @@
 
 -(void)goTouchDown:(UIButton*)goButton
 {
-    [self swapButtonColors:goButton];
+    [goButton setBackgroundColor:[UIColor flatLimeColorDark]];
+    [goButton setAttributedTitle:[cblock make:^id{
+        NSMutableAttributedString *s=[[NSMutableAttributedString alloc] initWithAttributedString:goButton.currentAttributedTitle];
+        NSRange full=NSMakeRange(0, s.length);
+        [s removeAttribute:NSForegroundColorAttributeName range:full];
+        [s addAttribute:NSForegroundColorAttributeName value:[UIColor grayColor] range:full];
+        return s;
+    }] forState:UIControlStateNormal];
+    goButton.layer.shadowOpacity=.5f;
 }
 
 -(void)goTouchUp:(UIButton*)goButton
 {
-    [self swapButtonColors:goButton];
+    [goButton setBackgroundColor:[UIColor flatLimeColor]];
+    [goButton setAttributedTitle:[cblock make:^id{
+        NSMutableAttributedString *s=[[NSMutableAttributedString alloc] initWithAttributedString:goButton.currentAttributedTitle];
+        NSRange full=NSMakeRange(0, s.length);
+        [s removeAttribute:NSForegroundColorAttributeName range:full];
+        [s addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor] range:full];
+        return s;
+    }] forState:UIControlStateNormal];
+    goButton.layer.shadowOpacity=0.0f;
 }
 
 -(void)swapButtonColors:(UIButton*)button

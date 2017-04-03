@@ -1,5 +1,5 @@
 PODS:
-  - BBView (1.0.3)
+  - BBView (1.0.4)
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
@@ -21,7 +21,7 @@ DEPENDENCIES:
   - RETableViewManager
 
 SPEC CHECKSUMS:
-  BBView: a1fb4fc2df1c2c8c3a8cf30e3b45ff7bf4ca8bec
+  BBView: 7dc5625d7267c105ec67c456cf79f6e5d4a4ba0b
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
@@ -32,4 +32,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c4fb0ef037ccebd6f9dd2837267861e73ae31c0f
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

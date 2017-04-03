@@ -15,6 +15,10 @@
 
 @interface eventOptionView : UIStackView <UIGestureRecognizerDelegate>
 
+-(void)barTouched;
+
+@property (strong, nonatomic) UIImage *optionImage;
+
 -(id)initWithFrame:(CGRect)frame barHeight:(CGFloat)barHeight;
 
 @property (strong, nonatomic) UIView *barView;
@@ -26,6 +30,8 @@
 -(BOOL)isAccessoryViewShowing;
 
 -(void)tapBar;
+
+@property (nonatomic) BOOL red;
 
 @property (strong, nonatomic) id<eventOptionViewDelegate> myDelegate;
 

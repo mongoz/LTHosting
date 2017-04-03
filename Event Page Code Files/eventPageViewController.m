@@ -286,6 +286,7 @@
 
 -(void)addCommentToComments:(eventComment*)comment{
     eventCommentTableViewItem *com=[[eventCommentTableViewItem alloc] initWithComment:comment];
+    com.transitionController=self;
     [_tableView beginUpdates];
     [comments insertItem:com atIndex:comments.items.count-1];
     [_tableView insertRowsAtIndexPaths:@[com.indexPath] withRowAnimation:UITableViewRowAnimationTop];
@@ -295,6 +296,17 @@
 -(void)postComment:(eventComment *)comment{
     NSLog(@"post comment");
     [self addCommentToComments:comment];
+}
+
+-(void)displayImageView:(UIImageView *)view{
+    imageInspectionView *inspect=[[imageInspectionView alloc] initWithFrame:self.navigationController.view.bounds];
+    [self.navigationController.view addSubview:inspect];
+    view.frame=[view convertRect:view.bounds toView:self.view];
+    inspect.imageView=view;
+}
+
+-(void)inspectionViewDidDismiss:(imageInspectionView *)view{
+    [view removeFromSuperview];
 }
 
 @end

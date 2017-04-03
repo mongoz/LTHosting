@@ -170,7 +170,7 @@
     NSBlockOperation *createTool=[NSBlockOperation blockOperationWithBlock:^{
         new=[[self items][index] correspondingTool];
         [new setFrame:self.bounds];
-        [new layoutIfNeeded];
+        //[new layoutIfNeeded];
         new.hidden=YES;
     }];
     [createTool setCompletionBlock:^{

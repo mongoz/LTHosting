@@ -45,4 +45,6 @@
 
 @property (weak, nonatomic) flyerViewController *viewController;
 
+@property (readonly) UIImage *currentImage;
+
 @end

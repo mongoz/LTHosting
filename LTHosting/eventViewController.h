@@ -17,4 +17,6 @@
 
 -(void)pressedGo;
 
+@property (readonly) eventOptionView *selectedOption;
+
 @end

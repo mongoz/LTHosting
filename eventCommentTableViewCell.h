@@ -9,6 +9,7 @@
 #import "eventPageTableViewCell.h"
 #import "eventCommentTableViewItem.h"
 
+
 @interface eventCommentTableViewCell : eventPageTableViewCell
 
 @property (strong, nonatomic) eventCommentTableViewItem *item;
