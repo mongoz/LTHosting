@@ -67,7 +67,6 @@
 		324BC1781E38018D00C9B629 /* usefulArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 324BC1771E38018D00C9B629 /* usefulArray.m */; };
 		32574B0A1E89E0F0000AFCEA /* eventCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */; };
 		32574B0D1E89E0FB000AFCEA /* eventCommentTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */; };
-		3269486C1E9AA3A0005CD419 /* profileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3269486B1E9AA3A0005CD419 /* profileButton.m */; };
 		327708151E2DF74F000FE30A /* maptrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 327708141E2DF74F000FE30A /* maptrash.png */; };
 		3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3277081E1E3037D5000FE30A /* commonUseFunctions.m */; };
 		3278EA681E64E392002E68A4 /* datePickerOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998EA81E5FF4C300DFA698 /* datePickerOptionView.m */; };
@@ -125,6 +124,7 @@
 		3290A7221E4A7E0D00042C26 /* switchOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A7211E4A7E0D00042C26 /* switchOptionView.m */; };
 		3290A7251E4AAEC500042C26 /* goOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3290A7241E4AAEC500042C26 /* goOptionView.m */; };
 		3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3290A7261E4AB91A00042C26 /* Unused.storyboard */; };
+		329868B41E9B2D01008DE7F0 /* profileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 329868B31E9B2D01008DE7F0 /* profileButton.m */; };
 		32998EAB1E5FF4C300DFA698 /* borderToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E8F1E5FF4C300DFA698 /* borderToolView.m */; };
 		32998EAC1E5FF4C300DFA698 /* colorTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E911E5FF4C300DFA698 /* colorTool.m */; };
 		32998EAD1E5FF4C300DFA698 /* smarterString.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998E961E5FF4C300DFA698 /* smarterString.m */; };
@@ -285,8 +285,6 @@
 		32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		32574B0B1E89E0FB000AFCEA /* eventCommentTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCommentTableViewItem.h; sourceTree = SOURCE_ROOT; };
 		32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewItem.m; sourceTree = SOURCE_ROOT; };
-		3269486A1E9AA3A0005CD419 /* profileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileButton.h; sourceTree = "<group>"; };
-		3269486B1E9AA3A0005CD419 /* profileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileButton.m; sourceTree = "<group>"; };
 		327708141E2DF74F000FE30A /* maptrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maptrash.png; sourceTree = "<group>"; };
 		3277081D1E3037D5000FE30A /* commonUseFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = commonUseFunctions.h; sourceTree = "<group>"; };
 		3277081E1E3037D5000FE30A /* commonUseFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = commonUseFunctions.m; sourceTree = "<group>"; };
@@ -384,6 +382,8 @@
 		3290A7231E4AAEC500042C26 /* goOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goOptionView.h; sourceTree = "<group>"; };
 		3290A7241E4AAEC500042C26 /* goOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = goOptionView.m; sourceTree = "<group>"; };
 		3290A7261E4AB91A00042C26 /* Unused.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unused.storyboard; sourceTree = "<group>"; };
+		329868B21E9B2D01008DE7F0 /* profileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileButton.h; sourceTree = SOURCE_ROOT; };
+		329868B31E9B2D01008DE7F0 /* profileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileButton.m; sourceTree = SOURCE_ROOT; };
 		32998E8C1E5FF4C300DFA698 /* borderEditingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = borderEditingLayer.h; path = LTHosting/borderEditingLayer.h; sourceTree = SOURCE_ROOT; };
 		32998E8D1E5FF4C300DFA698 /* borderPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = borderPicker.h; path = LTHosting/borderPicker.h; sourceTree = SOURCE_ROOT; };
 		32998E8E1E5FF4C300DFA698 /* borderToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = borderToolView.h; path = LTHosting/borderToolView.h; sourceTree = SOURCE_ROOT; };
@@ -771,8 +771,8 @@
 			children = (
 				328273E11E723E850077722B /* eventPageViewController.h */,
 				328273E21E723E850077722B /* eventPageViewController.m */,
-				3269486A1E9AA3A0005CD419 /* profileButton.h */,
-				3269486B1E9AA3A0005CD419 /* profileButton.m */,
+				329868B21E9B2D01008DE7F0 /* profileButton.h */,
+				329868B31E9B2D01008DE7F0 /* profileButton.m */,
 				328503261E91F68E005D1A4E /* imageInspectionView.h */,
 				328503251E91F68E005D1A4E /* imageInspectionView.m */,
 				328273E91E723E860077722B /* fullEventDetailViewController.h */,
@@ -1460,6 +1460,7 @@
 				32998EB41E5FF4C300DFA698 /* editingLayer.m in Sources */,
 				328274001E723E860077722B /* eventDetailTableViewCell.m in Sources */,
 				3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */,
+				329868B41E9B2D01008DE7F0 /* profileButton.m in Sources */,
 				32E9ACCC1E7B7F9D00703EDF /* LTTextView.m in Sources */,
 				32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */,
 				32574B0A1E89E0F0000AFCEA /* eventCommentTableViewCell.m in Sources */,
@@ -1502,7 +1503,6 @@
 				3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */,
 				32B1E67D1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m in Sources */,
 				3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */,
-				3269486C1E9AA3A0005CD419 /* profileButton.m in Sources */,
 				32E9ACDC1E7B7FC600703EDF /* eventPageFooterView.m in Sources */,
 				3282740B1E723E860077722B /* LTTableViewSection.m in Sources */,
 				32998EB31E5FF4C300DFA698 /* borderPicker.m in Sources */,
