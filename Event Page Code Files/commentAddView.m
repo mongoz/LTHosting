@@ -18,6 +18,7 @@
     BOOL layoutEditing;
     NSString *commentText;
     UIView *bottom;
+    UILabel *placeholder;
 }
 
 @end
@@ -39,6 +40,7 @@
     _container=nil;
     layoutEditing=NO;
     bottom=[[UIView alloc] init];
+    bottom.layer.zPosition=CGFLOAT_MAX;
     [self addSubview:bottom];
     bottom.backgroundColor=[UIColor blackColor];
     field.canDismiss=!layoutEditing;
@@ -46,14 +48,20 @@
     field=[[LTTextView alloc] init];
     field.autocorrectionType=UITextAutocorrectionTypeNo;
     field.userInteractionEnabled=NO;
-    [field setText:@"Add Comment"];
+    [field setText:@""];
     field.textColor=[UIColor lightGrayColor];
     field.font=[UIFont preferredFontForTextStyle:UIFontTextStyleTitle3];
     cameraButton=[[UIButton alloc] init];
     [cameraButton addTarget:self action:@selector(cameraPressed:) forControlEvents:UIControlEventTouchUpInside];
-    cameraButton.layer.backgroundColor=[UIColor blackColor].CGColor;
+    [cameraButton setImage:[UIImage imageNamed:@"camera event page.png"] forState:UIControlStateNormal];
+    [cameraButton setContentMode:UIViewContentModeScaleAspectFit];
     [self addSubview:cameraButton];
     [self addSubview:field];
+    placeholder=[[UILabel alloc] init];
+    placeholder.text=@"Add Comment...";
+    placeholder.textColor=[UIColor lightGrayColor];
+    placeholder.font=[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
+    [self.layer addSublayer:placeholder.layer];
     return self;
 }
 
@@ -84,13 +92,20 @@
         CGFloat height=self.frame.size.height-margin*2;
         cameraButton.frame=CGRectMake(margin, margin, height, height);
         field.frame=CGRectMake(cameraButton.frame.origin.x+cameraButton.frame.size.width+margin, margin, self.frame.size.width-margin-(cameraButton.frame.origin.x+cameraButton.frame.size.width+margin), height);
-        cameraButton.layer.cornerRadius=height/2;
+        placeholder.frame=field.frame;
+        [self scale:cameraButton by:.9];
     }
     else
     {
         field.frame=self.bounds;
     }
     bottom.frame=CGRectMake(0, self.frame.size.height-1.0f, self.frame.size.width, 1.0f);
+}
+
+-(void)scale:(UIView*)v by:(CGFloat)amount{
+    CGPoint center=v.center;
+    v.bounds=CGRectMake(0, 0, v.frame.size.width*amount, v.frame.size.height*amount);
+    v.center=center;
 }
 
 -(void)beginEditingWithCompletion:(void (^)())completionBlock
@@ -101,6 +116,7 @@
     self.frame=self.frame;
     [UIView animateWithDuration:.15 animations:^{
         cameraButton.alpha=0;
+        placeholder.alpha=0;
         field.text=commentText;
     }completion:^(BOOL finished){
         field.userInteractionEnabled=YES;
@@ -127,7 +143,8 @@
         commentText=field.text;
         [UIView animateWithDuration:.25 animations:^{
             cameraButton.alpha=1.0f;
-            field.text=@"Add Comment";
+            placeholder.alpha=1.0f;
+            field.text=@"";
             field.textColor=[UIColor lightGrayColor];
         } completion:^(BOOL finished){
             if(completionBlock!=nil){
@@ -139,10 +156,11 @@
 
 -(UIView*)textViewAccessoryView
 {
-    CGFloat topHeight=1.0f;
-    UIView *container=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, 44+topHeight)];
+    CGFloat topHeight=0.0f;
+    CGFloat fullHeight=48.0f;
+    UIView *container=[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, fullHeight+topHeight)];
     container.backgroundColor=[UIColor whiteColor];
-    CGFloat margin=4.0f;
+    CGFloat margin=6.0f;
     CGFloat height=container.frame.size.height-margin*2;
     UIButton *sendButton=[[UIButton alloc] initWithFrame:CGRectMake(container.frame.size.width-margin-height*1.618f, margin+topHeight, height*1.618f, height)];
     [sendButton addTarget:self action:@selector(sendTouchUp:) forControlEvents:UIControlEventTouchUpInside];
@@ -163,13 +181,26 @@
     top.backgroundColor=[UIColor blackColor];
     [container addSubview:top];
     UIButton *cButton=[[UIButton alloc] initWithFrame:CGRectMake(margin, margin+topHeight, height, height)];
-    cButton.backgroundColor=[UIColor blackColor];
+    [cButton setImage:[[UIImage imageNamed:@"camera event page.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [cButton setTintColor:[UIColor lightGrayColor]];
+    [cButton setContentMode:UIViewContentModeScaleAspectFit];
     [cButton addTarget:self action:@selector(cameraTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [cButton addTarget:self action:@selector(cameraButtonDown:) forControlEvents:UIControlEventTouchDown];
+    [cButton addTarget:self action:@selector(cameraButtonUp:) forControlEvents:UIControlEventTouchUpOutside];
     [container addSubview:cButton];
     return container;
 }
 
--(void)cameraTouched:(UIButton*)cameraButton{
+-(void)cameraButtonDown:(UIButton*)button{
+    [button setTintColor:[UIColor blackColor]];
+}
+
+-(void)cameraButtonUp:(UIButton*)button{
+    [button setTintColor:[UIColor lightGrayColor]];
+}
+
+-(void)cameraTouched:(UIButton*)cButton{
+    [self cameraButtonUp:cButton];
     [self.home.transitionController showImagePicker];
 }
 
@@ -232,11 +263,6 @@
 -(BOOL)endEditing:(BOOL)force
 {
     return [field.textView endEditing:force];
-}
-
--(void)endEditing
-{
-    
 }
 
 -(BOOL)resignFirstResponder

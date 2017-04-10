@@ -121,4 +121,12 @@
     }
 }
 
+-(void)toolDidLoad{
+    
+}
+
+-(void)toolWillAppear{
+    
+}
+
 @end

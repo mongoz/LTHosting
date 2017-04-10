@@ -26,4 +26,8 @@
 
 -(void)updateCurrentValueAnimated:(BOOL)animated;
 
+-(void)toolDidLoad;
+
+-(void)toolWillAppear;
+
 @end

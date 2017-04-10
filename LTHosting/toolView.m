@@ -170,6 +170,8 @@
     NSBlockOperation *createTool=[NSBlockOperation blockOperationWithBlock:^{
         new=[[self items][index] correspondingTool];
         [new setFrame:self.bounds];
+        [new toolDidLoad];
+        [new layoutIfNeeded];
         //[new layoutIfNeeded];
         new.hidden=YES;
     }];
@@ -177,6 +179,7 @@
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             activeTool=new;
             [self addSubview:activeTool];
+            [new toolWillAppear];
             [activeTool dissolveIn:YES completion:^{
                 [self beginUsingTool:activeTool];
             }];
@@ -230,7 +233,9 @@
 
 -(void)endUsingTool
 {
-    [activeTool dissolveIn:NO completion:nil];
+    [activeTool dissolveIn:NO completion:^{
+        [activeTool removeFromSuperview];
+    }];
     [_container toolView:self isEditingWillChangeTo:NO];
 }
 

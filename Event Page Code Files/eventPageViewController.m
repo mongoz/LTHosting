@@ -25,6 +25,7 @@
     commentsHeaderView *commentsHeader;
     commentAddContainer *commentEditingContainer;
     BOOL laidout;
+    BOOL footerShowing;
 }
 
 @end
@@ -37,24 +38,27 @@
     commentEditingContainer=nil;
     // Do any additional setup after loading the view, typically from a nib
     [_tableView setFrame:self.view.bounds];
+    _tableView.delaysContentTouches=NO;
     _manager=[[RETableViewManager alloc] initWithTableView:_tableView delegate:self];
     _manager[@"flyerTableViewItem"]=@"flyerTableViewCell";
     _manager[@"seperatorTableViewItem"]=@"seperatorCell";
     _manager[@"eventTableViewItem"]=@"eventDetailTableViewCell";
     _manager[@"eventCommentTableViewItem"]=@"eventCommentTableViewCell";
    _header=[eventPageHeaderView headerViewForUser:_event.poster withWidth:self.view.frame.size.width];
+    _header.backgroundColor=[UIColor whiteColor];
     _header.profileTransitionController=self;
     [self.view addSubview:_header];
     footer=[eventPageFooterView footerViewWithWidth:self.view.frame.size.width];
     footer.delegate=self;
-    [self.view addSubview:footer];
+    footer.layer.zPosition=CGFLOAT_MAX;
+    [self.navigationController.view addSubview:footer];
+    footerShowing=YES;
     [self startStandardUpdates];
     [self createSampleEvent:^{
         _header.poster=_event.poster;
         info=[[RETableViewSection alloc] initWithHeaderView:nil];
         [info addItem:[flyerTableViewItem itemWithFlyer:[UIImage imageNamed:@"exampleFlyer.jpg"] transitionController:self]];
         [info addItem:[eventTableViewItem itemWithEvent:_event locationManager:locationManager transitionController:self]];
-        [info addItem:[seperatorTableViewItem item]];
         [_manager addSection:info];
         commentsHeader=[[commentsHeaderView alloc] initWithUser:_event.poster transitionController:self];
         commentsHeader.frame=CGRectMake(0, 0, self.view.frame.size.width, 64.0f);
@@ -76,24 +80,41 @@
 -(void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    
+    self.footerShowing=NO;
 }
 
--(void)viewWillAppear:(BOOL)animated
+-(void)viewDidAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    self.footerShowing=YES;
+}
+
+-(void)setFooterShowing:(BOOL)fShowing{
+    if(fShowing!=footerShowing){
+        CGFloat var=fShowing?-footer.frame.size.height:0;
+        [UIView animateWithDuration:.25 animations:^{
+            footer.frame=CGRectMake(0, self.view.frame.size.height+var+self.navigationController.navigationBar.frame.origin.y+self.navigationController.navigationBar.frame.size.height, footer.frame.size.width, footer.frame.size.height);
+        } completion:^(BOOL finished){
+            footerShowing=fShowing;
+        }];
+    }
+}
+
+-(BOOL)footerShowing{
+    return footerShowing;
 }
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
     if(!laidout){
-        footer.frame=CGRectMake(0, self.view.frame.size.height-footer.frame.size.height, footer.frame.size.width, footer.frame.size.height);
+        
         [footer layoutIfNeeded];
-        [_tableView setFrame:CGRectMake(_header.frame.origin.x, _header.frame.origin.y+_header.frame.size.height, _header.frame.size.width, self.view.frame.size.height-_header.frame.size.height-_header.frame.origin.y)];
         [self.view bringSubviewToFront:footer];
         [self reloadData];
         laidout=YES;
     }
+    footer.frame=CGRectMake(0, self.view.frame.size.height-footer.frame.size.height+self.navigationController.navigationBar.frame.origin.y+self.navigationController.navigationBar.frame.size.height, footer.frame.size.width, footer.frame.size.height);
+    _tableView.frame=CGRectMake(_header.frame.origin.x, _header.frame.origin.y+_header.frame.size.height, _header.frame.size.width, self.view.frame.size.height-_header.frame.size.height-_header.frame.origin.y);
     
 }
 
@@ -194,12 +215,13 @@
 
 -(void)shouldBeginCommentEditingWithHeader:(commentsHeaderView *)headera
 {
+    
     commentAddView *v=[headera retrieveCommentAddView];
     CGRect headerFrame=[self frameOfHeaderForSection:comments];
     v.frame=headerFrame;
     commentEditingContainer=[[commentAddContainer alloc] initWithTransitionController:self];
-    commentEditingContainer.frame=_tableView.bounds;
-    [_tableView addSubview:commentEditingContainer];
+    commentEditingContainer.frame=self.view.frame;
+    [self.navigationController.view addSubview:commentEditingContainer];
     _tableView.scrollEnabled=NO;
     [commentEditingContainer giveCommentAddView:v];
 }
@@ -214,7 +236,7 @@
 
 -(CGRect)frameOfHeaderForSection:(RETableViewSection*)section
 {
-    CGFloat height=0;
+    CGFloat height=_header.frame.size.height;
     for(NSInteger i=0; i<section.index; i++)
     {
         height+=[self heightOfSection:section.tableViewManager.sections[i]];
@@ -225,7 +247,7 @@
 -(CGRect)frameOfCellForItem:(RETableViewItem*)item
 {
     NSIndexPath *path=item.indexPath;
-    CGFloat totalHeight=0.0f;
+    CGFloat totalHeight=_header.frame.size.height;
     for(NSInteger i=0; i<path.row; i++)
     {
         RETableViewItem *thisItem=item.section.items[i];
@@ -301,12 +323,16 @@
 -(void)displayImageView:(UIImageView *)view{
     imageInspectionView *inspect=[[imageInspectionView alloc] initWithFrame:self.navigationController.view.bounds];
     [self.navigationController.view addSubview:inspect];
-    view.frame=[view convertRect:view.bounds toView:self.view];
+    //view.frame=[view convertRect:view.bounds toView:self.view];
+    
     inspect.imageView=view;
+    inspect.delegate=self;
+    self.footerShowing=NO;
 }
 
 -(void)inspectionViewDidDismiss:(imageInspectionView *)view{
     [view removeFromSuperview];
+    self.footerShowing=YES;
 }
 
 @end

@@ -25,6 +25,8 @@
     CGRect keyboardFrame;
     
     eventOptionView *selectedView;
+    
+    BOOL configured;
 }
 @end
 
@@ -33,6 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    configured=NO;
     [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
         UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
         CGFloat cushion=8.0f;
@@ -58,7 +61,14 @@
     animator=[[UIDynamicAnimator alloc] init];
     animator.delegate=self;
     // Do any additional setup after loading the view.
-    [self configureView];
+}
+
+-(void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    if(!configured){
+        [self configureView];
+        configured=YES;
+    }
 }
                                                
 -(void)backPressed:(id)sender{
@@ -123,7 +133,7 @@
     [self recalculateContentSize];
     if(view.isAccessoryViewShowing){
         CGRect viewFrame=[view convertRect:view.bounds toView:_scrollView];
-        [_scrollView scrollRectToVisible:viewFrame animated:YES];
+        [_scrollView scrollRectToVisible:CGRectMake(viewFrame.origin.x, viewFrame.origin.y, viewFrame.size.width, _scrollView.frame.size.height) animated:YES];
     }
     
 }

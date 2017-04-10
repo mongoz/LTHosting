@@ -31,10 +31,13 @@
     self=[super init];
     margin=16.0f;
     accept=[[UIButton alloc] init];
-    accept.backgroundColor=[UIColor flatGreenColor];
+    [accept setImage:[UIImage imageNamed:@"accept.png"] forState:UIControlStateNormal];
+    [accept setBackgroundImage:[UIImage imageNamed:@"accept.png"] forState:(UIControlStateNormal)];
     [accept addTarget:self action:@selector(acceptPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [accept setContentMode:UIViewContentModeScaleAspectFill];
     deny=[[UIButton alloc] init];
-    deny.backgroundColor=[UIColor flatRedColor];
+    [deny setBackgroundImage:[UIImage imageNamed:@"deny.png"] forState:UIControlStateNormal];
+    [deny setContentMode:UIViewContentModeScaleAspectFill];
     [deny addTarget:self action:@selector(denyPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:accept];
     [self addSubview:deny];
@@ -108,8 +111,8 @@
     self.layer.contentsGravity=kCAGravityBottom;
     setButtonSize(accept);
     setButtonSize(deny);
-    accept.center=CGPointMake(accept.frame.size.width/2+margin, accept.frame.size.height/2+margin);
-    deny.center=CGPointMake(self.frame.size.width-(deny.frame.size.width/2+margin), deny.frame.size.height/2+margin);
+    deny.center=CGPointMake(accept.frame.size.width/2+margin, accept.frame.size.height/2+margin);
+    accept.center=CGPointMake(self.frame.size.width-(deny.frame.size.width/2+margin), deny.frame.size.height/2+margin);
 }
 
 -(id)initWithWidth:(CGFloat)width{

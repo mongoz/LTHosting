@@ -181,5 +181,20 @@
     return [self milesFromFeet:[self feetFromMeters:meters]];
 }
 
+-(void)setSelected:(BOOL)selected animated:(BOOL)animated{
+    UIColor *dividerColor=divider.backgroundColor;
+    [super setSelected:selected animated:animated];
+    if(selected){
+        divider.backgroundColor=dividerColor;
+    }
+}
+
+-(void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated{
+    UIColor *dividerColor=divider.backgroundColor;
+    [super setHighlighted:highlighted animated:animated];
+    if(highlighted){
+        divider.backgroundColor=dividerColor;
+    }
+}
 
 @end

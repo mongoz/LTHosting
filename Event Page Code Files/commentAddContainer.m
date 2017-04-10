@@ -179,9 +179,13 @@ void (^dropCompletionBlock)()=nil;
     [collide addBoundaryWithIdentifier:@"top" fromPoint:CGPointZero toPoint:CGPointMake(self.frame.size.width, 0)];
     collide.collisionDelegate=self;
     UIAttachmentBehavior *attach=[UIAttachmentBehavior slidingAttachmentWithItem:addView attachmentAnchor:addView.center axisOfTranslation:CGVectorMake(0, 1)];
+    
     [animator addBehavior:grav];
     [animator addBehavior:collide];
     [animator addBehavior:attach];
+    if(self.superview!=nil){
+        [self.superview layoutIfNeeded];
+    }
     dropCompletionBlock=completionBlock;
     
 }
@@ -230,6 +234,10 @@ void (^dropCompletionBlock)()=nil;
 
 -(void)dynamicAnimatorWillResume:(UIDynamicAnimator *)animator
 {
+    
+}
+
+-(void)cameraTapped{
     
 }
 

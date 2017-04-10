@@ -32,7 +32,7 @@
     self=[super initWithFrame:frame];
     [self fakeInit];
     last=nil;
-    drag=0.5f;
+    drag=0.0f;
     return self;
 }
 
@@ -178,7 +178,7 @@
     }
     CGRect initFrame=[imView convertRect:imView.bounds toView:self];
     imageView=imView;
-    imageView.frame=initFrame;
+    imageView.frame=CGRectMake(0, 0, initFrame.size.width, initFrame.size.height);
     
     imageView.contentMode=UIViewContentModeScaleAspectFit;
     [contentView addSubview:imageView];
@@ -188,6 +188,16 @@
         NSLog(@"%@",finished?@"Yes":@"No");
     }];
 }
+
+-(CGRect)centeredRectForRect:(CGRect)oldRect{
+    CGFloat scale=self.frame.size.width/oldRect.size.width;
+    CGRect comparable=oldRect;
+    if(scale!=1){
+        comparable=CGRectMake(comparable.origin.x, comparable.origin.y, comparable.size.width*scale, comparable.size.height*scale);
+    }
+    return CGRectMake(0, self.frame.size.height/2-comparable.size.height/2, comparable.size.width, comparable.size.height);
+}
+
 
 -(UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView{
     return imageView;

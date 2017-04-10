@@ -7,11 +7,12 @@
 //
 
 #import "eventPageHeaderView.h"
+#import "profileButton.h"
 
 @interface eventPageHeaderView(){
     user *myUser;
     CGFloat myWidth;
-    UIImageView *imageView;
+    profileButton *imageView;
     UILabel *label;
 }
 
@@ -46,18 +47,16 @@
     CGFloat bottomHeight=1.0f;
     [self reset];
     UIFont *nameFont=[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
-    CGFloat myheight=nameFont.lineHeight*2.0f;
     CGFloat margin=8.0f;
+    CGFloat myheight=64.0f;
     [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, myWidth, myheight+margin*2+bottomHeight)];
     if(myUser==nil)
     {
         return;
     }
-    imageView=[[UIImageView alloc] initWithImage:myUser.profileImage];
-    [imageView setContentMode:UIViewContentModeScaleAspectFill];
+    imageView=[[profileButton alloc] initWithUser:self.poster];
+    imageView.transitionController=self.profileTransitionController;
     [imageView setFrame:CGRectMake(margin, margin, myheight, myheight)];
-    [imageView.layer setCornerRadius:imageView.frame.size.height/2];
-    [imageView.layer setMasksToBounds:YES];
     [self addSubview:imageView];
     
     label=[[UILabel alloc] init];

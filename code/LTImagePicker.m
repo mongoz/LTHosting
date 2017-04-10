@@ -92,10 +92,13 @@
 }
 
 -(void)addCameraThumbnail{
-    [self addThumbnailForImage:[UIImage imageNamed:@"SwitchCamera.png"]];
+    [self addThumbnailForImage:[UIImage imageNamed:@"camera event page.png"]];
     UIView *cameraNail=thumbnails.lastObject;
     cameraNail.contentMode=UIViewContentModeScaleAspectFit;
-    cameraNail.backgroundColor=[UIColor lightGrayColor];
+    cameraNail.backgroundColor=[UIColor whiteColor];
+    cameraNail.layer.cornerRadius=4.0f;
+    cameraNail.layer.borderWidth=2.0f;
+    cameraNail.layer.borderColor=[UIColor lightGrayColor].CGColor;
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(cameraTapped:)];
     [cameraNail addGestureRecognizer:tap];
 }
@@ -108,10 +111,28 @@
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info{
-    NSLog(@"finished");
     [self.pickerDelegate endCameraModeWithImagePicker:self completion:^{
     }];
-    UIImage *im=(UIImage*)info[UIImagePickerControllerOriginalImage];
+    UIImage *img = [info valueForKey:UIImagePickerControllerOriginalImage];
+    img = [UIImage imageWithCGImage:[img CGImage]];
+    
+    UIImageOrientation requiredOrientation = UIImageOrientationUp;
+    switch ([[[info objectForKey:@"UIImagePickerControllerMediaMetadata"] objectForKey:@"Orientation"] intValue])
+    {
+        case 3:
+            requiredOrientation = UIImageOrientationDown;
+            break;
+        case 6:
+            requiredOrientation = UIImageOrientationRight;
+            break;
+        case 8:
+            requiredOrientation = UIImageOrientationLeft;
+            break;
+        default:
+            break;
+    }
+    
+    UIImage *im = [[UIImage alloc] initWithCGImage:img.CGImage scale:img.scale orientation:requiredOrientation];
     [self.pickerDelegate imagePicker:self didFinishChoosingWithImage:im];
 }
 

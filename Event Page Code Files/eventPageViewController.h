@@ -46,5 +46,7 @@
 
 @property (strong, nonatomic) IBOutlet eventPageHeaderView *header;
 
+@property (nonatomic) BOOL footerShowing;
+
 @end
 

@@ -7,11 +7,12 @@
 //
 
 #import "eventCommentTableViewCell.h"
+#import "profileButton.h"
 
 @interface eventCommentTableViewCell(){
     UILabel *textLabel;
     UIImageView *imageView;
-    UIImageView *profPicView;
+    profileButton *profPicView;
     UIView *bottom;
 }
 
@@ -37,13 +38,15 @@
     bottom.backgroundColor=[UIColor blackColor];
     CGFloat margin=12.0f;
     CGFloat pwidth=64.0f;
-    profPicView=[[UIImageView alloc] initWithFrame:CGRectMake(margin, margin, pwidth, pwidth)];
-    profPicView.layer.cornerRadius=profPicView.frame.size.height/2;
-    profPicView.layer.masksToBounds=YES;
+    profPicView=[[profileButton alloc] init];
+    profPicView.frame=CGRectMake(margin, margin, pwidth, pwidth);
     textLabel=[[UILabel alloc] initWithFrame:CGRectMake(profPicView.frame.origin.x+profPicView.frame.size.width+margin, profPicView.frame.origin.y, self.tableViewManager.tableView.frame.size.width-(profPicView.frame.origin.x+profPicView.frame.size.width+margin)-margin, 64.0f)];
     textLabel.numberOfLines=0;
     imageView=[[UIImageView alloc] initWithFrame:CGRectMake(margin, textLabel.frame.origin.y+textLabel.frame.size.height+margin, self.tableViewManager.tableView.frame.size.width-margin*2, self.tableViewManager.tableView.frame.size.width-margin*2)];
     imageView.userInteractionEnabled=YES;
+    imageView.layer.cornerRadius=4.0f;
+    imageView.layer.borderColor=[UIColor lightGrayColor].CGColor;
+    imageView.layer.borderWidth=1.0f;
     UITapGestureRecognizer *tap=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageViewTapped:)];
     [imageView addGestureRecognizer:tap];
     [self addSubview:profPicView];
@@ -68,7 +71,8 @@
     [self addSubview:imageView];
     textLabel.attributedText=[[NSAttributedString alloc] initWithString:self.item.comment.text attributes:@{NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody],NSForegroundColorAttributeName:[UIColor blackColor]}];
     [textLabel setFrame:CGRectMake(textLabel.frame.origin.x, textLabel.frame.origin.y, textLabel.frame.size.width, [textLabel.attributedText boundingRectWithSize:CGSizeMake(textLabel.frame.size.width, CGFLOAT_MAX) options:(NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin) context:nil].size.height)];
-    profPicView.image=self.item.comment.poster.profileImage;
+    profPicView.user=self.item.comment.poster;
+    profPicView.transitionController=self.item.transitionController;
     if(self.item.comment.image!=nil){
         imageView.contentMode=UIViewContentModeScaleAspectFill;
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
@@ -95,7 +99,6 @@
     NSAttributedString *text=[[NSAttributedString alloc] initWithString:item.comment.text attributes:@{NSFontAttributeName:font}];
     CGFloat textHeight=[text boundingRectWithSize:CGSizeMake(textWidth, CGFLOAT_MAX) options:(NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin) context:nil].size.height;
     if(!hasImage){
-        NSLog(@"no image");
         return margin*2+MAX(textHeight,profPicWidth);
     }
     else{

@@ -116,7 +116,7 @@ static editorView *instance=nil;
     [super setFrame:frame];
     [self gravitateBackgroundLayer];
     [border setFrame:backgroundLayer.bounds];
-    CGFloat proportion=MIN(backgroundLayer.frame.size.width,backgroundLayer.frame.size.height)/10.0f;
+    CGFloat proportion=MIN(backgroundLayer.frame.size.width,backgroundLayer.frame.size.height)/8.f;
     CGFloat height=title.frame.size.height*propr;
     if(isnan(height))
     {
@@ -218,7 +218,8 @@ static editorView *instance=nil;
 -(CGRect)bodyFrameForTitleFrame:(CGRect)titleFrame
 {
     CGFloat inset=titleFrame.origin.x-backgroundLayer.frame.origin.x;
-    return CGRectMake(titleFrame.origin.x, titleFrame.origin.y+titleFrame.size.height, titleFrame.size.width, backgroundLayer.frame.size.height-titleFrame.size.height-inset*2);
+    CGFloat seperation=12.0f;
+    return CGRectMake(titleFrame.origin.x, titleFrame.origin.y+titleFrame.size.height+seperation, titleFrame.size.width, backgroundLayer.frame.size.height-titleFrame.size.height-inset*2-seperation);
 }
 
 -(void)setBodyText:(NSString *)bodya

@@ -122,7 +122,9 @@
     NSMutableAttributedString *full=[[NSMutableAttributedString alloc] init];
     NSMutableArray<NSAttributedString*>* lines=[[NSMutableArray alloc] init];
     [lines addObject:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@",dateString]]];
-    [lines addObject:[[NSAttributedString alloc] initWithString:_address]];
+    if(!_isPrivate){
+        [lines addObject:[[NSAttributedString alloc] initWithString:_address]];
+    }
     if(![_about isEqualToString:@""])
     {
         while([[_about substringFromIndex:_about.length-1] isEqualToString:@"\n"])

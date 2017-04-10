@@ -28,24 +28,8 @@
 -(id)init
 {
     self=[super init];
-    segControl=nil;
-    segControl=[[UISegmentedControl alloc] initWithItems:@[@"Left",@"Center",@"Right"]];
-    //[segControl setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:12.0f]} forState:UIControlStateNormal];
-    [segControl setBackgroundColor:[UIColor clearColor]];
-    [segControl setTintColor:[UIColor blackColor]];
-    [self addSubview:segControl];
-    [segControl setTitleTextAttributes:@{NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]} forState:UIControlStateNormal];
-    [segControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
+    
     return self;
-}
-
--(void)setFrame:(CGRect)frame
-{
-    [super setFrame:frame];
-    CGFloat marginx=24.0f;
-    CGFloat height=self.frame.size.height/3;
-    [segControl setFrame:CGRectMake(marginx, self.bounds.size.height/2-height/2, self.bounds.size.width-marginx*2, height)];
-    [self layoutIfNeeded];
 }
 
 -(void)segmentChanged:(UISegmentedControl*)control
@@ -68,6 +52,9 @@
 
 -(void)updateCurrentValueAnimated:(BOOL)animated
 {
+    if(segControl==nil){
+        return;
+    }
     [super updateCurrentValueAnimated:animated];
     switch([(textEditingLayer*)self.targetLayer textAlignment])
     {
@@ -83,6 +70,21 @@
         default:
             break;
     }
+}
+
+-(void)toolWillAppear{
+    [super toolWillAppear];
+    CGFloat marginx=24.0f;
+    CGFloat height=self.frame.size.height/3;
+    segControl=[[UISegmentedControl alloc] initWithItems:@[@"Left",@"Center",@"Right"]];
+    [segControl setBackgroundColor:[UIColor clearColor]];
+    [segControl setTintColor:[UIColor blackColor]];
+    [segControl setTitleTextAttributes:@{NSFontAttributeName:[UIFont preferredFontForTextStyle:UIFontTextStyleBody]} forState:UIControlStateNormal];
+    segControl.frame=CGRectMake(marginx, self.bounds.size.height/2-height/2, self.bounds.size.width-marginx*2, height);
+    [segControl addTarget:self action:@selector(segmentChanged:) forControlEvents:UIControlEventValueChanged];
+    [self addSubview:segControl];
+    
+    [self updateCurrentValueAnimated:NO];
 }
 
 @end

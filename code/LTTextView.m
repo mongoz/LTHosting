@@ -84,7 +84,7 @@
 -(NSArray<UIImage*>*)images{
     NSMutableArray *ims=[[NSMutableArray alloc] init];
     for(LTTextViewImageContainer *obj in imageContainers){
-        [ims addObject:[UIImage imageWithCGImage:obj.image.CGImage]];
+        [ims addObject:obj.image];
     }
     return ims;
 }
@@ -182,8 +182,7 @@
     }];
 }
 
--(void)textViewDidBeginEditing:(UITextView *)textView{
-    
+-(void)textViewDidBeginEditing:(UITextView *)textV{
 }
 
 -(BOOL)textViewShouldEndEditing:(UITextView *)textView{
@@ -194,8 +193,8 @@
     
 }
 
--(void)textViewDidChangeSelection:(UITextView *)textView{
-    
+-(void)textViewDidChangeSelection:(UITextView *)textV{
+    [textV scrollRangeToVisible:[textV selectedRange]];
 }
 
 @end
