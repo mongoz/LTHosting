@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		088B6CD9DE1AF1D472AF893F /* libPods-LTHostingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E4FD975F0668A2ACE13B12 /* libPods-LTHostingUITests.a */; };
 		1E4C027B53E604A651CB310C /* libPods-LTHosting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EFCC24B4C17C83D5A762A5 /* libPods-LTHosting.a */; };
-		3229AF921E1B500400405137 /* dateSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3229AF911E1B500400405137 /* dateSliderViewController.m */; };
 		323498641E481EB9000148DF /* eventsNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 323498631E481EB8000148DF /* eventsNavigationController.m */; };
 		3234D0CC1E53F5DA008245B7 /* LTDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 3234D0CB1E53F5DA008245B7 /* LTDatePicker.m */; };
 		3234D0D21E541866008245B7 /* CameraButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3234D0D11E541866008245B7 /* CameraButton.png */; };
@@ -140,11 +139,6 @@
 		32998EB71E5FF4C300DFA698 /* shadeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998EA61E5FF4C300DFA698 /* shadeTool.m */; };
 		32998EB81E5FF4C300DFA698 /* toolsContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998EA71E5FF4C300DFA698 /* toolsContainer.m */; };
 		32998EBA1E5FF4C300DFA698 /* horizontalViewPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32998EAA1E5FF4C300DFA698 /* horizontalViewPicker.m */; };
-		32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0D21E18267400C42207 /* eventOptionsSwitchTableViewCell.m */; };
-		32ADD0D61E18280500C42207 /* eventOptionsFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0D51E18280500C42207 /* eventOptionsFieldTableViewCell.m */; };
-		32ADD0DD1E19E58300C42207 /* eventOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0DC1E19E58300C42207 /* eventOptionTableViewCell.m */; };
-		32ADD0E01E1A001500C42207 /* pickerSliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0DF1E1A001500C42207 /* pickerSliderViewController.m */; };
-		32ADD0E61E1A088800C42207 /* sliderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32ADD0E51E1A088800C42207 /* sliderViewController.m */; };
 		32AF04731E180F67006D4E19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04721E180F67006D4E19 /* main.m */; };
 		32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04751E180F67006D4E19 /* AppDelegate.m */; };
 		32AF04791E180F67006D4E19 /* eventCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04781E180F67006D4E19 /* eventCameraViewController.m */; };
@@ -153,16 +147,11 @@
 		32AF04841E180F67006D4E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AF04821E180F67006D4E19 /* LaunchScreen.storyboard */; };
 		32AF048F1E180F67006D4E19 /* LTHostingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF048E1E180F67006D4E19 /* LTHostingTests.m */; };
 		32AF049A1E180F67006D4E19 /* LTHostingUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04991E180F67006D4E19 /* LTHostingUITests.m */; };
-		32AF04A91E181DFC006D4E19 /* eventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04A81E181DFC006D4E19 /* eventDetailViewController.m */; };
-		32AF04AC1E18213C006D4E19 /* eventOptionsTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04AB1E18213C006D4E19 /* eventOptionsTextTableViewCell.m */; };
-		32B1E67D1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E67C1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m */; };
-		32B1E6801E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32B1E67F1E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m */; };
 		32C024BE1E71E29300D6F39F /* keyboardAccessory.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C024BD1E71E29200D6F39F /* keyboardAccessory.m */; };
 		32C024C41E71FC9C00D6F39F /* backgroundTintTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C024C31E71FC9C00D6F39F /* backgroundTintTool.m */; };
 		32C024C71E71FCDC00D6F39F /* tintEditinglayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32C024C61E71FCDC00D6F39F /* tintEditinglayer.m */; };
 		32C024C91E7200B800D6F39F /* tint color.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C024C81E7200B800D6F39F /* tint color.png */; };
 		32C82E4D1E5FDEFB00D557A5 /* test3.png in Resources */ = {isa = PBXBuildFile; fileRef = 32C82E4C1E5FDEFB00D557A5 /* test3.png */; };
-		32D4E1851E1EDF9800616488 /* eventOptionsImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32D4E1841E1EDF9800616488 /* eventOptionsImageTableViewCell.m */; };
 		32DEA0371E65715300FCFFFF /* textToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32DEA0351E65715300FCFFFF /* textToolView.m */; };
 		32E9ACC51E7B680D00703EDF /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC21E7B680D00703EDF /* fire.png */; };
 		32E9ACC61E7B680D00703EDF /* PIZZA.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC31E7B680D00703EDF /* PIZZA.png */; };
@@ -214,8 +203,6 @@
 /* Begin PBXFileReference section */
 		0EFB49BE7901759AB9C8F46D /* Pods-LTHosting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTHosting.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTHosting/Pods-LTHosting.release.xcconfig"; sourceTree = "<group>"; };
 		1E976958F10ECE71A9F31D80 /* libPods-LTHostingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTHostingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3229AF901E1B500400405137 /* dateSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dateSliderViewController.h; sourceTree = "<group>"; };
-		3229AF911E1B500400405137 /* dateSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = dateSliderViewController.m; sourceTree = "<group>"; };
 		3229AF941E1B501F00405137 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		323498621E481EB8000148DF /* eventsNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventsNavigationController.h; sourceTree = "<group>"; };
 		323498631E481EB8000148DF /* eventsNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventsNavigationController.m; sourceTree = "<group>"; };
@@ -417,16 +404,6 @@
 		32998EAA1E5FF4C300DFA698 /* horizontalViewPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = horizontalViewPicker.m; path = LTHosting/horizontalViewPicker.m; sourceTree = SOURCE_ROOT; };
 		32998EC11E5FFDC200DFA698 /* horizontalViewPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = horizontalViewPicker.h; sourceTree = "<group>"; };
 		32998EC21E5FFDC200DFA698 /* horizontalViewPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = horizontalViewPicker.m; sourceTree = "<group>"; };
-		32ADD0D11E18267400C42207 /* eventOptionsSwitchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsSwitchTableViewCell.h; sourceTree = "<group>"; };
-		32ADD0D21E18267400C42207 /* eventOptionsSwitchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionsSwitchTableViewCell.m; sourceTree = "<group>"; };
-		32ADD0D41E18280500C42207 /* eventOptionsFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsFieldTableViewCell.h; sourceTree = "<group>"; };
-		32ADD0D51E18280500C42207 /* eventOptionsFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionsFieldTableViewCell.m; sourceTree = "<group>"; };
-		32ADD0DB1E19E58300C42207 /* eventOptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionTableViewCell.h; sourceTree = "<group>"; };
-		32ADD0DC1E19E58300C42207 /* eventOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionTableViewCell.m; sourceTree = "<group>"; };
-		32ADD0DE1E1A001500C42207 /* pickerSliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pickerSliderViewController.h; sourceTree = "<group>"; };
-		32ADD0DF1E1A001500C42207 /* pickerSliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = pickerSliderViewController.m; sourceTree = "<group>"; };
-		32ADD0E41E1A088800C42207 /* sliderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sliderViewController.h; sourceTree = "<group>"; };
-		32ADD0E51E1A088800C42207 /* sliderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sliderViewController.m; sourceTree = "<group>"; };
 		32AF046E1E180F67006D4E19 /* LTHosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTHosting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AF04721E180F67006D4E19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32AF04741E180F67006D4E19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -443,14 +420,6 @@
 		32AF04951E180F67006D4E19 /* LTHostingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LTHostingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AF04991E180F67006D4E19 /* LTHostingUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LTHostingUITests.m; sourceTree = "<group>"; };
 		32AF049B1E180F67006D4E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		32AF04A71E181DFC006D4E19 /* eventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventDetailViewController.h; sourceTree = "<group>"; };
-		32AF04A81E181DFC006D4E19 /* eventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventDetailViewController.m; sourceTree = "<group>"; };
-		32AF04AA1E18213C006D4E19 /* eventOptionsTextTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsTextTableViewCell.h; sourceTree = "<group>"; };
-		32AF04AB1E18213C006D4E19 /* eventOptionsTextTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionsTextTableViewCell.m; sourceTree = "<group>"; };
-		32B1E67B1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsGoTableViewCell.h; sourceTree = "<group>"; };
-		32B1E67C1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionsGoTableViewCell.m; sourceTree = "<group>"; };
-		32B1E67E1E1CDC8E00BF7DB9 /* addressSearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressSearchResultsViewController.h; sourceTree = "<group>"; };
-		32B1E67F1E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addressSearchResultsViewController.m; sourceTree = "<group>"; };
 		32C024BC1E71E29200D6F39F /* keyboardAccessory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keyboardAccessory.h; sourceTree = "<group>"; };
 		32C024BD1E71E29200D6F39F /* keyboardAccessory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = keyboardAccessory.m; sourceTree = "<group>"; };
 		32C024C21E71FC9C00D6F39F /* backgroundTintTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = backgroundTintTool.h; sourceTree = SOURCE_ROOT; };
@@ -459,8 +428,6 @@
 		32C024C61E71FCDC00D6F39F /* tintEditinglayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tintEditinglayer.m; sourceTree = SOURCE_ROOT; };
 		32C024C81E7200B800D6F39F /* tint color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tint color.png"; sourceTree = "<group>"; };
 		32C82E4C1E5FDEFB00D557A5 /* test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test3.png; sourceTree = "<group>"; };
-		32D4E1831E1EDF9800616488 /* eventOptionsImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventOptionsImageTableViewCell.h; sourceTree = "<group>"; };
-		32D4E1841E1EDF9800616488 /* eventOptionsImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventOptionsImageTableViewCell.m; sourceTree = "<group>"; };
 		32DEA0351E65715300FCFFFF /* textToolView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = textToolView.m; path = LTHosting/textToolView.m; sourceTree = SOURCE_ROOT; };
 		32DEA0361E65715300FCFFFF /* textToolView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = textToolView.h; path = LTHosting/textToolView.h; sourceTree = SOURCE_ROOT; };
 		32E9ACC21E7B680D00703EDF /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
@@ -603,19 +570,6 @@
 				3238760E1E248E14000ECEEB /* eventCamera.m */,
 			);
 			name = Camera;
-			sourceTree = "<group>";
-		};
-		323CF9441E280B2700A1A0A9 /* Main Options View */ = {
-			isa = PBXGroup;
-			children = (
-				32ADD0D71E18288800C42207 /* Event Options Table View Cells */,
-				32AF04A71E181DFC006D4E19 /* eventDetailViewController.h */,
-				32AF04A81E181DFC006D4E19 /* eventDetailViewController.m */,
-				32B1E67E1E1CDC8E00BF7DB9 /* addressSearchResultsViewController.h */,
-				32B1E67F1E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m */,
-				32ADD0E71E1A088E00C42207 /* Slider View Controllers */,
-			);
-			name = "Main Options View";
 			sourceTree = "<group>";
 		};
 		3249C4E61E6BCB5600F23B60 /* Flyer Tool Icons */ = {
@@ -891,38 +845,6 @@
 			name = "Border Images";
 			sourceTree = "<group>";
 		};
-		32ADD0D71E18288800C42207 /* Event Options Table View Cells */ = {
-			isa = PBXGroup;
-			children = (
-				32AF04AA1E18213C006D4E19 /* eventOptionsTextTableViewCell.h */,
-				32AF04AB1E18213C006D4E19 /* eventOptionsTextTableViewCell.m */,
-				32ADD0D11E18267400C42207 /* eventOptionsSwitchTableViewCell.h */,
-				32ADD0D21E18267400C42207 /* eventOptionsSwitchTableViewCell.m */,
-				32ADD0D41E18280500C42207 /* eventOptionsFieldTableViewCell.h */,
-				32ADD0D51E18280500C42207 /* eventOptionsFieldTableViewCell.m */,
-				32B1E67B1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.h */,
-				32B1E67C1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m */,
-				32D4E1831E1EDF9800616488 /* eventOptionsImageTableViewCell.h */,
-				32D4E1841E1EDF9800616488 /* eventOptionsImageTableViewCell.m */,
-				32ADD0DB1E19E58300C42207 /* eventOptionTableViewCell.h */,
-				32ADD0DC1E19E58300C42207 /* eventOptionTableViewCell.m */,
-			);
-			name = "Event Options Table View Cells";
-			sourceTree = "<group>";
-		};
-		32ADD0E71E1A088E00C42207 /* Slider View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				32ADD0DE1E1A001500C42207 /* pickerSliderViewController.h */,
-				32ADD0DF1E1A001500C42207 /* pickerSliderViewController.m */,
-				3229AF901E1B500400405137 /* dateSliderViewController.h */,
-				3229AF911E1B500400405137 /* dateSliderViewController.m */,
-				32ADD0E41E1A088800C42207 /* sliderViewController.h */,
-				32ADD0E51E1A088800C42207 /* sliderViewController.m */,
-			);
-			name = "Slider View Controllers";
-			sourceTree = "<group>";
-		};
 		32AF04651E180F67006D4E19 = {
 			isa = PBXGroup;
 			children = (
@@ -1029,7 +951,6 @@
 				3290A7021E49F14700042C26 /* Stack Views */,
 				32C82E371E5FDBE400D557A5 /* flyer */,
 				323CF9431E280B0D00A1A0A9 /* Camera */,
-				323CF9441E280B2700A1A0A9 /* Main Options View */,
 			);
 			name = Hosting;
 			sourceTree = "<group>";
@@ -1437,7 +1358,6 @@
 			files = (
 				3278EA681E64E392002E68A4 /* datePickerOptionView.m in Sources */,
 				32998EAB1E5FF4C300DFA698 /* borderToolView.m in Sources */,
-				32B1E6801E1CDC8E00BF7DB9 /* addressSearchResultsViewController.m in Sources */,
 				328274041E723E860077722B /* eventPageViewController.m in Sources */,
 				32574B0D1E89E0FB000AFCEA /* eventCommentTableViewItem.m in Sources */,
 				3249C4C01E69084900F23B60 /* sizeTool.m in Sources */,
@@ -1462,7 +1382,6 @@
 				3290A70C1E4A51EC00042C26 /* pickerOptionView.m in Sources */,
 				329868B41E9B2D01008DE7F0 /* profileButton.m in Sources */,
 				32E9ACCC1E7B7F9D00703EDF /* LTTextView.m in Sources */,
-				32ADD0D31E18267400C42207 /* eventOptionsSwitchTableViewCell.m in Sources */,
 				32574B0A1E89E0F0000AFCEA /* eventCommentTableViewCell.m in Sources */,
 				328273CE1E720DE20077722B /* selectionViewController.m in Sources */,
 				32998EAF1E5FF4C300DFA698 /* tool.m in Sources */,
@@ -1474,15 +1393,12 @@
 				328502AC1E8DBC57005D1A4E /* cblock.m in Sources */,
 				32998EB11E5FF4C300DFA698 /* toolViewItem.m in Sources */,
 				328502961E8CE5FA005D1A4E /* LTNavigationController.m in Sources */,
-				32ADD0D61E18280500C42207 /* eventOptionsFieldTableViewCell.m in Sources */,
 				328274071E723E860077722B /* flyerTableViewItem.m in Sources */,
 				32998EB21E5FF4C300DFA698 /* borderEditingLayer.m in Sources */,
 				328274101E723E860077722B /* user.m in Sources */,
 				328274031E723E860077722B /* eventPageTableViewItem.m in Sources */,
 				3290A7011E49F09400042C26 /* stackTableView.m in Sources */,
-				32D4E1851E1EDF9800616488 /* eventOptionsImageTableViewCell.m in Sources */,
 				3290A6E31E496E0A00042C26 /* eventViewController.m in Sources */,
-				32ADD0DD1E19E58300C42207 /* eventOptionTableViewCell.m in Sources */,
 				32998EB01E5FF4C300DFA698 /* toolView.m in Sources */,
 				328274051E723E860077722B /* eventTableViewItem.m in Sources */,
 				32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */,
@@ -1490,8 +1406,6 @@
 				32C024C41E71FC9C00D6F39F /* backgroundTintTool.m in Sources */,
 				32998EB81E5FF4C300DFA698 /* toolsContainer.m in Sources */,
 				328274021E723E860077722B /* eventPageTableViewCell.m in Sources */,
-				3229AF921E1B500400405137 /* dateSliderViewController.m in Sources */,
-				32ADD0E01E1A001500C42207 /* pickerSliderViewController.m in Sources */,
 				3290A6FE1E49E0FD00042C26 /* aboutOptionView.m in Sources */,
 				3249C4CF1E6908D000F23B60 /* textEditor.m in Sources */,
 				328274081E723E860077722B /* fullEventDetailViewController.m in Sources */,
@@ -1501,7 +1415,6 @@
 				3290A6F51E49C1A400042C26 /* stackView.m in Sources */,
 				32998EAC1E5FF4C300DFA698 /* colorTool.m in Sources */,
 				3290A6F81E49CB2C00042C26 /* nameOptionView.m in Sources */,
-				32B1E67D1E1CD35B00BF7DB9 /* eventOptionsGoTableViewCell.m in Sources */,
 				3290A6CE1E48766100042C26 /* navigationScrollView.m in Sources */,
 				32E9ACDC1E7B7FC600703EDF /* eventPageFooterView.m in Sources */,
 				3282740B1E723E860077722B /* LTTableViewSection.m in Sources */,
@@ -1511,9 +1424,7 @@
 				32998EAD1E5FF4C300DFA698 /* smarterString.m in Sources */,
 				328273FB1E723E860077722B /* commentAddContainer.m in Sources */,
 				32998EB71E5FF4C300DFA698 /* shadeTool.m in Sources */,
-				32AF04A91E181DFC006D4E19 /* eventDetailViewController.m in Sources */,
 				32E9ACD81E7B7FB900703EDF /* LTImagePickerController.m in Sources */,
-				32AF04AC1E18213C006D4E19 /* eventOptionsTextTableViewCell.m in Sources */,
 				3290A6F21E49BF9F00042C26 /* eventOptionVIew.m in Sources */,
 				32AF04731E180F67006D4E19 /* main.m in Sources */,
 				3290A6FB1E49D48800042C26 /* addressOptionView.m in Sources */,
@@ -1521,7 +1432,6 @@
 				3277081F1E3037D5000FE30A /* commonUseFunctions.m in Sources */,
 				3282740D1E723E860077722B /* REAttributedStringItem.m in Sources */,
 				328273FC1E723E860077722B /* commentAddView.m in Sources */,
-				32ADD0E61E1A088800C42207 /* sliderViewController.m in Sources */,
 				32DEA0371E65715300FCFFFF /* textToolView.m in Sources */,
 				3249C4BD1E69083E00F23B60 /* textAlignmentTool.m in Sources */,
 				324BC1781E38018D00C9B629 /* usefulArray.m in Sources */,
