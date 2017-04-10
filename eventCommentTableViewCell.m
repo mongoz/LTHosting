@@ -58,6 +58,7 @@
     copy.image=imageView.image;
     copy.contentMode=imageView.contentMode;
     copy.layer.masksToBounds=imageView.layer.masksToBounds;
+    [self addSubview:copy];
     [self.item.transitionController displayImageView:copy];
 }
 

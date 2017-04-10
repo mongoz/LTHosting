@@ -321,9 +321,11 @@
 }
 
 -(void)displayImageView:(UIImageView *)view{
+    CGRect rect=[view convertRect:view.bounds toView:nil];
+    [view removeFromSuperview];
     imageInspectionView *inspect=[[imageInspectionView alloc] initWithFrame:self.navigationController.view.bounds];
     [self.navigationController.view addSubview:inspect];
-    //view.frame=[view convertRect:view.bounds toView:self.view];
+    view.frame=rect;
     
     inspect.imageView=view;
     inspect.delegate=self;

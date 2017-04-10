@@ -76,17 +76,17 @@
 }
 
 -(void)draggingEnded:(UIPanGestureRecognizer*)pan{
-    NSLog(@"ended");
     NSTimeInterval decelInt=.15f;
     [self beginDecelerationWithVelocity:[pan velocityInView:self].y*(1.0f-drag) timeInterval:decelInt endBlock:^{
-        if(fabs(self.frame.origin.y)>[self maxCenterDistance]){
+        if(fabs(contentView.frame.origin.y)>[self maxCenterDistance]){
             [self dismissSelf];
+            
         }
         else{
-            [UIView transitionWithView:self duration:.2 options:UIViewAnimationOptionCurveEaseIn animations:^{
-                self.frame=CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+            [UIView transitionWithView:contentView duration:.2 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                [self setContentViewFrame:CGRectMake(0, 0, contentView.frame.size.width, contentView.frame.size.height)];
             }completion:^(BOOL finished){
-                
+                contentView.userInteractionEnabled=YES;
             }];
         }
     }];
@@ -102,7 +102,7 @@
         return velocity+(acceleration*t);
     };
     [UIView animateWithDuration:time animations:^{
-        self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y+x(time), self.frame.size.width, self.frame.size.height);
+        [self setContentViewFrame:CGRectMake(contentView.frame.origin.x, contentView.frame.origin.y+x(time), contentView.frame.size.width, contentView.frame.size.height)];
     } completion:^(BOOL finished){
         if(fabs(v(time))>0.01f||(v(time)>=0)!=(velocity>=0)){
             if(endBlock!=nil){
@@ -116,12 +116,19 @@
 }
 
 -(void)draggingChanged:(UIPanGestureRecognizer*)pan{
-    self.frame=CGRectMake(self.frame.origin.x, self.frame.origin.y+([pan velocityInView:self].y*[[NSDate date] timeIntervalSinceDate:last]*(1.0f-drag)), self.frame.size.width, self.frame.size.height);
+    [self setContentViewFrame:CGRectMake(contentView.frame.origin.x, contentView.frame.origin.y+([pan velocityInView:self].y*[[NSDate date] timeIntervalSinceDate:last]*(1.0f-drag)), contentView.frame.size.width, contentView.frame.size.height)];
     last=[NSDate date];
+}
+
+-(void)setContentViewFrame:(CGRect)frame{
+    contentView.frame=frame;
+    CGFloat total=self.frame.size.height/2;
+    self.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:MAX(1-fabs(contentView.frame.origin.y)/(total*1.618f),0)];
 }
 
 -(void)draggingBegan:(UIPanGestureRecognizer*)pan{
     last=[NSDate date];
+    contentView.userInteractionEnabled=NO;
 }
 
 -(void)doubleTapped:(UITapGestureRecognizer*)tap{
@@ -150,7 +157,7 @@
 
 -(void)dismissSelf{
     [UIView animateWithDuration:.25 animations:^{
-        self.frame=CGRectMake(0, self.frame.origin.y>[self maxCenterDistance]?self.frame.size.height:-self.frame.size.height, self.frame.size.width, self.frame.size.height);
+        [self setContentViewFrame:CGRectMake(0, contentView.frame.origin.y>[self maxCenterDistance]?contentView.frame.size.height:-contentView.frame.size.height, contentView.frame.size.width, contentView.frame.size.height)];
     } completion:^(BOOL finished){
         if(_delegate!=nil){
             [_delegate inspectionViewDidDismiss:self];
@@ -176,16 +183,13 @@
     if(imageView!=nil){
         [imageView removeFromSuperview];
     }
-    CGRect initFrame=[imView convertRect:imView.bounds toView:self];
     imageView=imView;
-    imageView.frame=CGRectMake(0, 0, initFrame.size.width, initFrame.size.height);
     
-    imageView.contentMode=UIViewContentModeScaleAspectFit;
     [contentView addSubview:imageView];
     [UIView animateWithDuration:.25 animations:^{
         imageView.frame=self.bounds;
+        imageView.contentMode=UIViewContentModeScaleAspectFit;
     } completion:^(BOOL finished){
-        NSLog(@"%@",finished?@"Yes":@"No");
     }];
 }
 
