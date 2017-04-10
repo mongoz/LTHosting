@@ -57,33 +57,12 @@
 		3249C4E51E6BCB1900F23B60 /* Text size.png in Resources */ = {isa = PBXBuildFile; fileRef = 3249C4DD1E6BCB1900F23B60 /* Text size.png */; };
 		3249C4E81E6BD5E000F23B60 /* expandcollapsearrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3249C4E71E6BD5E000F23B60 /* expandcollapsearrow.png */; };
 		324BC1781E38018D00C9B629 /* usefulArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 324BC1771E38018D00C9B629 /* usefulArray.m */; };
-		32574B0A1E89E0F0000AFCEA /* eventCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */; };
-		32574B0D1E89E0FB000AFCEA /* eventCommentTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */; };
 		327708151E2DF74F000FE30A /* maptrash.png in Resources */ = {isa = PBXBuildFile; fileRef = 327708141E2DF74F000FE30A /* maptrash.png */; };
 		328273C81E720D500077722B /* exampleFlyer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 328273C41E720D500077722B /* exampleFlyer.jpg */; };
 		328273C91E720D500077722B /* location-pointer.png in Resources */ = {isa = PBXBuildFile; fileRef = 328273C51E720D500077722B /* location-pointer.png */; };
 		328273CA1E720D500077722B /* hourglass.png in Resources */ = {isa = PBXBuildFile; fileRef = 328273C61E720D500077722B /* hourglass.png */; };
 		328273CB1E720D500077722B /* profileImage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 328273C71E720D500077722B /* profileImage.jpeg */; };
 		328273CE1E720DE20077722B /* selectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273CD1E720DE20077722B /* selectionViewController.m */; };
-		328273FB1E723E860077722B /* commentAddContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273D01E723E850077722B /* commentAddContainer.m */; };
-		328273FC1E723E860077722B /* commentAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273D21E723E850077722B /* commentAddView.m */; };
-		328273FD1E723E860077722B /* commentsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273D41E723E850077722B /* commentsHeaderView.m */; };
-		328274001E723E860077722B /* eventDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273DA1E723E850077722B /* eventDetailTableViewCell.m */; };
-		328274011E723E860077722B /* eventPageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273DC1E723E850077722B /* eventPageHeaderView.m */; };
-		328274021E723E860077722B /* eventPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273DE1E723E850077722B /* eventPageTableViewCell.m */; };
-		328274031E723E860077722B /* eventPageTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273E01E723E850077722B /* eventPageTableViewItem.m */; };
-		328274041E723E860077722B /* eventPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273E21E723E850077722B /* eventPageViewController.m */; };
-		328274051E723E860077722B /* eventTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273E41E723E850077722B /* eventTableViewItem.m */; };
-		328274061E723E860077722B /* flyerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273E61E723E850077722B /* flyerTableViewCell.m */; };
-		328274071E723E860077722B /* flyerTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273E81E723E860077722B /* flyerTableViewItem.m */; };
-		328274081E723E860077722B /* fullEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273EA1E723E860077722B /* fullEventDetailViewController.m */; };
-		328274091E723E860077722B /* locationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273EC1E723E860077722B /* locationCell.m */; };
-		3282740A1E723E860077722B /* locationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273EE1E723E860077722B /* locationItem.m */; };
-		3282740B1E723E860077722B /* LTTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273F01E723E860077722B /* LTTableViewSection.m */; };
-		3282740C1E723E860077722B /* REAttributedStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273F21E723E860077722B /* REAttributedStringCell.m */; };
-		3282740D1E723E860077722B /* REAttributedStringItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273F41E723E860077722B /* REAttributedStringItem.m */; };
-		3282740E1E723E860077722B /* seperatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273F61E723E860077722B /* seperatorCell.m */; };
-		3282740F1E723E860077722B /* seperatorTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273F81E723E860077722B /* seperatorTableViewItem.m */; };
 		328274151E724F200077722B /* EventPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328274141E724F200077722B /* EventPage.storyboard */; };
 		328502A01E8DBBC5005D1A4E /* about section.png in Resources */ = {isa = PBXBuildFile; fileRef = 328502971E8DBBC5005D1A4E /* about section.png */; };
 		328502A11E8DBBC5005D1A4E /* accept.png in Resources */ = {isa = PBXBuildFile; fileRef = 328502981E8DBBC5005D1A4E /* accept.png */; };
@@ -94,9 +73,7 @@
 		328502A61E8DBBC5005D1A4E /* event name.png in Resources */ = {isa = PBXBuildFile; fileRef = 3285029D1E8DBBC5005D1A4E /* event name.png */; };
 		328502A71E8DBBC5005D1A4E /* Go-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 3285029E1E8DBBC5005D1A4E /* Go-48.png */; };
 		328502A81E8DBBC5005D1A4E /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 3285029F1E8DBBC5005D1A4E /* location.png */; };
-		328503271E91F68E005D1A4E /* imageInspectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 328503251E91F68E005D1A4E /* imageInspectionView.m */; };
 		3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3290A7261E4AB91A00042C26 /* Unused.storyboard */; };
-		329868B41E9B2D01008DE7F0 /* profileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 329868B31E9B2D01008DE7F0 /* profileButton.m */; };
 		329868F31E9B3196008DE7F0 /* aboutOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329868E01E9B3196008DE7F0 /* aboutOptionView.m */; };
 		329868F41E9B3196008DE7F0 /* addressOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329868E21E9B3196008DE7F0 /* addressOptionView.m */; };
 		329868F51E9B3196008DE7F0 /* cblock.m in Sources */ = {isa = PBXBuildFile; fileRef = 329868E41E9B3196008DE7F0 /* cblock.m */; };
@@ -144,6 +121,36 @@
 		329869811E9B3486008DE7F0 /* event.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298697C1E9B3486008DE7F0 /* event.m */; };
 		329869821E9B3486008DE7F0 /* eventComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 3298697E1E9B3486008DE7F0 /* eventComment.m */; };
 		329869831E9B3486008DE7F0 /* user.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869801E9B3486008DE7F0 /* user.m */; };
+		329869BC1E9B3945008DE7F0 /* LTImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869B51E9B3945008DE7F0 /* LTImageManager.m */; };
+		329869BD1E9B3945008DE7F0 /* LTImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869B71E9B3945008DE7F0 /* LTImagePicker.m */; };
+		329869BE1E9B3945008DE7F0 /* LTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869B91E9B3945008DE7F0 /* LTImagePickerController.m */; };
+		329869BF1E9B3945008DE7F0 /* LTImagePickerThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869BB1E9B3945008DE7F0 /* LTImagePickerThumbnail.m */; };
+		329869D41E9B395C008DE7F0 /* commentAddContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869C11E9B395B008DE7F0 /* commentAddContainer.m */; };
+		329869D51E9B395C008DE7F0 /* commentAddView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869C31E9B395B008DE7F0 /* commentAddView.m */; };
+		329869D61E9B395C008DE7F0 /* eventPageFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869C51E9B395B008DE7F0 /* eventPageFooterView.m */; };
+		329869D71E9B395C008DE7F0 /* eventPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869C71E9B395B008DE7F0 /* eventPageViewController.m */; };
+		329869D81E9B395C008DE7F0 /* fullEventDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869C91E9B395B008DE7F0 /* fullEventDetailViewController.m */; };
+		329869D91E9B395C008DE7F0 /* imageInspectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869CB1E9B395B008DE7F0 /* imageInspectionView.m */; };
+		329869DA1E9B395C008DE7F0 /* LTTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869CD1E9B395B008DE7F0 /* LTTableViewSection.m */; };
+		329869DB1E9B395C008DE7F0 /* LTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869CF1E9B395C008DE7F0 /* LTTextView.m */; };
+		329869DC1E9B395C008DE7F0 /* LTTextViewImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869D11E9B395C008DE7F0 /* LTTextViewImageContainer.m */; };
+		329869DD1E9B395C008DE7F0 /* profileButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869D31E9B395C008DE7F0 /* profileButton.m */; };
+		329869E21E9B396E008DE7F0 /* commentsHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869DF1E9B396E008DE7F0 /* commentsHeaderView.m */; };
+		329869E31E9B396E008DE7F0 /* eventPageHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869E11E9B396E008DE7F0 /* eventPageHeaderView.m */; };
+		329869F21E9B398B008DE7F0 /* eventCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869E51E9B398B008DE7F0 /* eventCommentTableViewCell.m */; };
+		329869F31E9B398B008DE7F0 /* eventDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869E71E9B398B008DE7F0 /* eventDetailTableViewCell.m */; };
+		329869F41E9B398B008DE7F0 /* eventPageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869E91E9B398B008DE7F0 /* eventPageTableViewCell.m */; };
+		329869F51E9B398B008DE7F0 /* flyerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869EB1E9B398B008DE7F0 /* flyerTableViewCell.m */; };
+		329869F61E9B398B008DE7F0 /* locationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869ED1E9B398B008DE7F0 /* locationCell.m */; };
+		329869F71E9B398B008DE7F0 /* REAttributedStringCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869EF1E9B398B008DE7F0 /* REAttributedStringCell.m */; };
+		329869F81E9B398B008DE7F0 /* seperatorCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869F11E9B398B008DE7F0 /* seperatorCell.m */; };
+		32986A071E9B3A24008DE7F0 /* eventCommentTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869FA1E9B3A24008DE7F0 /* eventCommentTableViewItem.m */; };
+		32986A081E9B3A24008DE7F0 /* eventPageTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869FC1E9B3A24008DE7F0 /* eventPageTableViewItem.m */; };
+		32986A091E9B3A25008DE7F0 /* eventTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 329869FE1E9B3A24008DE7F0 /* eventTableViewItem.m */; };
+		32986A0A1E9B3A25008DE7F0 /* flyerTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32986A001E9B3A24008DE7F0 /* flyerTableViewItem.m */; };
+		32986A0B1E9B3A25008DE7F0 /* locationItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32986A021E9B3A24008DE7F0 /* locationItem.m */; };
+		32986A0C1E9B3A25008DE7F0 /* REAttributedStringItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32986A041E9B3A24008DE7F0 /* REAttributedStringItem.m */; };
+		32986A0D1E9B3A25008DE7F0 /* seperatorTableViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 32986A061E9B3A24008DE7F0 /* seperatorTableViewItem.m */; };
 		32AF04731E180F67006D4E19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04721E180F67006D4E19 /* main.m */; };
 		32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04751E180F67006D4E19 /* AppDelegate.m */; };
 		32AF047C1E180F67006D4E19 /* Hosting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AF047A1E180F67006D4E19 /* Hosting.storyboard */; };
@@ -156,13 +163,6 @@
 		32E9ACC51E7B680D00703EDF /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC21E7B680D00703EDF /* fire.png */; };
 		32E9ACC61E7B680D00703EDF /* PIZZA.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC31E7B680D00703EDF /* PIZZA.png */; };
 		32E9ACC71E7B680D00703EDF /* SPEAKER.png in Resources */ = {isa = PBXBuildFile; fileRef = 32E9ACC41E7B680D00703EDF /* SPEAKER.png */; };
-		32E9ACCC1E7B7F9D00703EDF /* LTTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACC91E7B7F9D00703EDF /* LTTextView.m */; };
-		32E9ACCD1E7B7F9D00703EDF /* LTTextViewImageContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACCB1E7B7F9D00703EDF /* LTTextViewImageContainer.m */; };
-		32E9ACD61E7B7FB900703EDF /* LTImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACCF1E7B7FB900703EDF /* LTImageManager.m */; };
-		32E9ACD71E7B7FB900703EDF /* LTImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACD11E7B7FB900703EDF /* LTImagePicker.m */; };
-		32E9ACD81E7B7FB900703EDF /* LTImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACD31E7B7FB900703EDF /* LTImagePickerController.m */; };
-		32E9ACD91E7B7FB900703EDF /* LTImagePickerThumbnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACD51E7B7FB900703EDF /* LTImagePickerThumbnail.m */; };
-		32E9ACDC1E7B7FC600703EDF /* eventPageFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 32E9ACDB1E7B7FC600703EDF /* eventPageFooterView.m */; };
 		32EB4A081E68E30400E9E714 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F41E68DFA000E9E714 /* BebasNeue.otf */; };
 		32EB4A091E68E30400E9E714 /* bullpen hv it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F51E68DFA000E9E714 /* bullpen hv it.ttf */; };
 		32EB4A0A1E68E30400E9E714 /* Chosence Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32EB49F61E68DFA000E9E714 /* Chosence Bold Italic.otf */; };
@@ -254,10 +254,6 @@
 		3249C4E71E6BD5E000F23B60 /* expandcollapsearrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expandcollapsearrow.png; sourceTree = "<group>"; };
 		324BC1761E38018D00C9B629 /* usefulArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = usefulArray.h; sourceTree = "<group>"; };
 		324BC1771E38018D00C9B629 /* usefulArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = usefulArray.m; sourceTree = "<group>"; };
-		32574B081E89E0F0000AFCEA /* eventCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCommentTableViewCell.h; sourceTree = SOURCE_ROOT; };
-		32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewCell.m; sourceTree = SOURCE_ROOT; };
-		32574B0B1E89E0FB000AFCEA /* eventCommentTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventCommentTableViewItem.h; sourceTree = SOURCE_ROOT; };
-		32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventCommentTableViewItem.m; sourceTree = SOURCE_ROOT; };
 		327708141E2DF74F000FE30A /* maptrash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maptrash.png; sourceTree = "<group>"; };
 		328273C41E720D500077722B /* exampleFlyer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = exampleFlyer.jpg; sourceTree = "<group>"; };
 		328273C51E720D500077722B /* location-pointer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location-pointer.png"; sourceTree = "<group>"; };
@@ -265,44 +261,6 @@
 		328273C71E720D500077722B /* profileImage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = profileImage.jpeg; sourceTree = "<group>"; };
 		328273CC1E720DE20077722B /* selectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectionViewController.h; sourceTree = "<group>"; };
 		328273CD1E720DE20077722B /* selectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectionViewController.m; sourceTree = "<group>"; };
-		328273CF1E723E850077722B /* commentAddContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentAddContainer.h; path = "Event Page Code Files/commentAddContainer.h"; sourceTree = SOURCE_ROOT; };
-		328273D01E723E850077722B /* commentAddContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentAddContainer.m; path = "Event Page Code Files/commentAddContainer.m"; sourceTree = SOURCE_ROOT; };
-		328273D11E723E850077722B /* commentAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentAddView.h; path = "Event Page Code Files/commentAddView.h"; sourceTree = SOURCE_ROOT; };
-		328273D21E723E850077722B /* commentAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentAddView.m; path = "Event Page Code Files/commentAddView.m"; sourceTree = SOURCE_ROOT; };
-		328273D31E723E850077722B /* commentsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentsHeaderView.h; path = "Event Page Code Files/commentsHeaderView.h"; sourceTree = SOURCE_ROOT; };
-		328273D41E723E850077722B /* commentsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentsHeaderView.m; path = "Event Page Code Files/commentsHeaderView.m"; sourceTree = SOURCE_ROOT; };
-		328273D91E723E850077722B /* eventDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventDetailTableViewCell.h; path = "Event Page Code Files/eventDetailTableViewCell.h"; sourceTree = SOURCE_ROOT; };
-		328273DA1E723E850077722B /* eventDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventDetailTableViewCell.m; path = "Event Page Code Files/eventDetailTableViewCell.m"; sourceTree = SOURCE_ROOT; };
-		328273DB1E723E850077722B /* eventPageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageHeaderView.h; path = "Event Page Code Files/eventPageHeaderView.h"; sourceTree = SOURCE_ROOT; };
-		328273DC1E723E850077722B /* eventPageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageHeaderView.m; path = "Event Page Code Files/eventPageHeaderView.m"; sourceTree = SOURCE_ROOT; };
-		328273DD1E723E850077722B /* eventPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageTableViewCell.h; path = "Event Page Code Files/eventPageTableViewCell.h"; sourceTree = SOURCE_ROOT; };
-		328273DE1E723E850077722B /* eventPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageTableViewCell.m; path = "Event Page Code Files/eventPageTableViewCell.m"; sourceTree = SOURCE_ROOT; };
-		328273DF1E723E850077722B /* eventPageTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageTableViewItem.h; path = "Event Page Code Files/eventPageTableViewItem.h"; sourceTree = SOURCE_ROOT; };
-		328273E01E723E850077722B /* eventPageTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageTableViewItem.m; path = "Event Page Code Files/eventPageTableViewItem.m"; sourceTree = SOURCE_ROOT; };
-		328273E11E723E850077722B /* eventPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageViewController.h; path = "Event Page Code Files/eventPageViewController.h"; sourceTree = SOURCE_ROOT; };
-		328273E21E723E850077722B /* eventPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageViewController.m; path = "Event Page Code Files/eventPageViewController.m"; sourceTree = SOURCE_ROOT; };
-		328273E31E723E850077722B /* eventTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventTableViewItem.h; path = "Event Page Code Files/eventTableViewItem.h"; sourceTree = SOURCE_ROOT; };
-		328273E41E723E850077722B /* eventTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventTableViewItem.m; path = "Event Page Code Files/eventTableViewItem.m"; sourceTree = SOURCE_ROOT; };
-		328273E51E723E850077722B /* flyerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flyerTableViewCell.h; path = "Event Page Code Files/flyerTableViewCell.h"; sourceTree = SOURCE_ROOT; };
-		328273E61E723E850077722B /* flyerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flyerTableViewCell.m; path = "Event Page Code Files/flyerTableViewCell.m"; sourceTree = SOURCE_ROOT; };
-		328273E71E723E850077722B /* flyerTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flyerTableViewItem.h; path = "Event Page Code Files/flyerTableViewItem.h"; sourceTree = SOURCE_ROOT; };
-		328273E81E723E860077722B /* flyerTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flyerTableViewItem.m; path = "Event Page Code Files/flyerTableViewItem.m"; sourceTree = SOURCE_ROOT; };
-		328273E91E723E860077722B /* fullEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fullEventDetailViewController.h; path = "Event Page Code Files/fullEventDetailViewController.h"; sourceTree = SOURCE_ROOT; };
-		328273EA1E723E860077722B /* fullEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fullEventDetailViewController.m; path = "Event Page Code Files/fullEventDetailViewController.m"; sourceTree = SOURCE_ROOT; };
-		328273EB1E723E860077722B /* locationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = locationCell.h; path = "Event Page Code Files/locationCell.h"; sourceTree = SOURCE_ROOT; };
-		328273EC1E723E860077722B /* locationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = locationCell.m; path = "Event Page Code Files/locationCell.m"; sourceTree = SOURCE_ROOT; };
-		328273ED1E723E860077722B /* locationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = locationItem.h; path = "Event Page Code Files/locationItem.h"; sourceTree = SOURCE_ROOT; };
-		328273EE1E723E860077722B /* locationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = locationItem.m; path = "Event Page Code Files/locationItem.m"; sourceTree = SOURCE_ROOT; };
-		328273EF1E723E860077722B /* LTTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTableViewSection.h; path = "Event Page Code Files/LTTableViewSection.h"; sourceTree = SOURCE_ROOT; };
-		328273F01E723E860077722B /* LTTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTableViewSection.m; path = "Event Page Code Files/LTTableViewSection.m"; sourceTree = SOURCE_ROOT; };
-		328273F11E723E860077722B /* REAttributedStringCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REAttributedStringCell.h; path = "Event Page Code Files/REAttributedStringCell.h"; sourceTree = SOURCE_ROOT; };
-		328273F21E723E860077722B /* REAttributedStringCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REAttributedStringCell.m; path = "Event Page Code Files/REAttributedStringCell.m"; sourceTree = SOURCE_ROOT; };
-		328273F31E723E860077722B /* REAttributedStringItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REAttributedStringItem.h; path = "Event Page Code Files/REAttributedStringItem.h"; sourceTree = SOURCE_ROOT; };
-		328273F41E723E860077722B /* REAttributedStringItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REAttributedStringItem.m; path = "Event Page Code Files/REAttributedStringItem.m"; sourceTree = SOURCE_ROOT; };
-		328273F51E723E860077722B /* seperatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seperatorCell.h; path = "Event Page Code Files/seperatorCell.h"; sourceTree = SOURCE_ROOT; };
-		328273F61E723E860077722B /* seperatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = seperatorCell.m; path = "Event Page Code Files/seperatorCell.m"; sourceTree = SOURCE_ROOT; };
-		328273F71E723E860077722B /* seperatorTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seperatorTableViewItem.h; path = "Event Page Code Files/seperatorTableViewItem.h"; sourceTree = SOURCE_ROOT; };
-		328273F81E723E860077722B /* seperatorTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = seperatorTableViewItem.m; path = "Event Page Code Files/seperatorTableViewItem.m"; sourceTree = SOURCE_ROOT; };
 		328274141E724F200077722B /* EventPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventPage.storyboard; path = "../Event Page Code Files/EventPage.storyboard"; sourceTree = "<group>"; };
 		328502971E8DBBC5005D1A4E /* about section.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "about section.png"; path = "notes3.30/about section.png"; sourceTree = "<group>"; };
 		328502981E8DBBC5005D1A4E /* accept.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = accept.png; path = notes3.30/accept.png; sourceTree = "<group>"; };
@@ -313,11 +271,7 @@
 		3285029D1E8DBBC5005D1A4E /* event name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "event name.png"; path = "notes3.30/event name.png"; sourceTree = "<group>"; };
 		3285029E1E8DBBC5005D1A4E /* Go-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Go-48.png"; path = "notes3.30/Go-48.png"; sourceTree = "<group>"; };
 		3285029F1E8DBBC5005D1A4E /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = notes3.30/location.png; sourceTree = "<group>"; };
-		328503251E91F68E005D1A4E /* imageInspectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imageInspectionView.m; path = code/imageInspectionView.m; sourceTree = SOURCE_ROOT; };
-		328503261E91F68E005D1A4E /* imageInspectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageInspectionView.h; path = code/imageInspectionView.h; sourceTree = SOURCE_ROOT; };
 		3290A7261E4AB91A00042C26 /* Unused.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unused.storyboard; sourceTree = "<group>"; };
-		329868B21E9B2D01008DE7F0 /* profileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileButton.h; sourceTree = SOURCE_ROOT; };
-		329868B31E9B2D01008DE7F0 /* profileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileButton.m; sourceTree = SOURCE_ROOT; };
 		329868DF1E9B3196008DE7F0 /* aboutOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aboutOptionView.h; path = "Hosting/Option Views/aboutOptionView.h"; sourceTree = "<group>"; };
 		329868E01E9B3196008DE7F0 /* aboutOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = aboutOptionView.m; path = "Hosting/Option Views/aboutOptionView.m"; sourceTree = "<group>"; };
 		329868E11E9B3196008DE7F0 /* addressOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = addressOptionView.h; path = "Hosting/Option Views/addressOptionView.h"; sourceTree = "<group>"; };
@@ -412,6 +366,66 @@
 		3298697E1E9B3486008DE7F0 /* eventComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventComment.m; path = LTHosting/Schema/eventComment.m; sourceTree = SOURCE_ROOT; };
 		3298697F1E9B3486008DE7F0 /* user.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = user.h; path = LTHosting/Schema/user.h; sourceTree = SOURCE_ROOT; };
 		329869801E9B3486008DE7F0 /* user.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = user.m; path = LTHosting/Schema/user.m; sourceTree = SOURCE_ROOT; };
+		329869B41E9B3945008DE7F0 /* LTImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImageManager.h; path = "LTHosting/Event Page/LTImagePickerController/LTImageManager.h"; sourceTree = SOURCE_ROOT; };
+		329869B51E9B3945008DE7F0 /* LTImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImageManager.m; path = "LTHosting/Event Page/LTImagePickerController/LTImageManager.m"; sourceTree = SOURCE_ROOT; };
+		329869B61E9B3945008DE7F0 /* LTImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePicker.h; path = "LTHosting/Event Page/LTImagePickerController/LTImagePicker.h"; sourceTree = SOURCE_ROOT; };
+		329869B71E9B3945008DE7F0 /* LTImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePicker.m; path = "LTHosting/Event Page/LTImagePickerController/LTImagePicker.m"; sourceTree = SOURCE_ROOT; };
+		329869B81E9B3945008DE7F0 /* LTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePickerController.h; path = "LTHosting/Event Page/LTImagePickerController/LTImagePickerController.h"; sourceTree = SOURCE_ROOT; };
+		329869B91E9B3945008DE7F0 /* LTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePickerController.m; path = "LTHosting/Event Page/LTImagePickerController/LTImagePickerController.m"; sourceTree = SOURCE_ROOT; };
+		329869BA1E9B3945008DE7F0 /* LTImagePickerThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePickerThumbnail.h; path = "LTHosting/Event Page/LTImagePickerController/LTImagePickerThumbnail.h"; sourceTree = SOURCE_ROOT; };
+		329869BB1E9B3945008DE7F0 /* LTImagePickerThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePickerThumbnail.m; path = "LTHosting/Event Page/LTImagePickerController/LTImagePickerThumbnail.m"; sourceTree = SOURCE_ROOT; };
+		329869C01E9B395B008DE7F0 /* commentAddContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentAddContainer.h; path = "LTHosting/Event Page/commentAddContainer.h"; sourceTree = SOURCE_ROOT; };
+		329869C11E9B395B008DE7F0 /* commentAddContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentAddContainer.m; path = "LTHosting/Event Page/commentAddContainer.m"; sourceTree = SOURCE_ROOT; };
+		329869C21E9B395B008DE7F0 /* commentAddView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentAddView.h; path = "LTHosting/Event Page/commentAddView.h"; sourceTree = SOURCE_ROOT; };
+		329869C31E9B395B008DE7F0 /* commentAddView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentAddView.m; path = "LTHosting/Event Page/commentAddView.m"; sourceTree = SOURCE_ROOT; };
+		329869C41E9B395B008DE7F0 /* eventPageFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageFooterView.h; path = "LTHosting/Event Page/eventPageFooterView.h"; sourceTree = SOURCE_ROOT; };
+		329869C51E9B395B008DE7F0 /* eventPageFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageFooterView.m; path = "LTHosting/Event Page/eventPageFooterView.m"; sourceTree = SOURCE_ROOT; };
+		329869C61E9B395B008DE7F0 /* eventPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageViewController.h; path = "LTHosting/Event Page/eventPageViewController.h"; sourceTree = SOURCE_ROOT; };
+		329869C71E9B395B008DE7F0 /* eventPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageViewController.m; path = "LTHosting/Event Page/eventPageViewController.m"; sourceTree = SOURCE_ROOT; };
+		329869C81E9B395B008DE7F0 /* fullEventDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = fullEventDetailViewController.h; path = "LTHosting/Event Page/fullEventDetailViewController.h"; sourceTree = SOURCE_ROOT; };
+		329869C91E9B395B008DE7F0 /* fullEventDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = fullEventDetailViewController.m; path = "LTHosting/Event Page/fullEventDetailViewController.m"; sourceTree = SOURCE_ROOT; };
+		329869CA1E9B395B008DE7F0 /* imageInspectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = imageInspectionView.h; path = "LTHosting/Event Page/imageInspectionView.h"; sourceTree = SOURCE_ROOT; };
+		329869CB1E9B395B008DE7F0 /* imageInspectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = imageInspectionView.m; path = "LTHosting/Event Page/imageInspectionView.m"; sourceTree = SOURCE_ROOT; };
+		329869CC1E9B395B008DE7F0 /* LTTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTableViewSection.h; path = "LTHosting/Event Page/LTTableViewSection.h"; sourceTree = SOURCE_ROOT; };
+		329869CD1E9B395B008DE7F0 /* LTTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTableViewSection.m; path = "LTHosting/Event Page/LTTableViewSection.m"; sourceTree = SOURCE_ROOT; };
+		329869CE1E9B395B008DE7F0 /* LTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTextView.h; path = "LTHosting/Event Page/LTTextView.h"; sourceTree = SOURCE_ROOT; };
+		329869CF1E9B395C008DE7F0 /* LTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTextView.m; path = "LTHosting/Event Page/LTTextView.m"; sourceTree = SOURCE_ROOT; };
+		329869D01E9B395C008DE7F0 /* LTTextViewImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTextViewImageContainer.h; path = "LTHosting/Event Page/LTTextViewImageContainer.h"; sourceTree = SOURCE_ROOT; };
+		329869D11E9B395C008DE7F0 /* LTTextViewImageContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTextViewImageContainer.m; path = "LTHosting/Event Page/LTTextViewImageContainer.m"; sourceTree = SOURCE_ROOT; };
+		329869D21E9B395C008DE7F0 /* profileButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = profileButton.h; path = "LTHosting/Event Page/profileButton.h"; sourceTree = SOURCE_ROOT; };
+		329869D31E9B395C008DE7F0 /* profileButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = profileButton.m; path = "LTHosting/Event Page/profileButton.m"; sourceTree = SOURCE_ROOT; };
+		329869DE1E9B396E008DE7F0 /* commentsHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = commentsHeaderView.h; path = "LTHosting/Event Page/Header Views/commentsHeaderView.h"; sourceTree = SOURCE_ROOT; };
+		329869DF1E9B396E008DE7F0 /* commentsHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = commentsHeaderView.m; path = "LTHosting/Event Page/Header Views/commentsHeaderView.m"; sourceTree = SOURCE_ROOT; };
+		329869E01E9B396E008DE7F0 /* eventPageHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageHeaderView.h; path = "LTHosting/Event Page/Header Views/eventPageHeaderView.h"; sourceTree = SOURCE_ROOT; };
+		329869E11E9B396E008DE7F0 /* eventPageHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageHeaderView.m; path = "LTHosting/Event Page/Header Views/eventPageHeaderView.m"; sourceTree = SOURCE_ROOT; };
+		329869E41E9B398B008DE7F0 /* eventCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventCommentTableViewCell.h; path = "LTHosting/Event Page/Table View Cells/eventCommentTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		329869E51E9B398B008DE7F0 /* eventCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventCommentTableViewCell.m; path = "LTHosting/Event Page/Table View Cells/eventCommentTableViewCell.m"; sourceTree = SOURCE_ROOT; };
+		329869E61E9B398B008DE7F0 /* eventDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventDetailTableViewCell.h; path = "LTHosting/Event Page/Table View Cells/eventDetailTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		329869E71E9B398B008DE7F0 /* eventDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventDetailTableViewCell.m; path = "LTHosting/Event Page/Table View Cells/eventDetailTableViewCell.m"; sourceTree = SOURCE_ROOT; };
+		329869E81E9B398B008DE7F0 /* eventPageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageTableViewCell.h; path = "LTHosting/Event Page/Table View Cells/eventPageTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		329869E91E9B398B008DE7F0 /* eventPageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageTableViewCell.m; path = "LTHosting/Event Page/Table View Cells/eventPageTableViewCell.m"; sourceTree = SOURCE_ROOT; };
+		329869EA1E9B398B008DE7F0 /* flyerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flyerTableViewCell.h; path = "LTHosting/Event Page/Table View Cells/flyerTableViewCell.h"; sourceTree = SOURCE_ROOT; };
+		329869EB1E9B398B008DE7F0 /* flyerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flyerTableViewCell.m; path = "LTHosting/Event Page/Table View Cells/flyerTableViewCell.m"; sourceTree = SOURCE_ROOT; };
+		329869EC1E9B398B008DE7F0 /* locationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = locationCell.h; path = "LTHosting/Event Page/Table View Cells/locationCell.h"; sourceTree = SOURCE_ROOT; };
+		329869ED1E9B398B008DE7F0 /* locationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = locationCell.m; path = "LTHosting/Event Page/Table View Cells/locationCell.m"; sourceTree = SOURCE_ROOT; };
+		329869EE1E9B398B008DE7F0 /* REAttributedStringCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REAttributedStringCell.h; path = "LTHosting/Event Page/Table View Cells/REAttributedStringCell.h"; sourceTree = SOURCE_ROOT; };
+		329869EF1E9B398B008DE7F0 /* REAttributedStringCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REAttributedStringCell.m; path = "LTHosting/Event Page/Table View Cells/REAttributedStringCell.m"; sourceTree = SOURCE_ROOT; };
+		329869F01E9B398B008DE7F0 /* seperatorCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seperatorCell.h; path = "LTHosting/Event Page/Table View Cells/seperatorCell.h"; sourceTree = SOURCE_ROOT; };
+		329869F11E9B398B008DE7F0 /* seperatorCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = seperatorCell.m; path = "LTHosting/Event Page/Table View Cells/seperatorCell.m"; sourceTree = SOURCE_ROOT; };
+		329869F91E9B3A24008DE7F0 /* eventCommentTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventCommentTableViewItem.h; path = "LTHosting/Event Page/Table View Items/eventCommentTableViewItem.h"; sourceTree = SOURCE_ROOT; };
+		329869FA1E9B3A24008DE7F0 /* eventCommentTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventCommentTableViewItem.m; path = "LTHosting/Event Page/Table View Items/eventCommentTableViewItem.m"; sourceTree = SOURCE_ROOT; };
+		329869FB1E9B3A24008DE7F0 /* eventPageTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageTableViewItem.h; path = "LTHosting/Event Page/Table View Items/eventPageTableViewItem.h"; sourceTree = SOURCE_ROOT; };
+		329869FC1E9B3A24008DE7F0 /* eventPageTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageTableViewItem.m; path = "LTHosting/Event Page/Table View Items/eventPageTableViewItem.m"; sourceTree = SOURCE_ROOT; };
+		329869FD1E9B3A24008DE7F0 /* eventTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventTableViewItem.h; path = "LTHosting/Event Page/Table View Items/eventTableViewItem.h"; sourceTree = SOURCE_ROOT; };
+		329869FE1E9B3A24008DE7F0 /* eventTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventTableViewItem.m; path = "LTHosting/Event Page/Table View Items/eventTableViewItem.m"; sourceTree = SOURCE_ROOT; };
+		329869FF1E9B3A24008DE7F0 /* flyerTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flyerTableViewItem.h; path = "LTHosting/Event Page/Table View Items/flyerTableViewItem.h"; sourceTree = SOURCE_ROOT; };
+		32986A001E9B3A24008DE7F0 /* flyerTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flyerTableViewItem.m; path = "LTHosting/Event Page/Table View Items/flyerTableViewItem.m"; sourceTree = SOURCE_ROOT; };
+		32986A011E9B3A24008DE7F0 /* locationItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = locationItem.h; path = "LTHosting/Event Page/Table View Items/locationItem.h"; sourceTree = SOURCE_ROOT; };
+		32986A021E9B3A24008DE7F0 /* locationItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = locationItem.m; path = "LTHosting/Event Page/Table View Items/locationItem.m"; sourceTree = SOURCE_ROOT; };
+		32986A031E9B3A24008DE7F0 /* REAttributedStringItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = REAttributedStringItem.h; path = "LTHosting/Event Page/Table View Items/REAttributedStringItem.h"; sourceTree = SOURCE_ROOT; };
+		32986A041E9B3A24008DE7F0 /* REAttributedStringItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = REAttributedStringItem.m; path = "LTHosting/Event Page/Table View Items/REAttributedStringItem.m"; sourceTree = SOURCE_ROOT; };
+		32986A051E9B3A24008DE7F0 /* seperatorTableViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = seperatorTableViewItem.h; path = "LTHosting/Event Page/Table View Items/seperatorTableViewItem.h"; sourceTree = SOURCE_ROOT; };
+		32986A061E9B3A24008DE7F0 /* seperatorTableViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = seperatorTableViewItem.m; path = "LTHosting/Event Page/Table View Items/seperatorTableViewItem.m"; sourceTree = SOURCE_ROOT; };
 		32AF046E1E180F67006D4E19 /* LTHosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTHosting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AF04721E180F67006D4E19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32AF04741E180F67006D4E19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -431,20 +445,6 @@
 		32E9ACC21E7B680D00703EDF /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
 		32E9ACC31E7B680D00703EDF /* PIZZA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PIZZA.png; sourceTree = "<group>"; };
 		32E9ACC41E7B680D00703EDF /* SPEAKER.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SPEAKER.png; sourceTree = "<group>"; };
-		32E9ACC81E7B7F9D00703EDF /* LTTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTextView.h; path = code/LTTextView.h; sourceTree = SOURCE_ROOT; };
-		32E9ACC91E7B7F9D00703EDF /* LTTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTextView.m; path = code/LTTextView.m; sourceTree = SOURCE_ROOT; };
-		32E9ACCA1E7B7F9D00703EDF /* LTTextViewImageContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTTextViewImageContainer.h; path = code/LTTextViewImageContainer.h; sourceTree = SOURCE_ROOT; };
-		32E9ACCB1E7B7F9D00703EDF /* LTTextViewImageContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTTextViewImageContainer.m; path = code/LTTextViewImageContainer.m; sourceTree = SOURCE_ROOT; };
-		32E9ACCE1E7B7FB900703EDF /* LTImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImageManager.h; path = code/LTImageManager.h; sourceTree = SOURCE_ROOT; };
-		32E9ACCF1E7B7FB900703EDF /* LTImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImageManager.m; path = code/LTImageManager.m; sourceTree = SOURCE_ROOT; };
-		32E9ACD01E7B7FB900703EDF /* LTImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePicker.h; path = code/LTImagePicker.h; sourceTree = SOURCE_ROOT; };
-		32E9ACD11E7B7FB900703EDF /* LTImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePicker.m; path = code/LTImagePicker.m; sourceTree = SOURCE_ROOT; };
-		32E9ACD21E7B7FB900703EDF /* LTImagePickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePickerController.h; path = code/LTImagePickerController.h; sourceTree = SOURCE_ROOT; };
-		32E9ACD31E7B7FB900703EDF /* LTImagePickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePickerController.m; path = code/LTImagePickerController.m; sourceTree = SOURCE_ROOT; };
-		32E9ACD41E7B7FB900703EDF /* LTImagePickerThumbnail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LTImagePickerThumbnail.h; path = code/LTImagePickerThumbnail.h; sourceTree = SOURCE_ROOT; };
-		32E9ACD51E7B7FB900703EDF /* LTImagePickerThumbnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LTImagePickerThumbnail.m; path = code/LTImagePickerThumbnail.m; sourceTree = SOURCE_ROOT; };
-		32E9ACDA1E7B7FC600703EDF /* eventPageFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = eventPageFooterView.h; path = code/eventPageFooterView.h; sourceTree = SOURCE_ROOT; };
-		32E9ACDB1E7B7FC600703EDF /* eventPageFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = eventPageFooterView.m; path = code/eventPageFooterView.m; sourceTree = SOURCE_ROOT; };
 		32EB49F41E68DFA000E9E714 /* BebasNeue.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BebasNeue.otf; sourceTree = "<group>"; };
 		32EB49F51E68DFA000E9E714 /* bullpen hv it.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bullpen hv it.ttf"; sourceTree = "<group>"; };
 		32EB49F61E68DFA000E9E714 /* Chosence Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Chosence Bold Italic.otf"; sourceTree = "<group>"; };
@@ -547,14 +547,14 @@
 		323C9B3A1E7A6A69009FB0F6 /* LTImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
-				32E9ACCE1E7B7FB900703EDF /* LTImageManager.h */,
-				32E9ACCF1E7B7FB900703EDF /* LTImageManager.m */,
-				32E9ACD01E7B7FB900703EDF /* LTImagePicker.h */,
-				32E9ACD11E7B7FB900703EDF /* LTImagePicker.m */,
-				32E9ACD21E7B7FB900703EDF /* LTImagePickerController.h */,
-				32E9ACD31E7B7FB900703EDF /* LTImagePickerController.m */,
-				32E9ACD41E7B7FB900703EDF /* LTImagePickerThumbnail.h */,
-				32E9ACD51E7B7FB900703EDF /* LTImagePickerThumbnail.m */,
+				329869B41E9B3945008DE7F0 /* LTImageManager.h */,
+				329869B51E9B3945008DE7F0 /* LTImageManager.m */,
+				329869B61E9B3945008DE7F0 /* LTImagePicker.h */,
+				329869B71E9B3945008DE7F0 /* LTImagePicker.m */,
+				329869B81E9B3945008DE7F0 /* LTImagePickerController.h */,
+				329869B91E9B3945008DE7F0 /* LTImagePickerController.m */,
+				329869BA1E9B3945008DE7F0 /* LTImagePickerThumbnail.h */,
+				329869BB1E9B3945008DE7F0 /* LTImagePickerThumbnail.m */,
 			);
 			name = LTImagePickerController;
 			sourceTree = "<group>";
@@ -679,20 +679,20 @@
 		3282739E1E720D220077722B /* Table View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				328273DD1E723E850077722B /* eventPageTableViewCell.h */,
-				328273DE1E723E850077722B /* eventPageTableViewCell.m */,
-				328273E51E723E850077722B /* flyerTableViewCell.h */,
-				328273E61E723E850077722B /* flyerTableViewCell.m */,
-				328273D91E723E850077722B /* eventDetailTableViewCell.h */,
-				328273DA1E723E850077722B /* eventDetailTableViewCell.m */,
-				328273F51E723E860077722B /* seperatorCell.h */,
-				328273F61E723E860077722B /* seperatorCell.m */,
-				328273EB1E723E860077722B /* locationCell.h */,
-				328273EC1E723E860077722B /* locationCell.m */,
-				328273F11E723E860077722B /* REAttributedStringCell.h */,
-				328273F21E723E860077722B /* REAttributedStringCell.m */,
-				32574B081E89E0F0000AFCEA /* eventCommentTableViewCell.h */,
-				32574B091E89E0F0000AFCEA /* eventCommentTableViewCell.m */,
+				329869E41E9B398B008DE7F0 /* eventCommentTableViewCell.h */,
+				329869E51E9B398B008DE7F0 /* eventCommentTableViewCell.m */,
+				329869E61E9B398B008DE7F0 /* eventDetailTableViewCell.h */,
+				329869E71E9B398B008DE7F0 /* eventDetailTableViewCell.m */,
+				329869E81E9B398B008DE7F0 /* eventPageTableViewCell.h */,
+				329869E91E9B398B008DE7F0 /* eventPageTableViewCell.m */,
+				329869EA1E9B398B008DE7F0 /* flyerTableViewCell.h */,
+				329869EB1E9B398B008DE7F0 /* flyerTableViewCell.m */,
+				329869EC1E9B398B008DE7F0 /* locationCell.h */,
+				329869ED1E9B398B008DE7F0 /* locationCell.m */,
+				329869EE1E9B398B008DE7F0 /* REAttributedStringCell.h */,
+				329869EF1E9B398B008DE7F0 /* REAttributedStringCell.m */,
+				329869F01E9B398B008DE7F0 /* seperatorCell.h */,
+				329869F11E9B398B008DE7F0 /* seperatorCell.m */,
 			);
 			name = "Table View Cells";
 			sourceTree = "<group>";
@@ -700,20 +700,20 @@
 		328273AB1E720D220077722B /* Table View Items */ = {
 			isa = PBXGroup;
 			children = (
-				328273DF1E723E850077722B /* eventPageTableViewItem.h */,
-				328273E01E723E850077722B /* eventPageTableViewItem.m */,
-				328273E31E723E850077722B /* eventTableViewItem.h */,
-				328273E41E723E850077722B /* eventTableViewItem.m */,
-				328273E71E723E850077722B /* flyerTableViewItem.h */,
-				328273E81E723E860077722B /* flyerTableViewItem.m */,
-				328273F31E723E860077722B /* REAttributedStringItem.h */,
-				328273F41E723E860077722B /* REAttributedStringItem.m */,
-				328273F71E723E860077722B /* seperatorTableViewItem.h */,
-				328273F81E723E860077722B /* seperatorTableViewItem.m */,
-				328273ED1E723E860077722B /* locationItem.h */,
-				328273EE1E723E860077722B /* locationItem.m */,
-				32574B0B1E89E0FB000AFCEA /* eventCommentTableViewItem.h */,
-				32574B0C1E89E0FB000AFCEA /* eventCommentTableViewItem.m */,
+				329869F91E9B3A24008DE7F0 /* eventCommentTableViewItem.h */,
+				329869FA1E9B3A24008DE7F0 /* eventCommentTableViewItem.m */,
+				329869FB1E9B3A24008DE7F0 /* eventPageTableViewItem.h */,
+				329869FC1E9B3A24008DE7F0 /* eventPageTableViewItem.m */,
+				329869FD1E9B3A24008DE7F0 /* eventTableViewItem.h */,
+				329869FE1E9B3A24008DE7F0 /* eventTableViewItem.m */,
+				329869FF1E9B3A24008DE7F0 /* flyerTableViewItem.h */,
+				32986A001E9B3A24008DE7F0 /* flyerTableViewItem.m */,
+				32986A011E9B3A24008DE7F0 /* locationItem.h */,
+				32986A021E9B3A24008DE7F0 /* locationItem.m */,
+				32986A031E9B3A24008DE7F0 /* REAttributedStringItem.h */,
+				32986A041E9B3A24008DE7F0 /* REAttributedStringItem.m */,
+				32986A051E9B3A24008DE7F0 /* seperatorTableViewItem.h */,
+				32986A061E9B3A24008DE7F0 /* seperatorTableViewItem.m */,
 			);
 			name = "Table View Items";
 			sourceTree = "<group>";
@@ -721,27 +721,27 @@
 		328273AC1E720D220077722B /* Event Page */ = {
 			isa = PBXGroup;
 			children = (
-				328273E11E723E850077722B /* eventPageViewController.h */,
-				328273E21E723E850077722B /* eventPageViewController.m */,
-				329868B21E9B2D01008DE7F0 /* profileButton.h */,
-				329868B31E9B2D01008DE7F0 /* profileButton.m */,
-				328503261E91F68E005D1A4E /* imageInspectionView.h */,
-				328503251E91F68E005D1A4E /* imageInspectionView.m */,
-				328273E91E723E860077722B /* fullEventDetailViewController.h */,
-				328273EA1E723E860077722B /* fullEventDetailViewController.m */,
-				328273EF1E723E860077722B /* LTTableViewSection.h */,
-				328273F01E723E860077722B /* LTTableViewSection.m */,
-				32E9ACC81E7B7F9D00703EDF /* LTTextView.h */,
-				32E9ACC91E7B7F9D00703EDF /* LTTextView.m */,
-				32E9ACCA1E7B7F9D00703EDF /* LTTextViewImageContainer.h */,
-				32E9ACCB1E7B7F9D00703EDF /* LTTextViewImageContainer.m */,
 				323C9B3A1E7A6A69009FB0F6 /* LTImagePickerController */,
-				328273CF1E723E850077722B /* commentAddContainer.h */,
-				328273D01E723E850077722B /* commentAddContainer.m */,
-				328273D11E723E850077722B /* commentAddView.h */,
-				328273D21E723E850077722B /* commentAddView.m */,
-				32E9ACDA1E7B7FC600703EDF /* eventPageFooterView.h */,
-				32E9ACDB1E7B7FC600703EDF /* eventPageFooterView.m */,
+				329869C01E9B395B008DE7F0 /* commentAddContainer.h */,
+				329869C11E9B395B008DE7F0 /* commentAddContainer.m */,
+				329869C21E9B395B008DE7F0 /* commentAddView.h */,
+				329869C31E9B395B008DE7F0 /* commentAddView.m */,
+				329869C41E9B395B008DE7F0 /* eventPageFooterView.h */,
+				329869C51E9B395B008DE7F0 /* eventPageFooterView.m */,
+				329869C61E9B395B008DE7F0 /* eventPageViewController.h */,
+				329869C71E9B395B008DE7F0 /* eventPageViewController.m */,
+				329869C81E9B395B008DE7F0 /* fullEventDetailViewController.h */,
+				329869C91E9B395B008DE7F0 /* fullEventDetailViewController.m */,
+				329869CA1E9B395B008DE7F0 /* imageInspectionView.h */,
+				329869CB1E9B395B008DE7F0 /* imageInspectionView.m */,
+				329869CC1E9B395B008DE7F0 /* LTTableViewSection.h */,
+				329869CD1E9B395B008DE7F0 /* LTTableViewSection.m */,
+				329869CE1E9B395B008DE7F0 /* LTTextView.h */,
+				329869CF1E9B395C008DE7F0 /* LTTextView.m */,
+				329869D01E9B395C008DE7F0 /* LTTextViewImageContainer.h */,
+				329869D11E9B395C008DE7F0 /* LTTextViewImageContainer.m */,
+				329869D21E9B395C008DE7F0 /* profileButton.h */,
+				329869D31E9B395C008DE7F0 /* profileButton.m */,
 				328274111E723F620077722B /* Header Views */,
 				3282739E1E720D220077722B /* Table View Cells */,
 				328273AB1E720D220077722B /* Table View Items */,
@@ -753,10 +753,10 @@
 		328274111E723F620077722B /* Header Views */ = {
 			isa = PBXGroup;
 			children = (
-				328273D31E723E850077722B /* commentsHeaderView.h */,
-				328273D41E723E850077722B /* commentsHeaderView.m */,
-				328273DB1E723E850077722B /* eventPageHeaderView.h */,
-				328273DC1E723E850077722B /* eventPageHeaderView.m */,
+				329869DE1E9B396E008DE7F0 /* commentsHeaderView.h */,
+				329869DF1E9B396E008DE7F0 /* commentsHeaderView.m */,
+				329869E01E9B396E008DE7F0 /* eventPageHeaderView.h */,
+				329869E11E9B396E008DE7F0 /* eventPageHeaderView.m */,
 			);
 			name = "Header Views";
 			sourceTree = "<group>";
@@ -1353,86 +1353,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				3298692C1E9B326F008DE7F0 /* toolsContainer.m in Sources */,
-				328274041E723E860077722B /* eventPageViewController.m in Sources */,
 				329868F61E9B3196008DE7F0 /* datePickerOptionView.m in Sources */,
+				329869DB1E9B395C008DE7F0 /* LTTextView.m in Sources */,
 				329869061E9B31A5008DE7F0 /* stackLabel.m in Sources */,
 				329869831E9B3486008DE7F0 /* user.m in Sources */,
-				32574B0D1E89E0FB000AFCEA /* eventCommentTableViewItem.m in Sources */,
-				328503271E91F68E005D1A4E /* imageInspectionView.m in Sources */,
 				329869731E9B33F4008DE7F0 /* textAlignmentTool.m in Sources */,
-				3282740A1E723E860077722B /* locationItem.m in Sources */,
 				329869371E9B32E1008DE7F0 /* textEditingLayer.m in Sources */,
 				329869281E9B326F008DE7F0 /* editorView.m in Sources */,
+				32986A0D1E9B3A25008DE7F0 /* seperatorTableViewItem.m in Sources */,
 				3298691C1E9B31F2008DE7F0 /* LTNavigationController.m in Sources */,
 				329869811E9B3486008DE7F0 /* event.m in Sources */,
 				3298697A1E9B3429008DE7F0 /* eventCameraViewController.m in Sources */,
 				3298691A1E9B31F2008DE7F0 /* horizontalViewPicker.m in Sources */,
-				32E9ACD71E7B7FB900703EDF /* LTImagePicker.m in Sources */,
+				329869DA1E9B395C008DE7F0 /* LTTableViewSection.m in Sources */,
+				329869BF1E9B3945008DE7F0 /* LTImagePickerThumbnail.m in Sources */,
+				32986A081E9B3A24008DE7F0 /* eventPageTableViewItem.m in Sources */,
+				329869BC1E9B3945008DE7F0 /* LTImageManager.m in Sources */,
 				3298696D1E9B33F4008DE7F0 /* backgroundTintTool.m in Sources */,
 				329869291E9B326F008DE7F0 /* flyerViewController.m in Sources */,
 				329869701E9B33F4008DE7F0 /* fontTool.m in Sources */,
-				32E9ACD61E7B7FB900703EDF /* LTImageManager.m in Sources */,
 				329869171E9B31F2008DE7F0 /* commonUseFunctions.m in Sources */,
+				329869D61E9B395C008DE7F0 /* eventPageFooterView.m in Sources */,
 				3298692B1E9B326F008DE7F0 /* textEditor.m in Sources */,
 				3298691D1E9B31F2008DE7F0 /* navigationScrollView.m in Sources */,
 				329869741E9B33F4008DE7F0 /* tool.m in Sources */,
-				3282740C1E723E860077722B /* REAttributedStringCell.m in Sources */,
 				329869181E9B31F2008DE7F0 /* eventsNavigationController.m in Sources */,
-				328274011E723E860077722B /* eventPageHeaderView.m in Sources */,
+				32986A091E9B3A25008DE7F0 /* eventTableViewItem.m in Sources */,
+				329869D51E9B395C008DE7F0 /* commentAddView.m in Sources */,
+				32986A071E9B3A24008DE7F0 /* eventCommentTableViewItem.m in Sources */,
+				329869D71E9B395C008DE7F0 /* eventPageViewController.m in Sources */,
 				329869431E9B3332008DE7F0 /* toolView.m in Sources */,
-				32E9ACCD1E7B7F9D00703EDF /* LTTextViewImageContainer.m in Sources */,
 				329869711E9B33F4008DE7F0 /* shadeTool.m in Sources */,
 				329868F31E9B3196008DE7F0 /* aboutOptionView.m in Sources */,
 				329869421E9B3332008DE7F0 /* textToolView.m in Sources */,
 				329869721E9B33F4008DE7F0 /* sizeTool.m in Sources */,
 				329869411E9B3332008DE7F0 /* borderToolView.m in Sources */,
 				329868F41E9B3196008DE7F0 /* addressOptionView.m in Sources */,
-				328274001E723E860077722B /* eventDetailTableViewCell.m in Sources */,
 				329868F91E9B3196008DE7F0 /* keyboardAccessory.m in Sources */,
 				329868FC1E9B3196008DE7F0 /* switchOptionView.m in Sources */,
-				329868B41E9B2D01008DE7F0 /* profileButton.m in Sources */,
-				32E9ACCC1E7B7F9D00703EDF /* LTTextView.m in Sources */,
-				32574B0A1E89E0F0000AFCEA /* eventCommentTableViewCell.m in Sources */,
+				32986A0A1E9B3A25008DE7F0 /* flyerTableViewItem.m in Sources */,
+				329869F71E9B398B008DE7F0 /* REAttributedStringCell.m in Sources */,
 				328273CE1E720DE20077722B /* selectionViewController.m in Sources */,
+				32986A0B1E9B3A25008DE7F0 /* locationItem.m in Sources */,
+				329869F41E9B398B008DE7F0 /* eventPageTableViewCell.m in Sources */,
+				329869BD1E9B3945008DE7F0 /* LTImagePicker.m in Sources */,
 				329869081E9B31A5008DE7F0 /* stackView.m in Sources */,
 				329869791E9B3429008DE7F0 /* eventCamera.m in Sources */,
+				329869D81E9B395C008DE7F0 /* fullEventDetailViewController.m in Sources */,
+				329869DD1E9B395C008DE7F0 /* profileButton.m in Sources */,
+				329869F21E9B398B008DE7F0 /* eventCommentTableViewCell.m in Sources */,
+				329869D41E9B395C008DE7F0 /* commentAddContainer.m in Sources */,
 				3298691B1E9B31F2008DE7F0 /* LTDatePicker.m in Sources */,
 				329868F71E9B3196008DE7F0 /* eventOptionVIew.m in Sources */,
 				329868FB1E9B3196008DE7F0 /* pickerOptionView.m in Sources */,
-				32E9ACD91E7B7FB900703EDF /* LTImagePickerThumbnail.m in Sources */,
+				329869F61E9B398B008DE7F0 /* locationCell.m in Sources */,
+				329869E21E9B396E008DE7F0 /* commentsHeaderView.m in Sources */,
 				329869071E9B31A5008DE7F0 /* stackTableView.m in Sources */,
 				329868F51E9B3196008DE7F0 /* cblock.m in Sources */,
+				329869F31E9B398B008DE7F0 /* eventDetailTableViewCell.m in Sources */,
 				329868F81E9B3196008DE7F0 /* goOptionView.m in Sources */,
-				328274071E723E860077722B /* flyerTableViewItem.m in Sources */,
 				3298696E1E9B33F4008DE7F0 /* borderPicker.m in Sources */,
 				329869351E9B32E1008DE7F0 /* borderEditingLayer.m in Sources */,
+				32986A0C1E9B3A25008DE7F0 /* REAttributedStringItem.m in Sources */,
 				329869821E9B3486008DE7F0 /* eventComment.m in Sources */,
-				328274031E723E860077722B /* eventPageTableViewItem.m in Sources */,
-				328274051E723E860077722B /* eventTableViewItem.m in Sources */,
+				329869E31E9B396E008DE7F0 /* eventPageHeaderView.m in Sources */,
 				32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */,
-				328274021E723E860077722B /* eventPageTableViewCell.m in Sources */,
-				328274081E723E860077722B /* fullEventDetailViewController.m in Sources */,
-				3282740F1E723E860077722B /* seperatorTableViewItem.m in Sources */,
 				3298696F1E9B33F4008DE7F0 /* colorTool.m in Sources */,
-				328274061E723E860077722B /* flyerTableViewCell.m in Sources */,
 				329869441E9B3332008DE7F0 /* toolViewItem.m in Sources */,
-				328273FD1E723E860077722B /* commentsHeaderView.m in Sources */,
 				329869051E9B31A5008DE7F0 /* stackDatePicker.m in Sources */,
 				329868FA1E9B3196008DE7F0 /* nameOptionView.m in Sources */,
-				32E9ACDC1E7B7FC600703EDF /* eventPageFooterView.m in Sources */,
-				3282740B1E723E860077722B /* LTTableViewSection.m in Sources */,
-				328274091E723E860077722B /* locationCell.m in Sources */,
 				3298692A1E9B326F008DE7F0 /* smarterString.m in Sources */,
-				328273FB1E723E860077722B /* commentAddContainer.m in Sources */,
+				329869F51E9B398B008DE7F0 /* flyerTableViewCell.m in Sources */,
+				329869BE1E9B3945008DE7F0 /* LTImagePickerController.m in Sources */,
 				329869361E9B32E1008DE7F0 /* editingLayer.m in Sources */,
-				32E9ACD81E7B7FB900703EDF /* LTImagePickerController.m in Sources */,
 				32AF04731E180F67006D4E19 /* main.m in Sources */,
 				329869381E9B32E1008DE7F0 /* tintEditinglayer.m in Sources */,
-				3282740D1E723E860077722B /* REAttributedStringItem.m in Sources */,
-				328273FC1E723E860077722B /* commentAddView.m in Sources */,
+				329869DC1E9B395C008DE7F0 /* LTTextViewImageContainer.m in Sources */,
+				329869D91E9B395C008DE7F0 /* imageInspectionView.m in Sources */,
 				329869191E9B31F2008DE7F0 /* eventViewController.m in Sources */,
 				324BC1781E38018D00C9B629 /* usefulArray.m in Sources */,
-				3282740E1E723E860077722B /* seperatorCell.m in Sources */,
+				329869F81E9B398B008DE7F0 /* seperatorCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
