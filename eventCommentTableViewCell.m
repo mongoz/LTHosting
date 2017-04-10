@@ -39,6 +39,7 @@
     CGFloat margin=12.0f;
     CGFloat pwidth=64.0f;
     profPicView=[[profileButton alloc] init];
+    profPicView.resizesOnTouch=NO;
     profPicView.frame=CGRectMake(margin, margin, pwidth, pwidth);
     textLabel=[[UILabel alloc] initWithFrame:CGRectMake(profPicView.frame.origin.x+profPicView.frame.size.width+margin, profPicView.frame.origin.y, self.tableViewManager.tableView.frame.size.width-(profPicView.frame.origin.x+profPicView.frame.size.width+margin)-margin, 64.0f)];
     textLabel.numberOfLines=0;
@@ -51,6 +52,15 @@
     [imageView addGestureRecognizer:tap];
     [self addSubview:profPicView];
     [self addSubview:textLabel];
+    
+    UILongPressGestureRecognizer *longP=[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressed:)];
+    [self addGestureRecognizer:longP];
+}
+
+-(void)longPressed:(UILongPressGestureRecognizer*)longPress{
+    if(longPress.state==UIGestureRecognizerStateBegan){
+        [self.item.transitionController commentLongPressed:self.item.comment];
+    }
 }
 
 -(void)imageViewTapped:(UITapGestureRecognizer*)tap{

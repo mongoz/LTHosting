@@ -34,6 +34,8 @@
 
 -(void)displayImageView:(UIImageView*)view;
 
+-(void)commentLongPressed:(eventComment*)comment;
+
 @end
 
 @interface eventPageViewController : UIViewController<RETableViewManagerDelegate, transitionController, CLLocationManagerDelegate, eventPageFooterViewDelegate, LTImagePickerControllerDelegate, imageInspectionViewDelegate>

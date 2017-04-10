@@ -337,4 +337,21 @@
     self.footerShowing=YES;
 }
 
+-(void)commentLongPressed:(eventComment *)comment{
+    UIAlertController *alert=[[UIAlertController alloc] init];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action){
+        
+    }]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Report Comment" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        [self reportComment:comment];
+    }]];
+    [self presentViewController:alert animated:YES completion:^{
+        
+    }];
+}
+
+-(void)reportComment:(eventComment*)comment{
+    
+}
+
 @end
