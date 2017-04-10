@@ -217,8 +217,6 @@
 
 -(void)setUpShadowForButton:(UIButton*)button
 {
-    //[button.layer setDrawsAsynchronously:YES];
-    //[button.layer setShouldRasterize:YES];
     [button.layer setOpaque:YES];
     [button.layer setCornerRadius:10];
     [button.layer setMasksToBounds:NO];
