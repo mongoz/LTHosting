@@ -144,7 +144,10 @@
     NSMutableArray *temp=[[NSMutableArray alloc] init];
     for(NSInteger i=0; i<names.count; i++)
     {
-        [temp addObject:[UIFont fontWithName:names[i] size:size]];
+        UIFont *font=[UIFont fontWithName:names[i] size:size];
+        if(font!=nil){
+            [temp addObject:font];
+        }
     }
     return [NSArray arrayWithArray:temp];
 }

@@ -136,6 +136,23 @@
 		32986A871E9B3D9E008DE7F0 /* Go-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 32986A7E1E9B3D9E008DE7F0 /* Go-48.png */; };
 		32986A881E9B3D9E008DE7F0 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 32986A7F1E9B3D9E008DE7F0 /* location.png */; };
 		32986A8A1E9B3DDC008DE7F0 /* EventPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32986A891E9B3DDC008DE7F0 /* EventPage.storyboard */; };
+		32986A8B1E9B46B2008DE7F0 /* BebasNeue.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A221E9B3B94008DE7F0 /* BebasNeue.otf */; };
+		32986A8C1E9B46B2008DE7F0 /* bullpen hv it.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A231E9B3B94008DE7F0 /* bullpen hv it.ttf */; };
+		32986A8D1E9B46B2008DE7F0 /* Chosence Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A241E9B3B94008DE7F0 /* Chosence Bold Italic.otf */; };
+		32986A8E1E9B46B2008DE7F0 /* Comfortaa-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A251E9B3B94008DE7F0 /* Comfortaa-Regular.ttf */; };
+		32986A8F1E9B46B2008DE7F0 /* hero.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A261E9B3B94008DE7F0 /* hero.ttf */; };
+		32986A901E9B46B2008DE7F0 /* Kingthings Organica.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A271E9B3B94008DE7F0 /* Kingthings Organica.ttf */; };
+		32986A911E9B46B2008DE7F0 /* LemonMilk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A281E9B3B94008DE7F0 /* LemonMilk.otf */; };
+		32986A921E9B46B2008DE7F0 /* LinLibertine_aBL.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A291E9B3B94008DE7F0 /* LinLibertine_aBL.ttf */; };
+		32986A931E9B46B2008DE7F0 /* Lissain didone.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A2A1E9B3B94008DE7F0 /* Lissain didone.ttf */; };
+		32986A941E9B46B2008DE7F0 /* Martell-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A2B1E9B3B94008DE7F0 /* Martell-Bold.otf */; };
+		32986A951E9B46B2008DE7F0 /* PoetsenOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A2C1E9B3B94008DE7F0 /* PoetsenOne-Regular.ttf */; };
+		32986A961E9B46B2008DE7F0 /* Reckoner.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A2D1E9B3B94008DE7F0 /* Reckoner.ttf */; };
+		32986A971E9B46B2008DE7F0 /* Rounded_Elegance.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A2E1E9B3B94008DE7F0 /* Rounded_Elegance.ttf */; };
+		32986A981E9B46B2008DE7F0 /* royal-serif.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A2F1E9B3B94008DE7F0 /* royal-serif.ttf */; };
+		32986A991E9B46B2008DE7F0 /* stentiga.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A301E9B3B94008DE7F0 /* stentiga.ttf */; };
+		32986A9A1E9B46B2008DE7F0 /* Subway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A311E9B3B94008DE7F0 /* Subway-Black.ttf */; };
+		32986A9B1E9B46B2008DE7F0 /* Typo GeoSlab Regular Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A321E9B3B94008DE7F0 /* Typo GeoSlab Regular Demo.otf */; };
 		32AF04731E180F67006D4E19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04721E180F67006D4E19 /* main.m */; };
 		32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04751E180F67006D4E19 /* AppDelegate.m */; };
 		32AF047C1E180F67006D4E19 /* Hosting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AF047A1E180F67006D4E19 /* Hosting.storyboard */; };
@@ -1068,6 +1085,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32986A8B1E9B46B2008DE7F0 /* BebasNeue.otf in Resources */,
+				32986A8C1E9B46B2008DE7F0 /* bullpen hv it.ttf in Resources */,
+				32986A8D1E9B46B2008DE7F0 /* Chosence Bold Italic.otf in Resources */,
+				32986A8E1E9B46B2008DE7F0 /* Comfortaa-Regular.ttf in Resources */,
+				32986A8F1E9B46B2008DE7F0 /* hero.ttf in Resources */,
+				32986A901E9B46B2008DE7F0 /* Kingthings Organica.ttf in Resources */,
+				32986A911E9B46B2008DE7F0 /* LemonMilk.otf in Resources */,
+				32986A921E9B46B2008DE7F0 /* LinLibertine_aBL.ttf in Resources */,
+				32986A931E9B46B2008DE7F0 /* Lissain didone.ttf in Resources */,
+				32986A941E9B46B2008DE7F0 /* Martell-Bold.otf in Resources */,
+				32986A951E9B46B2008DE7F0 /* PoetsenOne-Regular.ttf in Resources */,
+				32986A961E9B46B2008DE7F0 /* Reckoner.ttf in Resources */,
+				32986A971E9B46B2008DE7F0 /* Rounded_Elegance.ttf in Resources */,
+				32986A981E9B46B2008DE7F0 /* royal-serif.ttf in Resources */,
+				32986A991E9B46B2008DE7F0 /* stentiga.ttf in Resources */,
+				32986A9A1E9B46B2008DE7F0 /* Subway-Black.ttf in Resources */,
+				32986A9B1E9B46B2008DE7F0 /* Typo GeoSlab Regular Demo.otf in Resources */,
 				32986A541E9B3CEE008DE7F0 /* aceofspade.png in Resources */,
 				32986A5C1E9B3CEE008DE7F0 /* leaves.png in Resources */,
 				32986A411E9B3C94008DE7F0 /* Text size.png in Resources */,
