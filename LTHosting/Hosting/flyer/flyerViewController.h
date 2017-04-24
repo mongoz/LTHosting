@@ -10,6 +10,9 @@
 #import "textEditingLayer.h"
 #import "textEditor.h"
 
+@class toolsContainer;
+@class editorView;
+
 @interface flyerViewController : UIViewController <textEditorDelegate>
 
 @property BOOL toolsShowing;
@@ -17,6 +20,12 @@
 -(void)setToolsShowing:(BOOL)toolsShowing animated:(BOOL)animated;
 
 -(void)beginTextEditingWithLayer:(textEditingLayer*)layer;
+
+@property (strong, nonatomic) IBOutlet toolsContainer *toolContainer;
+
+@property (strong, nonatomic) IBOutlet editorView *editorView;
+
+@property (strong, nonatomic) IBOutlet UIButton *modeButton;
 
 @end
 

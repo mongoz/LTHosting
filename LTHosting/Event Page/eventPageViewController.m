@@ -15,6 +15,7 @@
 #import "commentsHeaderView.h"
 #import "commentAddContainer.h"
 #import "eventCommentTableViewItem.h"
+#import "cblock.h"
 @import GooglePlaces;
 
 @interface eventPageViewController (){
@@ -37,17 +38,24 @@
     laidout=NO;
     commentEditingContainer=nil;
     // Do any additional setup after loading the view, typically from a nib
-    [_tableView setFrame:self.view.bounds];
+    [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
+        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"Chevron Left-50"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+        item.tintColor=[UIColor whiteColor];
+        CGFloat cushion=8.0f;
+        CGFloat right=24.0f;
+        [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
+        return item;
+    }]];
+    
     _tableView.delaysContentTouches=NO;
     _manager=[[RETableViewManager alloc] initWithTableView:_tableView delegate:self];
     _manager[@"flyerTableViewItem"]=@"flyerTableViewCell";
     _manager[@"seperatorTableViewItem"]=@"seperatorCell";
     _manager[@"eventTableViewItem"]=@"eventDetailTableViewCell";
     _manager[@"eventCommentTableViewItem"]=@"eventCommentTableViewCell";
-   _header=[eventPageHeaderView headerViewForUser:_event.poster withWidth:self.view.frame.size.width];
+    _header.poster=_event.poster;
     _header.backgroundColor=[UIColor whiteColor];
     _header.profileTransitionController=self;
-    [self.view addSubview:_header];
     footer=[eventPageFooterView footerViewWithWidth:self.view.frame.size.width];
     footer.delegate=self;
     footer.layer.zPosition=CGFLOAT_MAX;
@@ -67,6 +75,10 @@
         [_manager addSection:comments];
         [_tableView reloadData];
     }];
+}
+
+-(void)backPressed:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)didPressAccept:(eventPageFooterView *)view{
@@ -215,13 +227,12 @@
 
 -(void)shouldBeginCommentEditingWithHeader:(commentsHeaderView *)headera
 {
-    
     commentAddView *v=[headera retrieveCommentAddView];
     CGRect headerFrame=[self frameOfHeaderForSection:comments];
     v.frame=headerFrame;
     commentEditingContainer=[[commentAddContainer alloc] initWithTransitionController:self];
-    commentEditingContainer.frame=self.view.frame;
-    [self.navigationController.view addSubview:commentEditingContainer];
+    commentEditingContainer.frame=self.view.bounds;
+    [self.view addSubview:commentEditingContainer];
     _tableView.scrollEnabled=NO;
     [commentEditingContainer giveCommentAddView:v];
 }

@@ -42,6 +42,12 @@
     return view;
 }
 
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    myWidth=self.frame.size.width;
+    [self configure];
+}
+
 -(void)configure
 {
     CGFloat bottomHeight=1.0f;
@@ -49,7 +55,7 @@
     UIFont *nameFont=[UIFont preferredFontForTextStyle:UIFontTextStyleTitle2];
     CGFloat margin=8.0f;
     CGFloat myheight=64.0f;
-    [self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, myWidth, myheight+margin*2+bottomHeight)];
+    //[self setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, myWidth, myheight+margin*2+bottomHeight)];
     if(myUser==nil)
     {
         return;

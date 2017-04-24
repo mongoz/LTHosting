@@ -39,7 +39,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *libraryBar;
 
-@property (strong, nonatomic) IBOutlet UIImageView *libraryBarImageView;
+@property (strong, nonatomic) IBOutlet UIButton *libraryBarImageView;
 
 -(void)prepareForUnwind:(UIStoryboardSegue*)seg;
 

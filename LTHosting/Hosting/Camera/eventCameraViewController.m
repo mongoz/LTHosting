@@ -34,17 +34,7 @@
         return item;
     }]];
     
-}
-
--(void)backPressed:(id)sender{
-    [self.navigationController popViewControllerAnimated:YES];
-}
-
--(void)viewDidLayoutSubviews
-{
-    [super viewDidLayoutSubviews];self.view.translatesAutoresizingMaskIntoConstraints=YES;
-    [_imageView setFrame:CGRectMake(_imageView.frame.origin.x, _imageView.frame.origin.y, _imageView.frame.size.width, _imageView.frame.size.width*640/480)];
-    [_libraryBar setFrame:CGRectMake(_imageView.frame.origin.x, _imageView.frame.origin.y+_imageView.frame.size.height, _imageView.frame.size.width, self.view.bounds.size.height-_imageView.frame.origin.y-_imageView.frame.size.height)];
+    
     [self configureView];
     // Do any additional setup after loading the view, typically from a nib.
     
@@ -60,17 +50,15 @@
     pinchStartScale=0;
     
     //Add tap gesture to libary bar
-    UILongPressGestureRecognizer *libraryTap=[[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(libraryBarTapped:)];
-    [libraryTap setMinimumPressDuration:0];
-    [libraryTap setDelegate:self];
-    [_libraryBarImageView addGestureRecognizer:libraryTap];
+    [_libraryBarImageView addTarget:self action:@selector(libraryBarTapped:) forControlEvents:UIControlEventTouchUpInside];
     [_libraryBarImageView setUserInteractionEnabled:YES];
     _libraryBarImageView.layer.borderColor=[UIColor whiteColor].CGColor;
     _libraryBarImageView.layer.borderWidth=1.0f;
+    _libraryBarImageView.layer.cornerRadius=2.0f;
+    [_libraryBarImageView.imageView setContentMode:UIViewContentModeScaleAspectFill];
     [_libraryBar setBackgroundColor:[UIColor blackColor]];
-    UIView *top=[[UIView alloc] initWithFrame:CGRectMake(0, 0, _libraryBar.frame.size.width, 1.0f)];
-    top.backgroundColor=[UIColor whiteColor];
-    [_libraryBar addSubview:top];
+    [_libraryBar sendSubviewToBack:_libraryBarImageView];
+    
     
     
     //Disable good and bad photo buttons until photo is taken
@@ -84,9 +72,6 @@
     [_captureButton.layer setShadowOpacity:0.0f];
     [_captureButton setTintColor:[UIColor flatWhiteColor]];
     CGFloat height=_libraryBar.frame.size.height-8*2;
-    [_captureButton setFrame:CGRectMake(_libraryBar.frame.size.width/2-height/2, _libraryBar.frame.size.height/2-height/2, height, height)];
-    [_captureButton removeFromSuperview];
-    [_libraryBar addSubview:_captureButton];
     
     CALayer *mask=[CALayer layer];
     [mask setFrame:_captureButton.bounds];
@@ -98,39 +83,36 @@
     
     CGFloat num=16;
     height=_libraryBar.frame.size.height-num*2;
-    [_libraryBarImageView setFrame:CGRectMake(num, num, height, height)];
     
     num*=1.5;
     height=_libraryBar.frame.size.height-num*2;
     [_switchCameraButton setTitle:@"" forState:UIControlStateNormal];
-    [_switchCameraButton setFrame:CGRectMake(_libraryBar.frame.size.width-num-height, num, height, height)];
-    [_switchCameraButton setImage:nil forState:UIControlStateNormal];
-    CALayer *mask2=[CALayer layer];
-    [mask2 setFrame:_switchCameraButton.bounds];
-    [mask2 setContents:(id)[UIImage imageNamed:@"SwitchCamera.png"].CGImage];
-    [mask2 setContentsGravity:kCAGravityResizeAspect];
-    [_switchCameraButton.layer setMask:mask2];
-    [_switchCameraButton.layer setBackgroundColor:[UIColor flatWhiteColor].CGColor];
-    [_switchCameraButton removeFromSuperview];
-    [_libraryBar addSubview:_switchCameraButton];
+    UIImage *switchC=[UIImage imageNamed:@"SwitchCamera.png"];
+    [_switchCameraButton setImage:[switchC imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    [_switchCameraButton.imageView setContentMode:UIViewContentModeScaleAspectFit];
+    [_switchCameraButton setTintColor:[UIColor whiteColor]];
+    CGFloat margin=8.0f;
+    [_switchCameraButton setImageEdgeInsets:UIEdgeInsetsMake(margin, margin, margin, margin)];
     
-    [_badPictureButton removeFromSuperview];
-    [_badPictureButton setFrame:CGRectMake(0, 0, _libraryBar.frame.size.width/2, _libraryBar.frame.size.height)];
+    
+    [_badPictureButton setImage:[[UIImage imageNamed:@"Poor Quality-50.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [_badPictureButton setBackgroundColor:[UIColor flatWhiteColor]];
-    [_badPictureButton.layer setBorderColor:[UIColor flatRedColor].CGColor];
-    [_badPictureButton.layer setBorderWidth:2.0f];
-    [_badPictureButton setTitleColor:[UIColor flatRedColor] forState:UIControlStateNormal];
-    [_libraryBar addSubview:_badPictureButton];
     [_badPictureButton.layer setShadowOpacity:0];
     
-    [_goodPictureButton removeFromSuperview];
-    [_goodPictureButton setFrame:CGRectMake(_libraryBar.frame.size.width/2, 0, _libraryBar.frame.size.width/2, _libraryBar.frame.size.height)];
+    [_goodPictureButton setImage:[[UIImage imageNamed:@"Good Quality-50.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] forState:UIControlStateNormal];
     [_goodPictureButton setBackgroundColor:[UIColor flatWhiteColor]];
-    [_goodPictureButton.layer setBorderColor:[UIColor flatMintColor].CGColor];
-    [_goodPictureButton.layer setBorderWidth:2.0f];
-    [_goodPictureButton setTitleColor:[UIColor flatMintColor] forState:UIControlStateNormal];
-    [_libraryBar addSubview:_goodPictureButton];
     [_goodPictureButton.layer setShadowOpacity:0];
+    
+}
+
+-(void)backPressed:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];self.view.translatesAutoresizingMaskIntoConstraints=YES;
+    
     
 }
 
@@ -165,18 +147,19 @@
         {
             NSLog(@"error retrieving photo");
         }
-        [_libraryBarImageView setImage:retrieved];
-        [_libraryBarImageView setContentMode:UIViewContentModeScaleAspectFit];
+        [_libraryBarImageView setImage:retrieved forState:UIControlStateNormal];
         [_libraryBarImageView setBackgroundColor:[UIColor blackColor]];
     }];
 }
 
--(IBAction)libraryBarTapped:(id)sender
+-(IBAction)libraryBarTapped:(UIButton*)button
 {
+    [self hideCameraButtons];
     UIImagePickerController *pickerController=[[UIImagePickerController alloc] init];
     [pickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
     [pickerController setDelegate:self];
     [self presentViewController:pickerController animated:YES completion:^{
+        [self showCameraButtons];
     }];
 }
 

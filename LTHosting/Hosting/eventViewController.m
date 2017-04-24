@@ -37,7 +37,8 @@
     [super viewDidLoad];
     configured=NO;
     [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
-        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"Chevron Left-50"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+        item.tintColor=[UIColor whiteColor];
         CGFloat cushion=8.0f;
         CGFloat right=24.0f;
         [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
@@ -335,15 +336,14 @@ NSDate *lastUpdate=nil;
     for(eventOptionView *op in options){
         prevColors[op.optionName]=op.backgroundColor;
     }
-    NSTimeInterval time=.2;
+    NSTimeInterval time=.15;
     [UIView animateWithDuration:time animations:^{
         for(eventOptionView *v in options){
             v.red=YES;
         }
     }completion:^(BOOL finished){
-        while(!finished){
-            
-        }
+        while(!finished){}
+        
         [UIView animateWithDuration:time animations:^{
             for(eventOptionView *v in options){
                 v.red=NO;

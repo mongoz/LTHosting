@@ -14,75 +14,70 @@
 #import "cblock.h"
 
 @interface flyerViewController (){
-    UIButton *modeButton;
     NSArray<UIView*>* modeArrows;
-    
-    toolsContainer *toolViewer;
-    BOOL laidOut;
+
     BOOL toolsShowing;
 }
 @end
 
 @implementation flyerViewController
 
+@synthesize toolContainer=toolViewer;
+@synthesize modeButton=modeButton;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [[editorView shared] setFrame:self.view.bounds];
+    
+    [editorView setSharedInstance:self.editorView];
+    
+    
+    [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
+        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+        CGFloat cushion=8.0f;
+        CGFloat right=24.0f;
+        [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
+        return item;
+    }]];
+    [self.navigationItem setRightBarButtonItem:[cblock make:^id{
+        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
+        return item;
+    }]];
+    
+    
+    self.view.translatesAutoresizingMaskIntoConstraints=YES;
+    [[editorView shared] setViewController:self];
+    [toolViewer viewWillAppear:YES];
+    [[editorView shared] setIsEditing:YES];
+    toolsShowing=YES;
+    //[[editorView shared] setFrame:self.view.bounds];
+    
+    modeButton.layer.borderColor=[UIColor whiteColor].CGColor;
+    modeButton.layer.borderWidth=1.0f;
+    //modeButton.layer.zPosition=999.9f;
+    [self.view bringSubviewToFront:modeButton];
+    
+    
+    [modeButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
+    [modeButton.layer setMasksToBounds:YES];
+    
+    NSMutableArray *a=[[NSMutableArray alloc] init];
+    for(NSInteger i=0; i<4; i++)
+    {
+        UIImageView *arrow=[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"expandcollapsearrow.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        arrow.userInteractionEnabled=YES;
+        [arrow setContentMode:UIViewContentModeScaleAspectFit];
+        [arrow setTintColor:[UIColor whiteColor]];
+        [modeButton addSubview:arrow];
+        [a addObject:arrow];
+    }
+    modeArrows=a;
 }
 
 -(void)viewDidLayoutSubviews{
     [super viewDidLayoutSubviews];
-    if(!laidOut){
-        laidOut=NO;
-        // Do any additional setup after loading the view, typically from a nib.
-        [self.view addSubview:[editorView shared]];
-        
-        [[editorView shared] setFrame:self.view.bounds];
-        [[editorView shared] setViewController:self];
-        toolViewer=nil;
-        toolsShowing=NO;
-        
-        CGFloat margin=8;
-        CGFloat width=54;
-        modeButton=[[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width-margin-width, [[editorView shared] frame].origin.y+margin, width, width)];
-        [modeButton addTarget:self action:@selector(modeButtonTouchDown:) forControlEvents:UIControlEventTouchDown];
-        [modeButton addTarget:self action:@selector(modeButtonTouchUpInside:) forControlEvents:UIControlEventTouchUpInside];
-        [modeButton addTarget:self action:@selector(modeButtonTouchUpOutside:) forControlEvents:UIControlEventTouchUpOutside];
-        
-        [modeButton.layer setBackgroundColor:[UIColor blackColor].CGColor];
-        [modeButton.layer setCornerRadius:modeButton.frame.size.height/2];
-        [modeButton.layer setMasksToBounds:YES];
-        
-        modeButton.layer.borderColor=[UIColor whiteColor].CGColor;
-        modeButton.layer.borderWidth=1.0f;
-        
-        NSMutableArray *a=[[NSMutableArray alloc] init];
-        for(NSInteger i=0; i<4; i++)
-        {
-            UIImageView *arrow=[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"expandcollapsearrow.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-            [arrow setContentMode:UIViewContentModeScaleAspectFit];
-            [arrow setTintColor:[UIColor whiteColor]];
-            [modeButton addSubview:arrow];
-            [a addObject:arrow];
-        }
-        modeArrows=a;
-        [self setModeButtonFrames];
-        
-        [self.view addSubview:modeButton];
-        [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
-            UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
-            CGFloat cushion=8.0f;
-            CGFloat right=24.0f;
-            [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
-            return item;
-        }]];
-        [self.navigationItem setRightBarButtonItem:[cblock make:^id{
-            UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleDone target:self action:@selector(donePressed:)];
-            return item;
-        }]];
-        laidOut=YES;
-        self.toolsShowing=YES;
-    }
+    [modeButton.layer setCornerRadius:modeButton.frame.size.height/2];
+    
+    [self setModeButtonFrames];
 }
 
 -(void)donePressed:(id)sender{
@@ -162,6 +157,13 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    if(modeButton.userInteractionEnabled){
+        
+    }
+    else{
+        
+        
+    }
 }
 
 -(IBAction)backPressed:(UIBarButtonItem*)button
@@ -273,18 +275,24 @@ BOOL set=NO;
 
 -(IBAction)modeButtonTouchDown:(UIButton*)mButton
 {
-    [self animateButton:mButton touchDown:YES completion:nil];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self animateButton:mButton touchDown:YES completion:nil];
+    }];
 }
 
 -(IBAction)modeButtonTouchUpInside:(UIButton*)mButton
 {
     [self modeTouchedUp];
-    [self toggleToolViewAnimated:YES completion:nil];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self toggleToolViewAnimated:YES completion:nil];
+    }];
 }
 
 -(IBAction)modeButtonTouchUpOutside:(UIButton*)mButton
 {
-    [self modeTouchedUp];
+    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+        [self modeTouchedUp];
+    }];
 }
 
 -(void)modeTouchedUp

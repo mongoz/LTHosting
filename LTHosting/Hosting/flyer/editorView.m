@@ -45,10 +45,23 @@ static editorView *instance=nil;
     return instance;
 }
 
++(void)setSharedInstance:(editorView *)existing{
+    instance=existing;
+}
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [self configure];
+}
+
 -(id)init
 {
     self=[super init];
-    //Background layer
+    [self configure];
+    return self;
+}
+
+-(void)configure{
     backgroundLayer=[CALayer layer];
     [self.layer addSublayer:backgroundLayer];
     [backgroundLayer setContentsGravity:kCAGravityResizeAspect];
@@ -82,7 +95,6 @@ static editorView *instance=nil;
     [self addGestureRecognizer:tap];
     
     _viewController=nil;
-    return self;
 }
 
 -(IBAction)touchUpInside:(UITapGestureRecognizer*)tap

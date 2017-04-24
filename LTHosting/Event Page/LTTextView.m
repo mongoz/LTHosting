@@ -25,6 +25,7 @@
     [self addSubview:textView];
     imageContainers=[[NSMutableArray alloc] init];
     margin=8.0f;
+    self.bounces=NO;
     return self;
 }
 

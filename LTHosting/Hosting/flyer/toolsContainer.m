@@ -65,9 +65,19 @@ NSInteger tCount=3;
 -(id)init
 {
     self=[super init];
+    [self configure];
+    return self;
+}
+
+-(void)awakeFromNib{
+    [super awakeFromNib];
+    [self configure];
+}
+
+-(void)configure{
     bottomHeight=40.0f;
     barShowing=NO;
-    bottom=[[HMSegmentedControl alloc] init];
+    bottom=[[HMSegmentedControl alloc] initWithFrame:CGRectMake(0, MAX(self.frame.size.height-bottomHeight,0), self.frame.size.width, bottomHeight)];
     [self addSubview:bottom];
     [bottom setSectionTitles:[self titles]];
     [bottom setType:HMSegmentedControlTypeText];
@@ -86,7 +96,6 @@ NSInteger tCount=3;
     activeToolView=nil;
     
     [self transitionToTool:types[0] completion:nil];
-    return self;
 }
 
 -(void)setFrame:(CGRect)frame

@@ -19,6 +19,8 @@
 
 +(id)shared;
 
++(void)setSharedInstance:(editorView*)existing;
+
 -(void)reset;
 
 //Setters

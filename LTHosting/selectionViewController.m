@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     [_hostingButton addTarget:self action:@selector(transitionToHosting:) forControlEvents:UIControlEventTouchUpInside];
     [_eventPageButton addTarget:self action:@selector(transitionToEventPage:) forControlEvents:UIControlEventTouchUpInside];
+    [_hubButton addTarget:self action:@selector(transitionToHostingHub:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 -(void)transitionToHosting:(UIButton*)button
@@ -29,6 +30,11 @@
 -(void)transitionToEventPage:(UIButton*)butto
 {
     UIViewController *dest=[[UIStoryboard storyboardWithName:@"EventPage" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"eventPage"];
+    [self.navigationController pushViewController:dest animated:YES];
+}
+
+-(void)transitionToHostingHub:(UIButton*)button{
+    UIViewController *dest=[[UIStoryboard storyboardWithName:@"HostingHub" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"hostingHub"];
     [self.navigationController pushViewController:dest animated:YES];
 }
 

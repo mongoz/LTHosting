@@ -9,6 +9,31 @@
 /* Begin PBXBuildFile section */
 		088B6CD9DE1AF1D472AF893F /* libPods-LTHostingUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1E4FD975F0668A2ACE13B12 /* libPods-LTHostingUITests.a */; };
 		1E4C027B53E604A651CB310C /* libPods-LTHosting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 39EFCC24B4C17C83D5A762A5 /* libPods-LTHosting.a */; };
+		3200D8A21EA6D12600C4F0A6 /* Hosting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3200D8A11EA6D12600C4F0A6 /* Hosting.storyboard */; };
+		3200D8A31EA6D3BC00C4F0A6 /* All Star Resort 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A0E1E9B3B1C008DE7F0 /* All Star Resort 2.ttf */; };
+		3200D8A41EA6D3BC00C4F0A6 /* BluePrinted.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A0F1E9B3B1C008DE7F0 /* BluePrinted.ttf */; };
+		3200D8A51EA6D3BC00C4F0A6 /* CloisterBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A101E9B3B1C008DE7F0 /* CloisterBlack.ttf */; };
+		3200D8A61EA6D3BC00C4F0A6 /* Curly Shirley.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A111E9B3B1C008DE7F0 /* Curly Shirley.ttf */; };
+		3200D8A71EA6D3BC00C4F0A6 /* Double_Bubble_shadow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A121E9B3B1C008DE7F0 /* Double_Bubble_shadow.otf */; };
+		3200D8A81EA6D3BC00C4F0A6 /* DS-DIGI.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 32986A131E9B3B1C008DE7F0 /* DS-DIGI.TTF */; };
+		3200D8A91EA6D3BC00C4F0A6 /* Easy 3D.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A141E9B3B1C008DE7F0 /* Easy 3D.ttf */; };
+		3200D8AA1EA6D3BC00C4F0A6 /* JibrilRegular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A151E9B3B1C008DE7F0 /* JibrilRegular.ttf */; };
+		3200D8AB1EA6D3BC00C4F0A6 /* johnnytorchrotal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A161E9B3B1C008DE7F0 /* johnnytorchrotal.ttf */; };
+		3200D8AC1EA6D3BC00C4F0A6 /* KGDarkSide.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A171E9B3B1C008DE7F0 /* KGDarkSide.ttf */; };
+		3200D8AD1EA6D3BC00C4F0A6 /* KGTrueColors.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A181E9B3B1C008DE7F0 /* KGTrueColors.ttf */; };
+		3200D8AE1EA6D3BC00C4F0A6 /* Market_Deco.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A191E9B3B1C008DE7F0 /* Market_Deco.ttf */; };
+		3200D8AF1EA6D3BC00C4F0A6 /* neon2 2.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A1A1E9B3B1C008DE7F0 /* neon2 2.ttf */; };
+		3200D8B01EA6D3BC00C4F0A6 /* Original by fnkfrsh.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A1B1E9B3B1C008DE7F0 /* Original by fnkfrsh.otf */; };
+		3200D8B11EA6D3BC00C4F0A6 /* Park Lane NF.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A1C1E9B3B1C008DE7F0 /* Park Lane NF.ttf */; };
+		3200D8B21EA6D3BC00C4F0A6 /* Pretty Girls Script Demo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A1D1E9B3B1C008DE7F0 /* Pretty Girls Script Demo.ttf */; };
+		3200D8B31EA6D3BC00C4F0A6 /* Royalacid_o.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A1E1E9B3B1C008DE7F0 /* Royalacid_o.ttf */; };
+		3200D8B41EA6D3BC00C4F0A6 /* Sketch Handwriting.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A1F1E9B3B1C008DE7F0 /* Sketch Handwriting.otf */; };
+		3200D8B51EA6D3BC00C4F0A6 /* Stranger back in the Night.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A201E9B3B1C008DE7F0 /* Stranger back in the Night.ttf */; };
+		3200D8B61EA6D3BC00C4F0A6 /* tradizional DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A211E9B3B1C008DE7F0 /* tradizional DEMO.otf */; };
+		32351CA91EAD7F0700D605D7 /* HostingHub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32351CA81EAD7F0700D605D7 /* HostingHub.storyboard */; };
+		32351CAC1EAD7F9000D605D7 /* hostingHubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CAB1EAD7F9000D605D7 /* hostingHubViewController.m */; };
+		32351CAF1EAD81C200D605D7 /* hubMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CAE1EAD81C200D605D7 /* hubMainViewController.m */; };
+		32351CB31EAD852700D605D7 /* hubRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CB21EAD852700D605D7 /* hubRequestsViewController.m */; };
 		323876091E243C26000ECEEB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876081E243C26000ECEEB /* AVFoundation.framework */; };
 		323876111E249A98000ECEEB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876101E249A98000ECEEB /* CoreImage.framework */; };
 		323876151E25D5E6000ECEEB /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876141E25D5E6000ECEEB /* Photos.framework */; };
@@ -153,9 +178,10 @@
 		32986A991E9B46B2008DE7F0 /* stentiga.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A301E9B3B94008DE7F0 /* stentiga.ttf */; };
 		32986A9A1E9B46B2008DE7F0 /* Subway-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A311E9B3B94008DE7F0 /* Subway-Black.ttf */; };
 		32986A9B1E9B46B2008DE7F0 /* Typo GeoSlab Regular Demo.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A321E9B3B94008DE7F0 /* Typo GeoSlab Regular Demo.otf */; };
+		329F98471EAD50C300D3638A /* Poor Quality-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 329F98451EAD50C300D3638A /* Poor Quality-50.png */; };
+		329F984C1EAD561000D3638A /* Good Quality-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 329F984B1EAD561000D3638A /* Good Quality-50.png */; };
 		32AF04731E180F67006D4E19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04721E180F67006D4E19 /* main.m */; };
 		32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF04751E180F67006D4E19 /* AppDelegate.m */; };
-		32AF047C1E180F67006D4E19 /* Hosting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AF047A1E180F67006D4E19 /* Hosting.storyboard */; };
 		32AF04811E180F67006D4E19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32AF04801E180F67006D4E19 /* Assets.xcassets */; };
 		32AF04841E180F67006D4E19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32AF04821E180F67006D4E19 /* LaunchScreen.storyboard */; };
 		32AF048F1E180F67006D4E19 /* LTHostingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 32AF048E1E180F67006D4E19 /* LTHostingTests.m */; };
@@ -183,7 +209,15 @@
 /* Begin PBXFileReference section */
 		0EFB49BE7901759AB9C8F46D /* Pods-LTHosting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTHosting.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTHosting/Pods-LTHosting.release.xcconfig"; sourceTree = "<group>"; };
 		1E976958F10ECE71A9F31D80 /* libPods-LTHostingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTHostingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3200D8A11EA6D12600C4F0A6 /* Hosting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hosting.storyboard; sourceTree = "<group>"; };
 		3229AF941E1B501F00405137 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		32351CA81EAD7F0700D605D7 /* HostingHub.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HostingHub.storyboard; sourceTree = "<group>"; };
+		32351CAA1EAD7F9000D605D7 /* hostingHubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hostingHubViewController.h; sourceTree = "<group>"; };
+		32351CAB1EAD7F9000D605D7 /* hostingHubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hostingHubViewController.m; sourceTree = "<group>"; };
+		32351CAD1EAD81C200D605D7 /* hubMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hubMainViewController.h; sourceTree = "<group>"; };
+		32351CAE1EAD81C200D605D7 /* hubMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hubMainViewController.m; sourceTree = "<group>"; };
+		32351CB11EAD852700D605D7 /* hubRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hubRequestsViewController.h; sourceTree = "<group>"; };
+		32351CB21EAD852700D605D7 /* hubRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hubRequestsViewController.m; sourceTree = "<group>"; };
 		323876061E243B77000ECEEB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		323876081E243C26000ECEEB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		323876101E249A98000ECEEB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -428,11 +462,12 @@
 		32986A7E1E9B3D9E008DE7F0 /* Go-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Go-48.png"; path = "Hosting Images/Go-48.png"; sourceTree = "<group>"; };
 		32986A7F1E9B3D9E008DE7F0 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = "Hosting Images/location.png"; sourceTree = "<group>"; };
 		32986A891E9B3DDC008DE7F0 /* EventPage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventPage.storyboard; sourceTree = "<group>"; };
+		329F98451EAD50C300D3638A /* Poor Quality-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Poor Quality-50.png"; sourceTree = "<group>"; };
+		329F984B1EAD561000D3638A /* Good Quality-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Good Quality-50.png"; sourceTree = "<group>"; };
 		32AF046E1E180F67006D4E19 /* LTHosting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LTHosting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32AF04721E180F67006D4E19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32AF04741E180F67006D4E19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		32AF04751E180F67006D4E19 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		32AF047B1E180F67006D4E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Hosting.storyboard; sourceTree = "<group>"; };
 		32AF04801E180F67006D4E19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32AF04831E180F67006D4E19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		32AF04851E180F67006D4E19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -495,6 +530,19 @@
 				D1E4FD975F0668A2ACE13B12 /* libPods-LTHostingUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		32351CB01EAD850200D605D7 /* Hosting Hub */ = {
+			isa = PBXGroup;
+			children = (
+				32351CAA1EAD7F9000D605D7 /* hostingHubViewController.h */,
+				32351CAB1EAD7F9000D605D7 /* hostingHubViewController.m */,
+				32351CAD1EAD81C200D605D7 /* hubMainViewController.h */,
+				32351CAE1EAD81C200D605D7 /* hubMainViewController.m */,
+				32351CB11EAD852700D605D7 /* hubRequestsViewController.h */,
+				32351CB21EAD852700D605D7 /* hubRequestsViewController.m */,
+			);
+			name = "Hosting Hub";
 			sourceTree = "<group>";
 		};
 		323C9AE91E79D480009FB0F6 /* Title Fonts */ = {
@@ -844,6 +892,8 @@
 				32986A6B1E9B3D57008DE7F0 /* profileImage.jpeg */,
 				32986A6C1E9B3D57008DE7F0 /* SwitchCamera.png */,
 				32986A6D1E9B3D57008DE7F0 /* test3.png */,
+				329F98451EAD50C300D3638A /* Poor Quality-50.png */,
+				329F984B1EAD561000D3638A /* Good Quality-50.png */,
 				3249C4E61E6BCB5600F23B60 /* Flyer Tool Icons */,
 				3298890D1E41410F00397E3A /* Border Images */,
 			);
@@ -866,13 +916,15 @@
 				32AF04751E180F67006D4E19 /* AppDelegate.m */,
 				328273CC1E720DE20077722B /* selectionViewController.h */,
 				328273CD1E720DE20077722B /* selectionViewController.m */,
+				32351CB01EAD850200D605D7 /* Hosting Hub */,
 				328273AC1E720D220077722B /* Event Page */,
 				328273801E720D120077722B /* Schema */,
 				32C024CA1E72019500D6F39F /* Hosting */,
 				324BC1761E38018D00C9B629 /* usefulArray.h */,
 				324BC1771E38018D00C9B629 /* usefulArray.m */,
 				32986A891E9B3DDC008DE7F0 /* EventPage.storyboard */,
-				32AF047A1E180F67006D4E19 /* Hosting.storyboard */,
+				3200D8A11EA6D12600C4F0A6 /* Hosting.storyboard */,
+				32351CA81EAD7F0700D605D7 /* HostingHub.storyboard */,
 				3290A7261E4AB91A00042C26 /* Unused.storyboard */,
 				32AF04801E180F67006D4E19 /* Assets.xcassets */,
 				32AF04821E180F67006D4E19 /* LaunchScreen.storyboard */,
@@ -1085,6 +1137,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3200D8A31EA6D3BC00C4F0A6 /* All Star Resort 2.ttf in Resources */,
+				329F984C1EAD561000D3638A /* Good Quality-50.png in Resources */,
+				3200D8A41EA6D3BC00C4F0A6 /* BluePrinted.ttf in Resources */,
+				3200D8A51EA6D3BC00C4F0A6 /* CloisterBlack.ttf in Resources */,
+				3200D8A61EA6D3BC00C4F0A6 /* Curly Shirley.ttf in Resources */,
+				3200D8A71EA6D3BC00C4F0A6 /* Double_Bubble_shadow.otf in Resources */,
+				3200D8A81EA6D3BC00C4F0A6 /* DS-DIGI.TTF in Resources */,
+				3200D8A91EA6D3BC00C4F0A6 /* Easy 3D.ttf in Resources */,
+				3200D8AA1EA6D3BC00C4F0A6 /* JibrilRegular.ttf in Resources */,
+				3200D8AB1EA6D3BC00C4F0A6 /* johnnytorchrotal.ttf in Resources */,
+				3200D8AC1EA6D3BC00C4F0A6 /* KGDarkSide.ttf in Resources */,
+				3200D8AD1EA6D3BC00C4F0A6 /* KGTrueColors.ttf in Resources */,
+				3200D8AE1EA6D3BC00C4F0A6 /* Market_Deco.ttf in Resources */,
+				3200D8AF1EA6D3BC00C4F0A6 /* neon2 2.ttf in Resources */,
+				3200D8B01EA6D3BC00C4F0A6 /* Original by fnkfrsh.otf in Resources */,
+				3200D8B11EA6D3BC00C4F0A6 /* Park Lane NF.ttf in Resources */,
+				3200D8B21EA6D3BC00C4F0A6 /* Pretty Girls Script Demo.ttf in Resources */,
+				3200D8B31EA6D3BC00C4F0A6 /* Royalacid_o.ttf in Resources */,
+				3200D8B41EA6D3BC00C4F0A6 /* Sketch Handwriting.otf in Resources */,
+				3200D8B51EA6D3BC00C4F0A6 /* Stranger back in the Night.ttf in Resources */,
+				3200D8B61EA6D3BC00C4F0A6 /* tradizional DEMO.otf in Resources */,
 				32986A8B1E9B46B2008DE7F0 /* BebasNeue.otf in Resources */,
 				32986A8C1E9B46B2008DE7F0 /* bullpen hv it.ttf in Resources */,
 				32986A8D1E9B46B2008DE7F0 /* Chosence Bold Italic.otf in Resources */,
@@ -1094,6 +1167,7 @@
 				32986A911E9B46B2008DE7F0 /* LemonMilk.otf in Resources */,
 				32986A921E9B46B2008DE7F0 /* LinLibertine_aBL.ttf in Resources */,
 				32986A931E9B46B2008DE7F0 /* Lissain didone.ttf in Resources */,
+				329F98471EAD50C300D3638A /* Poor Quality-50.png in Resources */,
 				32986A941E9B46B2008DE7F0 /* Martell-Bold.otf in Resources */,
 				32986A951E9B46B2008DE7F0 /* PoetsenOne-Regular.ttf in Resources */,
 				32986A961E9B46B2008DE7F0 /* Reckoner.ttf in Resources */,
@@ -1108,6 +1182,7 @@
 				32986A5B1E9B3CEE008DE7F0 /* hearts.png in Resources */,
 				32986A881E9B3D9E008DE7F0 /* location.png in Resources */,
 				32986A5D1E9B3CEE008DE7F0 /* paws.png in Resources */,
+				32351CA91EAD7F0700D605D7 /* HostingHub.storyboard in Resources */,
 				32986A591E9B3CEE008DE7F0 /* diamonds.png in Resources */,
 				32986A3F1E9B3C94008DE7F0 /* frame.png in Resources */,
 				32986A581E9B3CEE008DE7F0 /* barbwire.png in Resources */,
@@ -1145,10 +1220,10 @@
 				32AF04811E180F67006D4E19 /* Assets.xcassets in Resources */,
 				32986A561E9B3CEE008DE7F0 /* arrows.png in Resources */,
 				32986A841E9B3D9E008DE7F0 /* Chevron Left-50.png in Resources */,
-				32AF047C1E180F67006D4E19 /* Hosting.storyboard in Resources */,
 				32986A831E9B3D9E008DE7F0 /* camera event page.png in Resources */,
 				32986A751E9B3D57008DE7F0 /* SwitchCamera.png in Resources */,
 				32986A821E9B3D9E008DE7F0 /* Calendar-50.png in Resources */,
+				3200D8A21EA6D12600C4F0A6 /* Hosting.storyboard in Resources */,
 				32986A5F1E9B3CEE008DE7F0 /* pointer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1336,6 +1411,7 @@
 				329869D61E9B395C008DE7F0 /* eventPageFooterView.m in Sources */,
 				3298692B1E9B326F008DE7F0 /* textEditor.m in Sources */,
 				3298691D1E9B31F2008DE7F0 /* navigationScrollView.m in Sources */,
+				32351CB31EAD852700D605D7 /* hubRequestsViewController.m in Sources */,
 				329869741E9B33F4008DE7F0 /* tool.m in Sources */,
 				329869181E9B31F2008DE7F0 /* eventsNavigationController.m in Sources */,
 				32986A091E9B3A25008DE7F0 /* eventTableViewItem.m in Sources */,
@@ -1370,6 +1446,7 @@
 				329869E21E9B396E008DE7F0 /* commentsHeaderView.m in Sources */,
 				329869071E9B31A5008DE7F0 /* stackTableView.m in Sources */,
 				329868F51E9B3196008DE7F0 /* cblock.m in Sources */,
+				32351CAF1EAD81C200D605D7 /* hubMainViewController.m in Sources */,
 				329869F31E9B398B008DE7F0 /* eventDetailTableViewCell.m in Sources */,
 				329868F81E9B3196008DE7F0 /* goOptionView.m in Sources */,
 				3298696E1E9B33F4008DE7F0 /* borderPicker.m in Sources */,
@@ -1393,6 +1470,7 @@
 				329869191E9B31F2008DE7F0 /* eventViewController.m in Sources */,
 				324BC1781E38018D00C9B629 /* usefulArray.m in Sources */,
 				329869F81E9B398B008DE7F0 /* seperatorCell.m in Sources */,
+				32351CAC1EAD7F9000D605D7 /* hostingHubViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1428,14 +1506,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		32AF047A1E180F67006D4E19 /* Hosting.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				32AF047B1E180F67006D4E19 /* Base */,
-			);
-			name = Hosting.storyboard;
-			sourceTree = "<group>";
-		};
 		32AF04821E180F67006D4E19 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

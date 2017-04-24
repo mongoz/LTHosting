@@ -11,5 +11,6 @@
 @interface selectionViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UIButton *hostingButton;
 @property (strong, nonatomic) IBOutlet UIButton *eventPageButton;
+@property (strong, nonatomic) IBOutlet UIButton *hubButton;
 
 @end
