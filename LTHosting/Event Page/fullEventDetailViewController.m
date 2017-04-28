@@ -9,6 +9,7 @@
 #import "fullEventDetailViewController.h"
 #import "REAttributedStringItem.h"
 #import "locationItem.h"
+#import "cblock.h"
 
 @interface fullEventDetailViewController (){
     RETableViewSection *section;
@@ -21,6 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
+        UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"Chevron Left-50"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
+        item.tintColor=[UIColor whiteColor];
+        CGFloat cushion=8.0f;
+        CGFloat right=24.0f;
+        [item setImageInsets:UIEdgeInsetsMake(cushion, cushion-right, cushion, cushion+right)];
+        return item;
+    }]];
+    
     _tableView.tableFooterView=[[UIView alloc] initWithFrame:CGRectZero];
     self.manager=[[RETableViewManager alloc] initWithTableView:_tableView delegate:self];
     self.manager[@"REAttributedStringItem"]=@"REAttributedStringCell";
@@ -71,6 +81,10 @@
         [aboutSection addItem:[REAttributedStringItem itemWithString:@"Private" font:[UIFont boldSystemFontOfSize:bodyFont.pointSize]]];
     }
     [self.manager addSection:aboutSection];
+}
+
+-(void)backPressed:(id)sender{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(UIView*)headerViewForTitle:(NSString*)title

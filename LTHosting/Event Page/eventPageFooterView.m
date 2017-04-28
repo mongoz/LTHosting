@@ -31,7 +31,6 @@
     self=[super init];
     margin=16.0f;
     accept=[[UIButton alloc] init];
-    [accept setImage:[UIImage imageNamed:@"accept.png"] forState:UIControlStateNormal];
     [accept setBackgroundImage:[UIImage imageNamed:@"accept.png"] forState:(UIControlStateNormal)];
     [accept addTarget:self action:@selector(acceptPressed:) forControlEvents:UIControlEventTouchUpInside];
     [accept setContentMode:UIViewContentModeScaleAspectFill];

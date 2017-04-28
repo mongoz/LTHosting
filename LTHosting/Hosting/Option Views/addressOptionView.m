@@ -173,10 +173,10 @@
     [[event sharedInstance] setAddress:field.text];
     if(mostRecentPrediction!=nil)
     {
-        [[GMSPlacesClient sharedClient] lookUpPlaceID:mostRecentPrediction.placeID callback:^(GMSPlace *place, NSError *error){
+        [[GMSPlacesClient sharedClient] lookUpPlaceID:mostRecentPrediction.placeID callback:^(GMSPlace *thisplace, NSError *error){
             if(!error)
             {
-                [[event sharedInstance] setFullAddressInfo:place];
+                [[event sharedInstance] setFullAddressInfo:[place placeWithPlace:thisplace]];
             }
         }];
     }

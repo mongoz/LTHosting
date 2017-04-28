@@ -150,7 +150,7 @@
         <!--Flyer View Controller-->
         <scene sceneID="yu8-00-tnS">
             <objects>
-                <viewController id="Ajq-ap-5KK" customClass="flyerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="flyerEditor" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ajq-ap-5KK" customClass="flyerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WV2-rI-e9l"/>
                         <viewControllerLayoutGuide type="bottom" id="tYY-Oi-SvE"/>
@@ -175,7 +175,7 @@
                                     <action selector="modeButtonTouchUpOutside:" destination="Ajq-ap-5KK" eventType="touchUpOutside" id="czR-vq-tp4"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rms-bf-XkH" customClass="editorView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rms-bf-XkH" customClass="BBView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="402"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -196,7 +196,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="j3J-N9-4AW"/>
                     <connections>
-                        <outlet property="editorView" destination="rms-bf-XkH" id="QDq-DU-8no"/>
+                        <outlet property="editorContainer" destination="rms-bf-XkH" id="iqw-XR-0pM"/>
                         <outlet property="modeButton" destination="OJD-U9-XDQ" id="POd-ge-tfp"/>
                         <outlet property="toolContainer" destination="97p-o3-QnV" id="pwo-vU-Oq3"/>
                     </connections>

@@ -32,7 +32,35 @@
 }
 */
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self=[super initWithCoder:aDecoder];
+    backgroundLayer=[aDecoder decodeObjectForKey:@"backgroundLayer"];
+    imageSize=[aDecoder decodeCGSizeForKey:@"imageSize"];
+    title=[aDecoder decodeObjectForKey:@"title"];
+    title.layoutManager=self;
+    body=[aDecoder decodeObjectForKey:@"body"];
+    body.layoutManager=self;
+    border=[aDecoder decodeObjectForKey:@"border"];
+    backgroundTintLayer=[aDecoder decodeObjectForKey:@"backgroundTintLayer"];
+    isEditing=[aDecoder decodeBoolForKey:@"isEditing"];
+    [self.layer addSublayer:backgroundLayer];
+    [backgroundLayer addSublayer:backgroundTintLayer];
+    [backgroundLayer addSublayer:border];
+    [self.layer addSublayer:title];
+    [self.layer addSublayer:body];
+    return self;
+}
 
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [super encodeWithCoder:aCoder];
+    [aCoder encodeObject:backgroundLayer forKey:@"backgroundLayer"];
+    [aCoder encodeCGSize:imageSize forKey:@"imageSize"];
+    [aCoder encodeObject:title forKey:@"title"];
+    [aCoder encodeObject:body forKey:@"body"];
+    [aCoder encodeObject:border forKey:@"border"];
+    [aCoder encodeObject:backgroundTintLayer forKey:@"backgroundTintLayer"];
+    [aCoder encodeBool:isEditing forKey:@"isEditing"];
+}
 
 static editorView *instance=nil;
 //Initialization and managing instance

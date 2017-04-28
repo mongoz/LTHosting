@@ -16,6 +16,8 @@
 #import "commentAddContainer.h"
 #import "eventCommentTableViewItem.h"
 #import "cblock.h"
+#import "testEvent.h"
+#import "testUser.h"
 @import GooglePlaces;
 
 @interface eventPageViewController (){
@@ -53,22 +55,21 @@
     _manager[@"seperatorTableViewItem"]=@"seperatorCell";
     _manager[@"eventTableViewItem"]=@"eventDetailTableViewCell";
     _manager[@"eventCommentTableViewItem"]=@"eventCommentTableViewCell";
-    _header.poster=_event.poster;
     _header.backgroundColor=[UIColor whiteColor];
     _header.profileTransitionController=self;
     footer=[eventPageFooterView footerViewWithWidth:self.view.frame.size.width];
     footer.delegate=self;
     footer.layer.zPosition=CGFLOAT_MAX;
-    [self.navigationController.view addSubview:footer];
+    [self.view addSubview:footer];
     footerShowing=YES;
     [self startStandardUpdates];
     [self createSampleEvent:^{
         _header.poster=_event.poster;
         info=[[RETableViewSection alloc] initWithHeaderView:nil];
-        [info addItem:[flyerTableViewItem itemWithFlyer:[UIImage imageNamed:@"exampleFlyer.jpg"] transitionController:self]];
+        [info addItem:[flyerTableViewItem itemWithFlyer:_event.flyer transitionController:self]];
         [info addItem:[eventTableViewItem itemWithEvent:_event locationManager:locationManager transitionController:self]];
         [_manager addSection:info];
-        commentsHeader=[[commentsHeaderView alloc] initWithUser:_event.poster transitionController:self];
+        commentsHeader=[[commentsHeaderView alloc] initWithUser:[testUser get] transitionController:self];
         commentsHeader.frame=CGRectMake(0, 0, self.view.frame.size.width, 64.0f);
         comments=[[RETableViewSection alloc] initWithHeaderView:commentsHeader];
         [comments addItem:[seperatorTableViewItem itemWithColor:[UIColor whiteColor] height:footer.frame.size.height]];
@@ -89,9 +90,8 @@
     
 }
 
--(void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
+-(void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
     self.footerShowing=NO;
 }
 
@@ -105,7 +105,7 @@
     if(fShowing!=footerShowing){
         CGFloat var=fShowing?-footer.frame.size.height:0;
         [UIView animateWithDuration:.25 animations:^{
-            footer.frame=CGRectMake(0, self.view.frame.size.height+var+self.navigationController.navigationBar.frame.origin.y+self.navigationController.navigationBar.frame.size.height, footer.frame.size.width, footer.frame.size.height);
+            footer.frame=CGRectMake(0, self.view.frame.size.height+var, footer.frame.size.width, footer.frame.size.height);
         } completion:^(BOOL finished){
             footerShowing=fShowing;
         }];
@@ -125,13 +125,21 @@
         [self reloadData];
         laidout=YES;
     }
-    footer.frame=CGRectMake(0, self.view.frame.size.height-footer.frame.size.height+self.navigationController.navigationBar.frame.origin.y+self.navigationController.navigationBar.frame.size.height, footer.frame.size.width, footer.frame.size.height);
+    footer.frame=CGRectMake(0, self.view.frame.size.height-footer.frame.size.height, footer.frame.size.width, footer.frame.size.height);
     _tableView.frame=CGRectMake(_header.frame.origin.x, _header.frame.origin.y+_header.frame.size.height, _header.frame.size.width, self.view.frame.size.height-_header.frame.size.height-_header.frame.origin.y);
     
 }
 
 -(void)createSampleEvent:(void(^)())completionBlock;
 {
+    _event=nil;
+    _event=[testEvent get];
+    if(_event!=nil){
+        if(completionBlock!=nil){
+            completionBlock();
+        }
+        return;
+    }
     _event=[[event alloc] init];
     _event.name=@"Party";
     _event.about=@"About paragraph explaining how great this event will be and blah blah blah blah blah. About paragraph explaining how great this event will be and blah blah blah blah blah. About paragraph explaining how great this event will be and blah blah blah blah blah. About paragraph explaining how great this event will be and blah blah blah blah blah. About paragraph explaining how great this event will be and blah blah blah blah blah. About paragraph explaining how great this event will be and blah blah blah blah blah. About paragraph explaining how great this event will be and blah blah blah blah blah.";
@@ -141,13 +149,10 @@
     _event.isPrivate=YES;
     _event.isFree=YES;
     _event.address=@"John Street";
-    user *testPoster=[[user alloc] init];
-    testPoster.name=@"Don Johnson";
-    testPoster.profileImage=[UIImage imageNamed:@"profileImage.jpeg"];
-    _event.poster=testPoster;
-    [[GMSPlacesClient sharedClient] lookUpPlaceID:@"ChIJt00z67a1j4ARL8h-xOZ1XVo" callback:^(GMSPlace *place, NSError *error){
-        _event.fullAddressInfo=place;
-        _event.address=place.name;
+    _event.poster=[testUser get];
+    [[GMSPlacesClient sharedClient] lookUpPlaceID:@"ChIJt00z67a1j4ARL8h-xOZ1XVo" callback:^(GMSPlace *thisplace, NSError *error){
+        _event.fullAddressInfo=[place placeWithPlace:thisplace];
+        _event.address=thisplace.name;
         if(completionBlock!=nil)
         {
             completionBlock();

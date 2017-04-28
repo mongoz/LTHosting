@@ -15,12 +15,52 @@
 
 @implementation event
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self=[self init];
+    _date=[aDecoder decodeObjectForKey:@"Date"];
+    _music=[aDecoder decodeObjectForKey:@"Music"];
+    _isPrivate=[aDecoder decodeBoolForKey:@"isPrivate"];
+    _isFree=[aDecoder decodeBoolForKey:@"isFree"];
+    _name=[aDecoder decodeObjectForKey:@"Name"];
+    _address=[aDecoder decodeObjectForKey:@"Address"];
+    _fullAddressInfo=[aDecoder decodeObjectForKey:@"FullAddressInfo"];
+    _about=[aDecoder decodeObjectForKey:@"About"];
+    _venue=[aDecoder decodeObjectForKey:@"Venue"];
+    _image=[aDecoder decodeObjectForKey:@"Image"];
+    _flyer=[aDecoder decodeObjectForKey:@"Flyer"];
+    _poster=[aDecoder decodeObjectForKey:@"Poster"];
+    _comments=[aDecoder decodeObjectForKey:@"Comments"];
+    _flyerObject=[aDecoder decodeObjectForKey:@"FlyerObject"];
+    _requesting=[aDecoder decodeObjectForKey:@"requesting"];
+    _attending=[aDecoder decodeObjectForKey:@"attending"];
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:_date forKey:@"Date"];
+    [aCoder encodeObject:_music forKey:@"Music"];
+    [aCoder encodeBool:_isPrivate forKey:@"isPrivate"];
+    [aCoder encodeBool:_isFree forKey:@"isFree"];
+    [aCoder encodeObject:_name forKey:@"Name"];
+    [aCoder encodeObject:_address forKey:@"Address"];
+    [aCoder encodeObject:_fullAddressInfo forKey:@"FullAddressInfo"];
+    [aCoder encodeObject:_about forKey:@"About"];
+    [aCoder encodeObject:_venue forKey:@"Venue"];
+    [aCoder encodeObject:_image forKey:@"Image"];
+    [aCoder encodeObject:_flyer forKey:@"Flyer"];
+    [aCoder encodeObject:_poster forKey:@"Poster"];
+    [aCoder encodeObject:_comments forKey:@"Comments"];
+    [aCoder encodeObject:_flyerObject forKey:@"FlyerObject"];
+    [aCoder encodeObject:_requesting forKey:@"requesting"];
+    [aCoder encodeObject:_attending forKey:@"attending"];
+}
+
 -(id)init
 {
     if(self=[super init])
     {
         self=[super init];
-        NSString *string=@"Add";
+        NSString *string=@"";
         _date=[NSDate date];
         _music=[string copy];
         _venue=[string copy];
@@ -31,19 +71,29 @@
         _about=[string copy];
         _image=[[UIImage alloc] init];
         _flyer=[[UIImage alloc] init];
+        _requesting=[[NSMutableArray alloc] init];
+        _attending=[[NSMutableArray alloc] init];
         [self generateOptionDictionary];
     }
     return self;
 }
 
+static event *SHARED_EVENT=nil;
+
 +(event*)sharedInstance
 {
-    static event *sharedEvent=nil;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        sharedEvent=[[self alloc] init];
-    });
-    return sharedEvent;
+    if(SHARED_EVENT==nil){
+        SHARED_EVENT=[[self alloc] init];
+    }
+    return SHARED_EVENT;
+}
+
++(void)resetSharedInstance{
+    SHARED_EVENT=nil;
+}
+
++(void)setSharedInstance:(event *)existing{
+    SHARED_EVENT=existing;
 }
 
 -(void)generateOptionDictionary

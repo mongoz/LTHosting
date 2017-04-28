@@ -10,7 +10,9 @@ target 'LTHosting' do
 	pod ‘ChameleonFramework’
 	pod ‘HMSegmentedControl’
 	pod ‘RETableViewManager’
+	pod ‘DZNEmptyDataSet’
 	pod ‘BBView’
+	pod ‘MGSwipeTableCell’
 
   target 'LTHostingTests' do
     inherit! :search_paths

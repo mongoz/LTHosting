@@ -12,6 +12,7 @@
 #import "toolsContainer.h"
 #import "event.h"
 #import "cblock.h"
+#import "testEvent.h"
 
 @interface flyerViewController (){
     NSArray<UIView*>* modeArrows;
@@ -28,8 +29,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [editorView setSharedInstance:self.editorView];
-    
+    [[editorView shared] setFrame:_editorContainer.bounds];
+    [_editorContainer addSubview:[editorView shared] withIdentifier:@"editor"];
+    _editorContainer.setFrameBlock=^(BBView *v){
+        [[editorView shared] setFrame:v.bounds];
+    };
     
     [self.navigationItem setLeftBarButtonItem:[cblock make:^id{
         UIBarButtonItem *item=[[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Chevron Left-50"] style:UIBarButtonItemStyleDone target:self action:@selector(backPressed:)];
@@ -81,7 +85,27 @@
 }
 
 -(void)donePressed:(id)sender{
-    [[event sharedInstance] setFlyer:[[editorView shared] currentImage]];
+    UIImage *im=[[editorView shared] currentImage];
+    CGRect editorFrame=[(editorView*)[editorView shared] frame];
+    CGImageRef result=im.CGImage;
+    CGFloat width=CGImageGetWidth(result);
+    CGFloat scale=width/editorFrame.size.width;
+    CGFloat xVal=scale*(editorFrame.size.width-[[editorView shared] backgroundTintLayer].frame.size.width)/2;
+    CGImageRef cropped=CGImageCreateWithImageInRect(result, CGRectMake(xVal, 0, width-(xVal*2), CGImageGetHeight(result)));
+    
+    [[event sharedInstance] setFlyer:[UIImage imageWithCGImage:cropped]];
+    CGImageRelease(cropped);
+    
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    [[editorView shared] removeFromSuperview];
+    NSMutableData *flyerData=[NSMutableData data];
+    NSKeyedArchiver *archive=[[NSKeyedArchiver alloc] initForWritingWithMutableData:flyerData];
+    [[editorView shared] encodeWithCoder:archive];
+    [archive finishEncoding];
+    [[event sharedInstance] setFlyerObject:flyerData];
+    
+    [[editorView shared] reset];
+    [testEvent set:[event sharedInstance]];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -211,7 +235,7 @@ BOOL set=NO;
     {
         [UIView animateWithDuration:.25 animations:^{
             [toolViewer setFrame:toolDestFrame];
-            [[editorView shared] setFrame:editorDestFrame];
+            [_editorContainer setFrame:editorDestFrame];
         } completion:^(BOOL finished){
             [[editorView shared] setIsEditing:YES];
             if(completionBlock!=nil)
@@ -224,7 +248,7 @@ BOOL set=NO;
     else
     {
         [toolViewer setFrame:toolDestFrame];
-        [[editorView shared] setFrame:editorDestFrame];
+        [_editorContainer setFrame:editorDestFrame];
         [[editorView shared] setIsEditing:YES];
         if(completionBlock!=nil)
         {
@@ -248,7 +272,7 @@ BOOL set=NO;
     if(animated)
     {
         [UIView animateWithDuration:.25 animations:^{
-            [[editorView shared] setFrame:editorDestFrame];
+            [_editorContainer setFrame:editorDestFrame];
             [toolViewer setFrame:toolDestFrame];
         } completion:^(BOOL finished){
             if(completionBlock!=nil)
@@ -261,7 +285,7 @@ BOOL set=NO;
     else
     {
         
-        [[editorView shared] setFrame:editorDestFrame];
+        [_editorContainer setFrame:editorDestFrame];
         [toolViewer setFrame:toolDestFrame];
         if(completionBlock!=nil)
         {

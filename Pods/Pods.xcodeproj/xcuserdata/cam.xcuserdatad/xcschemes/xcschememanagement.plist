@@ -14,7 +14,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>DZNEmptyDataSet.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HMSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MGSwipeTableCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -57,12 +67,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>058B947A1E70123A0067C1D8C45CE877</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4339401AA38C748D86F3C2E3C3C633E8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>497302CB179B27E8958A24969B789C76</key>
+		<key>43AFBF4F2CD231A7499E3B7813A16837</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4CA6B1FCF414D7C203EB680550A13B8A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5437890023F30CA85DFCA260CA914D48</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6D4C9A42C46B584DCA40C79917DB51A5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +102,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>942A401B66D65A05DF94B2E52F039911</key>
+		<key>90F36E66307579EFCA88CC73445C31BA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,27 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A0445F360D72C0E09313C9DAB4460899</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CCBF48787E48B5599E4CDBB2DB2DAB60</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>D57F6DD7CBDE11E457971075B0805982</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7BFFB8F86EBDF2D90B54F53956FABD9</key>
+		<key>EAE03C93054ABB5DD5A08AF8ED4CD48C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EAE03C93054ABB5DD5A08AF8ED4CD48C</key>
+		<key>FFB5F5D7C838DB66B200CAA52056AC28</key>
 		<dict>
 			<key>primary</key>
 			<true/>

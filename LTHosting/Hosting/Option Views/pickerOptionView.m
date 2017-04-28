@@ -141,11 +141,15 @@
 {
     if(type==LTPickerOptionMusic)
     {
-        [[event sharedInstance] setMusic:barLabel.text];
+        if(![barLabel.text isEqualToString:@"Music"]){
+            [[event sharedInstance] setMusic:barLabel.text];
+        }
     }
     else if(type==LTPickerOptionVenue)
     {
-        [[event sharedInstance] setVenue:barLabel.text];
+        if(![barLabel.text isEqualToString:@"Venue"]){
+            [[event sharedInstance] setVenue:barLabel.text];
+        }
     }
 }
 

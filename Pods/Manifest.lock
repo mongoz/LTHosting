@@ -3,10 +3,12 @@ PODS:
   - ChameleonFramework (2.1.0):
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
+  - DZNEmptyDataSet (1.8.1)
   - GoogleMaps/Base (2.2.0)
   - GooglePlaces (2.2.0):
     - GoogleMaps/Base (= 2.2.0)
   - HMSegmentedControl (1.5.3)
+  - MGSwipeTableCell (1.5.6)
   - REFormattedNumberField (1.1.6)
   - RETableViewManager (1.7):
     - REFormattedNumberField (~> 1.1.5)
@@ -16,20 +18,24 @@ PODS:
 DEPENDENCIES:
   - BBView
   - ChameleonFramework
+  - DZNEmptyDataSet
   - GooglePlaces
   - HMSegmentedControl
+  - MGSwipeTableCell
   - RETableViewManager
 
 SPEC CHECKSUMS:
   BBView: 7dc5625d7267c105ec67c456cf79f6e5d4a4ba0b
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
   GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
   HMSegmentedControl: 7c6145afb50f26cec5f3243082f6f12b9f41318f
+  MGSwipeTableCell: 616700eb0ffd1c611ba909066cb7fd739790a0a7
   REFormattedNumberField: 70fc5fb1218ebd5ee9983820defd12806d5c6ec6
   RETableViewManager: 0f24d796c42c0890d38c79cc9aeb3871e186726e
   REValidation: 38c4de1be58455f8b00aab208ac80db316a66b7f
 
-PODFILE CHECKSUM: c4fb0ef037ccebd6f9dd2837267861e73ae31c0f
+PODFILE CHECKSUM: df15f04a736301580ceb0181ec378a7ef3670ad1
 
 COCOAPODS: 1.2.0

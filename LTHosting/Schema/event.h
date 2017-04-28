@@ -7,17 +7,21 @@
 //
 
 #import "eventComment.h"
-@import GooglePlaces;
+#import "place.h"
 
-@interface event : NSObject
+@interface event : NSObject<NSCoding>
 
 +(event*)sharedInstance;
+
++(void)setSharedInstance:(event*)existing;
+
++(void)resetSharedInstance;
 
 @property (strong, nonatomic) NSString *name;
 
 @property (strong, nonatomic) NSString *address;
 
-@property (strong, nonatomic) GMSPlace *fullAddressInfo;
+@property (strong, nonatomic) place *fullAddressInfo;
 
 @property (strong, nonatomic) NSString *about;
 
@@ -38,6 +42,12 @@
 @property (strong, nonatomic) user *poster;
 
 @property (strong, nonatomic) NSArray<eventComment*>* comments;
+
+@property (strong, nonatomic) NSData *flyerObject;
+
+@property (strong, nonatomic) NSMutableArray<user*>* attending;
+
+@property (strong, nonatomic) NSMutableArray<user*>* requesting;
 
 -(id)objectForOption:(NSString*)option;
 

@@ -31,14 +31,20 @@
 		3200D8B51EA6D3BC00C4F0A6 /* Stranger back in the Night.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A201E9B3B1C008DE7F0 /* Stranger back in the Night.ttf */; };
 		3200D8B61EA6D3BC00C4F0A6 /* tradizional DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A211E9B3B1C008DE7F0 /* tradizional DEMO.otf */; };
 		32351CA91EAD7F0700D605D7 /* HostingHub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32351CA81EAD7F0700D605D7 /* HostingHub.storyboard */; };
-		32351CAC1EAD7F9000D605D7 /* hostingHubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CAB1EAD7F9000D605D7 /* hostingHubViewController.m */; };
+		32351CAC1EAD7F9000D605D7 /* hostingHubPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CAB1EAD7F9000D605D7 /* hostingHubPageController.m */; };
 		32351CAF1EAD81C200D605D7 /* hubMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CAE1EAD81C200D605D7 /* hubMainViewController.m */; };
 		32351CB31EAD852700D605D7 /* hubRequestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CB21EAD852700D605D7 /* hubRequestsViewController.m */; };
+		32351CB61EB14D7C00D605D7 /* testEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CB51EB14D7C00D605D7 /* testEvent.m */; };
+		32351CBF1EB189AE00D605D7 /* place.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CBE1EB189AE00D605D7 /* place.m */; };
+		32351CC21EB1BBC400D605D7 /* testUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CC11EB1BBC400D605D7 /* testUser.m */; };
+		32351CC51EB1C31A00D605D7 /* hubInvitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CC41EB1C31A00D605D7 /* hubInvitesViewController.m */; };
 		323876091E243C26000ECEEB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876081E243C26000ECEEB /* AVFoundation.framework */; };
 		323876111E249A98000ECEEB /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876101E249A98000ECEEB /* CoreImage.framework */; };
 		323876151E25D5E6000ECEEB /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 323876141E25D5E6000ECEEB /* Photos.framework */; };
 		324BC1781E38018D00C9B629 /* usefulArray.m in Sources */ = {isa = PBXBuildFile; fileRef = 324BC1771E38018D00C9B629 /* usefulArray.m */; };
 		328273CE1E720DE20077722B /* selectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 328273CD1E720DE20077722B /* selectionViewController.m */; };
+		32884CDD1EB2BA6100203D92 /* eventRequestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 32884CDC1EB2BA6100203D92 /* eventRequestTableCell.m */; };
+		32884CE01EB2CBFF00203D92 /* flyerEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32884CDF1EB2CBFF00203D92 /* flyerEditViewController.m */; };
 		3290A7271E4AB91A00042C26 /* Unused.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3290A7261E4AB91A00042C26 /* Unused.storyboard */; };
 		329868F31E9B3196008DE7F0 /* aboutOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329868E01E9B3196008DE7F0 /* aboutOptionView.m */; };
 		329868F41E9B3196008DE7F0 /* addressOptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 329868E21E9B3196008DE7F0 /* addressOptionView.m */; };
@@ -212,12 +218,20 @@
 		3200D8A11EA6D12600C4F0A6 /* Hosting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hosting.storyboard; sourceTree = "<group>"; };
 		3229AF941E1B501F00405137 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		32351CA81EAD7F0700D605D7 /* HostingHub.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HostingHub.storyboard; sourceTree = "<group>"; };
-		32351CAA1EAD7F9000D605D7 /* hostingHubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hostingHubViewController.h; sourceTree = "<group>"; };
-		32351CAB1EAD7F9000D605D7 /* hostingHubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hostingHubViewController.m; sourceTree = "<group>"; };
+		32351CAA1EAD7F9000D605D7 /* hostingHubPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hostingHubPageController.h; sourceTree = "<group>"; };
+		32351CAB1EAD7F9000D605D7 /* hostingHubPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hostingHubPageController.m; sourceTree = "<group>"; };
 		32351CAD1EAD81C200D605D7 /* hubMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hubMainViewController.h; sourceTree = "<group>"; };
 		32351CAE1EAD81C200D605D7 /* hubMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hubMainViewController.m; sourceTree = "<group>"; };
 		32351CB11EAD852700D605D7 /* hubRequestsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hubRequestsViewController.h; sourceTree = "<group>"; };
 		32351CB21EAD852700D605D7 /* hubRequestsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hubRequestsViewController.m; sourceTree = "<group>"; };
+		32351CB41EB14D7C00D605D7 /* testEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testEvent.h; sourceTree = "<group>"; };
+		32351CB51EB14D7C00D605D7 /* testEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testEvent.m; sourceTree = "<group>"; };
+		32351CBD1EB189AE00D605D7 /* place.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = place.h; path = ../../LTHosting/LTHosting/place.h; sourceTree = "<group>"; };
+		32351CBE1EB189AE00D605D7 /* place.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = place.m; path = ../../LTHosting/LTHosting/place.m; sourceTree = "<group>"; };
+		32351CC01EB1BBC400D605D7 /* testUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testUser.h; sourceTree = "<group>"; };
+		32351CC11EB1BBC400D605D7 /* testUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testUser.m; sourceTree = "<group>"; };
+		32351CC31EB1C31A00D605D7 /* hubInvitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hubInvitesViewController.h; sourceTree = "<group>"; };
+		32351CC41EB1C31A00D605D7 /* hubInvitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hubInvitesViewController.m; sourceTree = "<group>"; };
 		323876061E243B77000ECEEB /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		323876081E243C26000ECEEB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		323876101E249A98000ECEEB /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -226,6 +240,10 @@
 		324BC1771E38018D00C9B629 /* usefulArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = usefulArray.m; sourceTree = "<group>"; };
 		328273CC1E720DE20077722B /* selectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectionViewController.h; sourceTree = "<group>"; };
 		328273CD1E720DE20077722B /* selectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectionViewController.m; sourceTree = "<group>"; };
+		32884CDB1EB2BA6100203D92 /* eventRequestTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventRequestTableCell.h; sourceTree = "<group>"; };
+		32884CDC1EB2BA6100203D92 /* eventRequestTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventRequestTableCell.m; sourceTree = "<group>"; };
+		32884CDE1EB2CBFF00203D92 /* flyerEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = flyerEditViewController.h; path = LTHosting/flyerEditViewController.h; sourceTree = SOURCE_ROOT; };
+		32884CDF1EB2CBFF00203D92 /* flyerEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = flyerEditViewController.m; path = LTHosting/flyerEditViewController.m; sourceTree = SOURCE_ROOT; };
 		3290A7261E4AB91A00042C26 /* Unused.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Unused.storyboard; sourceTree = "<group>"; };
 		329868DF1E9B3196008DE7F0 /* aboutOptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = aboutOptionView.h; path = "Hosting/Option Views/aboutOptionView.h"; sourceTree = "<group>"; };
 		329868E01E9B3196008DE7F0 /* aboutOptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = aboutOptionView.m; path = "Hosting/Option Views/aboutOptionView.m"; sourceTree = "<group>"; };
@@ -535,12 +553,18 @@
 		32351CB01EAD850200D605D7 /* Hosting Hub */ = {
 			isa = PBXGroup;
 			children = (
-				32351CAA1EAD7F9000D605D7 /* hostingHubViewController.h */,
-				32351CAB1EAD7F9000D605D7 /* hostingHubViewController.m */,
+				32351CAA1EAD7F9000D605D7 /* hostingHubPageController.h */,
+				32351CAB1EAD7F9000D605D7 /* hostingHubPageController.m */,
 				32351CAD1EAD81C200D605D7 /* hubMainViewController.h */,
 				32351CAE1EAD81C200D605D7 /* hubMainViewController.m */,
 				32351CB11EAD852700D605D7 /* hubRequestsViewController.h */,
 				32351CB21EAD852700D605D7 /* hubRequestsViewController.m */,
+				32351CC31EB1C31A00D605D7 /* hubInvitesViewController.h */,
+				32351CC41EB1C31A00D605D7 /* hubInvitesViewController.m */,
+				32884CDB1EB2BA6100203D92 /* eventRequestTableCell.h */,
+				32884CDC1EB2BA6100203D92 /* eventRequestTableCell.m */,
+				32884CDE1EB2CBFF00203D92 /* flyerEditViewController.h */,
+				32884CDF1EB2CBFF00203D92 /* flyerEditViewController.m */,
 			);
 			name = "Hosting Hub";
 			sourceTree = "<group>";
@@ -693,12 +717,18 @@
 		328273801E720D120077722B /* Schema */ = {
 			isa = PBXGroup;
 			children = (
+				32351CBD1EB189AE00D605D7 /* place.h */,
+				32351CBE1EB189AE00D605D7 /* place.m */,
 				3298697B1E9B3486008DE7F0 /* event.h */,
 				3298697C1E9B3486008DE7F0 /* event.m */,
+				32351CB41EB14D7C00D605D7 /* testEvent.h */,
+				32351CB51EB14D7C00D605D7 /* testEvent.m */,
 				3298697D1E9B3486008DE7F0 /* eventComment.h */,
 				3298697E1E9B3486008DE7F0 /* eventComment.m */,
 				3298697F1E9B3486008DE7F0 /* user.h */,
 				329869801E9B3486008DE7F0 /* user.m */,
+				32351CC01EB1BBC400D605D7 /* testUser.h */,
+				32351CC11EB1BBC400D605D7 /* testUser.m */,
 			);
 			name = Schema;
 			path = ../../LTEventPage/LTEventPage;
@@ -1390,11 +1420,13 @@
 				3298692C1E9B326F008DE7F0 /* toolsContainer.m in Sources */,
 				329868F61E9B3196008DE7F0 /* datePickerOptionView.m in Sources */,
 				329869DB1E9B395C008DE7F0 /* LTTextView.m in Sources */,
+				32351CB61EB14D7C00D605D7 /* testEvent.m in Sources */,
 				329869061E9B31A5008DE7F0 /* stackLabel.m in Sources */,
 				329869831E9B3486008DE7F0 /* user.m in Sources */,
 				329869731E9B33F4008DE7F0 /* textAlignmentTool.m in Sources */,
 				329869371E9B32E1008DE7F0 /* textEditingLayer.m in Sources */,
 				329869281E9B326F008DE7F0 /* editorView.m in Sources */,
+				32884CE01EB2CBFF00203D92 /* flyerEditViewController.m in Sources */,
 				32986A0D1E9B3A25008DE7F0 /* seperatorTableViewItem.m in Sources */,
 				3298691C1E9B31F2008DE7F0 /* LTNavigationController.m in Sources */,
 				329869811E9B3486008DE7F0 /* event.m in Sources */,
@@ -1407,6 +1439,7 @@
 				3298696D1E9B33F4008DE7F0 /* backgroundTintTool.m in Sources */,
 				329869291E9B326F008DE7F0 /* flyerViewController.m in Sources */,
 				329869701E9B33F4008DE7F0 /* fontTool.m in Sources */,
+				32351CC51EB1C31A00D605D7 /* hubInvitesViewController.m in Sources */,
 				329869171E9B31F2008DE7F0 /* commonUseFunctions.m in Sources */,
 				329869D61E9B395C008DE7F0 /* eventPageFooterView.m in Sources */,
 				3298692B1E9B326F008DE7F0 /* textEditor.m in Sources */,
@@ -1416,6 +1449,7 @@
 				329869181E9B31F2008DE7F0 /* eventsNavigationController.m in Sources */,
 				32986A091E9B3A25008DE7F0 /* eventTableViewItem.m in Sources */,
 				329869D51E9B395C008DE7F0 /* commentAddView.m in Sources */,
+				32351CC21EB1BBC400D605D7 /* testUser.m in Sources */,
 				32986A071E9B3A24008DE7F0 /* eventCommentTableViewItem.m in Sources */,
 				329869D71E9B395C008DE7F0 /* eventPageViewController.m in Sources */,
 				329869431E9B3332008DE7F0 /* toolView.m in Sources */,
@@ -1429,6 +1463,7 @@
 				329868FC1E9B3196008DE7F0 /* switchOptionView.m in Sources */,
 				32986A0A1E9B3A25008DE7F0 /* flyerTableViewItem.m in Sources */,
 				329869F71E9B398B008DE7F0 /* REAttributedStringCell.m in Sources */,
+				32351CBF1EB189AE00D605D7 /* place.m in Sources */,
 				328273CE1E720DE20077722B /* selectionViewController.m in Sources */,
 				32986A0B1E9B3A25008DE7F0 /* locationItem.m in Sources */,
 				329869F41E9B398B008DE7F0 /* eventPageTableViewCell.m in Sources */,
@@ -1457,6 +1492,7 @@
 				32AF04761E180F67006D4E19 /* AppDelegate.m in Sources */,
 				3298696F1E9B33F4008DE7F0 /* colorTool.m in Sources */,
 				329869441E9B3332008DE7F0 /* toolViewItem.m in Sources */,
+				32884CDD1EB2BA6100203D92 /* eventRequestTableCell.m in Sources */,
 				329869051E9B31A5008DE7F0 /* stackDatePicker.m in Sources */,
 				329868FA1E9B3196008DE7F0 /* nameOptionView.m in Sources */,
 				3298692A1E9B326F008DE7F0 /* smarterString.m in Sources */,
@@ -1470,7 +1506,7 @@
 				329869191E9B31F2008DE7F0 /* eventViewController.m in Sources */,
 				324BC1781E38018D00C9B629 /* usefulArray.m in Sources */,
 				329869F81E9B398B008DE7F0 /* seperatorCell.m in Sources */,
-				32351CAC1EAD7F9000D605D7 /* hostingHubViewController.m in Sources */,
+				32351CAC1EAD7F9000D605D7 /* hostingHubPageController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

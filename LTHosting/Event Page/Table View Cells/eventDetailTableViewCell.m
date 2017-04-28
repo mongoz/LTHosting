@@ -101,11 +101,16 @@
 -(void)cellWillAppear
 {
     [super cellWillAppear];
-    CLLocation *me=[self.item.locationManager location];
-    CLLocationCoordinate2D place2D=[[self.item.event fullAddressInfo] coordinate];
-    CLLocation *place=[[CLLocation alloc] initWithLatitude:place2D.latitude longitude:place2D.longitude];
-    CLLocationDistance dist=[place distanceFromLocation:me];
-    [rightLabel setText:[self stringForDistance:dist]];
+    if(self.item.event.fullAddressInfo!=nil&&self.item.locationManager!=nil){
+        CLLocation *me=[self.item.locationManager location];
+        CLLocationCoordinate2D place2D=[[self.item.event fullAddressInfo] coordinate];
+        CLLocation *place=[[CLLocation alloc] initWithLatitude:place2D.latitude longitude:place2D.longitude];
+        CLLocationDistance dist=[place distanceFromLocation:me];
+        [rightLabel setText:[self stringForDistance:dist]];
+    }
+    else{
+        [rightLabel setText:@"Location Unavailable"];
+    }
     NSTimeInterval timeUntilEvent=[self.item.event.date timeIntervalSinceNow];
     [leftLabel setText:[self stringForInterval:timeUntilEvent]];
     self.backgroundColor=[self backgroundColorForInterval:[self.item.event.date timeIntervalSinceNow]];

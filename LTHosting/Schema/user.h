@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface user : NSObject
+@interface user : NSObject<NSCoding>
 
 @property (strong, nonatomic) NSString *name;
 

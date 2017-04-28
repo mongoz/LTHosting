@@ -10,4 +10,16 @@
 
 @implementation user
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self=[self init];
+    _name=[aDecoder decodeObjectForKey:@"name"];
+    _profileImage=[aDecoder decodeObjectForKey:@"profile_image"];
+    return self;
+}
+
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [aCoder encodeObject:_name forKey:@"name"];
+    [aCoder encodeObject:_profileImage forKey:@"profile_image"];
+}
+
 @end

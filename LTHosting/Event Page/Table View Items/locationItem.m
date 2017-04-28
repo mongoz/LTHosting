@@ -23,7 +23,7 @@
     return self;
 }
 
--(id)initWithPlace:(GMSPlace *)somePlace addressString:(NSString *)string
+-(id)initWithPlace:(place *)somePlace addressString:(NSString *)string
 {
     self=[self init];
     _place=somePlace;
@@ -31,7 +31,7 @@
     return self;
 }
 
--(id)initWithPlace:(GMSPlace *)somePlace
+-(id)initWithPlace:(place *)somePlace
 {
     return [self initWithPlace:somePlace addressString:somePlace.name];
 }
@@ -41,12 +41,12 @@
     return [self initWithPlace:nil addressString:string];
 }
 
-+(locationItem*)itemWithPlace:(GMSPlace *)somePlace addressString:(NSString *)string
++(locationItem*)itemWithPlace:(place *)somePlace addressString:(NSString *)string
 {
     return [[self alloc] initWithPlace:somePlace addressString:string];
 }
 
-+(locationItem*)itemWithPlace:(GMSPlace *)somePlace
++(locationItem*)itemWithPlace:(place *)somePlace
 {
     return [[self alloc] initWithPlace:somePlace];
 }
@@ -67,7 +67,7 @@
     };
 }
 
--(void)openPlaceInGoogleMaps:(GMSPlace*)place completion:(void(^)(BOOL))completionBlock
+-(void)openPlaceInGoogleMaps:(place*)place completion:(void(^)(BOOL))completionBlock
 {
     NSMutableString *myString=[[NSMutableString alloc] init];
     [myString appendString:@"comgooglemaps-x-callback://?"];
@@ -88,7 +88,7 @@
     }];
 }
 
--(void)openPlaceInAppleMaps:(GMSPlace*)place completion:(void(^)(BOOL))completionBlock
+-(void)openPlaceInAppleMaps:(place*)place completion:(void(^)(BOOL))completionBlock
 {
     NSMutableString *myString=[[NSMutableString alloc] init];
     [myString appendString:@"http://maps.apple.com/?"];

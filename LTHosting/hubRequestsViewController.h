@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RETableViewManager/RETableViewManager.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import "hostingHubPageController.h"
 
-@interface hubRequestsViewController : UIViewController
+@interface hubRequestsViewController : UIViewController<DZNEmptyDataSetSource, hubVC, UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+@property (weak, nonatomic) hostingHubPageController *pageViewController;
 
 @end

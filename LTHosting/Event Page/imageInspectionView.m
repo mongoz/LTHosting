@@ -122,8 +122,8 @@
 
 -(void)setContentViewFrame:(CGRect)frame{
     contentView.frame=frame;
-    CGFloat total=self.frame.size.height/2;
-    self.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:MAX(1-fabs(contentView.frame.origin.y)/(total*1.618f),0)];
+    CGFloat total=self.frame.size.height;
+    self.backgroundColor=[[UIColor blackColor] colorWithAlphaComponent:MAX(1-fabs(contentView.frame.origin.y)/(total),0)];
 }
 
 -(void)draggingBegan:(UIPanGestureRecognizer*)pan{

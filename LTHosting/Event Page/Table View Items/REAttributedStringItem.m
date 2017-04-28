@@ -15,6 +15,7 @@
     self=[super init];
     _attributedString=[[NSAttributedString alloc] init];
     _textInsets=UIEdgeInsetsMake(12.0f, 14.0f, 12.0f, 12.0f);
+    self.selectionStyle=UITableViewCellSelectionStyleNone;
     return self;
 }
 

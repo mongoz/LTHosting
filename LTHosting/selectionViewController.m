@@ -7,6 +7,8 @@
 //
 
 #import "selectionViewController.h"
+#import "testEvent.h"
+#import "hostingHubPageController.h"
 
 @interface selectionViewController ()
 
@@ -35,6 +37,7 @@
 
 -(void)transitionToHostingHub:(UIButton*)button{
     UIViewController *dest=[[UIStoryboard storyboardWithName:@"HostingHub" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"hostingHub"];
+    [(hostingHubPageController*)dest setEvent:[testEvent get]];
     [self.navigationController pushViewController:dest animated:YES];
 }
 

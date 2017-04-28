@@ -15,6 +15,7 @@
     self=[super init];
     _color=[UIColor lightGrayColor];
     _height=12.0f;
+    self.selectionStyle=UITableViewCellSelectionStyleNone;
     return self;
 }
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "user.h"
 
-@interface eventComment : NSObject
+@interface eventComment : NSObject<NSCoding>
 
 @property (strong, nonatomic) NSString *text;
 

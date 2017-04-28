@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "event.h"
+#import "hostingHubPageController.h"
+#import <BBView/BBView.h>
 
-@interface hubMainViewController : UIViewController
+@interface hubMainViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout, hubVC>
 
 @property (strong, nonatomic) IBOutlet UIImageView *flyerView;
 
-@property (strong, nonatomic) IBOutlet UIView *infoView;
-
-@property (strong, nonatomic) IBOutlet UIView *controlView;
+@property (strong, nonatomic) IBOutlet UICollectionView *controlView;
 
 @property (strong, nonatomic) event *thisEvent;
+
+@property (weak, nonatomic) hostingHubPageController *pageViewController;
+
+@property (strong, nonatomic) IBOutlet BBView *infoView;
 
 @end

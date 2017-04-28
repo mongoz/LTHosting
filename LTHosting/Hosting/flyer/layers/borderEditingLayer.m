@@ -12,6 +12,18 @@
 
 CALayer *maskLayer=nil;
 
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [super encodeWithCoder:aCoder];
+    [aCoder encodeObject:maskLayer forKey:@"maskLayer"];
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self=[super initWithCoder:aDecoder];
+    maskLayer=[aDecoder decodeObjectForKey:@"maskLayer"];
+    self.mask=maskLayer;
+    return self;
+}
+
 -(void)setColor:(UIColor *)color
 {
     if(maskLayer==nil)

@@ -13,7 +13,6 @@
 
 @interface textEditingLayer(){
     BOOL flexibleHeight;
-    CGFloat textScale;
     BOOL frameChanged;
     CGFloat maxSize;
 }
@@ -21,6 +20,33 @@
 @end
 
 @implementation textEditingLayer
+
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    [super encodeWithCoder:aCoder];
+    [aCoder encodeBool:flexibleHeight forKey:@"flexibleHeight"];
+    [aCoder encodeBool:frameChanged forKey:@"frameChanged"];
+    [aCoder encodeFloat:maxSize forKey:@"maxSize"];
+    [aCoder encodeObject:_textLabel forKey:@"textLabel"];
+    UIFont *f=self.font;
+    NSLog(@"%@,%f",f.fontName,f.pointSize);
+    
+    [aCoder encodeObject:self.font.fontName forKey:@"fontName"];
+    [aCoder encodeFloat:self.font.pointSize forKey:@"fontSize"];
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self=[super initWithCoder:aDecoder];
+    flexibleHeight=[aDecoder decodeBoolForKey:@"flexibleHeight"];
+    frameChanged=[aDecoder decodeBoolForKey:@"frameChange"];
+    maxSize=[aDecoder decodeFloatForKey:@"maxSize"];
+    _textLabel=[aDecoder decodeObjectForKey:@"textLabel"];
+    NSString *fName=[aDecoder decodeObjectForKey:@"fontName"];
+    float fSize=[aDecoder decodeFloatForKey:@"fontSize"];
+    UIFont *f=[UIFont fontWithName:fName size:fSize];
+    [self setFont:f];
+    [self addSublayer:_textLabel];
+    return self;
+}
 
 -(id)init
 {
@@ -32,7 +58,9 @@
     _textLabel.shadowOffset=CGSizeZero;
     [_textLabel setBackgroundColor:[UIColor clearColor].CGColor];
     UIFont *bebas=[UIFont fontWithName:[usefulArray bodyFontPostScriptNames].firstObject size:[UIFont preferredFontForTextStyle:UIFontTextStyleTitle1].pointSize];
-    _textLabel.font=[self CGFontFromUIFont:bebas];
+    CGFontRef cgbebas=[self CGFontFromUIFont:bebas];
+    _textLabel.font=cgbebas;
+    CGFontRelease(cgbebas);
     _textLabel.rasterizationScale=5.0f;
     _textLabel.contentsScale=[[UIScreen mainScreen] scale];
     _textLabel.alignmentMode=kCAAlignmentLeft;
@@ -67,9 +95,10 @@
         height*=1.01f;
         [super setFrame:CGRectMake(self.frame.origin.x, self.frame.origin.y, _textLabel.frame.size.width, height)];
     }
-    else if(self.font.pointSize>[self maxTextSize])
+    else if(self.font.pointSize>MAX([self maxTextSize],1))
     {
-        [self setFont:[self.font fontWithSize:[self maxTextSize]]];
+        _textLabel.fontSize=[self maxTextSize];
+        _textLabel.shadowRadius=_textLabel.fontSize/10.0f;
     }
 }
 
@@ -139,14 +168,19 @@
 
 -(UIFont*)UIFontFromCGFont:(CGFontRef)font withSize:(CGFloat)size
 {
-    NSString *fontName=(NSString*)CFBridgingRelease(CGFontCopyPostScriptName(font));
+    NSLog(@"blah %@, %f",font,size);
+    NSString *fontName=(__bridge NSString*)CGFontCopyPostScriptName(font);
     return [UIFont fontWithName:fontName size:size];
     
 }
 
 -(UIFont*)font
 {
-    return [self UIFontFromCGFont:(CGFontRef)_textLabel.font withSize:_textLabel.fontSize];
+    CFTypeRef font=_textLabel.font;
+    if(font==nil){
+        
+    }
+    return [self UIFontFromCGFont:(CGFontRef)font withSize:_textLabel.fontSize];
 }
 
 -(CGRect)boundingRect
@@ -181,6 +215,7 @@
 
 -(NSAttributedString*)attributedText
 {
+    
     return [[NSAttributedString alloc] initWithString:self.text attributes:@{NSFontAttributeName:self.font}];
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "commentAddContainer.h"
+#import "cblock.h"
 
 @interface commentAddContainer(){
     CGRect initialFrame;
@@ -16,6 +17,8 @@
     BOOL animatingUp;
     CGFloat gravityMagnitude;
     CGRect keyboardRect;
+    UIView *topCover;
+    UINavigationBar *topContent;
 }
 
 @end;
@@ -46,6 +49,7 @@
     addView=nil;
     animator=[[UIDynamicAnimator alloc] initWithReferenceView:self];
     animator.delegate=self;
+    topCover=nil;
     return self;
 }
 
@@ -91,6 +95,12 @@ void (^keyboardWillShowCompletionBlock)(CGRect)=nil;
 
 -(void)tapped:(UITapGestureRecognizer*)tap
 {
+    [UIView animateWithDuration:.25 animations:^{
+        topCover.alpha=0.0f;
+    } completion:^(BOOL finished){
+        [topCover removeFromSuperview];
+        topCover=nil;
+    }];
     [addView endEditingWithCompletion:^{
         if(initialFrame.origin.y>0){
             [self dropToInitialFrameWithCompletion:^{
@@ -130,6 +140,29 @@ void (^keyboardWillShowCompletionBlock)(CGRect)=nil;
     {
         return;
     }
+    void(^completionBlock)()=^{
+        CGFloat topHeight=20.0f;
+        eventPageViewController *vc=(eventPageViewController*)self.transitionController;
+        topCover=[[UIView alloc] initWithFrame:CGRectMake(0, 0, vc.view.frame.size.width, topHeight+vc.navigationController.navigationBar.frame.size.height)];
+        topCover.backgroundColor=[UIColor blackColor];
+        topContent=[[UINavigationBar alloc] initWithFrame:CGRectMake(0, topHeight, topCover.frame.size.width, topCover.frame.size.height-topHeight)];
+        [topCover addSubview:topContent];
+        [topContent setTranslucent:NO];
+        [topContent setBarTintColor:[UIColor blackColor]];
+        [topContent setBarStyle:UIBarStyleBlack];
+        [topContent setTintColor:[UIColor whiteColor]];
+        [topContent setItems:@[[cblock make:^id{
+            UINavigationItem *item=[[UINavigationItem alloc] initWithTitle:@"Add Comment"];
+            [item setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStyleDone target:self action:@selector(topXPressed:)]];
+            return item;
+        }]] animated:NO];
+        topCover.alpha=0.0f;
+        [vc.navigationController.view addSubview:topCover];
+        [UIView animateWithDuration:.25 animations:^{
+            topCover.alpha=1.0f;
+        }];
+        
+    };
     [self registerForKeyBoardNotifications];
     addView=view;
     addView.container=self;
@@ -139,17 +172,17 @@ void (^keyboardWillShowCompletionBlock)(CGRect)=nil;
     {
         [self dropToTopWithCompletion:^{
             NSLog(@"completed");
-            [addView beginEditingWithCompletion:^{
-                
-            }];
+            [addView beginEditingWithCompletion:completionBlock];
         }];
     }
     else{
         view.frame=CGRectMake(view.frame.origin.x,0,view.frame.size.width, view.frame.size.height);
-        [addView beginEditingWithCompletion:^{
-            
-        }];
+        [addView beginEditingWithCompletion:completionBlock];
     }
+}
+
+-(void)topXPressed:(UIBarButtonItem*)item{
+    [self sendTappedWithComment:nil];
 }
 
 -(commentAddView*)retrieveCommentAddView

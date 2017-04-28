@@ -7,23 +7,23 @@
 //
 
 #import <RETableViewManager/RETableViewManager.h>
-@import GooglePlaces;
+#import "place.h"
 
 @interface locationItem : RETableViewItem
 
-@property (strong, nonatomic) GMSPlace *place;
+@property (strong, nonatomic) place *place;
 
 @property (strong, nonatomic) NSString *addressString;
 
--(id)initWithPlace:(GMSPlace*)somePlace addressString:(NSString*)string;
+-(id)initWithPlace:(place*)somePlace addressString:(NSString*)string;
 
--(id)initWithPlace:(GMSPlace*)somePlace;
+-(id)initWithPlace:(place*)somePlace;
 
 -(id)initWithAddressString:(NSString*)string;
 
-+(locationItem*)itemWithPlace:(GMSPlace*)somePlace addressString:(NSString*)string;
++(locationItem*)itemWithPlace:(place*)somePlace addressString:(NSString*)string;
 
-+(locationItem*)itemWithPlace:(GMSPlace*)somePlace;
++(locationItem*)itemWithPlace:(place*)somePlace;
 
 +(locationItem*)itemWithAddressString:(NSString*)addressString;
 

@@ -166,14 +166,14 @@
 
 -(void)tapBar
 {
-    stackDatePicker *pic=nil;
+    /*stackDatePicker *pic=nil;
     for(UIView *v in self.barView.subviews)
     {
         if(v.class==[stackDatePicker class])
         {
             pic=(stackDatePicker*)v;
         }
-    }
+    }*/
     [super tapBar];
 }
 

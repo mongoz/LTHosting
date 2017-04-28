@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "textEditingLayer.h"
 #import "textEditor.h"
+#import <BBView/BBView.h>
 
 @class toolsContainer;
 @class editorView;
@@ -23,7 +24,7 @@
 
 @property (strong, nonatomic) IBOutlet toolsContainer *toolContainer;
 
-@property (strong, nonatomic) IBOutlet editorView *editorView;
+@property (strong, nonatomic) IBOutlet BBView *editorContainer;
 
 @property (strong, nonatomic) IBOutlet UIButton *modeButton;
 
