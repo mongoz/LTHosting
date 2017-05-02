@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <HMSegmentedControl/HMSegmentedControl.h>
+#import "toolView.h"
 
 @class toolView;
 
@@ -18,6 +19,8 @@
 -(void)viewWillAppear:(BOOL)animated;
 
 -(void)viewWillDisappear:(BOOL)animated;
+
+-(void)transitionToTool:(toolType)tool completion:(void(^)())completionBlock;
 
 @end
 

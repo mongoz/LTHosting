@@ -9,6 +9,7 @@
 #import "flyerEditViewController.h"
 #import "editorView.h"
 #import "event.h"
+#import "toolsContainer.h"
 
 @interface flyerEditViewController ()
 
@@ -32,6 +33,7 @@
         };
         [[editorView shared] setIsEditing:YES];
         [[editorView shared] setViewController:self];
+        [self.toolContainer transitionToTool:titleTextTool completion:nil];
     }
     [super viewWillAppear:animated];
 }

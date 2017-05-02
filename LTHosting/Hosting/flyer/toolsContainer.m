@@ -7,7 +7,6 @@
 //
 
 #import "toolsContainer.h"
-#import "toolView.h"
 
 @interface toolsContainer(){
     HMSegmentedControl *bottom;
