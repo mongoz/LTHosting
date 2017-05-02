@@ -392,7 +392,7 @@
 -(void)showGoodBadButtons
 {
     [UIView animateWithDuration:.25 animations:^{
-        for(UIButton *button in [self goodBadButtons])
+        for(UIView *button in [self goodBadButtons])
         {
             [button setHidden:NO];
         }
@@ -402,10 +402,11 @@
 -(void)hideGoodBadButtons
 {
     [UIView animateWithDuration:.25 animations:^{
-        for(UIButton *button in [self goodBadButtons])
+        for(UIView *button in [self goodBadButtons])
         {
             [button setHidden:YES];
         }
+        
     }];
 }
 
@@ -437,12 +438,12 @@
     }];
 }
 
--(NSArray<UIButton*>*)goodBadButtons
+-(NSArray<UIView*>*)goodBadButtons
 {
-    return @[_goodPictureButton, _badPictureButton];
+    return @[_goodPictureButton, _badPictureButton, _goodBadContainer];
 }
 
--(NSArray<UIButton*>*)cameraButtons
+-(NSArray<UIView*>*)cameraButtons
 {
     return @[_captureButton, _switchCameraButton, _flashButton];
 }

@@ -29,6 +29,10 @@
 
 -(void)setBorder:(UIImage*)bimage;
 
+-(void)setBorderIndex:(NSInteger)borderIndex;
+
+@property (readonly) NSInteger borderIndex;
+
 -(void)setTitleText:(NSString*)title;
 
 -(void)setBodyText:(NSString*)body;

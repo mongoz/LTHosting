@@ -30,6 +30,7 @@
 		3200D8B41EA6D3BC00C4F0A6 /* Sketch Handwriting.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A1F1E9B3B1C008DE7F0 /* Sketch Handwriting.otf */; };
 		3200D8B51EA6D3BC00C4F0A6 /* Stranger back in the Night.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A201E9B3B1C008DE7F0 /* Stranger back in the Night.ttf */; };
 		3200D8B61EA6D3BC00C4F0A6 /* tradizional DEMO.otf in Resources */ = {isa = PBXBuildFile; fileRef = 32986A211E9B3B1C008DE7F0 /* tradizional DEMO.otf */; };
+		320991831EB8062C0081B78A /* DatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 320991821EB8062C0081B78A /* DatePicker.m */; };
 		32351CA91EAD7F0700D605D7 /* HostingHub.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32351CA81EAD7F0700D605D7 /* HostingHub.storyboard */; };
 		32351CAC1EAD7F9000D605D7 /* hostingHubPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CAB1EAD7F9000D605D7 /* hostingHubPageController.m */; };
 		32351CAF1EAD81C200D605D7 /* hubMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 32351CAE1EAD81C200D605D7 /* hubMainViewController.m */; };
@@ -216,6 +217,8 @@
 		0EFB49BE7901759AB9C8F46D /* Pods-LTHosting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LTHosting.release.xcconfig"; path = "Pods/Target Support Files/Pods-LTHosting/Pods-LTHosting.release.xcconfig"; sourceTree = "<group>"; };
 		1E976958F10ECE71A9F31D80 /* libPods-LTHostingTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LTHostingTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3200D8A11EA6D12600C4F0A6 /* Hosting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Hosting.storyboard; sourceTree = "<group>"; };
+		320991811EB8062C0081B78A /* DatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePicker.h; sourceTree = "<group>"; };
+		320991821EB8062C0081B78A /* DatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePicker.m; sourceTree = "<group>"; };
 		3229AF941E1B501F00405137 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		32351CA81EAD7F0700D605D7 /* HostingHub.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HostingHub.storyboard; sourceTree = "<group>"; };
 		32351CAA1EAD7F9000D605D7 /* hostingHubPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hostingHubPageController.h; sourceTree = "<group>"; };
@@ -1003,6 +1006,8 @@
 				329869101E9B31F2008DE7F0 /* horizontalViewPicker.m */,
 				329869111E9B31F2008DE7F0 /* LTDatePicker.h */,
 				329869121E9B31F2008DE7F0 /* LTDatePicker.m */,
+				320991811EB8062C0081B78A /* DatePicker.h */,
+				320991821EB8062C0081B78A /* DatePicker.m */,
 				329869131E9B31F2008DE7F0 /* LTNavigationController.h */,
 				329869141E9B31F2008DE7F0 /* LTNavigationController.m */,
 				329869151E9B31F2008DE7F0 /* navigationScrollView.h */,
@@ -1431,6 +1436,7 @@
 				329869811E9B3486008DE7F0 /* event.m in Sources */,
 				3298697A1E9B3429008DE7F0 /* eventCameraViewController.m in Sources */,
 				3298691A1E9B31F2008DE7F0 /* horizontalViewPicker.m in Sources */,
+				320991831EB8062C0081B78A /* DatePicker.m in Sources */,
 				329869DA1E9B395C008DE7F0 /* LTTableViewSection.m in Sources */,
 				329869BF1E9B3945008DE7F0 /* LTImagePickerThumbnail.m in Sources */,
 				32986A081E9B3A24008DE7F0 /* eventPageTableViewItem.m in Sources */,

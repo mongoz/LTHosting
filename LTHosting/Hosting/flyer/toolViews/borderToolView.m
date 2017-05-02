@@ -11,6 +11,7 @@
 #import "editorView.h"
 
 @interface borderToolView(){
+    NSArray<toolViewItem*>* items;
     
 }
 
@@ -38,7 +39,7 @@
     [super setFrame:frame];
 }
 
-NSArray<toolViewItem*>* items=nil;
+
 
 -(NSArray<toolViewItem*>*)items
 {

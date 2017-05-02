@@ -338,7 +338,9 @@
 }
 
 -(void)setDate:(NSDate*)date animated:(BOOL)animated silent:(BOOL)silent{
+    
     NSDateComponents *comps=[[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay | NSCalendarUnitHour | NSCalendarUnitHour | NSCalendarUnitMinute) fromDate:date];
+    NSLog(@"%@",self.date);
     for(NSInteger i=1; i<3; i++)
     {
         [_picker selectRow:[self pickerView:_picker numberOfRowsInComponent:i]/2 inComponent:i animated:NO];
@@ -360,7 +362,14 @@
         }
     }
     NSInteger minuteIndex=[_picker selectedRowInComponent:2];
-    if([self minuteForRow:minuteIndex]!=comps.minute)
+    NSLog(@"%ld",minuteIndex);
+    NSInteger currentMinute=[self minuteForRow:minuteIndex];
+    minuteIndex=(minuteIndex+labs(currentMinute-comps.minute))%[self pickerView:_picker numberOfRowsInComponent:2];
+    NSLog(@"%ld",minuteIndex);
+    /*if([self minuteForRow:minuteIndex]>comps.minute){
+        minuteIndex=(minuteIndex-([self minuteForRow:minuteIndex]-comps.minute))%[self pickerView:_picker numberOfRowsInComponent:2];
+    }*/
+    /*if([self minuteForRow:minuteIndex]!=comps.minute)
     {
         for(NSInteger i=0; i<[self pickerView:_picker numberOfRowsInComponent:2]; i++)
         {
@@ -370,9 +379,11 @@
                 break;
             }
         }
-    }
+    }*/
     NSInteger hourIndex=[_picker selectedRowInComponent:1];
-    if([self hourForRow:hourIndex]!=comps.hour)
+    NSInteger currentHour=[self hourForRow:hourIndex];
+    hourIndex=(hourIndex+labs(currentHour-comps.hour))%[self pickerView:_picker numberOfRowsInComponent:1];
+    /*if([self hourForRow:hourIndex]!=comps.hour)
     {
         for(NSInteger i=0; i<[self pickerView:_picker numberOfRowsInComponent:1]; i++)
         {
@@ -382,7 +393,7 @@
                 break;
             }
         }
-    }
+    }*/
     [_picker selectRow:dayIndex inComponent:0 animated:animated];
     [_picker selectRow:hourIndex inComponent:1 animated:animated];
     initialHourSelection=[_picker selectedRowInComponent:1];
@@ -394,6 +405,7 @@
     {
         [_delegate datePicker:self dateDidChangeTo:[self date]];
     }
+    NSLog(@"%@",self.date);
 }
 
 //Set delegate methods

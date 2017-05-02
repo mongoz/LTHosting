@@ -168,7 +168,7 @@
 
 -(UIFont*)UIFontFromCGFont:(CGFontRef)font withSize:(CGFloat)size
 {
-    NSLog(@"blah %@, %f",font,size);
+    //NSLog(@"blah %@, %f",font,size);
     NSString *fontName=(__bridge NSString*)CGFontCopyPostScriptName(font);
     return [UIFont fontWithName:fontName size:size];
     

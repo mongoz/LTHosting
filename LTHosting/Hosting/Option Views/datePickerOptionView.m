@@ -14,7 +14,7 @@
 @interface datePickerOptionView(){
     UILabel *dateLabel;
     UIImageView *imageView;
-    LTDatePicker *pick;
+    UIDatePicker *pick;
     
     NSDate *currentDate;
 }
@@ -55,10 +55,11 @@
     [self.accessoryView.layer setShadowColor:self.barView.layer.shadowColor];
     [self.accessoryView.layer setShadowRadius:self.barView.layer.shadowRadius];
     [self.accessoryView.layer setShadowOpacity:self.barView.layer.shadowOpacity];
-    pick=[[LTDatePicker alloc] initWithFrame:self.accessoryView.bounds];
-    pick.delegate=self;
+    pick=[[UIDatePicker alloc] initWithFrame:self.accessoryView.bounds];
+    [pick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged];
     [pick setBackgroundColor:[UIColor groupTableViewBackgroundColor]];
     [pick setDate:currentDate animated:NO];
+    pick.minimumDate=[NSDate date];
     //[pick addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventPrimaryActionTriggered];
     //[pick setMinimumDate:[NSDate date]];
     [self.accessoryView addSubview:pick];
@@ -182,24 +183,27 @@
     [[event sharedInstance] setDate:currentDate];
 }
 
+-(void)dateChanged:(UIDatePicker*)picker{
+    dateLabel.alpha=0.0f;
+    [dateLabel setText:[self stringForDate:[picker date]]];
+    dateLabel.textColor=[UIColor blackColor];
+    currentDate=[picker date];
+    dateLabel.alpha=1.0f;
+}
+
 //LTDatePickerDelegate method
--(void)datePicker:(LTDatePicker *)picker dateDidChangeTo:(NSDate *)date
+/*-(void)datePicker:(LTDatePicker *)picker dateDidChangeTo:(NSDate *)date
 {
     NSString *newText=[self stringForDate:date];
     if(newText!=dateLabel.text)
     {
-        dateLabel.alpha=0.0f;
-        [dateLabel setText:[self stringForDate:[picker date]]];
-        dateLabel.textColor=[UIColor blackColor];
-        currentDate=[picker date];
-        dateLabel.alpha=1.0f;
     }
     if([date timeIntervalSinceNow]<0&&fabs([date timeIntervalSinceNow])>60)
     {
         [picker setDate:[NSDate date] animated:YES];
     }
     
-}
+}*/
 
 -(BOOL)isComplete
 {

@@ -70,24 +70,40 @@
                                             <action selector="switchCameraView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uZf-Ah-OQL"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ag-OX-KEa">
-                                        <rect key="frame" x="8" y="8" width="175.5" height="84"/>
-                                        <state key="normal" image="Poor Quality-50.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="badButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IA-X8-m9p"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGs-vy-hBD">
-                                        <rect key="frame" x="191.5" y="8" width="175.5" height="84"/>
-                                        <state key="normal" image="Good Quality-50.png">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="goodButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqE-N3-8v0"/>
-                                        </connections>
-                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rLE-lI-kDH">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ag-OX-KEa">
+                                                <rect key="frame" x="8" y="8" width="175.5" height="84"/>
+                                                <state key="normal" image="Poor Quality-50.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="badButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9IA-X8-m9p"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGs-vy-hBD">
+                                                <rect key="frame" x="191.5" y="8" width="175.5" height="84"/>
+                                                <state key="normal" image="Good Quality-50.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="goodButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iqE-N3-8v0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="sGs-vy-hBD" firstAttribute="leading" secondItem="0Ag-OX-KEa" secondAttribute="trailing" constant="8" id="AWd-pV-TtM"/>
+                                            <constraint firstItem="sGs-vy-hBD" firstAttribute="top" secondItem="rLE-lI-kDH" secondAttribute="top" constant="8" id="GDf-Dw-Wje"/>
+                                            <constraint firstItem="sGs-vy-hBD" firstAttribute="width" secondItem="0Ag-OX-KEa" secondAttribute="width" id="MfX-0w-SQp"/>
+                                            <constraint firstAttribute="bottom" secondItem="0Ag-OX-KEa" secondAttribute="bottom" constant="8" id="N2U-OW-CPX"/>
+                                            <constraint firstItem="0Ag-OX-KEa" firstAttribute="top" secondItem="rLE-lI-kDH" secondAttribute="top" constant="8" id="c1i-Kj-kzt"/>
+                                            <constraint firstAttribute="bottom" secondItem="sGs-vy-hBD" secondAttribute="bottom" constant="8" id="dzg-BS-gWO"/>
+                                            <constraint firstItem="0Ag-OX-KEa" firstAttribute="leading" secondItem="rLE-lI-kDH" secondAttribute="leading" constant="8" id="mD2-h5-94I"/>
+                                            <constraint firstAttribute="trailing" secondItem="sGs-vy-hBD" secondAttribute="trailing" constant="8" id="uH3-Wr-eky"/>
+                                        </constraints>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNb-qZ-7ZP">
                                         <rect key="frame" x="8" y="18" width="64" height="64"/>
                                         <constraints>
@@ -98,23 +114,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="0Ag-OX-KEa" secondAttribute="bottom" constant="8" id="1zt-OH-3Mr"/>
+                                    <constraint firstItem="rLE-lI-kDH" firstAttribute="leading" secondItem="sqi-tv-Fo9" secondAttribute="leading" id="4HM-Vu-m7y"/>
                                     <constraint firstItem="o54-4R-H8j" firstAttribute="top" secondItem="sqi-tv-Fo9" secondAttribute="top" constant="8" id="6iX-h9-GPG"/>
-                                    <constraint firstItem="sGs-vy-hBD" firstAttribute="width" secondItem="0Ag-OX-KEa" secondAttribute="width" id="9Yw-La-Uck"/>
-                                    <constraint firstItem="sGs-vy-hBD" firstAttribute="leading" secondItem="0Ag-OX-KEa" secondAttribute="trailing" constant="8" id="Bqf-MX-lkp"/>
-                                    <constraint firstItem="sGs-vy-hBD" firstAttribute="top" secondItem="sqi-tv-Fo9" secondAttribute="top" constant="8" id="DAL-cP-QEJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="rLE-lI-kDH" secondAttribute="trailing" id="APB-kk-18k"/>
+                                    <constraint firstItem="rLE-lI-kDH" firstAttribute="top" secondItem="sqi-tv-Fo9" secondAttribute="top" id="CRD-fK-fdQ"/>
                                     <constraint firstItem="Hnh-mU-ke5" firstAttribute="top" relation="greaterThanOrEqual" secondItem="sqi-tv-Fo9" secondAttribute="top" constant="8" id="FDQ-7j-xoB"/>
                                     <constraint firstAttribute="height" constant="100" id="GcJ-Iw-y0X"/>
                                     <constraint firstAttribute="trailing" secondItem="Hnh-mU-ke5" secondAttribute="trailing" constant="8" id="KX3-ZH-76T"/>
-                                    <constraint firstAttribute="bottom" secondItem="sGs-vy-hBD" secondAttribute="bottom" constant="8" id="Nzq-GQ-pLJ"/>
                                     <constraint firstItem="FNb-qZ-7ZP" firstAttribute="centerY" secondItem="sqi-tv-Fo9" secondAttribute="centerY" id="PYj-39-Uys"/>
                                     <constraint firstAttribute="bottom" secondItem="o54-4R-H8j" secondAttribute="bottom" constant="8" id="Skv-Ca-JtM"/>
                                     <constraint firstItem="Hnh-mU-ke5" firstAttribute="centerY" secondItem="sqi-tv-Fo9" secondAttribute="centerY" id="W3P-Db-A0w"/>
                                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Hnh-mU-ke5" secondAttribute="bottom" constant="8" id="Wzk-Y8-ZkL"/>
-                                    <constraint firstAttribute="trailing" secondItem="sGs-vy-hBD" secondAttribute="trailing" constant="8" id="Z25-mx-zfE"/>
                                     <constraint firstItem="FNb-qZ-7ZP" firstAttribute="leading" secondItem="sqi-tv-Fo9" secondAttribute="leading" constant="8" id="cUf-aZ-Iiv"/>
-                                    <constraint firstItem="0Ag-OX-KEa" firstAttribute="top" secondItem="sqi-tv-Fo9" secondAttribute="top" constant="8" id="fSU-vV-ORI"/>
-                                    <constraint firstItem="0Ag-OX-KEa" firstAttribute="leading" secondItem="sqi-tv-Fo9" secondAttribute="leading" constant="8" id="qko-zT-WIa"/>
+                                    <constraint firstAttribute="bottom" secondItem="rLE-lI-kDH" secondAttribute="bottom" id="gM3-Wy-7Dh"/>
                                     <constraint firstItem="o54-4R-H8j" firstAttribute="centerX" secondItem="sqi-tv-Fo9" secondAttribute="centerX" id="rEh-jQ-rWz"/>
                                 </constraints>
                             </view>
@@ -135,6 +147,7 @@
                         <outlet property="badPictureButton" destination="0Ag-OX-KEa" id="weR-30-qV5"/>
                         <outlet property="captureButton" destination="o54-4R-H8j" id="Tlz-Am-sDI"/>
                         <outlet property="flashButton" destination="rNV-lH-5x6" id="Ygb-RN-HEW"/>
+                        <outlet property="goodBadContainer" destination="rLE-lI-kDH" id="piY-rI-H45"/>
                         <outlet property="goodPictureButton" destination="sGs-vy-hBD" id="Ns6-at-eoV"/>
                         <outlet property="imageView" destination="ucW-hE-ypU" id="5Gf-Hq-4gS"/>
                         <outlet property="libraryBar" destination="sqi-tv-Fo9" id="HKu-AB-uUx"/>

@@ -7,6 +7,7 @@
 //
 
 #import "editorView.h"
+#import "usefulArray.h"
 
 @interface editorView(){
     CALayer *backgroundLayer;
@@ -16,7 +17,7 @@
     textEditingLayer *body;
     borderEditingLayer *border;
     CALayer *backgroundTintLayer;
-    
+    NSInteger borderIndex;
     BOOL isEditing;
 }
 
@@ -48,6 +49,7 @@
     [backgroundLayer addSublayer:border];
     [self.layer addSublayer:title];
     [self.layer addSublayer:body];
+    borderIndex=[aDecoder decodeIntegerForKey:@"borderIndex"];
     return self;
 }
 
@@ -60,6 +62,7 @@
     [aCoder encodeObject:border forKey:@"border"];
     [aCoder encodeObject:backgroundTintLayer forKey:@"backgroundTintLayer"];
     [aCoder encodeBool:isEditing forKey:@"isEditing"];
+    [aCoder encodeInteger:borderIndex forKey:@"borderIndex"];
 }
 
 static editorView *instance=nil;
@@ -121,7 +124,7 @@ static editorView *instance=nil;
     tap.numberOfTouchesRequired=1;
     [tap addTarget:self action:@selector(touchUpInside:)];
     [self addGestureRecognizer:tap];
-    
+    borderIndex=0;
     _viewController=nil;
 }
 
@@ -197,6 +200,22 @@ static editorView *instance=nil;
 {
     imageSize=image.size;
     [self updateImageContainerWithImage:image];
+}
+
+-(void)setBorderIndex:(NSInteger)borderInd{
+    if(borderIndex!=borderInd){
+        borderIndex=borderInd;
+        if(borderIndex>0){
+            [self setBorder:[usefulArray borderImages][borderIndex-1]];
+        }
+        else{
+            [self setBorder:nil];
+        }
+    }
+}
+
+-(NSInteger)borderIndex{
+    return borderIndex;
 }
 
 -(void)setBorder:(UIImage *)bimage

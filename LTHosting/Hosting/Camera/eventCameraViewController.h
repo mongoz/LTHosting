@@ -43,5 +43,7 @@
 
 -(void)prepareForUnwind:(UIStoryboardSegue*)seg;
 
+@property (strong, nonatomic) IBOutlet UIView *goodBadContainer;
+
 @end
 

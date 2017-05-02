@@ -81,12 +81,12 @@
 -(void)barTouched{
     [super barTouched];
     if(!self.hasAccessoryView){
-        if(field.isFirstResponder){
+        /*if(field.isFirstResponder){
             [field endEditing:YES];
         }
         else{
-            [field becomeFirstResponder];
-        }
+        }*/
+        [field becomeFirstResponder];
     }
     else{
         if(self.isAccessoryViewShowing){

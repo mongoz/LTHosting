@@ -36,7 +36,7 @@ static NSInteger selectedIndex=0;
 
 +(NSInteger)selectedIndex
 {
-    return selectedIndex;
+    return [[editorView shared] borderIndex];
 }
 
 -(id)init
@@ -56,7 +56,7 @@ static NSInteger selectedIndex=0;
 -(void)updateCurrentValueAnimated:(BOOL)animated
 {
     [super updateCurrentValueAnimated:animated];
-    [scroller selectRowAtIndex:selectedIndex];
+    [scroller selectRowAtIndex:[[editorView shared] borderIndex]];
 }
 
 -(void)setFrame:(CGRect)frame
@@ -170,12 +170,13 @@ static NSInteger selectedIndex=0;
 -(void)horizontalPickerDidSelectViewAtIndex:(NSInteger)index
 {
     selectedIndex=index;
-    if(index==0)
+    /*if(index==0)
     {
         [[editorView shared] setBorder:nil];
         return;
-    }
-    [[editorView shared] setBorder:[usefulArray borderImages][index-1]];
+    }*/
+    [[editorView shared] setBorderIndex:index];
+    //[[editorView shared] setBorder:[usefulArray borderImages][index-1]];
     if(self.toolDelegate!=nil&&[self.toolDelegate respondsToSelector:@selector(toolValueChanged:)])
     {
         [self.toolDelegate toolValueChanged:self];
